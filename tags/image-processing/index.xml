@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Image Processing on Reading and Thinking</title>
+    <link>https://bigheadghost.github.io/tags/image-processing/</link>
+    <description>Recent content in Image Processing on Reading and Thinking</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 25 Jun 2014 14:14:28 +0800</lastBuildDate>
+    
+	<atom:link href="https://bigheadghost.github.io/tags/image-processing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Frog Mania</title>
+      <link>https://bigheadghost.github.io/post/frog-mania/</link>
+      <pubDate>Wed, 25 Jun 2014 14:14:28 +0800</pubDate>
+      
+      <guid>https://bigheadghost.github.io/post/frog-mania/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.bigfishgames.com/online-games/18111/frog-mania/index.html&#34;&gt;Frog Mania&lt;/a&gt; is a flash game. It is quite easy to play, so this is not about its solver, but the way to get the underlying matrix representation of each level.&lt;br /&gt;
+&lt;img src=&#34;http://pic.yupoo.com/lavender/GRrP1D55/wSReB.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

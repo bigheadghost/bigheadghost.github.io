@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Dive into Project Euler Part 2 (21-40) - Reading and Thinking</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigheadghost" />
+  <meta name="description" content="Problem 21 f = DivisorSigma[1, #] - # &amp;amp;; Total@Select[Range[9999], (a = f@#; a &amp;lt; 9999 &amp;amp;&amp;amp; a != # &amp;amp;&amp;amp; f@a == #) &amp;amp;] 31626  Problem 22 nl=Sort@StringSplit[StringReplace[Import[&amp;quot;p022_names.txt&amp;quot;], &amp;quot;\&amp;quot;&amp;quot; -&amp;gt; &amp;quot;&amp;quot;], &amp;quot;,&amp;quot;]; Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&amp;quot;A&amp;quot;]] &#43; 1] * First[#2] &amp;amp;, nl] 871198282  Problem 23 Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &amp;gt; # &amp;amp;]; Total@Complement[Range[1, 28123], DeleteDuplicates@( (Abundants[[#]] &#43; Abundants[[# ;; -1]]) &amp;amp; /@ Range[Length@Abundants] // Flatten )] 4179871  Problem 24 FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]] 2783915460  Problem 25 NestWhile[(# &#43; 1) &amp;amp;, 1, IntegerLength@Fibonacci@# &amp;lt; 1000 &amp;amp;] 4782  
+" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.30.2" />
+
+
+<link rel="canonical" href="https://bigheadghost.github.io/post/dive-into-project-euler-part-2-21-40/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<link href="/dist/even.min.css?v=2.6.4" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+<meta property="og:title" content="Dive into Project Euler Part 2 (21-40)" />
+<meta property="og:description" content="Problem 21
+
+f = DivisorSigma[1, #] - # &amp;;
+Total@Select[Range[9999], (a = f@#; a &lt; 9999 &amp;&amp; a != # &amp;&amp; f@a == #) &amp;]
+31626
+
+
+Problem 22
+
+nl=Sort@StringSplit[StringReplace[Import[&quot;p022_names.txt&quot;], &quot;\&quot;&quot; -&gt; &quot;&quot;], &quot;,&quot;];
+Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&quot;A&quot;]] &#43; 1] * First[#2] &amp;, nl]
+871198282
+
+
+Problem 23
+
+Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &gt; # &amp;];
+Total@Complement[Range[1, 28123],
+  DeleteDuplicates@(   (Abundants[[#]] &#43; Abundants[[# ;; -1]]) &amp; /@ Range[Length@Abundants] // Flatten  )]
+4179871
+
+
+Problem 24
+
+FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]]
+2783915460
+
+
+Problem 25
+
+NestWhile[(# &#43; 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
+4782
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigheadghost.github.io/post/dive-into-project-euler-part-2-21-40/" />
+
+
+
+<meta property="article:published_time" content="2014-08-29T12:07:32&#43;08:00"/>
+
+<meta property="article:modified_time" content="2014-08-29T12:07:32&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Dive into Project Euler Part 2 (21-40)">
+<meta itemprop="description" content="Problem 21
+
+f = DivisorSigma[1, #] - # &amp;;
+Total@Select[Range[9999], (a = f@#; a &lt; 9999 &amp;&amp; a != # &amp;&amp; f@a == #) &amp;]
+31626
+
+
+Problem 22
+
+nl=Sort@StringSplit[StringReplace[Import[&quot;p022_names.txt&quot;], &quot;\&quot;&quot; -&gt; &quot;&quot;], &quot;,&quot;];
+Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&quot;A&quot;]] &#43; 1] * First[#2] &amp;, nl]
+871198282
+
+
+Problem 23
+
+Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &gt; # &amp;];
+Total@Complement[Range[1, 28123],
+  DeleteDuplicates@(   (Abundants[[#]] &#43; Abundants[[# ;; -1]]) &amp; /@ Range[Length@Abundants] // Flatten  )]
+4179871
+
+
+Problem 24
+
+FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]]
+2783915460
+
+
+Problem 25
+
+NestWhile[(# &#43; 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
+4782
+
+
+">
+
+
+<meta itemprop="datePublished" content="2014-08-29T12:07:32&#43;08:00" />
+<meta itemprop="dateModified" content="2014-08-29T12:07:32&#43;08:00" />
+<meta itemprop="wordCount" content="422">
+
+
+
+<meta itemprop="keywords" content="Mathematica," />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Dive into Project Euler Part 2 (21-40)"/>
+<meta name="twitter:description" content="Problem 21
+
+f = DivisorSigma[1, #] - # &amp;;
+Total@Select[Range[9999], (a = f@#; a &lt; 9999 &amp;&amp; a != # &amp;&amp; f@a == #) &amp;]
+31626
+
+
+Problem 22
+
+nl=Sort@StringSplit[StringReplace[Import[&quot;p022_names.txt&quot;], &quot;\&quot;&quot; -&gt; &quot;&quot;], &quot;,&quot;];
+Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&quot;A&quot;]] &#43; 1] * First[#2] &amp;, nl]
+871198282
+
+
+Problem 23
+
+Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &gt; # &amp;];
+Total@Complement[Range[1, 28123],
+  DeleteDuplicates@(   (Abundants[[#]] &#43; Abundants[[# ;; -1]]) &amp; /@ Range[Length@Abundants] // Flatten  )]
+4179871
+
+
+Problem 24
+
+FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]]
+2783915460
+
+
+Problem 25
+
+NestWhile[(# &#43; 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
+4782
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Reading and Thinking</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a><a href="/zh">
+        <li class="mobile-menu-item">中文(Chinese)</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Reading and Thinking</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/zh">中文(Chinese)</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Dive into Project Euler Part 2 (21-40)</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-08-29 12:07:32 CST </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#problem-21">Problem 21</a></li>
+<li><a href="#problem-22">Problem 22</a></li>
+<li><a href="#problem-23">Problem 23</a></li>
+<li><a href="#problem-24">Problem 24</a></li>
+<li><a href="#problem-25">Problem 25</a></li>
+<li><a href="#problem-26">Problem 26</a></li>
+<li><a href="#problem-27">Problem 27</a></li>
+<li><a href="#problem-28">Problem 28</a></li>
+<li><a href="#problem-29">Problem 29</a></li>
+<li><a href="#problem-30">Problem 30</a></li>
+<li><a href="#problem-31">Problem 31</a></li>
+<li><a href="#problem-32">Problem 32</a></li>
+<li><a href="#problem-33">Problem 33</a></li>
+<li><a href="#problem-34">Problem 34</a></li>
+<li><a href="#problem-35">Problem 35</a></li>
+<li><a href="#problem-36">Problem 36</a></li>
+<li><a href="#problem-37">Problem 37</a></li>
+<li><a href="#problem-38">Problem 38</a></li>
+<li><a href="#problem-39">Problem 39</a></li>
+<li><a href="#problem-40">Problem 40</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h1 id="problem-21">Problem 21</h1>
+
+<pre><code>f = DivisorSigma[1, #] - # &amp;;
+Total@Select[Range[9999], (a = f@#; a &lt; 9999 &amp;&amp; a != # &amp;&amp; f@a == #) &amp;]
+31626
+</code></pre>
+
+<h1 id="problem-22">Problem 22</h1>
+
+<pre><code>nl=Sort@StringSplit[StringReplace[Import[&quot;p022_names.txt&quot;], &quot;\&quot;&quot; -&gt; &quot;&quot;], &quot;,&quot;];
+Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&quot;A&quot;]] + 1] * First[#2] &amp;, nl]
+871198282
+</code></pre>
+
+<h1 id="problem-23">Problem 23</h1>
+
+<pre><code>Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &gt; # &amp;];
+Total@Complement[Range[1, 28123],
+  DeleteDuplicates@(   (Abundants[[#]] + Abundants[[# ;; -1]]) &amp; /@ Range[Length@Abundants] // Flatten  )]
+4179871
+</code></pre>
+
+<h1 id="problem-24">Problem 24</h1>
+
+<pre><code>FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]]
+2783915460
+</code></pre>
+
+<h1 id="problem-25">Problem 25</h1>
+
+<pre><code>NestWhile[(# + 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
+4782
+</code></pre>
+
+<p></p>
+
+<h1 id="problem-26">Problem 26</h1>
+
+<pre><code>Last@Ordering[Length@RealDigits[1/#][[1, 1]] &amp; /@ Range[999]]
+983
+</code></pre>
+
+<h1 id="problem-27">Problem 27</h1>
+
+<pre><code>al = Range[-999, 999];
+pl = Array[Prime, PrimePi@999];
+bl = Join[pl, -pl];
+f[a_, b_] := NestWhile[# + 1 &amp;, 0, PrimeQ[#^2 + a # + b] &amp;];
+s = Table[f[a, b], {a, al}, {b, bl}];
+pos = Position[s, Max[s]];
+al[[pos[[1, 1]]]]*bl[[pos[[1, 2]]]]
+-59231
+</code></pre>
+
+<h1 id="problem-28">Problem 28</h1>
+
+<pre><code>Total@FoldList[Plus, 1, Array[Ceiling[#/4]*2 &amp;, (1001-1)/2*4]]
+669171001
+</code></pre>
+
+<h1 id="problem-29">Problem 29</h1>
+
+<pre><code>Length@DeleteDuplicates@Flatten@Table[a^b, {a, 2, 100}, {b, 2, 100}]
+9183
+</code></pre>
+
+<h1 id="problem-30">Problem 30</h1>
+
+<pre><code>Total@Select[Range[10, 1*^6 - 1], # == Total[(IntegerDigits@#)^5] &amp;]
+443839
+</code></pre>
+
+<h1 id="problem-31">Problem 31</h1>
+
+<pre><code>Length@IntegerPartitions[200, All, {1, 2, 5, 10, 20, 50, 100, 200}]
+73682
+</code></pre>
+
+<h1 id="problem-32">Problem 32</h1>
+
+<pre><code>f[m_List, n_List] :=Select[Flatten[Table[{i, j, i*j}, {i, m}, {j, n}], 1],  Sort@Flatten@IntegerDigits@# == Range[9] &amp;]
+Total@DeleteDuplicates@ Join[f[Range[12, 98], Range[123, 987]],  f[Range[1, 9], Range[1234, 9876]]][[All, 3]]
+45228
+</code></pre>
+
+<h1 id="problem-33">Problem 33</h1>
+
+<pre><code>f[{i_, j_}] :=  Module[{}, {id, jd} = IntegerDigits@{i, j}; c = Intersection[id, jd];
+   FreeQ[{id, jd}, 0] &amp;&amp; Length@c == 1 &amp;&amp;
+ (newi = Delete[id, FirstPosition[id, First@c]]; newj = Delete[jd, FirstPosition[jd, First@c]]; First[newi/newj] == i/j)];
+Denominator[Times @@ Divide @@@ Select[Flatten[Table[{i, j}, {i, 10, 98}, {j, i + 1, 99}], 1], f]]
+100
+</code></pre>
+
+<h1 id="problem-34">Problem 34</h1>
+
+<pre><code>In[48]:= cf =
+  Compile[{ {A, _Integer} },
+   Boole[A == Total[Factorial[IntegerDigits[A]]]],
+   RuntimeAttributes -&gt; Listable,
+   RuntimeOptions -&gt; &quot;Speed&quot;, CompilationTarget -&gt; &quot;C&quot;];
+n = Range[10, 9!*7];
+AbsoluteTiming@Total@Pick[n, cf@n, 1]
+</code></pre>
+
+<h1 id="problem-35">Problem 35</h1>
+
+<pre><code>cpQ[n_] := 
+ AllTrue[FromDigits /@ 
+   Array[RotateLeft[IntegerDigits@n, #] &amp;, IntegerLength@n - 1], 
+  PrimeQ]
+Count[Table[Prime[i], {i, PrimePi[1*^6]}], i_/;cpQ@i]
+55
+</code></pre>
+
+<h1 id="problem-36">Problem 36</h1>
+
+<pre><code>palQ[i_List] := i == Reverse@i;
+Total@Select[Range[1*^6], (palQ[IntegerDigits@#] &amp;&amp; palQ[IntegerDigits[#, 2]]) &amp;]
+872187
+</code></pre>
+
+<h1 id="problem-37">Problem 37</h1>
+
+<pre><code>TpQ[n_] :=  Module[{l = IntegerDigits@n},  AllTrue[FromDigits /@Flatten[Table[{l[[;; i]], l[[i + 1 ;;]]}, {i, Length@l - 1}], 1],  PrimeQ]];
+S = n = 0; i = 5; While[n &lt; 11, a = Prime@i;If[TpQ@a, S += a; ++n]; ++i]; S
+748317
+</code></pre>
+
+<h1 id="problem-38">Problem 38</h1>
+
+<pre><code>fl=Select[Range[9123, 9876],Combinatorica`PermutationQ[Catenate@IntegerDigits[{1, 2}*#]] &amp;]
+{9267, 9273, 9327}
+Max[FromDigits /@ (Catenate@IntegerDigits[{1, 2}*#] &amp; /@fl)]
+932718654
+</code></pre>
+
+<h1 id="problem-39">Problem 39</h1>
+
+<pre><code>Commonest@Flatten@Select[# +
+      Total[Rest@PowersRepresentations[#^2, 2, 2], {2}] &amp; /@
+    Range[500], ListQ]
+840
+</code></pre>
+
+<h1 id="problem-40">Problem 40</h1>
+
+<pre><code>i = 0; NestWhileList[(++i; # + i*9*10^(i - 1)) &amp;, 0, # &lt; 1*^6 &amp;]; i
+6
+Times @@ (Flatten@IntegerDigits@Range[999999])[[Table[ 10^(i - 1), {i, 7}]]]
+210
+</code></pre>
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/mathematica/">Mathematica</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/dive-into-project-euler-part-3-41-60/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Dive into Project Euler Part 3 (41-60)</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/dive-into-project-euler-part-1-1-20/">
+            <span class="next-text nav-default">Dive into Project Euler Part 1 (1-20)</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'bigheadghost';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink" target="_blank">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  
+      </div>  
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:bigheadghost@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://math.stackexchange.com/users/157947/bigheadghost" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/bigheadghost" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://www.douban.com/people/1254984/" class="iconfont icon-douban" title="douban"></a>
+  <a href="https://bigheadghost.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2014 - 
+    2017
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">bigheadghost</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/even.min.js?v=2.6.4"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+
+
+
+</body>
+</html>

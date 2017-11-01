@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Dive into Project Euler Part 1 (1-20) - Reading and Thinking</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigheadghost" />
+  <meta name="description" content="Although calculation of mathematica codes could be slower than those written in C/C&#43;&#43;, or even those in python, the prodigious and interesting if not funny functions do save coding time a lot.
+Problem 1 Brute force solution at first thought:
+Total@Select[Range[999], 3\[Divides]# || 5\[Divides]# &amp;amp;] 233168  What if the upper limit is extreme large, like \(10^{10}\), or \(10^{10^7}\)? Calculating one after another or even saving them using Range is impossible. Here comes the mathematical way:
+top = 10^(10^7) - 1; SumMultiplesOf[n_] := (p = Quotient[top, n]; n*p*(p &#43; 1)/2); SumMultiplesOf[m_, n_] := SumMultiplesOf[m] &#43; SumMultiplesOf[n] - SumMultiplesOf[LCM[m, n]]; N[SumMultiplesOf[3, 5], 2] // AbsoluteTiming {2.222280, 2.3*10^19999999}  Problem 2 n=NestWhile[# &#43; 1 &amp;amp;, 1, Fibonacci@# &amp;lt;= 4*^6 &amp;amp;] - 1 Total@Select[Array[Fibonacci,n] , EvenQ] 4613732  Even numbers appear every 3rd positions in Fibonacci series:
+Total@Table[Fibonacci@i, {i, 3, n, 3}]  Problem 3 Max[FactorInteger[600851475143][[All, 1]]] 6857  Problem 4 Catch@Scan[If[FromDigit@Reverse@IntegerDigits@# == #, Throw[#]] &amp;amp;, Reverse@Sort@Flatten@Table[i*j, {i, 999, 100, -1}, {j, i, 100, -1}]] 906609  Problem 5 LCM @@ Range[20] 232792560  
+" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.30.2" />
+
+
+<link rel="canonical" href="https://bigheadghost.github.io/post/dive-into-project-euler-part-1-1-20/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<link href="/dist/even.min.css?v=2.6.4" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+<meta property="og:title" content="Dive into Project Euler Part 1 (1-20)" />
+<meta property="og:description" content="Although calculation of mathematica codes could be slower than those written in C/C&#43;&#43;, or even those in python, the prodigious and interesting if not funny functions do save coding time a lot.
+
+Problem 1
+
+Brute force solution at first thought:
+
+Total@Select[Range[999], 3\[Divides]# || 5\[Divides]# &amp;]
+233168
+
+
+What if the upper limit is extreme large, like \(10^{10}\), or \(10^{10^7}\)? Calculating one after another or even saving them using Range is impossible. Here comes the mathematical way:
+
+top = 10^(10^7) - 1;
+SumMultiplesOf[n_] := (p = Quotient[top, n]; n*p*(p &#43; 1)/2);
+SumMultiplesOf[m_, n_] := SumMultiplesOf[m] &#43; SumMultiplesOf[n] - SumMultiplesOf[LCM[m, n]];
+N[SumMultiplesOf[3, 5], 2] // AbsoluteTiming
+{2.222280, 2.3*10^19999999}
+
+
+Problem 2
+
+n=NestWhile[# &#43; 1 &amp;, 1, Fibonacci@# &lt;= 4*^6 &amp;] - 1
+Total@Select[Array[Fibonacci,n] ,  EvenQ]
+4613732
+
+
+Even numbers appear every 3rd positions in Fibonacci series:
+
+Total@Table[Fibonacci@i, {i, 3, n, 3}]
+
+
+Problem 3
+
+Max[FactorInteger[600851475143][[All, 1]]]
+6857
+
+
+Problem 4
+
+Catch@Scan[If[FromDigit@Reverse@IntegerDigits@# == #, Throw[#]] &amp;, Reverse@Sort@Flatten@Table[i*j, {i, 999, 100, -1}, {j, i, 100, -1}]]
+906609
+
+
+Problem 5
+
+LCM @@ Range[20]
+232792560
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigheadghost.github.io/post/dive-into-project-euler-part-1-1-20/" />
+
+
+
+<meta property="article:published_time" content="2014-08-29T08:41:09&#43;08:00"/>
+
+<meta property="article:modified_time" content="2014-08-29T08:41:09&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Dive into Project Euler Part 1 (1-20)">
+<meta itemprop="description" content="Although calculation of mathematica codes could be slower than those written in C/C&#43;&#43;, or even those in python, the prodigious and interesting if not funny functions do save coding time a lot.
+
+Problem 1
+
+Brute force solution at first thought:
+
+Total@Select[Range[999], 3\[Divides]# || 5\[Divides]# &amp;]
+233168
+
+
+What if the upper limit is extreme large, like \(10^{10}\), or \(10^{10^7}\)? Calculating one after another or even saving them using Range is impossible. Here comes the mathematical way:
+
+top = 10^(10^7) - 1;
+SumMultiplesOf[n_] := (p = Quotient[top, n]; n*p*(p &#43; 1)/2);
+SumMultiplesOf[m_, n_] := SumMultiplesOf[m] &#43; SumMultiplesOf[n] - SumMultiplesOf[LCM[m, n]];
+N[SumMultiplesOf[3, 5], 2] // AbsoluteTiming
+{2.222280, 2.3*10^19999999}
+
+
+Problem 2
+
+n=NestWhile[# &#43; 1 &amp;, 1, Fibonacci@# &lt;= 4*^6 &amp;] - 1
+Total@Select[Array[Fibonacci,n] ,  EvenQ]
+4613732
+
+
+Even numbers appear every 3rd positions in Fibonacci series:
+
+Total@Table[Fibonacci@i, {i, 3, n, 3}]
+
+
+Problem 3
+
+Max[FactorInteger[600851475143][[All, 1]]]
+6857
+
+
+Problem 4
+
+Catch@Scan[If[FromDigit@Reverse@IntegerDigits@# == #, Throw[#]] &amp;, Reverse@Sort@Flatten@Table[i*j, {i, 999, 100, -1}, {j, i, 100, -1}]]
+906609
+
+
+Problem 5
+
+LCM @@ Range[20]
+232792560
+
+
+">
+
+
+<meta itemprop="datePublished" content="2014-08-29T08:41:09&#43;08:00" />
+<meta itemprop="dateModified" content="2014-08-29T08:41:09&#43;08:00" />
+<meta itemprop="wordCount" content="503">
+
+
+
+<meta itemprop="keywords" content="Mathematica," />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Dive into Project Euler Part 1 (1-20)"/>
+<meta name="twitter:description" content="Although calculation of mathematica codes could be slower than those written in C/C&#43;&#43;, or even those in python, the prodigious and interesting if not funny functions do save coding time a lot.
+
+Problem 1
+
+Brute force solution at first thought:
+
+Total@Select[Range[999], 3\[Divides]# || 5\[Divides]# &amp;]
+233168
+
+
+What if the upper limit is extreme large, like \(10^{10}\), or \(10^{10^7}\)? Calculating one after another or even saving them using Range is impossible. Here comes the mathematical way:
+
+top = 10^(10^7) - 1;
+SumMultiplesOf[n_] := (p = Quotient[top, n]; n*p*(p &#43; 1)/2);
+SumMultiplesOf[m_, n_] := SumMultiplesOf[m] &#43; SumMultiplesOf[n] - SumMultiplesOf[LCM[m, n]];
+N[SumMultiplesOf[3, 5], 2] // AbsoluteTiming
+{2.222280, 2.3*10^19999999}
+
+
+Problem 2
+
+n=NestWhile[# &#43; 1 &amp;, 1, Fibonacci@# &lt;= 4*^6 &amp;] - 1
+Total@Select[Array[Fibonacci,n] ,  EvenQ]
+4613732
+
+
+Even numbers appear every 3rd positions in Fibonacci series:
+
+Total@Table[Fibonacci@i, {i, 3, n, 3}]
+
+
+Problem 3
+
+Max[FactorInteger[600851475143][[All, 1]]]
+6857
+
+
+Problem 4
+
+Catch@Scan[If[FromDigit@Reverse@IntegerDigits@# == #, Throw[#]] &amp;, Reverse@Sort@Flatten@Table[i*j, {i, 999, 100, -1}, {j, i, 100, -1}]]
+906609
+
+
+Problem 5
+
+LCM @@ Range[20]
+232792560
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Reading and Thinking</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a><a href="/zh">
+        <li class="mobile-menu-item">中文(Chinese)</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Reading and Thinking</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/zh">中文(Chinese)</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Dive into Project Euler Part 1 (1-20)</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-08-29 08:41:09 CST </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#problem-1">Problem 1</a></li>
+<li><a href="#problem-2">Problem 2</a></li>
+<li><a href="#problem-3">Problem 3</a></li>
+<li><a href="#problem-4">Problem 4</a></li>
+<li><a href="#problem-5">Problem 5</a></li>
+<li><a href="#problem-6">Problem 6</a></li>
+<li><a href="#problem-7">Problem 7</a></li>
+<li><a href="#problem-8">Problem 8</a></li>
+<li><a href="#problem-9">Problem 9</a></li>
+<li><a href="#problem-10">Problem 10</a></li>
+<li><a href="#problem-11">Problem 11</a></li>
+<li><a href="#problem-12">Problem 12</a></li>
+<li><a href="#problem-13">Problem 13</a></li>
+<li><a href="#problem-14">Problem 14</a></li>
+<li><a href="#problem-15">Problem 15</a></li>
+<li><a href="#problem-16">Problem 16</a></li>
+<li><a href="#problem-17">Problem 17</a></li>
+<li><a href="#problem-18">Problem 18</a></li>
+<li><a href="#problem-19">Problem 19</a></li>
+<li><a href="#problem-20">Problem 20</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p>Although calculation of mathematica codes could be slower than those written in C/C++, or even those in python, the prodigious and interesting if not funny functions do save coding time a lot.</p>
+
+<h1 id="problem-1">Problem 1</h1>
+
+<p>Brute force solution at first thought:</p>
+
+<pre><code>Total@Select[Range[999], 3\[Divides]# || 5\[Divides]# &amp;]
+233168
+</code></pre>
+
+<p>What if the upper limit is extreme large, like \(10^{10}\), or \(10^{10^7}\)? Calculating one after another or even saving them using Range is impossible. Here comes the mathematical way:</p>
+
+<pre><code>top = 10^(10^7) - 1;
+SumMultiplesOf[n_] := (p = Quotient[top, n]; n*p*(p + 1)/2);
+SumMultiplesOf[m_, n_] := SumMultiplesOf[m] + SumMultiplesOf[n] - SumMultiplesOf[LCM[m, n]];
+N[SumMultiplesOf[3, 5], 2] // AbsoluteTiming
+{2.222280, 2.3*10^19999999}
+</code></pre>
+
+<h1 id="problem-2">Problem 2</h1>
+
+<pre><code>n=NestWhile[# + 1 &amp;, 1, Fibonacci@# &lt;= 4*^6 &amp;] - 1
+Total@Select[Array[Fibonacci,n] ,  EvenQ]
+4613732
+</code></pre>
+
+<p>Even numbers appear every 3rd positions in Fibonacci series:</p>
+
+<pre><code>Total@Table[Fibonacci@i, {i, 3, n, 3}]
+</code></pre>
+
+<h1 id="problem-3">Problem 3</h1>
+
+<pre><code>Max[FactorInteger[600851475143][[All, 1]]]
+6857
+</code></pre>
+
+<h1 id="problem-4">Problem 4</h1>
+
+<pre><code>Catch@Scan[If[FromDigit@Reverse@IntegerDigits@# == #, Throw[#]] &amp;, Reverse@Sort@Flatten@Table[i*j, {i, 999, 100, -1}, {j, i, 100, -1}]]
+906609
+</code></pre>
+
+<h1 id="problem-5">Problem 5</h1>
+
+<pre><code>LCM @@ Range[20]
+232792560
+</code></pre>
+
+<p></p>
+
+<h1 id="problem-6">Problem 6</h1>
+
+<p>Sum is clever to use equations like \(\sum_{i=1}^{n}{i}=\frac{n(n+1)}{2}\)</p>
+
+<pre><code>(Sum[i, {i, 100}])^2 - Sum[i^2, {i, 100}]
+25164150
+</code></pre>
+
+<h1 id="problem-7">Problem 7</h1>
+
+<pre><code>Prime[10001]
+104743
+</code></pre>
+
+<h1 id="problem-8">Problem 8</h1>
+
+<pre><code>Max[Times @@@ Partition[IntegerDigits[n], 13, 1]]
+23514624000
+</code></pre>
+
+<h1 id="problem-9">Problem 9</h1>
+
+<pre><code>a b c /. Solve[{a^2 + b^2 == c^2, a + b + c == 1000, c&gt;a &gt; b &gt; 0}, {a, b, c}, Integers]
+{31875000}
+</code></pre>
+
+<h1 id="problem-10">Problem 10</h1>
+
+<pre><code>Sum[Prime[i], {i, PrimePi[2*^6]}]
+142913828922
+</code></pre>
+
+<h1 id="problem-11">Problem 11</h1>
+
+<pre><code>Max@Table[{Times@@@a, Times@@Diagonal@a, Times@@@Transpose@a, Times@@Diagonal@Reverse[a, 2]}, {a, Flatten[Partition[n, {4, 4}, 1], 1]}]
+70600674
+</code></pre>
+
+<h1 id="problem-12">Problem 12</h1>
+
+<pre><code>i = 1; NestWhile[(i++; # + i) &amp;, 1, Length@Divisors@# &lt;= 500 &amp;]
+76576500
+</code></pre>
+
+<h1 id="problem-13">Problem 13</h1>
+
+<pre><code>FromDigits@Take[IntegerDigits@Total@nl, 10]
+5537376230
+</code></pre>
+
+<h1 id="problem-14">Problem 14</h1>
+
+<p>Using memoized function:</p>
+
+<pre><code>f[1] = 1;
+f[n_] := f[n] = If[EvenQ[n], f[n/2] + 1, f[3 n + 1] + 1];
+Ordering[Table[f[i], {i, 1*^6}], -1]]//AbsoluteTiming
+{27.099414, {837799}}
+</code></pre>
+
+<p>Using compiled function:</p>
+
+<pre><code>f=Compile[{ {top, _Integer} }, Module[{len, maxLen = 0, maxN = 0}, 
+Do[len = 1;
+     NestWhile[(len++; If[EvenQ@#, #~Quotient~2, 3 # + 1]) &amp;, n, # != 1 &amp;];
+     If[len &gt;  maxLen, {maxLen, maxN} = {len + Floor[Log[2, top/N[n]]],  n}], {n, 1, top, 2}];
+    {maxLen, maxN}], CompilationTarget -&gt; &quot;C&quot;];
+f[10^6] // AbsoluteTiming
+{5.010632, {525, 837799}}
+</code></pre>
+
+<h1 id="problem-15">Problem 15</h1>
+
+<p>memoized function way, comes along with heavy memory load and deeply-nested recursive calls.</p>
+
+<pre><code>f[0, n_] = f[m_, 0] = 1;
+f[m_, n_] := f[m, n] = f[m - 1, n] + f[m, n - 1];
+f[20, 20]
+137846528820
+</code></pre>
+
+<p>In a m \(\times\) n grid, each path contains exactly n movements to the right ( R ) and m movements down (D). So here it is \({m+n \choose m}\)</p>
+
+<pre><code>Binomial[40, 20]
+</code></pre>
+
+<h1 id="problem-16">Problem 16</h1>
+
+<pre><code>Total[IntegerDigits[2^1000]]
+1366
+</code></pre>
+
+<h1 id="problem-17">Problem 17</h1>
+
+<p><a href="http://mathematica.stackexchange.com/a/1075">inWords</a></p>
+
+<pre><code>StringReplace[StringJoin[inWords /@ Range[1000]],   &quot; &quot; -&gt; &quot;&quot;] // StringLength
+21124
+</code></pre>
+
+<h1 id="problem-18">Problem 18</h1>
+
+<pre><code>d=Import[&quot;R:\\triangle.txt&quot;, &quot;Table&quot;];
+f[Length[d], j_] := d[[Length[d], j]];
+f[i_, j_] := f[i, j] = d[[i, j]] + Max[f[i + 1, j], f[i + 1, j + 1]];
+f[1, 1]
+1074
+</code></pre>
+
+<p>or using patterns to calculate bottom-up</p>
+
+<pre><code>d //. {x___, a_, b_} :&gt; {x, a + Max /@ Partition[b, 2, 1]}
+</code></pre>
+
+<h1 id="problem-19">Problem 19</h1>
+
+<pre><code>Count[DateRange[{1901, 1}, {2000, 12}, &quot;Month&quot;],d_ /; DayName@d == Sunday]
+171
+</code></pre>
+
+<h1 id="problem-20">Problem 20</h1>
+
+<pre><code>Total@IntegerDigits@Factorial@100
+648
+</code></pre>
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/mathematica/">Mathematica</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/dive-into-project-euler-part-2-21-40/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Dive into Project Euler Part 2 (21-40)</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/pythonchallenge-solutions-using-mathematica/">
+            <span class="next-text nav-default">PythonChallenge Solutions Using Mathematica</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'bigheadghost';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink" target="_blank">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  
+      </div>  
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:bigheadghost@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://math.stackexchange.com/users/157947/bigheadghost" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/bigheadghost" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://www.douban.com/people/1254984/" class="iconfont icon-douban" title="douban"></a>
+  <a href="https://bigheadghost.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2014 - 
+    2017
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">bigheadghost</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/even.min.js?v=2.6.4"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+
+
+
+</body>
+</html>

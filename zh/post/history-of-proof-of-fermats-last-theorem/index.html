@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>History of Proof of Fermat&#39;s Last Theorem - Reading and Thinking</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigheadghost" />
+  <meta name="description" content="推荐阅读Simon Singh写的这本探险小说《费马大定理：一个困惑了世间智者358年的谜》
+一、缘起 1637年， 法国数学家费马(Fermat 1601-1665)在看丢番图的&amp;lt;算术&amp;gt;(的拉丁文译本)时，被毕达哥拉斯三元组的种类和数量之多吸引。考虑 \( x^2&#43;y^2=z^2 \) 的一种变异方程： \( x^3&#43;y^3=z^3 \) 反复的试算表明，要找到方程的正整数解是困难的。他进一步将幂改成大于3的数，得到新的方程，并且发现要寻找每一个这种方程的解有着同样的困难。费马在书的页边处写下了一个结论：
+ 不可能将一个立方数写成两个立方数之和；或者将一个4次幂写成两个4次幕之和；或者，总的来说，不可能将一个高于2次的幕写成两个同样次幂的和。
+ 并且给出了自己的“证明”：
+ 我有一个对这个命题的十分美妙的证明，这里空白太小，写不下。
+ 1665年费马去世，1670年他的儿子整理出版了附有费马批注的丢番图的算术， 费马猜想开始为世人所知。 数林中一场腥风血雨拉开了帷幕，数百年来，不计其数的人前赴后继在这迷一样的荒原上探险：绘就的是地图，而真正的探险者却已消失在别处……
+" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.30.2" />
+
+
+<link rel="canonical" href="https://bigheadghost.github.io/zh/post/history-of-proof-of-fermats-last-theorem/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<link href="/dist/even.min.css?v=2.6.4" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+<meta property="og:title" content="History of Proof of Fermat&#39;s Last Theorem" />
+<meta property="og:description" content="推荐阅读Simon Singh写的这本探险小说《费马大定理：一个困惑了世间智者358年的谜》
+
+一、缘起
+
+1637年， 法国数学家费马(Fermat 1601-1665)在看丢番图的&lt;算术&gt;(的拉丁文译本)时，被毕达哥拉斯三元组的种类和数量之多吸引。考虑 \( x^2&#43;y^2=z^2 \) 的一种变异方程： \( x^3&#43;y^3=z^3 \) 反复的试算表明，要找到方程的正整数解是困难的。他进一步将幂改成大于3的数，得到新的方程，并且发现要寻找每一个这种方程的解有着同样的困难。费马在书的页边处写下了一个结论：
+
+
+不可能将一个立方数写成两个立方数之和；或者将一个4次幂写成两个4次幕之和；或者，总的来说，不可能将一个高于2次的幕写成两个同样次幂的和。
+
+
+并且给出了自己的“证明”：
+
+
+我有一个对这个命题的十分美妙的证明，这里空白太小，写不下。
+
+
+1665年费马去世，1670年他的儿子整理出版了附有费马批注的丢番图的算术， 费马猜想开始为世人所知。 数林中一场腥风血雨拉开了帷幕，数百年来，不计其数的人前赴后继在这迷一样的荒原上探险：绘就的是地图，而真正的探险者却已消失在别处……
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigheadghost.github.io/zh/post/history-of-proof-of-fermats-last-theorem/" />
+
+
+
+<meta property="article:published_time" content="2006-02-28T22:17:59&#43;08:00"/>
+
+<meta property="article:modified_time" content="2006-02-28T22:17:59&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="History of Proof of Fermat&#39;s Last Theorem">
+<meta itemprop="description" content="推荐阅读Simon Singh写的这本探险小说《费马大定理：一个困惑了世间智者358年的谜》
+
+一、缘起
+
+1637年， 法国数学家费马(Fermat 1601-1665)在看丢番图的&lt;算术&gt;(的拉丁文译本)时，被毕达哥拉斯三元组的种类和数量之多吸引。考虑 \( x^2&#43;y^2=z^2 \) 的一种变异方程： \( x^3&#43;y^3=z^3 \) 反复的试算表明，要找到方程的正整数解是困难的。他进一步将幂改成大于3的数，得到新的方程，并且发现要寻找每一个这种方程的解有着同样的困难。费马在书的页边处写下了一个结论：
+
+
+不可能将一个立方数写成两个立方数之和；或者将一个4次幂写成两个4次幕之和；或者，总的来说，不可能将一个高于2次的幕写成两个同样次幂的和。
+
+
+并且给出了自己的“证明”：
+
+
+我有一个对这个命题的十分美妙的证明，这里空白太小，写不下。
+
+
+1665年费马去世，1670年他的儿子整理出版了附有费马批注的丢番图的算术， 费马猜想开始为世人所知。 数林中一场腥风血雨拉开了帷幕，数百年来，不计其数的人前赴后继在这迷一样的荒原上探险：绘就的是地图，而真正的探险者却已消失在别处……
+">
+
+
+<meta itemprop="datePublished" content="2006-02-28T22:17:59&#43;08:00" />
+<meta itemprop="dateModified" content="2006-02-28T22:17:59&#43;08:00" />
+<meta itemprop="wordCount" content="7770">
+
+
+
+<meta itemprop="keywords" content="history,mathematics," />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="History of Proof of Fermat&#39;s Last Theorem"/>
+<meta name="twitter:description" content="推荐阅读Simon Singh写的这本探险小说《费马大定理：一个困惑了世间智者358年的谜》
+
+一、缘起
+
+1637年， 法国数学家费马(Fermat 1601-1665)在看丢番图的&lt;算术&gt;(的拉丁文译本)时，被毕达哥拉斯三元组的种类和数量之多吸引。考虑 \( x^2&#43;y^2=z^2 \) 的一种变异方程： \( x^3&#43;y^3=z^3 \) 反复的试算表明，要找到方程的正整数解是困难的。他进一步将幂改成大于3的数，得到新的方程，并且发现要寻找每一个这种方程的解有着同样的困难。费马在书的页边处写下了一个结论：
+
+
+不可能将一个立方数写成两个立方数之和；或者将一个4次幂写成两个4次幕之和；或者，总的来说，不可能将一个高于2次的幕写成两个同样次幂的和。
+
+
+并且给出了自己的“证明”：
+
+
+我有一个对这个命题的十分美妙的证明，这里空白太小，写不下。
+
+
+1665年费马去世，1670年他的儿子整理出版了附有费马批注的丢番图的算术， 费马猜想开始为世人所知。 数林中一场腥风血雨拉开了帷幕，数百年来，不计其数的人前赴后继在这迷一样的荒原上探险：绘就的是地图，而真正的探险者却已消失在别处……
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Reading and Thinking</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/zh">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/zh/post">
+        <li class="mobile-menu-item">存档</li>
+      </a><a href="/zh/tags">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/">
+        <li class="mobile-menu-item">English(英文)</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Reading and Thinking</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/zh">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/zh/post">存档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/zh/tags">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/">English(英文)</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">History of Proof of Fermat&#39;s Last Theorem</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2006-02-28 22:17:59 CST </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#一-缘起">一、缘起</a></li>
+<li><a href="#二-分析的化身">二、分析的化身</a></li>
+<li><a href="#三-勒布朗先生">三、“勒布朗先生”</a></li>
+<li><a href="#四-库默尔证明">四、库默尔证明</a></li>
+<li><a href="#五-自杀未遂的沃尔夫斯凯尔">五、自杀未遂的沃尔夫斯凯尔</a></li>
+<li><a href="#六-哥德尔的不可判定定理">六、哥德尔的不可判定定理</a></li>
+<li><a href="#七-计算机">七、计算机</a></li>
+<li><a href="#八-巨人肩膀上的安德鲁-怀尔斯">八、巨人肩膀上的安德鲁·怀尔斯</a>
+<ul>
+<li><a href="#a-发现问题-理解问题-吸引-投入">A. 发现问题， 理解问题 -&gt; 吸引， 投入</a></li>
+<li><a href="#b-掌握必备知识-比较-定位-自信">B. 掌握必备知识 -&gt; 比较、定位 -&gt; 自信</a></li>
+<li><a href="#c-经过一年的失败之后-改变策略-从别人的错误中学习-汲取经验">C. 经过一年的失败之后，改变策略，从别人的错误中学习，汲取经验</a></li>
+<li><a href="#d-怀疑-肯定-再怀疑-的泥淖">D. 怀疑 -&gt; 肯定 -&gt; 再怀疑 的泥淖</a></li>
+<li><a href="#e-职业数学家">E. 职业数学家</a></li>
+<li><a href="#f-谷山志村猜想与朗兰兹纲领">F. 谷山志村猜想与朗兰兹纲领</a></li>
+<li><a href="#g-弗赖方程的咖啡惊魂">G. 弗赖方程的咖啡惊魂</a></li>
+<li><a href="#h-致敬">H. 致敬</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p>推荐阅读Simon Singh写的这本探险小说《<a href="https://book.douban.com/subject/1322358/">费马大定理：一个困惑了世间智者358年的谜</a>》</p>
+
+<h1 id="一-缘起">一、缘起</h1>
+
+<p>1637年， 法国数学家费马(Fermat 1601-1665)在看丢番图的&lt;算术&gt;(的拉丁文译本)时，被毕达哥拉斯三元组的种类和数量之多吸引。考虑 \( x^2+y^2=z^2 \) 的一种变异方程： \( x^3+y^3=z^3 \) 反复的试算表明，要找到方程的正整数解是困难的。他进一步将幂改成大于3的数，得到新的方程，并且发现要寻找每一个这种方程的解有着同样的困难。费马在书的页边处写下了一个结论：</p>
+
+<blockquote>
+<p>不可能将一个立方数写成两个立方数之和；或者将一个4次幂写成两个4次幕之和；或者，总的来说，不可能将一个高于2次的幕写成两个同样次幂的和。</p>
+</blockquote>
+
+<p>并且给出了自己的“证明”：</p>
+
+<blockquote>
+<p>我有一个对这个命题的十分美妙的证明，这里空白太小，写不下。</p>
+</blockquote>
+
+<p>1665年费马去世，1670年他的儿子整理出版了附有费马批注的丢番图的算术， 费马猜想开始为世人所知。 数林中一场腥风血雨拉开了帷幕，数百年来，不计其数的人前赴后继在这迷一样的荒原上探险：绘就的是地图，而真正的探险者却已消失在别处……<br />
+</p>
+
+<h1 id="二-分析的化身">二、分析的化身</h1>
+
+<p>瑞士数学家欧拉(Euler 1707-1783)有着令人难以置信的直觉和超人的记忆力，据说他能够在头脑中详细列出一大堆完整无缺的演算式而无需用笔写在纸上。在整个欧洲他被誉为“分析的化身”，法国科学院院士弗朗索瓦·阿拉戈(Francois Arago)说，“欧拉计算时就像人呼吸或者鹰乘风飞翔一样无需明显的努力。”</p>
+
+<p>欧拉在费马那本有标记的书中别的一个隐蔽的地方觉察出费马用无穷递降法概略证明了费马猜想在n=4的特殊情况： 为了证明\( x^4+y^4=z^4 \)无解， 费马假设存在一个假定解：三元组(X1，Y1，Z1)。 通过研究(X1，Y1，Z1)的性质，费马能够证明： 如果这个假设解存在， 那么一定存在一个更小的解(X2，Y2，Z2)。 如此反复，费马找到了一列逐步递减的解，理论上它们将永远继续下去，产生越来越小的解，然而，x，y和z必须是整数，因此这个永无止境的梯队是不可能存在的，因为必定会有一个最小的可能解存在。这个矛盾证明了最初的关于存在一个解(X1，Y1，Z1)的假设一定是错的。</p>
+
+<p>1753年8月4日，欧拉在给普鲁士数学家克里斯蒂安·哥德巴赫(Chritian Goldbach)的信中宣布，他采用费马的无穷递降法成功地证明了n=3的情形(通过引入虚数 i )。</p>
+
+<p>然而很不走运的是，欧拉使其论证适用于其余情形的努力以失败告终。尽管如此，这仍然是一个巨大的成就，对情形n=3的证明是特别有意义的，因为数字3是一个质数。数学家们认为质数是最重要的数，因为它们是数学中的原子。质数是数的建筑材料，因为所有别的数都可以由若干个质数相乘而得。为了证明费马大定理对n的一切值适合，我们仅仅需要证明它对n的所有质数值适合。所有其他的情形只不过是质数情形的倍数，因而无疑也会被证明。</p>
+
+<p>直觉上，这大大地简化了问题，因为你可以忽略那些涉及非质数的n的方程。现在剩下的方程的个数大大地减少了。而实际上，仍然有无穷个方程在等待着……</p>
+
+<h1 id="三-勒布朗先生">三、“勒布朗先生”</h1>
+
+<p>索非·热尔曼(Sophie German 1776-1831)，因为当时法国对于受过教育的妇女的大男子主义态度，使得她不能和男性一样进学校学习自己痴迷的数学，不得已冒名为一个男学生“勒布朗”偷偷地进行。<br />
+1808年(<a href="http://www.agnesscott.edu/lriddle/women/germain.htm">ref</a>)在她给高斯的一封信中提到自己证明费马猜想的一种新策略：她直接的目标并不是去证明一种特殊的情形，而是一次就得出适合许多种情形的解答。对于使得(2p+1)也是质数的那类质数p而言(这种p被称为热尔曼质数)，她论证费马方程不大可能有解。因为如果有解存在，那么x，y中的一个或z将是n的倍数，而这就将对解加上非常严格的限制。她的同行们对她的质数表上的质数一个一个地研究，尝试证明x，y或z不可能是n的倍数，从而证明对n的哪些值解不存在。</p>
+
+<p>1825年，由于两位相差一代年龄的数学家古斯塔夫·勒瑞纳-狄利克雷(Gustav Lej eune-Dirichlet)和阿德利昂-玛利。埃·勒让德(Adrien-Marie Legendre)的工作，使热尔曼的方法第一次获得完满的成功。证明了n=5的情形不存在解。</p>
+
+<p>14年后，法国人加里布尔·拉梅(Gabriel Lamé 1795-1870)对热尔曼的方法作了一些进一步的、巧妙的补充，并证明了n=7的情形。热尔曼己经告诉数论家们怎样去攻克完整的一批质数，现在，继续一次证明费马大定理的一个情形的任务则留给她的同行们去共同努力了。</p>
+
+<h1 id="四-库默尔证明">四、库默尔证明</h1>
+
+<p>在索菲·热尔曼的突破性工作之后，法国科学院设立了一系列的奖，包括金质奖章和3000法郎的奖金，以奖励能最终揭开费马大定理的神秘面纱的数学家。现在，除了享有证明费马大定理的声望外，这个挑战还附加了巨额的奖金。</p>
+
+<p>1847年3月，科学院的一次会议上，法国数学家柯西(Cauchy 1789-1857)和拉梅都声称自己证明了费马猜想，即将公布完整的证明。 接着5月份一次会议上有人宣读了德国数学家恩斯特·库默尔(Ernst Kummer)的一封信，他指出了柯西和拉梅证明的逻辑漏洞，并论证了费马猜想的完整证明是当时的数学方法不可能实现的。这是数学逻辑的光辉一页，但也是对希望能解决这个世界上最棘手的数学问题的整整一代数学家的巨大打击。</p>
+
+<h1 id="五-自杀未遂的沃尔夫斯凯尔">五、自杀未遂的沃尔夫斯凯尔</h1>
+
+<p>1908年，达姆斯塔特(barmstadt)的一位德国实业家保罗·沃尔夫斯凯尔(Paul Wolfskehl) 因为追mm被据，极端失望之余决定自杀。 他定下了自杀的日子，决定在午夜钟声响起时开枪射击自己的头部。在最后一天，他写下了遗嘱，并且给他所有的亲朋好友和亲属写了信。沃尔夫斯凯尔的高效率使得所有的事情略早于他午夜的时限就办完了。为了消磨这几个小时，他到图书室里开始翻阅数学书籍。不久，他就不知不觉地被库默尔解释柯西和拉梅失败的原因的经典论文吸引住了。</p>
+
+<p>忽然间，他发现了证明一个逻辑上的漏洞，直到黎明时分，他作出了一个小证明来补救库默尔的证明。说明费马猜想仍旧是不可达的。然而规定的自杀时间已经过了，于是沃尔夫斯凯尔撕毁了他写好的告别信，重新立了他的遗嘱。把自己财产中的一大部分遗赠作为一个奖，规定奖给任何能证明费马大定理的人。奖金为10万马克，按现在的币值计算其价值超过100万英镑。这是他对这个挽救过他生命的复杂难题的报恩方式。1908年沃尔夫斯凯尔去世。</p>
+
+<p>值得注意的是，只有证明费马猜想的人才能拿钱，而证明它不成立的人则一分钱也没有，呵呵 ：)</p>
+
+<h1 id="六-哥德尔的不可判定定理">六、哥德尔的不可判定定理</h1>
+
+<p>几百年来，数学家们一直在使用逻辑证明，每一代新的数学家都扩大了他们的重大成果并创造了关于数和几何的新概念，取得的进步是非凡的。然而，到了19世纪末，数理逻辑学家们不是向前看而是开始回过头来审视作为这一切的支柱的数学基础。他们想要证实数学的基本原理并且严格地从基本原理出发重建所有的数学。</p>
+
+<p>众多逻辑学家参与了这个缓慢而棘手的只使用最少个数的公理来重建这座无比复杂的数学知识大厦的过程。想法是完全按照最严格的逻辑标准对数学家认为他们已经知道的东西进行整顿。除了净化已知的东西外，另一个希望是这种基要主义的研究方法也能把包括费马大定理在内的至今尚未解决的问题搞清楚。</p>
+
+<p>这个计划是由德国数学家希尔伯特(Hilbert 1862-1943)领导进行的，1900年8月8日希尔伯特在巴黎的国际数学家大会上作了一个历史性的演讲。希尔伯特提出了数学中的23个未解决的问题，他相信这些问题是最迫切需要解决的重要问题。试图借此实现建立可信的并且相容的数学体系的梦想。</p>
+
+<p>1902年英国逻辑学家贝特兰·罗素(1872-1970)提出存在悖论(图书目录册悖论)。</p>
+
+<p>1931年奥地利数学家库特·哥德尔(Kurt Godel 1906-1978)提出不可判定定理， 说明存在既不能证明又不能证伪的定理。</p>
+
+<p>或许费马猜想根本是不可判定的！</p>
+
+<h1 id="七-计算机">七、计算机</h1>
+
+<p>随着计算机的出现，费马猜想的验证计算进展似乎变得快速起来。二战后，一组组的计算机科学家和数学家对于500以内，然后是1000以内，再是10000以内的n的值证明了费马大定理。在80年代，伊利诺伊大学的萨缪尔·S·瓦格斯塔夫(SamuelS·Wagstaff)将范围提高到25000，然后是后来的400万……</p>
+
+<p>然而单靠计算机的蛮力嘎吱嘎吱地碾过一个一个的数是不可能到达无穷的。戴维·洛奇(David Lodge)在他的著作《常看电影的人们》(The Picturegoers)中对相当于这个概念的永恒作了形象生动的描述：</p>
+
+<blockquote>
+<p>你想想一个有地球那么大的钢球，每隔100万年才偶然有一只苍蝇飞落在它上面，当这个钢球因苍蝇飞落时的摩擦而损耗殆尽时，永恒甚至根本还没有开始。</p>
+</blockquote>
+
+<h1 id="八-巨人肩膀上的安德鲁-怀尔斯">八、巨人肩膀上的安德鲁·怀尔斯</h1>
+
+<p>1963年，10岁的安德鲁·怀尔斯(Andrew Wiles，英国)在图书馆里注意到了&lt;大问题&gt;(The Last Problem, Eric Temple Bell著)上的这个神秘的问题。</p>
+
+<h2 id="a-发现问题-理解问题-吸引-投入">A. 发现问题， 理解问题 -&gt; 吸引， 投入</h2>
+
+<blockquote>
+<p>它看上去如此简单，但历史上所有的大数学家都未能解决它。这里正摆着一个我——一个10岁的孩子-能理解的问题，从那个时刻起，我知道我永远不会放弃它。我必须解决它。</p>
+</blockquote>
+
+<h2 id="b-掌握必备知识-比较-定位-自信">B. 掌握必备知识 -&gt; 比较、定位 -&gt; 自信</h2>
+
+<blockquote>
+<p>我发现了这个历时三百多年还未能解决的问题。我想到我的许多校友并不热衷于数学，所以我不去与我的同龄人讨论这个问题，但我有一个老师，他曾研究过数学，他给了我一本数论方面的书。这本书为我如何着手解决这个问题提供了一些线索。我假定费马懂得的数学并不比我已经懂得的多很多，根据这个假定我开始工作。我尝试使用他可能用过的方法来找出他的遗失了的解法。</p>
+</blockquote>
+
+<h2 id="c-经过一年的失败之后-改变策略-从别人的错误中学习-汲取经验">C. 经过一年的失败之后，改变策略，从别人的错误中学习，汲取经验</h2>
+
+<blockquote>
+<p>费马大定理有这么难以置信的传奇性经历，许多人都思考过它，而且过去试图解决这个问题并失败了的大数学家越多，它的挑战性就越大，它的神秘色彩就越浓。在18世纪和19世纪中，许多数学家用过如此多的不同方法试图解决它，所以，作为一个十几岁的少年，我决定我应该研究那些方法，并且设法理解他们一直在做的那些工作。</p>
+</blockquote>
+
+<h2 id="d-怀疑-肯定-再怀疑-的泥淖">D. 怀疑 -&gt; 肯定 -&gt; 再怀疑 的泥淖</h2>
+
+<p>在整个青少年时代，安德鲁·怀尔斯研究了欧拉、热尔曼、柯西和拉梅的工作，最后研究了库默尔的工作 (1847年库尔默论证了费马猜想的完整证明是当时的数学方法不可能实现的。) 直到他成为牛津大学的学生时， 仍然没有进展。</p>
+
+<p>仿佛库尔默的那个“诅咒”对他所处的时代依然有效。 然而在历史上曾经也有过一些证明是经过一百多年的努力才最终被发现的，而且其中有一些情形，解决问题的那种洞察力的闪现并未依靠新的数学。相反它是很久以前就能够被完成的那种证明， 并不需要多么高深甚至新潮的理论知识储备。(比如“点猜测”： 不可能画出一个点图使得每条直线上至少有3个点，所有点在同一条直线上的图形除外)</p>
+
+<p>然而1931年哥德尔的不可判定定理再次让整个数学界泄气，计算机验证的雪球越滚越大，可发现证明的希望依然渺茫……</p>
+
+<h2 id="e-职业数学家">E. 职业数学家</h2>
+
+<p>1975年安德鲁开始其在剑桥大学的研究生生活，老师是个澳大利亚人，约翰·科茨(John Coates)。10年研究未果，既已加入职业数学界的行列，安德鲁只能暂时放弃儿时的梦想：</p>
+
+<blockquote>
+<p>当我来到剑桥时，我真正地把费马搁在一边了。这不是因为我忘了它-它总在我心头–而是我认识到我们所掌握的用来攻克它的全部技术已经反复用了130年，这些技术似乎没有真正地触及问题的根本所在。研究费马可能带来的问题是，你也许会虚度岁月而一无所成。只要研究某个问题时能在研究过程中产生出使人感兴趣的数学，那么研究它就是值得的–即使你最终也没有解决它。判断一个数学问题是否是好的，其标准就是看它能否产生新的数学，而不是问题本身。</p>
+</blockquote>
+
+<p>而作为安德鲁导师的科茨也确实很令人钦佩(值得现在高校的”老板”们学习啊~~)</p>
+
+<blockquote>
+<p>我认为研究生导师能为学生做的一切就是设法把他推向一个富有成果的方向。当然，不能保证它一定是一个富有成果的研究方向，但是也许年长的数学家在这过程中能做的一件事是使用他的实用的常识，他的对何为好的领域的直觉，然后，学生能在这个方向上有多大成绩就确实是他自己的事了。</p>
+</blockquote>
+
+<p>最后，科茨决定怀尔斯应该研究数学中称为椭圆曲线的领域。这个决定后来证明是怀尔斯职业生涯的一个转折点，为他提供了他攻克费马大定理的新方法所需要的工具。</p>
+
+<p>椭圆曲线，其实是研究具有如下形式的方程：</p>
+
+<blockquote>
+<p>\(y^2=x^3+ax^2+bx+c\)， a， b， c是任意整数</p>
+</blockquote>
+
+<p>判断该方程是否有整数解，有的话有几个? 通常情况下要在有无穷多个元素的整个整数域内寻找这个问题的答案非常困难，因此考虑问题的一种简化模式： 在一个有限多个数的范围(所谓的时钟算数)中寻找解。由于篇幅问题，关于时钟算数就不作介绍了， 感兴趣的话自己找些资料看，大体上类似与N进制， 在0~N-1这有限个整数内寻解。</p>
+
+<p>一个椭圆方程对于不同的N有着不同的解的个数， 比如E1=1， E2=4…当N趋于无穷时就是原问题的正解啦。</p>
+
+<p>事实上E-序列浓缩着关于它描述的那个椭圆方程的许多信息。如同生物中的DNA携带着构造生命组织所需的全部信息一样，E-序列携带着椭圆方程的本质要素。数学家们希望通过研究E-序列这个数学的DNA，最终能够算出他们曾想要知道的有关椭圆方程的一切东西。</p>
+
+<h2 id="f-谷山志村猜想与朗兰兹纲领">F. 谷山志村猜想与朗兰兹纲领</h2>
+
+<p>1955年9月的一个国际学术讨论会上，日本数学家谷山丰和志村五郎提出猜想：每一个椭圆方程E-序列 和 模形式(modular forms)的M-序列是相同的。</p>
+
+<blockquote>
+<p>一方面是椭圆世界，另一方面是模世界，这两个数学分支都已被集中地但单独地研究过。……， 谷山-志村猜想出现了，这个重大的推测说，在这两个完全不同的世界之间存在着一座桥。数学家们喜欢建造桥梁。<br />
+–-<cite>巴里·梅休尔(Barry Mazur)</cite></p>
+</blockquote>
+
+<p>数学是由未知海洋中的一个个知识孤岛组成的。每个孤岛上使用它们自己独特的语言，这种语言别的岛上的居民是不懂的。而桥的出现，仿佛使得双方忽然一下子多会了一门外语，并且有了解决各自领域里困难问题的新的工具和能力。</p>
+
+<p>谷山志村猜想所具有的这种潜力吸引了普林斯顿高等研究院的罗伯特·朗兰兹(Robert Langlands)。他提出一个设想：在所有主要的数学课题之间都存在这种类似的桥梁。如果所有这些代表桥梁的猜想被证明的话，其回报将是巨大无比的：在某个数学领域中无法解答的任何问题，可以被转换成另一个领域中相应的问题，而在那里有一整套新武器可以用来对付它。如果仍然难以找到解答，那么可以把问题再转换到另一个数学领域中，继续下去直到。它被解决为止。根据朗兰兹纲领，有一天数学家们将能够解决他们的最深奥、最难对付的问题，办法是领着这些问题周游数学王国的各个风景胜地。</p>
+
+<h2 id="g-弗赖方程的咖啡惊魂">G. 弗赖方程的咖啡惊魂</h2>
+
+<p>1984年秋，弗莱在一次研讨会上：假设费马方程有解，那么它可以变形为一个椭圆方程，而这个椭圆方程看起来非常古怪，如此古怪以至于不可能与一个模形式相关。</p>
+
+<p>然而弗赖关于这个方程古怪到不可能模式化的证明存在瑕疵，但却给了数论家门极大的希望。加利福尼亚波克利分校教授肯·里贝特经过18个月的努力后依然只是证明了非常特殊的情形，不知道如何将它推广以得到整个证明。</p>
+
+<p>1986年国际科学家大会， 里贝特和与会的巴里·梅休尔在一家咖啡点里聊及此事。突然， 梅休尔停下来：</p>
+
+<blockquote>
+<p>难道你还不明白？你已经完成了它！你还需要做的一切只是加上一些M-结构的 γ-0，然后再做一遍你的论证，这就行了。它会给出你所需要的一切。</p>
+</blockquote>
+
+<p>这逻辑上深奥的一步，世界上只有少数的数学家能在随便喝一杯咖啡的时间里想出这一步。</p>
+
+<p>现在问题明朗了：要想证明费马猜想，只要证明谷山-志村猜想即可。</p>
+
+<h2 id="h-致敬">H. 致敬</h2>
+
+<p>1986年夏末，在剑桥取得博士后，已经成为普林斯顿大学教授的怀尔斯得到这个消息后开始着手证明。</p>
+
+<p>慎重思考后拟用数学归纳法。首先采用埃瓦里斯特·伽罗瓦的群论思想推倒了第一块多米诺骨牌：每一个E-序列的第一个元素确实可以和一个M-序列的第一个元素配对。</p>
+
+<p>1990年，怀尔斯仍然无法证明如果椭圆方程的一项是模形式的项，那么下一项也应如此。</p>
+
+<p>一年后，怀尔斯打算修改一种称为岩沢理论(Iwasawa theory)的技术，使其变得足够有力，能产生多米诺骨牌效应。</p>
+
+<p>1991年夏，怀尔斯感觉他改进岩沢理论的努力已经失败。查遍所有文献后仍然找不到一种可替代的技术来实现这种突破。在秘密研究5年后，他认为此时应该重返交流圈以便了解更新的数学传闻。果不其然，一次关于椭圆方程的会议上，科茨向怀尔斯提及一种科利瓦金-弗莱切方法。</p>
+
+<p>怀尔斯回到普林斯顿，熟悉这项技术，然后开始改造它。不久，对一种特殊的椭圆方程，他已经使归纳证明奏效。不幸的是，科利瓦金一弗莱切方法对一种特殊的椭圆方程能行得通但不一定对别的椭圆方程行得通。他最终认识到所有的椭圆方程可以分类为不同的族。一旦科利瓦金一弗莱切方法经修改后对某个椭圆方程奏效，那就对那一族中所有的别的椭圆方程都奏效。任务是要改造科利瓦金一弗莱切方法使得它对每一族都能奏效。</p>
+
+<p>一直到1993年，他成功地将科利瓦金-弗莱切方法应用于一族又一族的椭圆方程，最后只剩下一族椭圆方程了。怀尔斯描述了他怎样试图完成证明的最后一步：</p>
+
+<blockquote>
+<p>5月末的一个早晨，内达和孩子们一起出去了，我坐在书桌旁思考着这剩下的一族椭圆方程。我随意地看一下巴里·梅休尔的一篇论文，恰好其中有一句话引起了我的注意。它提到一个19世纪的构造，我突然意识到我应该能够使用这个结构来使科利瓦金-弗莱切方法也适用于这最后的一族椭圆方程。我一直工作到下午，忘记了下去吃午饭。到了大约下午三四点钟的时候，我真正地确信这将解决最后剩下的问题。当时已到饮茶休息的时候，我走下楼去，内达非常惊奇我来得这么迟。然后我告诉她–我已经解决了费马大定理。</p>
+</blockquote>
+
+<p>1993年6月末的一次会议上，怀尔斯宣布证明费马猜想。但按照沃尔夫斯凯尔委员会颁奖规则，证明需经别的数学家证实，并且正式发表。怀尔斯将证明手稿投到&lt;数学发明&gt;(Inventiones Mathematicae)杂志。</p>
+
+<p>8月份的时候证明的一个漏洞被发现：怀尔斯改造后的科利瓦金-弗莱切方法事实上并不向他原本以为的那样，强到足以适合他的所有需要。那个产生多米诺效应的推动力存在质疑。</p>
+
+<p>经过一个秋天的沉默和寻找，依然没有找到这个错误的解决办法。12月怀尔斯发布了一个声明，证实这个漏洞的存在。</p>
+
+<p>1994年9月，在怀尔斯打算公开承认失败和发表那个有缺陷的证明之前，他决定最后一次检视一下科利瓦金-弗莱切方法的结构，试图确切地判断出它不能奏效的原因。</p>
+
+<blockquote>
+<p>9月19日，一个星期一的早晨，当时我坐在桌子旁，检查着科利瓦金-弗莱切的方法。这倒不是因为我相信自己能使它行得通，而是我认为至少我能够解释为什么它行不通。我想我是在捞救命稻草，不过我需要使自己放心。突然间，完全出乎意料，我有了一个难以置信的发现。我意识到，虽然科利瓦金-弗莱切方法现在不能完全行得通，但是我只需要它就可以使我原先采用的岩沢理论奏效。我认识到科利瓦金-弗莱切方法中有足够的东西使我原先的3年前的工作中对这个问题的处理方法取得成功。所以，对这个问题的正确答案似乎就在科利瓦金-弗莱切的废墟之中。</p>
+</blockquote>
+
+<p><p/></p>
+
+<blockquote>
+<p>单靠伊娃沙娃理论不足以解决问题，单靠科利瓦金-弗莱切方法也不足以解决问题，它们结合在一起却可以完美地互相补足。</p>
+</blockquote>
+
+<p>1994年10月25日， 怀尔斯寄出了这份完美的证明……</p>
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/history/">history</a>
+          
+          <a href="/tags/mathematics/">mathematics</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'bigheadghost';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink" target="_blank">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  
+      </div>  
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:bigheadghost@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://math.stackexchange.com/users/157947/bigheadghost" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/bigheadghost" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://www.douban.com/people/1254984/" class="iconfont icon-douban" title="douban"></a>
+  <a href="https://bigheadghost.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2014 - 
+    2017
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">bigheadghost</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/even.min.js?v=2.6.4"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+
+
+
+</body>
+</html>

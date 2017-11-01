@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reading and Thinking</title>
+    <link>https://bigheadghost.github.io/zh/</link>
+    <description>Recent content on Reading and Thinking</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 28 Feb 2006 22:17:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://bigheadghost.github.io/zh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>History of Proof of Fermat&#39;s Last Theorem</title>
+      <link>https://bigheadghost.github.io/zh/post/history-of-proof-of-fermats-last-theorem/</link>
+      <pubDate>Tue, 28 Feb 2006 22:17:59 +0800</pubDate>
+      
+      <guid>https://bigheadghost.github.io/zh/post/history-of-proof-of-fermats-last-theorem/</guid>
+      <description>&lt;p&gt;推荐阅读Simon Singh写的这本探险小说《&lt;a href=&#34;https://book.douban.com/subject/1322358/&#34;&gt;费马大定理：一个困惑了世间智者358年的谜&lt;/a&gt;》&lt;/p&gt;
+
+&lt;h1 id=&#34;一-缘起&#34;&gt;一、缘起&lt;/h1&gt;
+
+&lt;p&gt;1637年， 法国数学家费马(Fermat 1601-1665)在看丢番图的&amp;lt;算术&amp;gt;(的拉丁文译本)时，被毕达哥拉斯三元组的种类和数量之多吸引。考虑 \( x^2+y^2=z^2 \) 的一种变异方程： \( x^3+y^3=z^3 \) 反复的试算表明，要找到方程的正整数解是困难的。他进一步将幂改成大于3的数，得到新的方程，并且发现要寻找每一个这种方程的解有着同样的困难。费马在书的页边处写下了一个结论：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;不可能将一个立方数写成两个立方数之和；或者将一个4次幂写成两个4次幕之和；或者，总的来说，不可能将一个高于2次的幕写成两个同样次幂的和。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;并且给出了自己的“证明”：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;我有一个对这个命题的十分美妙的证明，这里空白太小，写不下。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;1665年费马去世，1670年他的儿子整理出版了附有费马批注的丢番图的算术， 费马猜想开始为世人所知。 数林中一场腥风血雨拉开了帷幕，数百年来，不计其数的人前赴后继在这迷一样的荒原上探险：绘就的是地图，而真正的探险者却已消失在别处……&lt;br /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

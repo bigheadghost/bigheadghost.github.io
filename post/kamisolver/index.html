@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Kami Solver - Reading and Thinking</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigheadghost" />
+  <meta name="description" content="Actually, all puzzles data are located in the &amp;ldquo;puzzles&amp;rdquo; folder under the game directory, including classic group from A to E, and pays needed premium &amp;ldquo;5C1&amp;rdquo; and &amp;ldquo;Pat1&amp;rdquo;.
+PuzzleData are stored in files such as SAL1_TwoSides.xml(Stage A Level 1). colours variable denotes the grid. gold, silver, bronze variables are the moves count to achieve these medals. The &amp;ldquo;solution&amp;rdquo; part, well, is the solution. Following computer world&amp;rsquo;s tradition, in each turn, x, y mean the column, row coordinates, both originating from 0.
+If solution is all your want, it&amp;rsquo;s done.
+" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.30.2" />
+
+
+<link rel="canonical" href="https://bigheadghost.github.io/post/kamisolver/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<link href="/dist/even.min.css?v=2.6.4" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+<meta property="og:title" content="Kami Solver" />
+<meta property="og:description" content="
+Actually, all puzzles data are located in the &ldquo;puzzles&rdquo;  folder under the game directory, including classic group from A to E, and pays needed premium &ldquo;5C1&rdquo; and &ldquo;Pat1&rdquo;.
+
+PuzzleData are stored in files such as SAL1_TwoSides.xml(Stage A Level 1). colours variable denotes the grid. gold, silver, bronze variables are the moves count to achieve these medals. The &ldquo;solution&rdquo; part, well, is the solution. Following computer world&rsquo;s tradition, in each turn, x, y mean the column, row coordinates, both originating from 0.
+
+If solution is all your want, it&rsquo;s done.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigheadghost.github.io/post/kamisolver/" />
+
+
+
+<meta property="article:published_time" content="2014-06-23T12:11:27&#43;08:00"/>
+
+<meta property="article:modified_time" content="2014-06-23T12:11:27&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Kami Solver">
+<meta itemprop="description" content="
+Actually, all puzzles data are located in the &ldquo;puzzles&rdquo;  folder under the game directory, including classic group from A to E, and pays needed premium &ldquo;5C1&rdquo; and &ldquo;Pat1&rdquo;.
+
+PuzzleData are stored in files such as SAL1_TwoSides.xml(Stage A Level 1). colours variable denotes the grid. gold, silver, bronze variables are the moves count to achieve these medals. The &ldquo;solution&rdquo; part, well, is the solution. Following computer world&rsquo;s tradition, in each turn, x, y mean the column, row coordinates, both originating from 0.
+
+If solution is all your want, it&rsquo;s done.
+">
+
+
+<meta itemprop="datePublished" content="2014-06-23T12:11:27&#43;08:00" />
+<meta itemprop="dateModified" content="2014-06-23T12:11:27&#43;08:00" />
+<meta itemprop="wordCount" content="666">
+
+
+
+<meta itemprop="keywords" content="puzzle,python," />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Kami Solver"/>
+<meta name="twitter:description" content="
+Actually, all puzzles data are located in the &ldquo;puzzles&rdquo;  folder under the game directory, including classic group from A to E, and pays needed premium &ldquo;5C1&rdquo; and &ldquo;Pat1&rdquo;.
+
+PuzzleData are stored in files such as SAL1_TwoSides.xml(Stage A Level 1). colours variable denotes the grid. gold, silver, bronze variables are the moves count to achieve these medals. The &ldquo;solution&rdquo; part, well, is the solution. Following computer world&rsquo;s tradition, in each turn, x, y mean the column, row coordinates, both originating from 0.
+
+If solution is all your want, it&rsquo;s done.
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Reading and Thinking</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a><a href="/zh">
+        <li class="mobile-menu-item">中文(Chinese)</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Reading and Thinking</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/zh">中文(Chinese)</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Kami Solver</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-06-23 12:11:27 CST </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+      
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p><img src="http://pic.yupoo.com/lavender/GRriY7wp/medish.jpg" alt="Kami" /><br />
+Actually, all puzzles data are located in the &ldquo;puzzles&rdquo;  folder under the game directory, including classic group from A to E, and pays needed premium &ldquo;5C1&rdquo; and &ldquo;Pat1&rdquo;.</p>
+
+<p>PuzzleData are stored in files such as SAL1_TwoSides.xml(Stage A Level 1). colours variable denotes the grid. gold, silver, bronze variables are the moves count to achieve these medals. The &ldquo;solution&rdquo; part, well, is the solution. Following computer world&rsquo;s tradition, in each turn, x, y mean the column, row coordinates, both originating from 0.</p>
+
+<p>If solution is all your want, it&rsquo;s done.<br />
+</p>
+
+<p>Here is my <a href="https://github.com/bigheadghost/PuzzleSolvers/blob/master/KamiSolver.py">KamiSolver</a>. It works out in seconds for most cases, but sometimes takes longer particularly when zones are much scattered and maximum moves are larger.</p>
+
+<p>The whole idea is: calculate all possible moves from the initial lattice, and then the possible moves of each of those moves &hellip; typical depth first search algorithm.</p>
+
+<p>Here are some tune tech used:</p>
+
+<ol>
+<li><p>Given the maximum moves, we do not need to go deep down, i.e. to a lattice with single color. Whenever the count of colors we have to wipe out is larger than the moves we left, this try has no future and can be closed. Because one move can only decrease one color at most.</p></li>
+
+<li><p>If after a candidate move, the lattice is someone which we have checked before, it is ignored. It is very common for turn sequences like  [A, B] and [B, A].<br />
+There is no need to walk along a wrong path twice, right? But there are exceptions. Just ignoring it would result in solution miss.<br />
+What if the second solution has less moves?  e.g. [D, E] reaches the same lattice as [A, B, C] dose. Then it should be reconsidered, and the solution log is updated with less moves for later reference.</p></li>
+
+<li><p>If a candidate dose not decrease the zone count, it is dismissed. FYI, zones are scattered area according to color connectivity. This kind of candidate is a move with an aiming color not found in its neighborhoods. It is not an effective move.<br />
+Will the lattice reached from such move be met again after a sequence of effective moves which downsize zone counts? Indeed.<br />
+For example, when faced with the lattice shown in the following picture, these two turn sequences reached the same status.<br />
+1) Change left black 2’s to red 1’s, zone count decreases by 2. Then change it back to black 2’s, zone count remains the same.<br />
+2) Change upper-left red 1’s to black 2’s, zone count decreases by 1. Then change lower-left red 1’s to black 2’s, zone count decreases by 1.<br />
+Since one step in solution 1) can achieve the goal, why bother two steps in solution 2)?<br />
+It seems we should just add the lattice in the blacklist, and should not give a second consideration, unlike the situations in tune tech #2.<br />
+Does this rule have exceptions? What if the latter solution has less moves? I am not sure, but I believe not. Anyway I include a similar reconsideration mechanism just in case. It can be removed for performance improvement.<br />
+<img src="http://pic.yupoo.com/lavender/DQWtw8rV/medish.jpg" alt="tune tech demo" title="tune tech demo" /></p></li>
+
+<li><p>Candidate moves are checked in some preferential order:<br />
+1) Less zone count. A better move should decrease more zones.<br />
+2) Larger zone combined. A better move should make the combined zone with more cells.<br />
+Usually these preferences are cool, one try hits the right solution.<br />
+But, for some levels, the right solution comes out from latter candidates, not with the least zone count, nor with the largest zone combined.<br />
+I guess that is why it is so fascinating.<br />
+You can add your preferences strategy and do some tests to check whether it works. Actually, Number of single zones has been added. Single zone is a zone whose color only shows in this zone. Its increase means a color with scattered zones has joined. Unfortunately, it turns out not that helpful.</p></li>
+</ol>
+
+<p>PS: If you want to design a puzzle level, BFSolve function (Breadth First Search) in the solver would be helpful to get the maximum moves.</p>
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/puzzle/">puzzle</a>
+          
+          <a href="/tags/python/">python</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/frog-mania/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Frog Mania</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/magic-griddlers-solver/">
+            <span class="next-text nav-default">Magic Griddlers Solver</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'bigheadghost';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink" target="_blank">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  
+      </div>  
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:bigheadghost@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://math.stackexchange.com/users/157947/bigheadghost" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/bigheadghost" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://www.douban.com/people/1254984/" class="iconfont icon-douban" title="douban"></a>
+  <a href="https://bigheadghost.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2014 - 
+    2017
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">bigheadghost</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/even.min.js?v=2.6.4"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Dive into Project Euler Part 4 (61-80) - Reading and Thinking</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigheadghost" />
+  <meta name="description" content="Problem 61 LEN=6 numbers=[[] for row in range(LEN)] solution=[0]*LEN for i in range(200): if(1000&amp;lt;=i*(i&#43;1)/2&amp;lt;10000): numbers[0].append(int(i*(i&#43;1)/2)) if(1000&amp;lt;=i*i&amp;lt;10000): numbers[1].append(i*i) if(1000&amp;lt;=i*(3*i-1)/2&amp;lt;10000): numbers[2].append(int(i*(3*i-1)/2)) if(1000&amp;lt;=i*(2*i-1)&amp;lt;10000): numbers[3].append(i*(2*i-1)) if(1000&amp;lt;=i*(5*i-3)/2&amp;lt;10000): numbers[4].append(int(i*(5*i-3)/2)) if(1000&amp;lt;=i*(3*i-2)&amp;lt;10000): numbers[5].append(i*(3*i-2)) def FindNext(last, length): for i in range(LEN): if (solution[i] == 0): for j in range(len(numbers[i])): if(numbers[i][j] not in solution and ((numbers[i][j] // 100) == (solution[last] % 100))): solution[i] = numbers[i][j] if (length == 5): if (solution[5] // 100 == solution[i] % 100): return True elif (FindNext(i, length &#43; 1)): return True solution[i] = 0 #backforce return False for i in range(len(numbers[5])): solution[5]=numbers[5][i] if(FindNext(5, 1)): print(solution, sum(solution)) break [8256, 5625, 2882, 8128, 2512, 1281] 28684  
+" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.30.2" />
+
+
+<link rel="canonical" href="https://bigheadghost.github.io/post/dive-into-project-euler-part-4-61-80/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<link href="/dist/even.min.css?v=2.6.4" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+<meta property="og:title" content="Dive into Project Euler Part 4 (61-80)" />
+<meta property="og:description" content="Problem 61
+
+LEN=6
+numbers=[[] for row in range(LEN)]
+solution=[0]*LEN
+for i in range(200):
+    if(1000&lt;=i*(i&#43;1)/2&lt;10000):
+        numbers[0].append(int(i*(i&#43;1)/2))
+    if(1000&lt;=i*i&lt;10000):
+        numbers[1].append(i*i)
+    if(1000&lt;=i*(3*i-1)/2&lt;10000):
+        numbers[2].append(int(i*(3*i-1)/2))
+    if(1000&lt;=i*(2*i-1)&lt;10000):
+        numbers[3].append(i*(2*i-1))           
+    if(1000&lt;=i*(5*i-3)/2&lt;10000):
+        numbers[4].append(int(i*(5*i-3)/2))
+    if(1000&lt;=i*(3*i-2)&lt;10000):
+        numbers[5].append(i*(3*i-2))
+ 
+def FindNext(last, length):
+    for i in range(LEN):
+        if (solution[i] == 0):
+            for j in range(len(numbers[i])):
+                if(numbers[i][j] not in solution and ((numbers[i][j] // 100) == (solution[last] % 100))):
+                    solution[i] = numbers[i][j]
+                    if (length == 5):
+                        if (solution[5] // 100 == solution[i] % 100):
+                            return True
+                    elif (FindNext(i, length &#43; 1)):
+                        return True
+ 
+            solution[i] = 0  #backforce
+    return  False
+ 
+for i in range(len(numbers[5])):
+    solution[5]=numbers[5][i]
+    if(FindNext(5, 1)):       
+        print(solution, sum(solution))
+        break
+
+[8256, 5625, 2882, 8128, 2512, 1281] 28684
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigheadghost.github.io/post/dive-into-project-euler-part-4-61-80/" />
+
+
+
+<meta property="article:published_time" content="2014-09-02T16:14:41&#43;08:00"/>
+
+<meta property="article:modified_time" content="2014-09-02T16:14:41&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Dive into Project Euler Part 4 (61-80)">
+<meta itemprop="description" content="Problem 61
+
+LEN=6
+numbers=[[] for row in range(LEN)]
+solution=[0]*LEN
+for i in range(200):
+    if(1000&lt;=i*(i&#43;1)/2&lt;10000):
+        numbers[0].append(int(i*(i&#43;1)/2))
+    if(1000&lt;=i*i&lt;10000):
+        numbers[1].append(i*i)
+    if(1000&lt;=i*(3*i-1)/2&lt;10000):
+        numbers[2].append(int(i*(3*i-1)/2))
+    if(1000&lt;=i*(2*i-1)&lt;10000):
+        numbers[3].append(i*(2*i-1))           
+    if(1000&lt;=i*(5*i-3)/2&lt;10000):
+        numbers[4].append(int(i*(5*i-3)/2))
+    if(1000&lt;=i*(3*i-2)&lt;10000):
+        numbers[5].append(i*(3*i-2))
+ 
+def FindNext(last, length):
+    for i in range(LEN):
+        if (solution[i] == 0):
+            for j in range(len(numbers[i])):
+                if(numbers[i][j] not in solution and ((numbers[i][j] // 100) == (solution[last] % 100))):
+                    solution[i] = numbers[i][j]
+                    if (length == 5):
+                        if (solution[5] // 100 == solution[i] % 100):
+                            return True
+                    elif (FindNext(i, length &#43; 1)):
+                        return True
+ 
+            solution[i] = 0  #backforce
+    return  False
+ 
+for i in range(len(numbers[5])):
+    solution[5]=numbers[5][i]
+    if(FindNext(5, 1)):       
+        print(solution, sum(solution))
+        break
+
+[8256, 5625, 2882, 8128, 2512, 1281] 28684
+
+
+">
+
+
+<meta itemprop="datePublished" content="2014-09-02T16:14:41&#43;08:00" />
+<meta itemprop="dateModified" content="2014-09-02T16:14:41&#43;08:00" />
+<meta itemprop="wordCount" content="787">
+
+
+
+<meta itemprop="keywords" content="Mathematica," />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Dive into Project Euler Part 4 (61-80)"/>
+<meta name="twitter:description" content="Problem 61
+
+LEN=6
+numbers=[[] for row in range(LEN)]
+solution=[0]*LEN
+for i in range(200):
+    if(1000&lt;=i*(i&#43;1)/2&lt;10000):
+        numbers[0].append(int(i*(i&#43;1)/2))
+    if(1000&lt;=i*i&lt;10000):
+        numbers[1].append(i*i)
+    if(1000&lt;=i*(3*i-1)/2&lt;10000):
+        numbers[2].append(int(i*(3*i-1)/2))
+    if(1000&lt;=i*(2*i-1)&lt;10000):
+        numbers[3].append(i*(2*i-1))           
+    if(1000&lt;=i*(5*i-3)/2&lt;10000):
+        numbers[4].append(int(i*(5*i-3)/2))
+    if(1000&lt;=i*(3*i-2)&lt;10000):
+        numbers[5].append(i*(3*i-2))
+ 
+def FindNext(last, length):
+    for i in range(LEN):
+        if (solution[i] == 0):
+            for j in range(len(numbers[i])):
+                if(numbers[i][j] not in solution and ((numbers[i][j] // 100) == (solution[last] % 100))):
+                    solution[i] = numbers[i][j]
+                    if (length == 5):
+                        if (solution[5] // 100 == solution[i] % 100):
+                            return True
+                    elif (FindNext(i, length &#43; 1)):
+                        return True
+ 
+            solution[i] = 0  #backforce
+    return  False
+ 
+for i in range(len(numbers[5])):
+    solution[5]=numbers[5][i]
+    if(FindNext(5, 1)):       
+        print(solution, sum(solution))
+        break
+
+[8256, 5625, 2882, 8128, 2512, 1281] 28684
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Reading and Thinking</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a><a href="/zh">
+        <li class="mobile-menu-item">中文(Chinese)</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Reading and Thinking</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/zh">中文(Chinese)</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Dive into Project Euler Part 4 (61-80)</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-09-02 16:14:41 CST </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#problem-61">Problem 61</a></li>
+<li><a href="#problem-62">Problem 62</a></li>
+<li><a href="#problem-63">Problem 63</a></li>
+<li><a href="#problem-64">Problem 64</a></li>
+<li><a href="#problem-65">Problem 65</a></li>
+<li><a href="#problem-66">Problem 66</a></li>
+<li><a href="#problem-67">Problem 67</a></li>
+<li><a href="#problem-68">Problem 68</a></li>
+<li><a href="#problem-69">Problem 69</a></li>
+<li><a href="#problem-70">Problem 70</a></li>
+<li><a href="#problem-71">Problem 71</a></li>
+<li><a href="#problem-72">Problem 72</a></li>
+<li><a href="#problem-73">Problem 73</a></li>
+<li><a href="#problem-74">Problem 74</a></li>
+<li><a href="#problem-75">Problem 75</a></li>
+<li><a href="#problem-76">Problem 76</a></li>
+<li><a href="#problem-77">Problem 77</a></li>
+<li><a href="#problem-78">Problem 78</a></li>
+<li><a href="#problem-79">Problem 79</a></li>
+<li><a href="#problem-80">Problem 80</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h1 id="problem-61">Problem 61</h1>
+
+<pre><code class="language-python">LEN=6
+numbers=[[] for row in range(LEN)]
+solution=[0]*LEN
+for i in range(200):
+    if(1000&lt;=i*(i+1)/2&lt;10000):
+        numbers[0].append(int(i*(i+1)/2))
+    if(1000&lt;=i*i&lt;10000):
+        numbers[1].append(i*i)
+    if(1000&lt;=i*(3*i-1)/2&lt;10000):
+        numbers[2].append(int(i*(3*i-1)/2))
+    if(1000&lt;=i*(2*i-1)&lt;10000):
+        numbers[3].append(i*(2*i-1))           
+    if(1000&lt;=i*(5*i-3)/2&lt;10000):
+        numbers[4].append(int(i*(5*i-3)/2))
+    if(1000&lt;=i*(3*i-2)&lt;10000):
+        numbers[5].append(i*(3*i-2))
+ 
+def FindNext(last, length):
+    for i in range(LEN):
+        if (solution[i] == 0):
+            for j in range(len(numbers[i])):
+                if(numbers[i][j] not in solution and ((numbers[i][j] // 100) == (solution[last] % 100))):
+                    solution[i] = numbers[i][j]
+                    if (length == 5):
+                        if (solution[5] // 100 == solution[i] % 100):
+                            return True
+                    elif (FindNext(i, length + 1)):
+                        return True
+ 
+            solution[i] = 0  #backforce
+    return  False
+ 
+for i in range(len(numbers[5])):
+    solution[5]=numbers[5][i]
+    if(FindNext(5, 1)):       
+        print(solution, sum(solution))
+        break
+
+[8256, 5625, 2882, 8128, 2512, 1281] 28684
+</code></pre>
+
+<p></p>
+
+<h1 id="problem-62">Problem 62</h1>
+
+<pre><code>Reverse@SortBy[Tally[Table[Sort@IntegerDigits[i^3], {i, 10000}]], Last]
+{ { {0, 1, 2, 3, 3, 4, 5, 6, 6, 7, 8, 9},  5}, { {0, 1, 2, 3, 3, 4, 5, 5, 6, 7, 8, 9}, 5}, ...}
+Min@Select[Table[i^3, {i, 1000, 10000}], Sort@IntegerDigits[#] == {0, 1, 2, 3, 3, 4, 5, 6, 6, 7, 8, 9} ||   Sort@IntegerDigits[#] == {0, 1, 2, 3, 3, 4, 5, 5, 6, 7, 8, 9} &amp;]
+127035954683
+</code></pre>
+
+<h1 id="problem-63">Problem 63</h1>
+
+<pre><code>Reduce[10^((i - 1)/i) &lt;= 9. &amp;&amp; i &gt; 0, i, Reals]
+0 &lt; i &lt;= 21.8543
+s =Table[Length@  Solve[10^(i - 1) &lt;= x^i &lt; 10^i &amp;&amp; x &gt; 0, x, Integers], {i, 21}]
+ {9, 6, 5, 4, 3, 3, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
+Total@s
+49
+</code></pre>
+
+<h1 id="problem-64">Problem 64</h1>
+
+<pre><code>Count[Sqrt /@ Range[10000], s_ /; (! IntegerQ@s) &amp;&amp; OddQ@Length[(ContinuedFraction@s)[[2]]]]
+1322
+</code></pre>
+
+<h1 id="problem-65">Problem 65</h1>
+
+<pre><code>Total@IntegerDigits@Numerator@Last@Convergents[E, 100]
+272
+</code></pre>
+
+<h1 id="problem-66">Problem 66</h1>
+
+<pre><code>f[d_] :=Module[{n = 1}, If[IntegerQ@Sqrt@d, ret = 0, While[True, 
+    b = Last@Convergents[Sqrt@d, n]; 
+    {x, y} = {Numerator@b,  Denominator@b}; 
+    If[x^2 == d*y^2 + 1, ret = x; Break[], n++] ]];
+  ret]
+Ordering[f /@ Range[1000], -1]
+{661}
+</code></pre>
+
+<h1 id="problem-67">Problem 67</h1>
+
+<pre><code>See Problem 18.
+</code></pre>
+
+<h1 id="problem-68">Problem 68</h1>
+
+<pre><code>outer = {1, 4, 6, 8,  10}; 
+seq = { {1, 2, 3}, {4, 3, 5} , {6, 5, 7} ,   {8, 7, 9}  , {10,  9, 2} };
+p = Select[Permutations@Range@10,
+   Length@Union@Table[Total@#[[i]], {i, seq}] == 1 &amp;&amp;
+     MemberQ[#[[outer]], 10] &amp;&amp; Min[#[[outer]]] == 6 &amp;];
+ 
+In[54]:= f[l_] := Module[{},
+  sm = Ordering[l[[outer]], 1];
+  s = RotateLeft[seq, sm - 1];
+  FromDigits@StringJoin[ToString /@ l[[Flatten@s]]]
+  ]
+ 
+In[55]:= Max[f /@ p]
+Out[55]= 6531031914842725
+</code></pre>
+
+<h1 id="problem-69">Problem 69</h1>
+
+<pre><code>Ordering[Table[n/EulerPhi[n],{n,2,1*^6}],-1]+1
+{510510} 
+</code></pre>
+
+<h1 id="problem-70">Problem 70</h1>
+
+<pre><code>ps = Table[Prime@i, {i, PrimePi@2000, PrimePi@5000}];
+s =Select[Flatten[{Table[{i, i}, {i, ps}], Subsets[ps, {2}]}, 1],  Times @@ # &lt; 1*^7 &amp;&amp; Sort@IntegerDigits[(#[[1]] - 1) (#[[2]] - 1)] == Sort@IntegerDigits[#[[1]]*#[[2]]] &amp;]
+s[[Ordering[(1 - 1/#) (1 - 1/#2) &amp; @@@ s, -1]]]
+{ {2339, 3557} }
+2339*3557
+8319823
+</code></pre>
+
+<h1 id="problem-71">Problem 71</h1>
+
+<pre><code>Numerator[Union[Floor[3 #/7]/# &amp; /@ Range[1*^6]][[-2]]]
+428570
+</code></pre>
+
+<h1 id="problem-72">Problem 72</h1>
+
+<pre><code>Total[EulerPhi /@ Range[2, 1*^6]]
+303963552391
+</code></pre>
+
+<h1 id="problem-73">Problem 73</h1>
+
+<pre><code>f[n_]:=Count[Range[Floor[n/3]+1,Ceiling[n/2]-1],a_/;CoprimeQ[n,a]]
+Total[f /@ Range[4, 12000]]
+7295372
+</code></pre>
+
+<h1 id="problem-74">Problem 74</h1>
+
+<pre><code class="language-python">import time
+start_time = time.time()
+ 
+total=0
+#Why bother calculating? We only need factorials of 0 - 9.
+f = [1,1,2,6,24,120,720,5040,40320,362880]
+#Let's keep a list of chains that we know the value for already.
+chains={}
+for i in range(1,1000001):
+        chain=[]
+        count=0
+        n = i
+        while not n in chain:
+                try:
+                        #If we've already found the chain value for this value of n, why recalculate it? Grab from our list, and end.
+                        count += chains[n]
+                        break
+                except KeyError:
+                        #Python threw an error, which means we don't know this n's chain value. Keep going.
+                        chain.append(n)
+                        ns = str(n)
+                        n = sum(f[int(d)] for d in ns)
+                        count+=1
+        #Record the chain value for the first value of n in this chain.
+        chains[chain[0]] = count
+        if count == 60: total+=1
+print total
+run_time = time.time() - start_time
+print(run_time)
+402
+59.08246302604675
+</code></pre>
+
+<h1 id="problem-75">Problem 75</h1>
+
+<pre><code class="language-python">def gcd(a,b):
+    while b != 0:
+        a,b = b,a%b
+    return a
+ 
+limit=1500000
+triplets = limit * [0]
+import math
+ 
+for m in range( 2, int( math.sqrt( limit / 2 ) ), 1 ):
+    for n in range( 1, m, 1 ):
+        if ( m - n ) % 2 == 1 and gcd( m, n ) == 1:
+            p = 2 * m * ( m + n )
+            if p &gt; limit: break
+            for idx in range( p, limit, p ):
+                triplets[idx] += 1
+ 
+print( sum( n == 1 for n in triplets ) )
+161667
+</code></pre>
+
+<h1 id="problem-76">Problem 76</h1>
+
+<pre><code>PartitionsP[100]-1
+190569291
+</code></pre>
+
+<h1 id="problem-77">Problem 77</h1>
+
+<pre><code>NestWhile[# + 1 &amp;, 2, Length@IntegerPartitions[#, All, Array[Prime, PrimePi[1000]]] &lt;=   5000 &amp;]
+71
+</code></pre>
+
+<h1 id="problem-78">Problem 78</h1>
+
+<pre><code>Clear[ml, sl, p];
+ml[n_] := ml[n] = # (3 # - 1)/2 &amp; /@ Flatten@Table[{1, -1}*i, {i, n}];
+sl[n_] := sl[n] = ((-1)^Floor[(# - 1)/2]) &amp; /@ Range[2 n];
+p[0] = p[1] = 1;
+p[k_Integer?Negative] := 0;
+p[k_] := p[k] = Module[{maxk = Ceiling[(1 + Sqrt[24 k + 1])/6]}, Total[(p /@ (k - ml[maxk]))*sl[maxk]]]
+NestWhile[# + 1 &amp;, 1, Mod[p@#, 1*^6] != 0 &amp;]
+55374
+</code></pre>
+
+<h1 id="problem-79">Problem 79</h1>
+
+<pre><code>TopologicalSort@Graph@Flatten[{DirectedEdge[#[[1]], #[[2]]], DirectedEdge[#[[2]], #[[3]]]} &amp; /@ s]
+{7, 3, 1, 6, 2, 8, 9, 0}
+</code></pre>
+
+<h1 id="problem-80">Problem 80</h1>
+
+<pre><code>ps = Select[Range[100], IntegerPart[Sqrt[#]] != Sqrt[#] &amp;];
+Total[Take[First@RealDigits@N[Sqrt[#], 102], 100] &amp; /@ ps, 2]
+40886
+</code></pre>
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/mathematica/">Mathematica</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/dive-into-project-euler-part-5-81-100/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Dive into Project Euler Part 5 (81-100)</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/dive-into-project-euler-part-3-41-60/">
+            <span class="next-text nav-default">Dive into Project Euler Part 3 (41-60)</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'bigheadghost';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink" target="_blank">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  
+      </div>  
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:bigheadghost@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://math.stackexchange.com/users/157947/bigheadghost" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/bigheadghost" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://www.douban.com/people/1254984/" class="iconfont icon-douban" title="douban"></a>
+  <a href="https://bigheadghost.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2014 - 
+    2017
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">bigheadghost</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/even.min.js?v=2.6.4"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+
+
+
+</body>
+</html>

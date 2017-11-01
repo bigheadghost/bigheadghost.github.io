@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Dive into Project Euler Part 3 (41-60) - Reading and Thinking</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigheadghost" />
+  <meta name="description" content="Problem 41 Max@Table[ Select[FromDigits /@ Permutations[Range[i]], PrimeQ], {i, 9}] 7652413  Problem 42 s = (Total[ToCharacterCode[#] - First@ToCharacterCode[&amp;quot;A&amp;quot;] &#43; 1]) &amp;amp; /@ StringSplit[StringReplace[Import[&amp;quot;R:\\words.txt&amp;quot;], &amp;quot;\&amp;quot;&amp;quot; -&amp;gt; &amp;quot;&amp;quot;], &amp;quot;,&amp;quot;]; Reduce[n*(n &#43; 1)/2 &amp;gt;Max[s] &amp;amp;&amp;amp; n &amp;gt; 0, n, Integers] n &amp;gt;= 20 In[37]:= tn = Array[#*(# &#43; 1)/2 &amp;amp;, 20]; In[38]:= Select[s, MemberQ[tn, #] &amp;amp;] // Length Out[38]= 162  Problem 43 cf = With[{ code = And @@ Thread[ Table[100 A[[i]] &#43; 10 A[[i &#43; 1]] &#43; A[[i &#43; 2]], {i, 2, 8}]~ Mod~{2, 3, 5, 7, 11, 13, 17} == 0] // Boole // Quiet }, Compile[{ {A, _Integer, 1} }, code, RuntimeAttributes -&amp;gt; Listable, RuntimeOptions -&amp;gt; &amp;quot;Speed&amp;quot;, CompilationTarget -&amp;gt; &amp;quot;C&amp;quot; ] ]; FromDigits /@ Pick[#, cf@#, 1] &amp;amp;@Permutations@Range[0, 9] // Tr 16695334890  
+" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.30.2" />
+
+
+<link rel="canonical" href="https://bigheadghost.github.io/post/dive-into-project-euler-part-3-41-60/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<link href="/dist/even.min.css?v=2.6.4" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+<meta property="og:title" content="Dive into Project Euler Part 3 (41-60)" />
+<meta property="og:description" content="Problem 41
+
+Max@Table[ Select[FromDigits /@ Permutations[Range[i]], PrimeQ], {i, 9}]
+7652413
+
+
+Problem 42
+
+s = (Total[ToCharacterCode[#] - First@ToCharacterCode[&quot;A&quot;] &#43; 1]) &amp; /@ StringSplit[StringReplace[Import[&quot;R:\\words.txt&quot;], &quot;\&quot;&quot; -&gt; &quot;&quot;],   &quot;,&quot;];
+Reduce[n*(n &#43; 1)/2 &gt;Max[s] &amp;&amp; n &gt; 0, n, Integers]
+n &gt;= 20
+In[37]:= tn = Array[#*(# &#43; 1)/2 &amp;, 20];
+In[38]:= Select[s, MemberQ[tn, #] &amp;] // Length
+Out[38]= 162
+
+
+Problem 43
+
+cf = With[{
+    code =
+     And @@ Thread[
+         Table[100 A[[i]] &#43; 10 A[[i &#43; 1]] &#43; A[[i &#43; 2]], {i, 2, 8}]~
+           Mod~{2, 3, 5, 7, 11, 13, 17} == 0] // Boole // Quiet
+    },
+   Compile[{ {A, _Integer, 1} },
+    code,
+    RuntimeAttributes -&gt; Listable,
+    RuntimeOptions -&gt; &quot;Speed&quot;, CompilationTarget -&gt; &quot;C&quot;
+    ]
+   ];
+FromDigits /@ Pick[#, cf@#, 1] &amp;@Permutations@Range[0, 9] // Tr
+16695334890
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigheadghost.github.io/post/dive-into-project-euler-part-3-41-60/" />
+
+
+
+<meta property="article:published_time" content="2014-09-02T12:04:41&#43;08:00"/>
+
+<meta property="article:modified_time" content="2014-09-02T12:04:41&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Dive into Project Euler Part 3 (41-60)">
+<meta itemprop="description" content="Problem 41
+
+Max@Table[ Select[FromDigits /@ Permutations[Range[i]], PrimeQ], {i, 9}]
+7652413
+
+
+Problem 42
+
+s = (Total[ToCharacterCode[#] - First@ToCharacterCode[&quot;A&quot;] &#43; 1]) &amp; /@ StringSplit[StringReplace[Import[&quot;R:\\words.txt&quot;], &quot;\&quot;&quot; -&gt; &quot;&quot;],   &quot;,&quot;];
+Reduce[n*(n &#43; 1)/2 &gt;Max[s] &amp;&amp; n &gt; 0, n, Integers]
+n &gt;= 20
+In[37]:= tn = Array[#*(# &#43; 1)/2 &amp;, 20];
+In[38]:= Select[s, MemberQ[tn, #] &amp;] // Length
+Out[38]= 162
+
+
+Problem 43
+
+cf = With[{
+    code =
+     And @@ Thread[
+         Table[100 A[[i]] &#43; 10 A[[i &#43; 1]] &#43; A[[i &#43; 2]], {i, 2, 8}]~
+           Mod~{2, 3, 5, 7, 11, 13, 17} == 0] // Boole // Quiet
+    },
+   Compile[{ {A, _Integer, 1} },
+    code,
+    RuntimeAttributes -&gt; Listable,
+    RuntimeOptions -&gt; &quot;Speed&quot;, CompilationTarget -&gt; &quot;C&quot;
+    ]
+   ];
+FromDigits /@ Pick[#, cf@#, 1] &amp;@Permutations@Range[0, 9] // Tr
+16695334890
+
+
+">
+
+
+<meta itemprop="datePublished" content="2014-09-02T12:04:41&#43;08:00" />
+<meta itemprop="dateModified" content="2014-09-02T12:04:41&#43;08:00" />
+<meta itemprop="wordCount" content="868">
+
+
+
+<meta itemprop="keywords" content="Mathematica," />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Dive into Project Euler Part 3 (41-60)"/>
+<meta name="twitter:description" content="Problem 41
+
+Max@Table[ Select[FromDigits /@ Permutations[Range[i]], PrimeQ], {i, 9}]
+7652413
+
+
+Problem 42
+
+s = (Total[ToCharacterCode[#] - First@ToCharacterCode[&quot;A&quot;] &#43; 1]) &amp; /@ StringSplit[StringReplace[Import[&quot;R:\\words.txt&quot;], &quot;\&quot;&quot; -&gt; &quot;&quot;],   &quot;,&quot;];
+Reduce[n*(n &#43; 1)/2 &gt;Max[s] &amp;&amp; n &gt; 0, n, Integers]
+n &gt;= 20
+In[37]:= tn = Array[#*(# &#43; 1)/2 &amp;, 20];
+In[38]:= Select[s, MemberQ[tn, #] &amp;] // Length
+Out[38]= 162
+
+
+Problem 43
+
+cf = With[{
+    code =
+     And @@ Thread[
+         Table[100 A[[i]] &#43; 10 A[[i &#43; 1]] &#43; A[[i &#43; 2]], {i, 2, 8}]~
+           Mod~{2, 3, 5, 7, 11, 13, 17} == 0] // Boole // Quiet
+    },
+   Compile[{ {A, _Integer, 1} },
+    code,
+    RuntimeAttributes -&gt; Listable,
+    RuntimeOptions -&gt; &quot;Speed&quot;, CompilationTarget -&gt; &quot;C&quot;
+    ]
+   ];
+FromDigits /@ Pick[#, cf@#, 1] &amp;@Permutations@Range[0, 9] // Tr
+16695334890
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Reading and Thinking</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a><a href="/zh">
+        <li class="mobile-menu-item">中文(Chinese)</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Reading and Thinking</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/zh">中文(Chinese)</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Dive into Project Euler Part 3 (41-60)</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-09-02 12:04:41 CST </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#problem-41">Problem 41</a></li>
+<li><a href="#problem-42">Problem 42</a></li>
+<li><a href="#problem-43">Problem 43</a></li>
+<li><a href="#problem-44">Problem 44</a></li>
+<li><a href="#problem-45">Problem 45</a></li>
+<li><a href="#problem-46">Problem 46</a></li>
+<li><a href="#problem-47">Problem 47</a></li>
+<li><a href="#problem-48">Problem 48</a></li>
+<li><a href="#problem-49">Problem 49</a></li>
+<li><a href="#problem-50">Problem 50</a></li>
+<li><a href="#problem-51">Problem 51</a></li>
+<li><a href="#problem-52">Problem 52</a></li>
+<li><a href="#problem-53">Problem 53</a></li>
+<li><a href="#problem-54">Problem 54</a></li>
+<li><a href="#problem-55">Problem 55</a></li>
+<li><a href="#problem-56">Problem 56</a></li>
+<li><a href="#problem-57">Problem 57</a></li>
+<li><a href="#problem-58">Problem 58</a></li>
+<li><a href="#problem-59">Problem 59</a></li>
+<li><a href="#problem-60">Problem 60</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h1 id="problem-41">Problem 41</h1>
+
+<pre><code>Max@Table[ Select[FromDigits /@ Permutations[Range[i]], PrimeQ], {i, 9}]
+7652413
+</code></pre>
+
+<h1 id="problem-42">Problem 42</h1>
+
+<pre><code>s = (Total[ToCharacterCode[#] - First@ToCharacterCode[&quot;A&quot;] + 1]) &amp; /@ StringSplit[StringReplace[Import[&quot;R:\\words.txt&quot;], &quot;\&quot;&quot; -&gt; &quot;&quot;],   &quot;,&quot;];
+Reduce[n*(n + 1)/2 &gt;Max[s] &amp;&amp; n &gt; 0, n, Integers]
+n &gt;= 20
+In[37]:= tn = Array[#*(# + 1)/2 &amp;, 20];
+In[38]:= Select[s, MemberQ[tn, #] &amp;] // Length
+Out[38]= 162
+</code></pre>
+
+<h1 id="problem-43">Problem 43</h1>
+
+<pre><code>cf = With[{
+    code =
+     And @@ Thread[
+         Table[100 A[[i]] + 10 A[[i + 1]] + A[[i + 2]], {i, 2, 8}]~
+           Mod~{2, 3, 5, 7, 11, 13, 17} == 0] // Boole // Quiet
+    },
+   Compile[{ {A, _Integer, 1} },
+    code,
+    RuntimeAttributes -&gt; Listable,
+    RuntimeOptions -&gt; &quot;Speed&quot;, CompilationTarget -&gt; &quot;C&quot;
+    ]
+   ];
+FromDigits /@ Pick[#, cf@#, 1] &amp;@Permutations@Range[0, 9] // Tr
+16695334890
+</code></pre>
+
+<p></p>
+
+<h1 id="problem-44">Problem 44</h1>
+
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+int main()
+{
+    int i=1;
+    bool flag=true;
+    int j,m,n;
+    double a,b;
+    while(flag)
+    {
+        n=i*(3*i-1)/2;
+        j=i-1;
+        for(j=i-1;j&gt;0;--j)
+        {
+            m=j*(3*j-1)/2;
+            a=(sqrt(24*(n+m)+1)+1)/6;
+            b=(sqrt(24*(n-m)+1)+1)/6;
+            if(a==int(a)&amp;&amp;b==int(b))
+            {
+                flag=false;
+                break;
+            }
+        }
+        i++;
+    }
+    printf(&quot;j:%d\ni:%d\nm:%d\nn:%d\nn-m:%d\n&quot;,j,i,m,n,n-m);
+}
+j:1020
+i:2168
+m:1560090
+n:7042750
+n-m:5482660
+</code></pre>
+
+<h1 id="problem-45">Problem 45</h1>
+
+<pre><code>n = 60000;
+T = Array[# (# + 1)/2 &amp;, n];
+P = Array[# (3 # - 1)/2 &amp;, n];
+H = Array[# (2 # - 1) &amp;, n];
+Intersection[T, P, H] 
+{1, 40755, 1533776805}
+</code></pre>
+
+<h1 id="problem-46">Problem 46</h1>
+
+<pre><code>In[17]:= CanWritten[n_] :=Count[n - Array[2*#^2 &amp;, Floor@Sqrt[n/2]], i_ /; PrimeQ@i] &gt; 0;
+In[18]:= AbsoluteTiming@Select[Range[3, 6000, 2], CompositeQ@# &amp;&amp; ! CanWritten@# &amp;]
+Out[18]= {0.467058, {5777, 5993}}
+</code></pre>
+
+<h1 id="problem-47">Problem 47</h1>
+
+<pre><code>Checker[n_, m_] :=(Length /@ (Part[#, All, 1] &amp; /@ FactorInteger[Range[n, n + m - 1]])) == ConstantArray[m, m]
+In[83]:= Select[Range[2, 2*^5], Checker[#, 4] &amp;]
+Out[83]= {134043}
+</code></pre>
+
+<h1 id="problem-48">Problem 48</h1>
+
+<pre><code>FromDigits[Take[IntegerDigits[Sum[i^i, {i, 1000}]], -10]]
+9110846700
+</code></pre>
+
+<h1 id="problem-49">Problem 49</h1>
+
+<pre><code>s = Select[Range[1000, 9999], PrimeQ];
+t = Select[s, MemberQ[s, # + 3330] &amp;&amp; MemberQ[s, # + 6660] &amp;];
+u = Table[{i, i + 3330, i + 6660}, {i, t}];
+Select[u, Length[DeleteDuplicates[Sort /@ IntegerDigits[#]]] == 1 &amp;]
+{ {1487, 4817, 8147}, {2969, 6299, 9629} }
+</code></pre>
+
+<h1 id="problem-50">Problem 50</h1>
+
+<pre><code>In[138]:= s = 0; NestWhile[(# + 1) &amp;, 1, (s += Prime[#]) &lt; 1*^6 &amp;]
+Out[138]= 547
+as = Accumulate[Array[Prime, 546]];
+In[145]:= For[i = 546, i &gt; 0, i--,
+For[j = 1, j &lt; i, j++,
+  If[PrimeQ[as[[i]] - as[[j]]],
+   Return[{&quot;from&quot;, Prime[j], &quot;to&quot;, Prime[i], i - j, &quot;primes'stotal:&quot;,
+     as[[i]] - as[[j]]}]]
+  ]
+]
+Out[145]= Return[{&quot;from&quot;, 5, &quot;to&quot;, 3931, 543, &quot;primes'stotal:&quot;,  997651}]
+</code></pre>
+
+<h1 id="problem-51">Problem 51</h1>
+
+<pre><code>ps = Table[Prime[i], {i, PrimePi[1*^4] + 1, PrimePi[1*^6]}];
+RepPrimeCount[n_, r_] := 
+  Block[{m = Most@IntegerDigits[n], l = Last@IntegerDigits[n]}, 
+   Count[Table[FromDigits@Append[ReplaceAll[m, i], l], {i,      Array[r -&gt; # &amp;, 10, 0]}], d_ /; IntegerLength@d == IntegerLength@n &amp;&amp; PrimeQ@d]];
+Filter[n_] := Block[{s = Most@IntegerDigits@n}, Or @@ Table[Count[s, i] == 3 &amp;&amp; RepPrimeCount[n, i] == 8, {i, 0, 2}]];
+Select[ps, Filter@# &amp;]
+{121313}
+</code></pre>
+
+<h1 id="problem-52">Problem 52</h1>
+
+<pre><code>NestWhile[# + 1 &amp;, 1, Length@DeleteDuplicates[Sort /@ (IntegerDigits@(Range[6]*#))] != 1 &amp;]
+142857
+</code></pre>
+
+<h1 id="problem-53">Problem 53</h1>
+
+<pre><code>Count[Flatten@Table[Binomial[n, r], {n, 1, 100}, {r, 1, n}], d_ /; d &gt; 1*^6]
+4075
+</code></pre>
+
+<h1 id="problem-54">Problem 54</h1>
+
+<pre><code>hands = Import[&quot;e:\\U盘\\p054_poker.txt&quot;, &quot;Table&quot;];
+type[cards_] :=
+Module[{},
+  values = FromDigits /@ ((StringTake[#, 1] &amp; /@ cards) /. {&quot;A&quot; -&gt;&quot;14&quot;, &quot;K&quot; -&gt; &quot;13&quot;, &quot;Q&quot; -&gt; &quot;12&quot;, &quot;J&quot; -&gt; &quot;11&quot;, &quot;T&quot; -&gt; &quot;10&quot;}) //Sort // Reverse;
+  suites = StringTake[#, -1] &amp; /@ cards;
+  valuepat = Tally[values][[;; , 2]] // Sort // Reverse;
+  FirstComVal = First@Commonest@values;
+  Which[
+   Length@Union@suites == 1 &amp;&amp;Differences@values == {-1, -1, -1, -1}, {9, values}, (*Royal/Straight Flush*)
+   valuepat == {4, 1}, {8, Commonest[values, 2]},
+   valuepat == {3, 2}, {7, Commonest[values, 2]},
+   Length@Union@suites == 1, {6, values},
+   Differences@values == {-1, -1, -1, -1}, {5, values},
+   valuepat == {3, 1, 1}, {4, Prepend[DeleteCases[values, FirstComVal], FirstComVal]},
+   valuepat == {2, 2, 1}, {3,  Append[Commonest[values, 2] // Sort // Reverse,    First@Complement[values, Commonest[values, 2]]]},
+   valuepat == {2, 1, 1, 1}, {2,  Prepend[DeleteCases[values, FirstComVal], FirstComVal]},
+   True, {1, values}
+   ]
+  ]
+GetWinner[hand_] :=  Module[{}, Player1 = type[hand[[;; 5]]];  Player2 = type[hand[[6 ;;]]];
+   If[Player1[[1]] &gt; Player2[[1]], Return[1],
+    If[Player1[[1]] &lt; Player2[[1]], Return[2],
+     For[i = 1, i &lt;= Length@Player1[[2]], i++,
+      If[Player1[[2, i]] &gt; Player2[[2, i]], Return[1],
+       If[Player1[[2, i]] &lt; Player2[[2, i]], Return[2]]
+       ]
+      ]
+     ]
+    ]
+   ];
+Count[GetWinner /@ hands, 1]
+376
+</code></pre>
+
+<h1 id="problem-55">Problem 55</h1>
+
+<pre><code>Rev[n_] := FromDigits@Reverse@IntegerDigits@n;
+IsPal[n_] := n == Rev@n;
+IsLychrel[n_] :=  TrueQ[For[m = n + Rev@n; i = 1, i &lt;= 50, i++,  If[IsPal@m, Return@False, m += Rev@m]] == Null]Count[IsLychrel /@ Range[10000], True]
+249
+</code></pre>
+
+<h1 id="problem-56">Problem 56</h1>
+
+<pre><code>Max[Total /@ IntegerDigits@Flatten@Array[#1^#2 &amp;, {99, 99}]]
+972
+</code></pre>
+
+<h1 id="problem-57">Problem 57</h1>
+
+<pre><code>Count[Convergents[Sqrt@2,1001],f_/;IntegerLength@Numerator@f&gt;IntegerLength@Denominator@f] 
+153
+</code></pre>
+
+<h1 id="problem-58">Problem 58</h1>
+
+<pre><code>f[3]=3;
+f[n_]:=f[n]=f[n-2]+Count[PrimeQ[Array[(n-2)^2+(n-1)#&amp;,3]],True];
+NestWhile[#+2&amp;,3,f[#]/(2#-1)&gt;=0.1&amp;]
+26241
+</code></pre>
+
+<h1 id="problem-59">Problem 59</h1>
+
+<pre><code>EncryptText = FromDigits /@ StringSplit[Import[&quot;p059_cipher.txt&quot;], &quot;,&quot;];
+key=StringJoin@
+Flatten@Table[
+   FromCharacterCode[
+    ToCharacterCode[&quot;a&quot;] - 1 +
+     Position[
+      Array[BitXor[First@ToCharacterCode[&quot; &quot;], #] &amp;, 26, First@ToCharacterCode[&quot;a&quot;]],
+      First@Commonest@EncryptText[[i ;; ;; 3]]
+      ]
+    ], {i, 3}]
+&quot;god&quot;
+Total@MapIndexed[BitXor[#1, ToCharacterCode[key][[Mod[#2, 3, 1]]]] &amp;, EncryptText]
+107359
+</code></pre>
+
+<h1 id="problem-60">Problem 60</h1>
+
+<pre><code>ps = Array[Prime, PrimePi@10000];
+FilterQ[n_] :=  Select[ps, # &gt; n &amp;&amp;  AllTrue[{n*(10^IntegerLength@#) + #, #*(10^IntegerLength@n) + n},      PrimeQ] &amp;];
+For[ia = 1, ia &lt;= Length@ps, ia++, a = ps[[ia]];
+seta = FilterQ@a;
+For[ib = 1, ib &lt;= Length@seta, ib++, b = seta[[ib]];
+  setb = FilterQ@b;
+  setbi = Intersection[seta, setb];
+  For[ic = 1, ic &lt;= Length@setbi, ic++, c = setbi[[ic]];
+   setc = FilterQ@c;
+   setci = Intersection[setbi, setc];
+   For[id = 1, id &lt;= Length@setci, id++, d = setci[[id]];
+    setd = FilterQ@d;
+    setdi = Intersection[setci, setd];
+    If[Length@setdi &gt; 0, Return[Total@{a, b, c, d, First@setdi}]]]]]]
+Return[26033]
+</code></pre>
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/mathematica/">Mathematica</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/dive-into-project-euler-part-4-61-80/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Dive into Project Euler Part 4 (61-80)</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/dive-into-project-euler-part-2-21-40/">
+            <span class="next-text nav-default">Dive into Project Euler Part 2 (21-40)</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'bigheadghost';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink" target="_blank">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  
+      </div>  
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:bigheadghost@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://math.stackexchange.com/users/157947/bigheadghost" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/bigheadghost" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://www.douban.com/people/1254984/" class="iconfont icon-douban" title="douban"></a>
+  <a href="https://bigheadghost.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2014 - 
+    2017
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">bigheadghost</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/even.min.js?v=2.6.4"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+
+
+
+</body>
+</html>
