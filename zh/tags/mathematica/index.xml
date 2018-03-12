@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mathematica on Reading and Thinking</title>
+    <link>https://bigheadghost.github.io/zh/tags/mathematica/</link>
+    <description>Recent content in Mathematica on Reading and Thinking</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 09 Mar 2018 12:39:01 +0800</lastBuildDate>
+    
+	<atom:link href="https://bigheadghost.github.io/zh/tags/mathematica/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>阿基米德群牛问题</title>
+      <link>https://bigheadghost.github.io/zh/post/archimedes-cattle-problem/</link>
+      <pubDate>Fri, 09 Mar 2018 12:39:01 +0800</pubDate>
+      
+      <guid>https://bigheadghost.github.io/zh/post/archimedes-cattle-problem/</guid>
+      <description>&lt;p&gt;网上以讹传讹，计算结果很多是错的，比如&lt;a href=&#34;https://baike.baidu.com/item/%E9%98%BF%E5%9F%BA%E7%B1%B3%E5%BE%B7%E7%BE%A4%E7%89%9B%E9%97%AE%E9%A2%98&#34;&gt;百度百科&lt;/a&gt;、&lt;a href=&#34;http://cdmd.cnki.com.cn/Article/CDMD-10697-2004103986.htm&#34;&gt;博士论文&lt;/a&gt;。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;太阳神有一个由公牛和母牛组成的牛群，其中一部分是白牛，一部分是黑牛，一部分是花牛，其余的都是棕色的牛。&lt;br /&gt;
+在公牛中，白牛的数量比棕色的牛多黑牛的二分之一加三分之一；黑牛的数量比棕色的牛多花牛的四分之一加五分之一；花牛的数量比棕色的牛多白牛的六分之一加七分之一。&lt;br /&gt;
+在母牛中，白牛的数量是所有黑牛的三分之一加四分之一；黑牛的数量是所有花牛的四分之一加五分之一；花牛的数量是所有棕色牛的五分之一加六分之一；棕色的牛的数量是所有白牛的六分之一加七分之一。&lt;br /&gt;
+问题1：这群牛总共有多少头？各种颜色的牛分别是多少头？&lt;br /&gt;
+问题2：若把白色公牛和黑色公牛放在一起，其数量刚好是一个完全平方数；把棕色公牛和花色公牛放在一起，其数量正好是一个三角数，则这群牛共有多少头？&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
