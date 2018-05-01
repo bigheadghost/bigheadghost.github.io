@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bigheadghost.github.io/zh/post/mojiaojiaozhu-complete/</loc>
+    <lastmod>2018-05-01T13:39:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://bigheadghost.github.io/zh/post/archimedes-cattle-problem/</loc>
     <lastmod>2018-03-09T12:39:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -38,15 +45,22 @@
   </url>
   
   <url>
+    <loc>https://bigheadghost.github.io/zh/tags/movie/</loc>
+    <lastmod>2018-05-01T13:39:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://bigheadghost.github.io/zh/post/</loc>
-    <lastmod>2018-03-09T12:39:01+08:00</lastmod>
+    <lastmod>2018-05-01T13:39:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://bigheadghost.github.io/zh/</loc>
-    <lastmod>2018-03-09T12:39:01+08:00</lastmod>
+    <lastmod>2018-05-01T13:39:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -54,6 +68,13 @@
   <url>
     <loc>https://bigheadghost.github.io/zh/tags/</loc>
     <lastmod>2006-02-28T22:17:59+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/tags/uncut/</loc>
+    <lastmod>2018-05-01T13:39:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

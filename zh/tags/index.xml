@@ -37,5 +37,23 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Movie</title>
+      <link>https://bigheadghost.github.io/zh/tags/movie/</link>
+      <pubDate>Tue, 01 May 2018 13:39:01 +0800</pubDate>
+      
+      <guid>https://bigheadghost.github.io/zh/tags/movie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Uncut</title>
+      <link>https://bigheadghost.github.io/zh/tags/uncut/</link>
+      <pubDate>Tue, 01 May 2018 13:39:01 +0800</pubDate>
+      
+      <guid>https://bigheadghost.github.io/zh/tags/uncut/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
