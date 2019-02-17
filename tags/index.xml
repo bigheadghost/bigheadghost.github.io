@@ -5,19 +5,11 @@
     <link>https://bigheadghost.github.io/tags/</link>
     <description>Recent content in Tags on Reading and Thinking</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 25 Jun 2014 14:14:28 +0800</lastBuildDate>
+    <language>en</language>
+    <lastBuildDate>Tue, 09 Sep 2014 12:05:23 +0800</lastBuildDate>
     
 	<atom:link href="https://bigheadghost.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Image Processing</title>
-      <link>https://bigheadghost.github.io/tags/image-processing/</link>
-      <pubDate>Wed, 25 Jun 2014 14:14:28 +0800</pubDate>
-      
-      <guid>https://bigheadghost.github.io/tags/image-processing/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Mathematica</title>
@@ -29,7 +21,34 @@
     </item>
     
     <item>
-      <title>Puzzle</title>
+      <title>PythonChallenge</title>
+      <link>https://bigheadghost.github.io/tags/pythonchallenge/</link>
+      <pubDate>Fri, 11 Jul 2014 20:40:02 +0800</pubDate>
+      
+      <guid>https://bigheadghost.github.io/tags/pythonchallenge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>image processing</title>
+      <link>https://bigheadghost.github.io/tags/image-processing/</link>
+      <pubDate>Wed, 25 Jun 2014 14:14:28 +0800</pubDate>
+      
+      <guid>https://bigheadghost.github.io/tags/image-processing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mathematica</title>
+      <link>https://bigheadghost.github.io/tags/mathematica/</link>
+      <pubDate>Wed, 25 Jun 2014 14:14:28 +0800</pubDate>
+      
+      <guid>https://bigheadghost.github.io/tags/mathematica/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>puzzle</title>
       <link>https://bigheadghost.github.io/tags/puzzle/</link>
       <pubDate>Wed, 02 Jul 2014 10:17:48 +0800</pubDate>
       
@@ -38,20 +57,11 @@
     </item>
     
     <item>
-      <title>Python</title>
+      <title>python</title>
       <link>https://bigheadghost.github.io/tags/python/</link>
       <pubDate>Wed, 02 Jul 2014 10:17:48 +0800</pubDate>
       
       <guid>https://bigheadghost.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pythonchallenge</title>
-      <link>https://bigheadghost.github.io/tags/pythonchallenge/</link>
-      <pubDate>Fri, 11 Jul 2014 20:40:02 +0800</pubDate>
-      
-      <guid>https://bigheadghost.github.io/tags/pythonchallenge/</guid>
       <description></description>
     </item>
     

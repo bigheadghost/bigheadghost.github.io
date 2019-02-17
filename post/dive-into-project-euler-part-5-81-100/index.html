@@ -16,21 +16,17 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigheadghost" />
-  <meta name="description" content="Problem 81 s = Import[&amp;quot;p081_matrix.txt&amp;quot;, &amp;quot;Data&amp;quot;]; Clear@MinPathSum; MinPathSum[1, 1] := s[[1, 1]] MinPathSum[r_, c_] := MinPathSum[r, c] = If[r == 1, MinPathSum[r, c - 1], If[c == 1, MinPathSum[r - 1, c], Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] &#43; s[[r, c]]; MinPathSum[80, 80] 427337  
-" />
+<meta name="author" content="bigheadghost" /><meta name="description" content="Problem 81 1 2 3 4 5 6 7 8 9  s = Import[&amp;#34;p081_matrix.txt&amp;#34;, &amp;#34;Data&amp;#34;]; Clear@MinPathSum; MinPathSum[1, 1] := s[[1, 1]] MinPathSum[r_, c_] := MinPathSum[r, c] = If[r == 1, MinPathSum[r, c - 1], If[c == 1, MinPathSum[r - 1, c], Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] &#43; s[[r, c]]; MinPathSum[80, 80] 427337  " />
 
 
 
 
 
 
-
-<meta name="generator" content="Hugo 0.35" />
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/post/dive-into-project-euler-part-5-81-100/" />
-
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,21 +34,26 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-
-
-
-
-
-<link href="/dist/even.min.css?v=3.0.1" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="Dive into Project Euler Part 5 (81-100)" />
 <meta property="og:description" content="Problem 81
 
-s = Import[&quot;p081_matrix.txt&quot;, &quot;Data&quot;];
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+s = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
 Clear@MinPathSum;
 MinPathSum[1, 1] := s[[1, 1]]
 MinPathSum[r_, c_] := MinPathSum[r, c] =
@@ -61,32 +62,29 @@ MinPathSum[r_, c_] := MinPathSum[r, c] =
       Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] &#43; s[[r, c]];
 MinPathSum[80, 80]
 427337
-
 
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/post/dive-into-project-euler-part-5-81-100/" />
-
-
-
 <meta property="article:published_time" content="2014-09-09T12:05:23&#43;08:00"/>
-
 <meta property="article:modified_time" content="2014-09-09T12:05:23&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
 
 <meta itemprop="name" content="Dive into Project Euler Part 5 (81-100)">
 <meta itemprop="description" content="Problem 81
 
-s = Import[&quot;p081_matrix.txt&quot;, &quot;Data&quot;];
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+s = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
 Clear@MinPathSum;
 MinPathSum[1, 1] := s[[1, 1]]
 MinPathSum[r_, c_] := MinPathSum[r, c] =
@@ -95,14 +93,13 @@ MinPathSum[r_, c_] := MinPathSum[r, c] =
       Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] &#43; s[[r, c]];
 MinPathSum[80, 80]
 427337
-
 
 ">
 
 
 <meta itemprop="datePublished" content="2014-09-09T12:05:23&#43;08:00" />
 <meta itemprop="dateModified" content="2014-09-09T12:05:23&#43;08:00" />
-<meta itemprop="wordCount" content="1250">
+<meta itemprop="wordCount" content="1538">
 
 
 
@@ -111,7 +108,19 @@ MinPathSum[80, 80]
 <meta name="twitter:title" content="Dive into Project Euler Part 5 (81-100)"/>
 <meta name="twitter:description" content="Problem 81
 
-s = Import[&quot;p081_matrix.txt&quot;, &quot;Data&quot;];
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+s = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
 Clear@MinPathSum;
 MinPathSum[1, 1] := s[[1, 1]]
 MinPathSum[r_, c_] := MinPathSum[r, c] =
@@ -120,7 +129,6 @@ MinPathSum[r_, c_] := MinPathSum[r, c] =
       Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] &#43; s[[r, c]];
 MinPathSum[80, 80]
 427337
-
 
 "/>
 
@@ -156,7 +164,7 @@ MinPathSum[80, 80]
       </a><a href="/about/">
         <li class="mobile-menu-item">About</li>
       </a><a href="/zh">
-        <li class="mobile-menu-item">中文(Chinese)</li>
+        <li class="mobile-menu-item">Chinese Version(中文版)</li>
       </a>
   </ul>
 </nav>
@@ -177,7 +185,7 @@ MinPathSum[80, 80]
       </li><li class="menu-item">
         <a class="menu-item-link" href="/about/">About</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/zh">中文(Chinese)</a>
+        <a class="menu-item-link" href="/zh">Chinese Version(中文版)</a>
       </li>
   </ul>
 </nav>
@@ -194,17 +202,14 @@ MinPathSum[80, 80]
       <div class="post-meta">
         <span class="post-time"> 2014-09-09 12:05:23 CST </span>
         
-        <span class="more-meta"> 1250 words </span>
-        <span class="more-meta"> 6 mins read </span>
+          <span class="more-meta"> 1538 words </span>
+          <span class="more-meta"> 8 mins read </span>
         
       </div>
     </header>
 
-    
-    
-<div class="post-toc" id="post-toc">
+    <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
-  
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
 <ul>
@@ -232,12 +237,22 @@ MinPathSum[80, 80]
 </nav>
   </div>
 </div>
-
-    
     <div class="post-content">
       <h1 id="problem-81">Problem 81</h1>
-
-<pre><code>s = Import[&quot;p081_matrix.txt&quot;, &quot;Data&quot;];
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">s = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
 Clear@MinPathSum;
 MinPathSum[1, 1] := s[[1, 1]]
 MinPathSum[r_, c_] := MinPathSum[r, c] =
@@ -245,14 +260,27 @@ MinPathSum[r_, c_] := MinPathSum[r, c] =
      If[c == 1, MinPathSum[r - 1, c],
       Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] + s[[r, c]];
 MinPathSum[80, 80]
-427337
-</code></pre>
-
-<p></p>
-
+427337</pre></td></tr></table>
+</div>
+</div>
 <h1 id="problem-82">Problem 82</h1>
-
-<pre><code>m = Import[&quot;p081_matrix.txt&quot;, &quot;Data&quot;];
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">m = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
 n = Length@m;
 dirs = { {0, 1}, {1, 0}, {-1, 0} };
 ew = Flatten[
@@ -263,12 +291,27 @@ ew = Flatten[
        dirs}];], 1];
 gr = Graph[ew[[1]], EdgeWeight -&gt; ew[[2]]];
 Min@Table[GraphDistance[%, {i, 1}, {j, n}] + m[[i, 1]], {i, n}, {j, n}]
-260324
-</code></pre>
-
+260324</pre></td></tr></table>
+</div>
+</div>
 <h1 id="problem-83">Problem 83</h1>
-
-<pre><code>m = Import[&quot;p081_matrix.txt&quot;, &quot;Data&quot;];
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">m = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
 n = Length@m;
 dirs = { {0, 1}, {1, 0}, {-1, 0}, {0, -1} };
 ew = Flatten[
@@ -279,50 +322,99 @@ ew = Flatten[
        dirs}];], 1];
 gr = Graph[ew[[1]], EdgeWeight -&gt; ew[[2]]];
 m[[1, 1]] + GraphDistance[gr, {1, 1}, {n, n}]
-425185
-</code></pre>
-
+425185</pre></td></tr></table>
+</div>
+</div>
 <h1 id="problem-84">Problem 84</h1>
 
 <p>Not interested</p>
 
 <h1 id="problem-85">Problem 85</h1>
-
-<pre><code>s = Abs[Table[Binomial[x + 1, 2]*Binomial[y + 1, 2], {x, 2000, 1, -1}, {y, 2001 - x}] - 2*10^6];
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">s = Abs[Table[Binomial[x + 1, 2]*Binomial[y + 1, 2], {x, 2000, 1, -1}, {y, 2001 - x}] - 2*10^6];
 Position[s, Min@s]
 { {1924, 36}, {1965, 77} }
 36*77
-2772
-</code></pre>
-
+2772</pre></td></tr></table>
+</div>
+</div>
 <h1 id="problem-86">Problem 86</h1>
-
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;cmath&gt;
-int main()
-{
-    int m = 2;
-    int count = 0;
-    int target = 1000000;
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;cmath&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">target</span> <span class="o">=</span> <span class="mi">1000000</span><span class="p">;</span>
  
-    while (count &lt; target) {
-        m++;
-        for (int wh = 3; wh &lt;= 2 * m; wh++) {
-            double s = sqrt(wh * wh + m * m);                   
-            if (s == (int)(s)) {
-                count += (wh &lt;= m) ? wh / 2 : 1 + (m - (wh+1)/2);
-            }
-        }
-    }
-    printf(&quot;m:%d\ncount:%d\n&quot;,m,count);
-}
-m:1818
-count:1000457
-</code></pre>
-
+    <span class="k">while</span> <span class="p">(</span><span class="n">count</span> <span class="o">&lt;</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">m</span><span class="o">++</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">wh</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="n">wh</span> <span class="o">&lt;=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">m</span><span class="p">;</span> <span class="n">wh</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">double</span> <span class="n">s</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">wh</span> <span class="o">*</span> <span class="n">wh</span> <span class="o">+</span> <span class="n">m</span> <span class="o">*</span> <span class="n">m</span><span class="p">);</span>                   
+            <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">s</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">count</span> <span class="o">+=</span> <span class="p">(</span><span class="n">wh</span> <span class="o">&lt;=</span> <span class="n">m</span><span class="p">)</span> <span class="o">?</span> <span class="n">wh</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">:</span> <span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">m</span> <span class="o">-</span> <span class="p">(</span><span class="n">wh</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;m:%d</span><span class="se">\n</span><span class="s">count:%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">count</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nl">m</span><span class="p">:</span><span class="mi">1818</span>
+<span class="nl">count</span><span class="p">:</span><span class="mi">1000457</span>
+</code></pre></td></tr></table>
+</div>
+</div>
 <h1 id="problem-87">Problem 87</h1>
-
-<pre><code>limit = 5*10^7;
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">limit = 5*10^7;
 ps = Array[Prime, PrimePi@Sqrt@limit];
 ret = {};
 For[i = 1, i &lt;= Length@ps, i++,
@@ -334,12 +426,38 @@ For[j = 1, j &lt;= yset, j++,
   ]
 ];
 Length@DeleteDuplicates@Flatten@ret
-1097343
-</code></pre>
-
+1097343</pre></td></tr></table>
+</div>
+</div>
 <h1 id="problem-88">Problem 88</h1>
-
-<pre><code>uf[m_, 1] := { {} }
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">uf[m_, 1] := { {} }
 uf[1, n_] := { {} }
 uf[m_, n_?PrimeQ] := If[m &lt; n, {}, { {n} }]
 uf[m_, n_] :=
@@ -361,185 +479,362 @@ mf[fl_, pos_] :=
    0];
 MapIndexed[mf, s];
 Total@DeleteDuplicates@arr
-7587457
-</code></pre>
-
+7587457</pre></td></tr></table>
+</div>
+</div>
 <h1 id="problem-89">Problem 89</h1>
-
-<pre><code>Total[StringLength@# - StringLength@IntegerString[FromDigits[#, &quot;Roman&quot;], &quot;Roman&quot;] &amp; /@  ps]
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">Total[StringLength@# - StringLength@IntegerString[FromDigits[#, &#34;Roman&#34;], &#34;Roman&#34;] &amp; /@  ps]</pre></td></tr></table>
+</div>
+</div>
 <h1 id="problem-90">Problem 90</h1>
 
 <p>Not interested</p>
 
 <h1 id="problem-91">Problem 91</h1>
-
-<pre><code>r = 50; Pts = Flatten[Table[{i, j}, {i, r}, {j, r}], 1];
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">r = 50; Pts = Flatten[Table[{i, j}, {i, r}, {j, r}], 1];
 NatPt[i_, j_] :=  Module[{}, k = j/i; knew = -1/k; b = j - knew*i;   Count[(knew*# + b) &amp; /@ Range[0, r],   a_ /; IntegerQ@a &amp;&amp; 0 &lt;= a &lt;= r] - 1];
 Total[NatPt @@@ Pts] + 3 r^2
-14234
-</code></pre>
-
+14234</pre></td></tr></table>
+</div>
+</div>
 <h1 id="problem-92">Problem 92</h1>
 
 <p><a href="www.mathblog.dk/project-euler-92-square-digits-number-chain">ref</a></p>
-
-<pre><code class="language-CSharp">private int nextNumber(int input)
-{
-    int retVal = 0;
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="k">private</span> <span class="kt">int</span> <span class="n">nextNumber</span><span class="p">(</span><span class="kt">int</span> <span class="n">input</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">retVal</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
  
-    while (input &gt; 0)
-    {
-        int digit = input % 10;
-        retVal += digit * digit;
-        input /= 10;
-    }
+    <span class="k">while</span> <span class="p">(</span><span class="n">input</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">digit</span> <span class="p">=</span> <span class="n">input</span> <span class="p">%</span> <span class="m">10</span><span class="p">;</span>
+        <span class="n">retVal</span> <span class="p">+=</span> <span class="n">digit</span> <span class="p">*</span> <span class="n">digit</span><span class="p">;</span>
+        <span class="n">input</span> <span class="p">/=</span> <span class="m">10</span><span class="p">;</span>
+    <span class="p">}</span>
  
-    return retVal;
-}
-public void Solve()
-{
+    <span class="k">return</span> <span class="n">retVal</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">Solve</span><span class="p">()</span>
+<span class="p">{</span>
  
-    Stopwatch clock = Stopwatch.StartNew();
-    int result = 0;
-    int target = 10000000;
-    int cachesize = (int)Math.Ceiling(81 * Math.Log10(target)) + 1;
-    bool[] cache = new bool[cachesize + 1];
+    <span class="n">Stopwatch</span> <span class="n">clock</span> <span class="p">=</span> <span class="n">Stopwatch</span><span class="p">.</span><span class="n">StartNew</span><span class="p">();</span>
+    <span class="kt">int</span> <span class="n">result</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">target</span> <span class="p">=</span> <span class="m">10000000</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">cachesize</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">Math</span><span class="p">.</span><span class="n">Ceiling</span><span class="p">(</span><span class="m">81</span> <span class="p">*</span> <span class="n">Math</span><span class="p">.</span><span class="n">Log10</span><span class="p">(</span><span class="n">target</span><span class="p">))</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>
+    <span class="kt">bool</span><span class="na">[]</span> <span class="n">cache</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">bool</span><span class="na">[cachesize + 1]</span><span class="p">;</span>
  
-    for (int i = 1; i &lt; cachesize; i++)
-    {
-        int sequence = nextNumber(i);
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">cachesize</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">sequence</span> <span class="p">=</span> <span class="n">nextNumber</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
  
-        while (sequence &gt; i &amp;&amp; sequence != 89)
-        {
-            sequence = nextNumber(sequence);
-        }
+        <span class="k">while</span> <span class="p">(</span><span class="n">sequence</span> <span class="p">&gt;</span> <span class="n">i</span> <span class="p">&amp;&amp;</span> <span class="n">sequence</span> <span class="p">!=</span> <span class="m">89</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">sequence</span> <span class="p">=</span> <span class="n">nextNumber</span><span class="p">(</span><span class="n">sequence</span><span class="p">);</span>
+        <span class="p">}</span>
  
-        if (cache[sequence] || sequence == 89)
-        {
-            result++;
-            cache[i] = true;
-        }
+        <span class="k">if</span> <span class="p">(</span><span class="n">cache</span><span class="na">[sequence]</span> <span class="p">||</span> <span class="n">sequence</span> <span class="p">==</span> <span class="m">89</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">result</span><span class="p">++;</span>
+            <span class="n">cache</span><span class="na">[i]</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+        <span class="p">}</span>
  
-    }
+    <span class="p">}</span>
  
-    for (int i = cachesize; i &lt;= target; i++)
-    {
-        if (cache[nextNumber(i)])
-        {
-            result++;
-        }
-    }
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="n">cachesize</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="n">target</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">cache</span><span class="na">[nextNumber(i)]</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">result</span><span class="p">++;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
  
-    clock.Stop();
-    Console.WriteLine(&quot;There are {0} numbers that ends in 89&quot;, result);
-    Console.WriteLine(&quot;Solution took {0} ms&quot;, clock.Elapsed.TotalMilliseconds);
-}
-There are 8581146 numbers that ends in 89
-Solution took 1930.5379 ms
-</code></pre>
-
+    <span class="n">clock</span><span class="p">.</span><span class="n">Stop</span><span class="p">();</span>
+    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;There are {0} numbers that ends in 89&#34;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;Solution took {0} ms&#34;</span><span class="p">,</span> <span class="n">clock</span><span class="p">.</span><span class="n">Elapsed</span><span class="p">.</span><span class="n">TotalMilliseconds</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">There</span> <span class="n">are</span> <span class="m">8581146</span> <span class="n">numbers</span> <span class="n">that</span> <span class="n">ends</span> <span class="k">in</span> <span class="m">89</span>
+<span class="n">Solution</span> <span class="n">took</span> <span class="m">1930.5379</span> <span class="n">ms</span></code></pre></td></tr></table>
+</div>
+</div>
 <h1 id="problem-93">Problem 93</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">operators</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;*&#39;</span><span class="p">,</span><span class="s1">&#39;/&#39;</span><span class="p">]</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+<span class="n">opslist</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">operators</span><span class="p">,</span><span class="n">repeat</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
 
-<pre><code class="language-python">operators=['+','-','*','/']
-import itertools
-opslist=list(itertools.product(operators,repeat=3))
-
-def results(inputints):
-    inputs=[str(x) for x in inputints]
-    res=[]
-    for ops in opslist:
-        s=list(filter(lambda x: x != '', itertools.chain.from_iterable(itertools.zip_longest(inputs, ops, fillvalue = ''))))
+<span class="k">def</span> <span class="nf">results</span><span class="p">(</span><span class="n">inputints</span><span class="p">):</span>
+    <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">inputints</span><span class="p">]</span>
+    <span class="n">res</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">ops</span> <span class="ow">in</span> <span class="n">opslist</span><span class="p">:</span>
+        <span class="n">s</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">zip_longest</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">ops</span><span class="p">,</span> <span class="n">fillvalue</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">))))</span>
         
-        #added brackets
-        #a+b+c+d
-        #a+(b+c)+d
-        #a+b+(c+d)
-        #a+(b+c+d)
-        #(a+b)+(c+d)
-        exps=[s]
-        for i in range(4):
-            exps.append(s.copy())
-        exps[1].insert(2,'(')
-        exps[1].insert(6,')')
+        <span class="c1">#added brackets</span>
+        <span class="c1">#a+b+c+d</span>
+        <span class="c1">#a+(b+c)+d</span>
+        <span class="c1">#a+b+(c+d)</span>
+        <span class="c1">#a+(b+c+d)</span>
+        <span class="c1">#(a+b)+(c+d)</span>
+        <span class="n">exps</span><span class="o">=</span><span class="p">[</span><span class="n">s</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+            <span class="n">exps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+        <span class="n">exps</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;(&#39;</span><span class="p">)</span>
+        <span class="n">exps</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
         
-        exps[2].insert(4,'(')
-        exps[2].append(')')
+        <span class="n">exps</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;(&#39;</span><span class="p">)</span>
+        <span class="n">exps</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
         
-        exps[3].insert(2,'(')
-        exps[3].append(')')
+        <span class="n">exps</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;(&#39;</span><span class="p">)</span>
+        <span class="n">exps</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
         
-        exps[4].insert(0,'(')
-        exps[4].insert(4,')')
-        exps[4].insert(6,'(')
-        exps[4].append(')')    
+        <span class="n">exps</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;(&#39;</span><span class="p">)</span>
+        <span class="n">exps</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
+        <span class="n">exps</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;(&#39;</span><span class="p">)</span>
+        <span class="n">exps</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>    
     
-        for exp in exps:
-            expstr=''.join(exp)
-            try:
-                value=eval(expstr)
-                if value==int(value) and value&gt;0:
-                    res.append(int(value))
-            except ZeroDivisionError as err:
-                #print(err)
-                pass
-    return list(set(res))
+        <span class="k">for</span> <span class="n">exp</span> <span class="ow">in</span> <span class="n">exps</span><span class="p">:</span>
+            <span class="n">expstr</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">exp</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">value</span><span class="o">=</span><span class="nb">eval</span><span class="p">(</span><span class="n">expstr</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">value</span><span class="o">==</span><span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="ow">and</span> <span class="n">value</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+                    <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+            <span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+                <span class="c1">#print(err)</span>
+                <span class="k">pass</span>
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">res</span><span class="p">))</span>
 
-def GetNonCaled(operands):
-    res=[]
-    intlists=list(itertools.permutations(operands,4))
-    for inputints in intlists:
-        res.extend(results(inputints))
-    res=sorted(list(set(res)))
-    #print(res)
-    for i in range(1,len(res)+1):
-        if i not in res:
-            return i
+<span class="k">def</span> <span class="nf">GetNonCaled</span><span class="p">(</span><span class="n">operands</span><span class="p">):</span>
+    <span class="n">res</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">intlists</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">permutations</span><span class="p">(</span><span class="n">operands</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">inputints</span> <span class="ow">in</span> <span class="n">intlists</span><span class="p">:</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">results</span><span class="p">(</span><span class="n">inputints</span><span class="p">))</span>
+    <span class="n">res</span><span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">res</span><span class="p">)))</span>
+    <span class="c1">#print(res)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">res</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">i</span>
 
 
-arglist=[]
-for a in range(1,10):
-    for b in range(a+1,10):
-        for c in range(b+1,10):
-            for d in range(c+1,10):
-                arglist.append([a,b,c,d])
-data={}
-for l in arglist:
-    r=GetNonCaled(l)
-    if r not in data:
-        data[r]=[l]
-    else:
-        data[r].append(l)
+<span class="n">arglist</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">c</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+                <span class="n">arglist</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">])</span>
+<span class="n">data</span><span class="o">=</span><span class="p">{}</span>
+<span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">arglist</span><span class="p">:</span>
+    <span class="n">r</span><span class="o">=</span><span class="n">GetNonCaled</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">r</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="n">data</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">=</span><span class="p">[</span><span class="n">l</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">data</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
 
-print(data)
-1258
-</code></pre>
-
+<span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="mi">1258</span></code></pre></td></tr></table>
+</div>
+</div>
 <h1 id="problem-94">Problem 94</h1>
-
-<pre><code class="language-python">x,y=2,1
-sum=0
-while True:
-    x,y=2*x+3*y,2*y+x
-    if (2*x+1) % 3==0 and ((x+2)*y)%3==0:
-        print(int((2*x+1)/3),int((2*x+1)/3-1))
-        p=2*x+2
-        if p&gt;10**9:break
-        sum+=p
-    if (2*x-1) % 3==0 and ((x-2)*y) % 3==0:
-        print(int((2*x-1)/3),int((2*x-1)/3-1))
-        p=2*x-2
-        if p&gt;10**9:break
-        sum+=p
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span>
+<span class="nb">sum</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="n">y</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">+</span><span class="n">x</span>
+    <span class="k">if</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">3</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="o">%</span><span class="mi">3</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="p">),</span><span class="nb">int</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">2</span>
+        <span class="k">if</span> <span class="n">p</span><span class="o">&gt;</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">:</span><span class="k">break</span>
+        <span class="nb">sum</span><span class="o">+=</span><span class="n">p</span>
+    <span class="k">if</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">3</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">)</span> <span class="o">%</span> <span class="mi">3</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="p">),</span><span class="nb">int</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span>
+        <span class="k">if</span> <span class="n">p</span><span class="o">&gt;</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">:</span><span class="k">break</span>
+        <span class="nb">sum</span><span class="o">+=</span><span class="n">p</span>
  
-print(sum)
-518408346
-</code></pre>
-
+<span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+<span class="mi">518408346</span></code></pre></td></tr></table>
+</div>
+</div>
 <h1 id="problem-95">Problem 95</h1>
-
-<pre><code>f[n_] := DivisorSigma[1, n] - n;
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">f[n_] := DivisorSigma[1, n] - n;
 fl[n_] := Module[{}, i = 1;
    x = n; ret = {x};
    While[True, x = f@x;
@@ -550,12 +845,26 @@ fl[n_] := Module[{}, i = 1;
 ps = Position[fl /@ Range[10000, 1000000], a_ /; a &gt; 0]
 fres = fl @@@ (10000 + ps - 1)
 ps[[FirstPosition[fres, Max@fres]]]
-14316
-</code></pre>
-
+14316</pre></td></tr></table>
+</div>
+</div>
 <h1 id="problem-96">Problem 96</h1>
-
-<pre><code>grids = Map[FromDigits, Characters[  Rest /@ Partition[Import[&quot;p096_sudoku.txt&quot;, &quot;Data&quot;], 10]], {3}];
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">grids = Map[FromDigits, Characters[  Rest /@ Partition[Import[&#34;p096_sudoku.txt&#34;, &#34;Data&#34;], 10]], {3}];
 f[g_, i_, j_] := Complement[Range[9], DeleteDuplicates@ DeleteCases[ Join[g[[i, All]], g[[All, j]], Flatten@g[[3 Floor[(i - 1)/3] + 1 ;; 3 Floor[(i - 1)/3] + 3, 3 Floor[(j - 1)/3] + 1 ;; 3 Floor[(j - 1)/3] + 3]]], 0]];
 SpreadCands[l_] := Module[{candis = &lt;||&gt;},  Do[If[l[[i, j]] == 0, candis[{i, j}] = f[l, i, j]], {i, 9}, {j,9}]; Sort@candis];
 Step[] :=  Module[{assc, g, rule, pt, values}, g = Last@gl;  assc = SpreadCands[g];
@@ -565,18 +874,46 @@ Step[] :=  Module[{assc, g, rule, pt, values}, g = Last@gl;  assc = SpreadCands[
     Do[g[[Sequence @@ pt]] = v;  gl = {gl, g}; Step[], {v, values}]];
    ];
 AbsoluteTiming@Total@Table[gl = { {}, i}; Catch@Step[], {i, grids}]
-{49.13, 24702}
-</code></pre>
-
+{49.13, 24702}</pre></td></tr></table>
+</div>
+</div>
 <h1 id="problem-97">Problem 97</h1>
-
-<pre><code>FromDigits@Take[IntegerDigits[28433*2^7830457 + 1], -10]
-8739992577
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">FromDigits@Take[IntegerDigits[28433*2^7830457 + 1], -10]
+8739992577</pre></td></tr></table>
+</div>
+</div>
 <h1 id="problem-98">Problem 98</h1>
-
-<pre><code>words = StringSplit[StringReplace[Import[&quot;p098_words.txt&quot;], &quot;\&quot;&quot; -&gt; &quot;&quot;], &quot;,&quot;];
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">words = StringSplit[StringReplace[Import[&#34;p098_words.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;], &#34;,&#34;];
 wordpairs= SortBy[Select[GatherBy[words, Sort@Characters@# &amp;], Length@# &gt; 1 &amp;],100 - StringLength@First@# &amp;];
 f[w1_, w2_] :=
 Module[{}, l = StringLength@w1; ret = {};
@@ -594,23 +931,32 @@ Module[{}, l = StringLength@w1; ret = {};
     If[IntegerLength@w2i == l &amp;&amp; IntegerQ@Sqrt@w2i, ret = {ret, assc}]]
    ]; Flatten@ret];
 Take[f@@@wordpairs,-20]
-{f[&quot;POST&quot;, &quot;SPOT&quot;,  &quot;STOP&quot;], {}, {&lt;|&quot;B&quot; -&gt; 1, &quot;O&quot; -&gt; 7, &quot;A&quot; -&gt; 6, &quot;R&quot; -&gt; 8,   &quot;D&quot; -&gt; 9|&gt;}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} }
-18769
-</code></pre>
-
+{f[&#34;POST&#34;, &#34;SPOT&#34;,  &#34;STOP&#34;], {}, {&lt;|&#34;B&#34; -&gt; 1, &#34;O&#34; -&gt; 7, &#34;A&#34; -&gt; 6, &#34;R&#34; -&gt; 8,   &#34;D&#34; -&gt; 9|&gt;}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} }
+18769</pre></td></tr></table>
+</div>
+</div>
 <h1 id="problem-99">Problem 99</h1>
-
-<pre><code>Ordering[Import[&quot;p099_base_exp.txt&quot;, &quot;Data&quot;], -1, #1[[2]]*Log@#1[[1]] &lt; #2[[2]]*Log@#2[[1]] &amp;]
-{709}
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">Ordering[Import[&#34;p099_base_exp.txt&#34;, &#34;Data&#34;], -1, #1[[2]]*Log@#1[[1]] &lt; #2[[2]]*Log@#2[[1]] &amp;]
+{709}</pre></td></tr></table>
+</div>
+</div>
 <h1 id="problem-100">Problem 100</h1>
-
-<pre><code>First@Solve[b/(b + r)*(b - 1)/(b + r - 1) == 1/2 &amp;&amp; b + r &gt; 10^12 &amp;&amp; b &gt; 0 &amp;&amp;  r &gt; 0, {b, r}, Integers]
-</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">First@Solve[b/(b + r)*(b - 1)/(b + r - 1) == 1/2 &amp;&amp; b + r &gt; 10^12 &amp;&amp; b &gt; 0 &amp;&amp;  r &gt; 0, {b, r}, Integers]</pre></td></tr></table>
+</div>
+</div>
     </div>
 
-    
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
@@ -618,7 +964,10 @@ Take[f@@@wordpairs,-20]
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">2014-09-09 12:05:23 CST</span>
+    <span class="item-content">
+        2014-09-09 12:05:23 CST
+        
+    </span>
   </p>
   
   <p class="copyright-item">
@@ -626,49 +975,36 @@ Take[f@@@wordpairs,-20]
     <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
   </p>
 </div>
-
-    
-    
 <div class="post-reward">
   <input type="checkbox" name="reward" id="reward" hidden />
   <label class="reward-button" for="reward">Reward</label>
   <div class="qr-code">
     
-    
-      <label class="qr-code-image" for="reward">
+    <label class="qr-code-image" for="reward">
         <img class="image" src="/img/reward/wechat.jpg">
         <span>wechat</span>
       </label>
-    
-      <label class="qr-code-image" for="reward">
+    <label class="qr-code-image" for="reward">
         <img class="image" src="/img/reward/alipay.jpg">
         <span>alipay</span>
       </label>
   </div>
-</div>
-
-    <footer class="post-footer">
+</div><footer class="post-footer">
       <div class="post-tags">
-          
           <a href="/tags/mathematica/">Mathematica</a>
-          
-        </div>
-
-      
+          </div>
       <nav class="post-nav">
         
-        
-          <a class="next" href="/post/dive-into-project-euler-part-4-61-80/">
+        <a class="next" href="/post/dive-into-project-euler-part-4-61-80/">
             <span class="next-text nav-default">Dive into Project Euler Part 4 (61-80)</span>
-            <span class="prev-text nav-mobile">Next</span>
+            <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
       </nav>
     </footer>
   </article>
         </div>
-        
-  <div id="disqus_thread"></div>
+        <div id="disqus_thread"></div>
     <script type="text/javascript">
     (function() {
       
@@ -682,12 +1018,13 @@ Take[f@@@wordpairs,-20]
     })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
       </div>
     </main>
 
     <footer id="footer" class="footer">
       <div class="social-links">
-      <a href="mailto:bigheadghost@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="mailto:bigheadghost@gmail.com" class="iconfont icon-email" title="email"></a>
       <a href="https://math.stackexchange.com/users/157947/bigheadghost" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
       <a href="https://github.com/bigheadghost" class="iconfont icon-github" title="github"></a>
       <a href="https://www.douban.com/people/1254984/" class="iconfont icon-douban" title="douban"></a>
@@ -708,9 +1045,8 @@ Take[f@@@wordpairs,-20]
 
   <span class="copyright-year">
     &copy; 
-    
-      2014 - 
-    2018
+    2014 - 
+    2019
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
@@ -724,10 +1060,10 @@ Take[f@@@wordpairs,-20]
     </div>
   </div>
   
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
-<script type="text/javascript" src="/dist/even.min.js?v=3.0.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
 
 
 

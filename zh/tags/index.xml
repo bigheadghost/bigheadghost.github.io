@@ -5,13 +5,13 @@
     <link>https://bigheadghost.github.io/zh/tags/</link>
     <description>Recent content in Tags on Reading and Thinking</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 28 Feb 2006 22:17:59 +0800</lastBuildDate>
+    <language>en</language>
     
 	<atom:link href="https://bigheadghost.github.io/zh/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>History</title>
+      <title>history</title>
       <link>https://bigheadghost.github.io/zh/tags/history/</link>
       <pubDate>Tue, 28 Feb 2006 22:17:59 +0800</pubDate>
       
@@ -20,7 +20,7 @@
     </item>
     
     <item>
-      <title>Mathematica</title>
+      <title>mathematica</title>
       <link>https://bigheadghost.github.io/zh/tags/mathematica/</link>
       <pubDate>Fri, 09 Mar 2018 12:39:01 +0800</pubDate>
       
@@ -29,7 +29,7 @@
     </item>
     
     <item>
-      <title>Mathematics</title>
+      <title>mathematics</title>
       <link>https://bigheadghost.github.io/zh/tags/mathematics/</link>
       <pubDate>Tue, 28 Feb 2006 22:17:59 +0800</pubDate>
       
@@ -38,7 +38,7 @@
     </item>
     
     <item>
-      <title>Movie</title>
+      <title>movie</title>
       <link>https://bigheadghost.github.io/zh/tags/movie/</link>
       <pubDate>Tue, 01 May 2018 13:39:01 +0800</pubDate>
       
@@ -47,11 +47,29 @@
     </item>
     
     <item>
-      <title>Uncut</title>
+      <title>uncut</title>
       <link>https://bigheadghost.github.io/zh/tags/uncut/</link>
       <pubDate>Tue, 01 May 2018 13:39:01 +0800</pubDate>
       
       <guid>https://bigheadghost.github.io/zh/tags/uncut/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>分级</title>
+      <link>https://bigheadghost.github.io/zh/tags/%E5%88%86%E7%BA%A7/</link>
+      <pubDate>Sun, 17 Feb 2019 23:34:42 +0800</pubDate>
+      
+      <guid>https://bigheadghost.github.io/zh/tags/%E5%88%86%E7%BA%A7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>电影</title>
+      <link>https://bigheadghost.github.io/zh/tags/%E7%94%B5%E5%BD%B1/</link>
+      <pubDate>Sun, 17 Feb 2019 23:34:42 +0800</pubDate>
+      
+      <guid>https://bigheadghost.github.io/zh/tags/%E7%94%B5%E5%BD%B1/</guid>
       <description></description>
     </item>
     

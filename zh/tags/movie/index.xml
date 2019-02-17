@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Movie on Reading and Thinking</title>
+    <title>movie on Reading and Thinking</title>
     <link>https://bigheadghost.github.io/zh/tags/movie/</link>
-    <description>Recent content in Movie on Reading and Thinking</description>
+    <description>Recent content in movie on Reading and Thinking</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Tue, 01 May 2018 13:39:01 +0800</lastBuildDate>
     
 	<atom:link href="https://bigheadghost.github.io/zh/tags/movie/index.xml" rel="self" type="application/rss+xml" />

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Reading and Thinking</title>
+    <title>python on Reading and Thinking</title>
     <link>https://bigheadghost.github.io/tags/python/</link>
-    <description>Recent content in Python on Reading and Thinking</description>
+    <description>Recent content in python on Reading and Thinking</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Wed, 02 Jul 2014 10:17:48 +0800</lastBuildDate>
     
 	<atom:link href="https://bigheadghost.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
@@ -21,8 +22,7 @@
 &lt;p&gt;If solutions are all you want, please visit this &lt;a href=&#34;http://www.gamefaqs.com/pc/932088-mummy-maze-deluxe/faqs/42610&#34;&gt;Complete Walktrough&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The 14th puzzle in Pharaoh&amp;rsquo;s Tomb, has the solution with the most moves, 66 steps.&lt;br /&gt;
-&lt;img src=&#34;https://bigheadghost.github.io/img/2014/mummy_maze_with_longest_solution.jpg&#34; alt=&#34;mummy maze demo&#34; /&gt;&lt;br /&gt;
-&lt;/p&gt;</description>
+&lt;img src=&#34;https://bigheadghost.github.io/img/2014/mummy_maze_with_longest_solution.jpg&#34; alt=&#34;mummy maze demo&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -36,8 +36,7 @@ Actually, all puzzles data are located in the &amp;ldquo;puzzles&amp;rdquo;  fol
 
 &lt;p&gt;PuzzleData are stored in files such as SAL1_TwoSides.xml(Stage A Level 1). colours variable denotes the grid. gold, silver, bronze variables are the moves count to achieve these medals. The &amp;ldquo;solution&amp;rdquo; part, well, is the solution. Following computer world&amp;rsquo;s tradition, in each turn, x, y mean the column, row coordinates, both originating from 0.&lt;/p&gt;
 
-&lt;p&gt;If solution is all your want, it&amp;rsquo;s done.&lt;br /&gt;
-&lt;/p&gt;</description>
+&lt;p&gt;If solution is all your want, it&amp;rsquo;s done.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -46,7 +45,8 @@ Actually, all puzzles data are located in the &amp;ldquo;puzzles&amp;rdquo;  fol
       <pubDate>Tue, 17 Jun 2014 12:53:53 +0800</pubDate>
       
       <guid>https://bigheadghost.github.io/post/magic-griddlers-solver/</guid>
-      <description></description>
+      <description>&lt;p&gt;Recently  I came across a number puzzle called &lt;a href=&#34;http://www.bigfishgames.com/download-games/26504/magic-griddlers/index.html&#34;&gt;Magic Griddlers&lt;/a&gt; from &lt;a href=&#34;http://www.bigfishgames.com&#34;&gt;Big Fish&lt;/a&gt;. It&amp;rsquo;s kind of attractive, so I wrote a puzzle solver with several lines of python. It gives the solution in a few seconds.&lt;br /&gt;
+&lt;img src=&#34;http://cdn-games.bigfishsites.com/en_magic-griddlers/screen1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -16,20 +16,18 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigheadghost" />
-  <meta name="description" content="" />
+<meta name="author" content="bigheadghost" /><meta name="description" content="Recently I came across a number puzzle called Magic Griddlers from Big Fish. It&amp;rsquo;s kind of attractive, so I wrote a puzzle solver with several lines of python. It gives the solution in a few seconds.
+" />
 
 
 
 
 
 
-
-<meta name="generator" content="Hugo 0.35" />
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/post/magic-griddlers-solver/" />
-
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -37,52 +35,34 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-
-
-
-
-
-<link href="/dist/even.min.css?v=3.0.1" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="Magic Griddlers Solver" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="Recently  I came across a number puzzle called Magic Griddlers from Big Fish. It&rsquo;s kind of attractive, so I wrote a puzzle solver with several lines of python. It gives the solution in a few seconds.
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/post/magic-griddlers-solver/" />
-
-
-
 <meta property="article:published_time" content="2014-06-17T12:53:53&#43;08:00"/>
-
 <meta property="article:modified_time" content="2014-06-17T12:53:53&#43;08:00"/>
 
-
-
-
-
-
-
-
-
-
-
 <meta itemprop="name" content="Magic Griddlers Solver">
-<meta itemprop="description" content="">
+<meta itemprop="description" content="Recently  I came across a number puzzle called Magic Griddlers from Big Fish. It&rsquo;s kind of attractive, so I wrote a puzzle solver with several lines of python. It gives the solution in a few seconds.
+">
 
 
 <meta itemprop="datePublished" content="2014-06-17T12:53:53&#43;08:00" />
 <meta itemprop="dateModified" content="2014-06-17T12:53:53&#43;08:00" />
-<meta itemprop="wordCount" content="313">
+<meta itemprop="wordCount" content="311">
 
 
 
 <meta itemprop="keywords" content="puzzle,python," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Magic Griddlers Solver"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="Recently  I came across a number puzzle called Magic Griddlers from Big Fish. It&rsquo;s kind of attractive, so I wrote a puzzle solver with several lines of python. It gives the solution in a few seconds.
+"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -116,7 +96,7 @@
       </a><a href="/about/">
         <li class="mobile-menu-item">About</li>
       </a><a href="/zh">
-        <li class="mobile-menu-item">中文(Chinese)</li>
+        <li class="mobile-menu-item">Chinese Version(中文版)</li>
       </a>
   </ul>
 </nav>
@@ -137,7 +117,7 @@
       </li><li class="menu-item">
         <a class="menu-item-link" href="/about/">About</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/zh">中文(Chinese)</a>
+        <a class="menu-item-link" href="/zh">Chinese Version(中文版)</a>
       </li>
   </ul>
 </nav>
@@ -154,29 +134,27 @@
       <div class="post-meta">
         <span class="post-time"> 2014-06-17 12:53:53 CST </span>
         
-        <span class="more-meta"> 313 words </span>
-        <span class="more-meta"> 2 mins read </span>
+          <span class="more-meta"> 311 words </span>
+          <span class="more-meta"> 2 mins read </span>
         
       </div>
     </header>
 
-    
-    
-<div class="post-toc" id="post-toc">
+    <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
-  
   <div class="post-toc-content always-active">
     
   </div>
 </div>
-
-    
     <div class="post-content">
       <p>Recently  I came across a number puzzle called <a href="http://www.bigfishgames.com/download-games/26504/magic-griddlers/index.html">Magic Griddlers</a> from <a href="http://www.bigfishgames.com">Big Fish</a>. It&rsquo;s kind of attractive, so I wrote a puzzle solver with several lines of python. It gives the solution in a few seconds.<br />
-<img src="http://cdn-games.bigfishsites.com/en_magic-griddlers/screen1.jpg" alt="" /><br />
-<br />
-1. Input the patterns of rows and columns. If none of the numbers of a pattern is larger than 9, it can be input as a whole number, e.g. a pattern of &lsquo;1  3 5&rsquo; can be input as 135. Otherwise, you should input them as a list. e.g. a pattern of &lsquo;1 3 12&rsquo; as [1, 3, 12]<br />
-2. Run the <a href="https://github.com/bigheadghost/PuzzleSolvers/blob/master/Magic%20Griddlers%20solver.py">python code</a>. Python 3 is required.</p>
+<img src="http://cdn-games.bigfishsites.com/en_magic-griddlers/screen1.jpg" alt="" /></p>
+
+<ol>
+<li>Input the patterns of rows and columns. If none of the numbers of a pattern is larger than 9, it can be input as a whole number, e.g. a pattern of &lsquo;1  3 5&rsquo; can be input as 135. Otherwise, you should input them as a list. e.g. a pattern of &lsquo;1 3 12&rsquo; as [1, 3, 12]<br /></li>
+<li>Run the <a href="https://github.com/bigheadghost/PuzzleSolvers/blob/master/Magic%20Griddlers%20solver.py">python code</a>. Python 3 is required.<br />
+<br /></li>
+</ol>
 
 <p>Some Notes:<br />
 1. intermediate data are saved for calculation performance in savedata func. For the lattices used in the puzzle, only row count or column count is 5, 10, 15, 20 are pre calculated.<br />
@@ -193,7 +171,6 @@ So if you want to design a puzzle, you can use my solver to test whether the lat
 3. A interesting <a href="http://math.stackexchange.com/questions/839310/binary-sequence-count-of-unique-patterns">note</a> of the count of unique patterns of binary sequence, it follows fibonacci numbers as the sequence length increases.</p>
     </div>
 
-    
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
@@ -201,7 +178,10 @@ So if you want to design a puzzle, you can use my solver to test whether the lat
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">2014-06-17 12:53:53 CST</span>
+    <span class="item-content">
+        2014-06-17 12:53:53 CST
+        
+    </span>
   </p>
   
   <p class="copyright-item">
@@ -209,40 +189,27 @@ So if you want to design a puzzle, you can use my solver to test whether the lat
     <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
   </p>
 </div>
-
-    
-    
 <div class="post-reward">
   <input type="checkbox" name="reward" id="reward" hidden />
   <label class="reward-button" for="reward">Reward</label>
   <div class="qr-code">
     
-    
-      <label class="qr-code-image" for="reward">
+    <label class="qr-code-image" for="reward">
         <img class="image" src="/img/reward/wechat.jpg">
         <span>wechat</span>
       </label>
-    
-      <label class="qr-code-image" for="reward">
+    <label class="qr-code-image" for="reward">
         <img class="image" src="/img/reward/alipay.jpg">
         <span>alipay</span>
       </label>
   </div>
-</div>
-
-    <footer class="post-footer">
+</div><footer class="post-footer">
       <div class="post-tags">
-          
           <a href="/tags/puzzle/">puzzle</a>
-          
           <a href="/tags/python/">python</a>
-          
-        </div>
-
-      
+          </div>
       <nav class="post-nav">
-        
-          <a class="prev" href="/post/kamisolver/">
+        <a class="prev" href="/post/kamisolver/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">Kami Solver</span>
             <span class="prev-text nav-mobile">Prev</span>
@@ -252,8 +219,7 @@ So if you want to design a puzzle, you can use my solver to test whether the lat
     </footer>
   </article>
         </div>
-        
-  <div id="disqus_thread"></div>
+        <div id="disqus_thread"></div>
     <script type="text/javascript">
     (function() {
       
@@ -267,12 +233,13 @@ So if you want to design a puzzle, you can use my solver to test whether the lat
     })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
       </div>
     </main>
 
     <footer id="footer" class="footer">
       <div class="social-links">
-      <a href="mailto:bigheadghost@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="mailto:bigheadghost@gmail.com" class="iconfont icon-email" title="email"></a>
       <a href="https://math.stackexchange.com/users/157947/bigheadghost" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
       <a href="https://github.com/bigheadghost" class="iconfont icon-github" title="github"></a>
       <a href="https://www.douban.com/people/1254984/" class="iconfont icon-douban" title="douban"></a>
@@ -293,9 +260,8 @@ So if you want to design a puzzle, you can use my solver to test whether the lat
 
   <span class="copyright-year">
     &copy; 
-    
-      2014 - 
-    2018
+    2014 - 
+    2019
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
@@ -309,10 +275,10 @@ So if you want to design a puzzle, you can use my solver to test whether the lat
     </div>
   </div>
   
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
-<script type="text/javascript" src="/dist/even.min.js?v=3.0.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
 
 
 

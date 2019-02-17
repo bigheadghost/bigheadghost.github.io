@@ -16,15 +16,13 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigheadghost" />
-  <meta name="description" content="Level 1:
-a = CharacterRange[&amp;quot;a&amp;quot;, &amp;quot;z&amp;quot;]; StringJoin[Characters[s] /. Thread[a -&amp;gt; RotateLeft[a, 2]]]  Level 2:
-Sort[Tally[Characters[s]], #1[[2]] &amp;lt;= #2[[2]] &amp;amp;]  Level 3:
-StringJoin[StringCases[s,RegularExpression[&amp;quot;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&amp;quot;] -&amp;gt; &amp;quot;$1&amp;quot;]]  Level 4:
-NestWhileList[(resp = Import[&amp;quot;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&amp;quot;&amp;lt;&amp;gt;#]; m = StringCases[resp ,&amp;quot;next nothing is &amp;quot; ~~ (x : DigitCharacter ..) -&amp;gt; x]; If[m != {}, m[[1]], Print[resp]; &amp;quot;&amp;quot;]) &amp;amp;, &amp;quot;12345&amp;quot;, StringLength[#] &amp;gt; 0 &amp;amp;]  16044-&amp;gt;8022, continue
+<meta name="author" content="bigheadghost" /><meta name="description" content="Level 1:
+1  a = CharacterRange[&amp;#34;a&amp;#34;, &amp;#34;z&amp;#34;]; StringJoin[Characters[s] /. Thread[a -&amp;gt; RotateLeft[a, 2]]]   Level 2:
+1  Sort[Tally[Characters[s]], #1[[2]] &amp;lt;= #2[[2]] &amp;amp;]   Level 3:
+1  StringJoin[StringCases[s,RegularExpression[&amp;#34;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&amp;#34;] -&amp;gt; &amp;#34;$1&amp;#34;]]   Level 4:
+1 2 3 4 5  NestWhileList[(resp = Import[&amp;#34;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&amp;#34;&amp;lt;&amp;gt;#]; m = StringCases[resp ,&amp;#34;next nothing is &amp;#34; ~~ (x : DigitCharacter ..) -&amp;gt; x]; If[m != {}, m[[1]], Print[resp]; &amp;#34;&amp;#34;]) &amp;amp;, &amp;#34;12345&amp;#34;, StringLength[#] &amp;gt; 0 &amp;amp;]   16044-&amp;gt;8022, continue
 Level 5:
 pickle module needed, python only.
-Level 6:
 " />
 
 
@@ -32,12 +30,10 @@ Level 6:
 
 
 
-
-<meta name="generator" content="Hugo 0.35" />
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/post/pythonchallenge-solutions-using-mathematica/" />
-
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -45,103 +41,118 @@ Level 6:
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-
-
-
-
-
-<link href="/dist/even.min.css?v=3.0.1" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="PythonChallenge Solutions Using Mathematica" />
 <meta property="og:description" content="Level 1:
 
-a = CharacterRange[&quot;a&quot;, &quot;z&quot;]; StringJoin[Characters[s] /. Thread[a -&gt; RotateLeft[a, 2]]]
+
+1
+
+
+a = CharacterRange[&#34;a&#34;, &#34;z&#34;]; StringJoin[Characters[s] /. Thread[a -&gt; RotateLeft[a, 2]]]
 
 
 Level 2:
+
+
+1
+
 
 Sort[Tally[Characters[s]], #1[[2]] &lt;= #2[[2]] &amp;]
 
 
 Level 3:
 
-StringJoin[StringCases[s,RegularExpression[&quot;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&quot;] -&gt;  &quot;$1&quot;]]
+
+1
+
+
+StringJoin[StringCases[s,RegularExpression[&#34;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&#34;] -&gt;  &#34;$1&#34;]]
 
 
 Level 4:
 
-NestWhileList[(resp = Import[&quot;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&quot;&lt;&gt;#];
-   m = StringCases[resp ,&quot;next nothing is &quot; ~~ (x : DigitCharacter ..) -&gt; x];
-   If[m != {}, m[[1]], Print[resp]; &quot;&quot;]) &amp;,
-&quot;12345&quot;,
+
+1
+2
+3
+4
+5
+
+
+NestWhileList[(resp = Import[&#34;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&#34;&lt;&gt;#];
+   m = StringCases[resp ,&#34;next nothing is &#34; ~~ (x : DigitCharacter ..) -&gt; x];
+   If[m != {}, m[[1]], Print[resp]; &#34;&#34;]) &amp;,
+&#34;12345&#34;,
 StringLength[#] &gt; 0 &amp;]
 
 
 16044-&gt;8022, continue
 
 Level 5:
-pickle module needed, python only.
-
-Level 6:" />
+pickle module needed, python only." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/post/pythonchallenge-solutions-using-mathematica/" />
-
-
-
 <meta property="article:published_time" content="2014-07-11T20:40:02&#43;08:00"/>
-
 <meta property="article:modified_time" content="2014-07-11T20:40:02&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
 
 <meta itemprop="name" content="PythonChallenge Solutions Using Mathematica">
 <meta itemprop="description" content="Level 1:
 
-a = CharacterRange[&quot;a&quot;, &quot;z&quot;]; StringJoin[Characters[s] /. Thread[a -&gt; RotateLeft[a, 2]]]
+
+1
+
+
+a = CharacterRange[&#34;a&#34;, &#34;z&#34;]; StringJoin[Characters[s] /. Thread[a -&gt; RotateLeft[a, 2]]]
 
 
 Level 2:
+
+
+1
+
 
 Sort[Tally[Characters[s]], #1[[2]] &lt;= #2[[2]] &amp;]
 
 
 Level 3:
 
-StringJoin[StringCases[s,RegularExpression[&quot;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&quot;] -&gt;  &quot;$1&quot;]]
+
+1
+
+
+StringJoin[StringCases[s,RegularExpression[&#34;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&#34;] -&gt;  &#34;$1&#34;]]
 
 
 Level 4:
 
-NestWhileList[(resp = Import[&quot;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&quot;&lt;&gt;#];
-   m = StringCases[resp ,&quot;next nothing is &quot; ~~ (x : DigitCharacter ..) -&gt; x];
-   If[m != {}, m[[1]], Print[resp]; &quot;&quot;]) &amp;,
-&quot;12345&quot;,
+
+1
+2
+3
+4
+5
+
+
+NestWhileList[(resp = Import[&#34;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&#34;&lt;&gt;#];
+   m = StringCases[resp ,&#34;next nothing is &#34; ~~ (x : DigitCharacter ..) -&gt; x];
+   If[m != {}, m[[1]], Print[resp]; &#34;&#34;]) &amp;,
+&#34;12345&#34;,
 StringLength[#] &gt; 0 &amp;]
 
 
 16044-&gt;8022, continue
 
 Level 5:
-pickle module needed, python only.
-
-Level 6:">
+pickle module needed, python only.">
 
 
 <meta itemprop="datePublished" content="2014-07-11T20:40:02&#43;08:00" />
 <meta itemprop="dateModified" content="2014-07-11T20:40:02&#43;08:00" />
-<meta itemprop="wordCount" content="908">
+<meta itemprop="wordCount" content="1007">
 
 
 
@@ -150,34 +161,52 @@ Level 6:">
 <meta name="twitter:title" content="PythonChallenge Solutions Using Mathematica"/>
 <meta name="twitter:description" content="Level 1:
 
-a = CharacterRange[&quot;a&quot;, &quot;z&quot;]; StringJoin[Characters[s] /. Thread[a -&gt; RotateLeft[a, 2]]]
+
+1
+
+
+a = CharacterRange[&#34;a&#34;, &#34;z&#34;]; StringJoin[Characters[s] /. Thread[a -&gt; RotateLeft[a, 2]]]
 
 
 Level 2:
+
+
+1
+
 
 Sort[Tally[Characters[s]], #1[[2]] &lt;= #2[[2]] &amp;]
 
 
 Level 3:
 
-StringJoin[StringCases[s,RegularExpression[&quot;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&quot;] -&gt;  &quot;$1&quot;]]
+
+1
+
+
+StringJoin[StringCases[s,RegularExpression[&#34;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&#34;] -&gt;  &#34;$1&#34;]]
 
 
 Level 4:
 
-NestWhileList[(resp = Import[&quot;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&quot;&lt;&gt;#];
-   m = StringCases[resp ,&quot;next nothing is &quot; ~~ (x : DigitCharacter ..) -&gt; x];
-   If[m != {}, m[[1]], Print[resp]; &quot;&quot;]) &amp;,
-&quot;12345&quot;,
+
+1
+2
+3
+4
+5
+
+
+NestWhileList[(resp = Import[&#34;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&#34;&lt;&gt;#];
+   m = StringCases[resp ,&#34;next nothing is &#34; ~~ (x : DigitCharacter ..) -&gt; x];
+   If[m != {}, m[[1]], Print[resp]; &#34;&#34;]) &amp;,
+&#34;12345&#34;,
 StringLength[#] &gt; 0 &amp;]
 
 
 16044-&gt;8022, continue
 
 Level 5:
-pickle module needed, python only.
-
-Level 6:"/>
+pickle module needed, python only."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -211,7 +240,7 @@ Level 6:"/>
       </a><a href="/about/">
         <li class="mobile-menu-item">About</li>
       </a><a href="/zh">
-        <li class="mobile-menu-item">中文(Chinese)</li>
+        <li class="mobile-menu-item">Chinese Version(中文版)</li>
       </a>
   </ul>
 </nav>
@@ -232,7 +261,7 @@ Level 6:"/>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/about/">About</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/zh">中文(Chinese)</a>
+        <a class="menu-item-link" href="/zh">Chinese Version(中文版)</a>
       </li>
   </ul>
 </nav>
@@ -249,92 +278,131 @@ Level 6:"/>
       <div class="post-meta">
         <span class="post-time"> 2014-07-11 20:40:02 CST </span>
         
-        <span class="more-meta"> 908 words </span>
-        <span class="more-meta"> 5 mins read </span>
+          <span class="more-meta"> 1007 words </span>
+          <span class="more-meta"> 5 mins read </span>
         
       </div>
     </header>
 
-    
-    
-<div class="post-toc" id="post-toc">
+    <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
-  
   <div class="post-toc-content always-active">
     
   </div>
 </div>
-
-    
     <div class="post-content">
       <p><a href="http://www.pythonchallenge.com/pc/def/map.html">Level 1</a>:</p>
-
-<pre><code>a = CharacterRange[&quot;a&quot;, &quot;z&quot;]; StringJoin[Characters[s] /. Thread[a -&gt; RotateLeft[a, 2]]]
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">a = CharacterRange[&#34;a&#34;, &#34;z&#34;]; StringJoin[Characters[s] /. Thread[a -&gt; RotateLeft[a, 2]]]</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://www.pythonchallenge.com/pc/def/ocr.html">Level 2</a>:</p>
-
-<pre><code>Sort[Tally[Characters[s]], #1[[2]] &lt;= #2[[2]] &amp;]
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">Sort[Tally[Characters[s]], #1[[2]] &lt;= #2[[2]] &amp;]</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://www.pythonchallenge.com/pc/def/equality.html">Level 3</a>:</p>
-
-<pre><code>StringJoin[StringCases[s,RegularExpression[&quot;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&quot;] -&gt;  &quot;$1&quot;]]
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">StringJoin[StringCases[s,RegularExpression[&#34;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&#34;] -&gt;  &#34;$1&#34;]]</pre></td></tr></table>
+</div>
+</div>
 <p>Level 4:</p>
-
-<pre><code>NestWhileList[(resp = Import[&quot;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&quot;&lt;&gt;#];
-   m = StringCases[resp ,&quot;next nothing is &quot; ~~ (x : DigitCharacter ..) -&gt; x];
-   If[m != {}, m[[1]], Print[resp]; &quot;&quot;]) &amp;,
-&quot;12345&quot;,
-StringLength[#] &gt; 0 &amp;]
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">NestWhileList[(resp = Import[&#34;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&#34;&lt;&gt;#];
+   m = StringCases[resp ,&#34;next nothing is &#34; ~~ (x : DigitCharacter ..) -&gt; x];
+   If[m != {}, m[[1]], Print[resp]; &#34;&#34;]) &amp;,
+&#34;12345&#34;,
+StringLength[#] &gt; 0 &amp;]</pre></td></tr></table>
+</div>
+</div>
 <p>16044-&gt;8022, continue</p>
 
 <p><a href="http://www.pythonchallenge.com/pc/def/peak.html">Level 5</a>:<br />
-pickle module needed, python only.<br />
-<br />
-<a href="http://www.pythonchallenge.com/pc/def/channel.html">Level 6</a>:</p>
+pickle module needed, python only.</p>
+
+<p><a href="http://www.pythonchallenge.com/pc/def/channel.html">Level 6</a>:</p>
 
 <p>Each file in channel.zip has a comment of its own. Winrar can not see them. You can use winzip or 7zip instead. Mathematica can not handle them neither, IMLE.</p>
 
 <p><a href="http://www.pythonchallenge.com/pc/def/oxygen.html">Level 7</a>:</p>
-
-<pre><code>t = Cases[ImageData[Import[&quot;R:\\oxygen.png&quot;], &quot;Byte&quot;][[48]], {x_, x_, x_, 255} -&gt; x];
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">t = Cases[ImageData[Import[&#34;R:\\oxygen.png&#34;], &#34;Byte&#34;][[48]], {x_, x_, x_, 255} -&gt; x];
 FromCharacterCode[Take[t, {1, Dimensions[t][[1]], 7}]]
-Out[1]=&quot;smart guy, you made it. the next level is [105, 110, 116, 101, 103, 114, 105, 116, 121]&quot;
-FromCharacterCode[{105, 110, 116, 101, 103, 114, 105, 116, 121}]
-</code></pre>
-
+Out[1]=&#34;smart guy, you made it. the next level is [105, 110, 116, 101, 103, 114, 105, 116, 121]&#34;
+FromCharacterCode[{105, 110, 116, 101, 103, 114, 105, 116, 121}]</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://www.pythonchallenge.com/pc/def/integrity.html">Level 8</a>:<br />
 un/pw are given in python string format. Just use bz2 module. <code>bz2.BZ2Decompressor().decompress(un)</code> Results are huge and file.</p>
 
 <p><a href="http://www.pythonchallenge.com/pc/return/good.html">Level 9</a>:</p>
-
-<pre><code>Graphics[Line[{Partition[first, 2], Partition[second, 2]}]]
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">Graphics[Line[{Partition[first, 2], Partition[second, 2]}]]</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://www.pythonchallenge.com/pc/return/bull.html">Level 10</a>:<br />
 <a href="https://oeis.org/A005150">look-and-say sequence</a></p>
-
-<pre><code>f[n_] := If[n == 0, &quot;1&quot;, StringJoin[Map[StringJoin[ToString[Length[#]], #[[1]]] &amp;,Split[Characters[f[n - 1]]]]]];
-StringLength[f[30]]
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">f[n_] := If[n == 0, &#34;1&#34;, StringJoin[Map[StringJoin[ToString[Length[#]], #[[1]]] &amp;,Split[Characters[f[n - 1]]]]]];
+StringLength[f[30]]</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://www.pythonchallenge.com/pc/return/5808.html">Level 11</a>:</p>
-
-<pre><code>ImageTake[Import[&quot;R:\\cave.jpg&quot;], {1, 640, 2}, {1, 640, 2}]
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">ImageTake[Import[&#34;R:\\cave.jpg&#34;], {1, 640, 2}, {1, 640, 2}]</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://www.pythonchallenge.com/pc/return/evil.html">Level 12</a>:<br />
 evil1.jpg-&gt;evil2.jpg-&gt;evil2.gfx-&gt;evil3.jpg-&gt;evil4.jpg<br />
 evil4.jpg will not rendered correctly in Chrome, because it uses a confusing Content-Type:image/jpeg, while it is in fact a text file telling you &ldquo;Bert is evil!&rdquo;</p>
-
-<pre><code>ImportString[FromCharacterCode[#]]&amp; /@ Table[Downsample[Import[&quot;R:\\evil2.gfx&quot;, &quot;Byte&quot;], 5, i], {i, 5}]
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">ImportString[FromCharacterCode[#]]&amp; /@ Table[Downsample[Import[&#34;R:\\evil2.gfx&#34;, &#34;Byte&#34;], 5, i], {i, 5}]</pre></td></tr></table>
+</div>
+</div>
 <p>The 4th image is kind of corrupt. But you can save it, then use your image viewer or Firefox/Chrome to view it. <a href="http://www.pythonchallenge.com/forums/viewtopic.php?f=1&amp;t=15&amp;p=164&amp;hilit=padding+zeroes#p164">It is said</a> to be truncated on purpose to fit in the gfx pack, and you can try padding it with a few kilobytes of zeroes. But I <strong>did not make it</strong>. However the other images should give you enough information that you don&rsquo;t need that one.</p>
 
 <p><a href="http://www.pythonchallenge.com/pc/return/disproportional.html">Level 13</a>:<br />
@@ -344,62 +412,115 @@ xmlrpc, Mathematica has no official implement.</p>
 spiral, nothing special, omited.</p>
 
 <p><a href="http://www.pythonchallenge.com/pc/return/uzi.html">Level 15</a>:</p>
-
-<pre><code>Select[Table[{i,1,27},{i,1006,2000,10}],And[LeapYearQ[#],DayName[#]==Tuesday]&amp;]
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">Select[Table[{i,1,27},{i,1006,2000,10}],And[LeapYearQ[#],DayName[#]==Tuesday]&amp;]</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://www.pythonchallenge.com/pc/return/mozart.html">Level 16</a>:</p>
-
-<pre><code>d = Import[&quot;R:\\mozart.gif&quot;, &quot;Data&quot;];
-Image[MapThread[ RotateLeft, {d, Flatten[Position[#, {255, 0, 255}, 1, 1] &amp; /@ d] - 1}, 1]]
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">d = Import[&#34;R:\\mozart.gif&#34;, &#34;Data&#34;];
+Image[MapThread[ RotateLeft, {d, Flatten[Position[#, {255, 0, 255}, 1, 1] &amp; /@ d] - 1}, 1]]</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://www.pythonchallenge.com/pc/return/romance.html">Level 17</a>:</p>
-
-<pre><code>CookieInfo = Reap[NestWhileList[(
-    {resp, cookies} = URLFetch[&quot;http://huge:file@www.pythonchallenge.com/pc/def/linkedlist.php?busynothing=&quot; &lt;&gt; #, {&quot;Content&quot;, &quot;Cookies&quot;},&quot;StoreCookies&quot; -&gt; False];
-    Sow[&quot;Value&quot; /. cookies[[1]]];
-    m = StringCases[resp,&quot;next busynothing is &quot; ~~ (x : DigitCharacter ..) -&gt; x];
-    If[m != {}, m[[1]], Print[resp]; &quot;&quot;]) &amp;, &quot;12345&quot;,
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">CookieInfo = Reap[NestWhileList[(
+    {resp, cookies} = URLFetch[&#34;http://huge:file@www.pythonchallenge.com/pc/def/linkedlist.php?busynothing=&#34; &lt;&gt; #, {&#34;Content&#34;, &#34;Cookies&#34;},&#34;StoreCookies&#34; -&gt; False];
+    Sow[&#34;Value&#34; /. cookies[[1]]];
+    m = StringCases[resp,&#34;next busynothing is &#34; ~~ (x : DigitCharacter ..) -&gt; x];
+    If[m != {}, m[[1]], Print[resp]; &#34;&#34;]) &amp;, &#34;12345&#34;,
    StringLength[#] &gt; 0 &amp;]];
-ImportString[StringReplace[StringJoin[Flatten[CookieInfo[[2]]] /. &quot;+&quot; -&gt; &quot; &quot;],
-  RegularExpression[&quot;%(..)&quot;] -&gt;FromCharacterCode[FromDigits[&quot;$1&quot;, 16]]], &quot;BZip2&quot;]
-</code></pre>
-
+ImportString[StringReplace[StringJoin[Flatten[CookieInfo[[2]]] /. &#34;+&#34; -&gt; &#34; &#34;],
+  RegularExpression[&#34;%(..)&#34;] -&gt;FromCharacterCode[FromDigits[&#34;$1&#34;, 16]]], &#34;BZip2&#34;]</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://www.pythonchallenge.com/pc/return/balloons.html">Level 18</a>:<br />
 difflib module in python is nice and powerful.</p>
 
 <p><a href="http://butter:fly@www.pythonchallenge.com/pc/hex/bin.html">Level 19</a>:</p>
-
-<pre><code>sorrywav = ImportString[Import[&quot;R:\\a.txt&quot;, {&quot;Base64&quot;, &quot;String&quot;}]];
-Export[&quot;r:\\sorry.wav&quot;, sorrywav];
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">sorrywav = ImportString[Import[&#34;R:\\a.txt&#34;, {&#34;Base64&#34;, &#34;String&#34;}]];
+Export[&#34;r:\\sorry.wav&#34;, sorrywav];
 swapbytes[x_] := Module[{hexstr},
    hexstr = IntegerString[Round[x*2^15], 16, 4];
    FromDigits[StringTake[hexstr, -2] ~~ StringTake[hexstr, 2], 16]/
     2^15.
    ];
 sorrywav[[1, 1, 1]] = swapbytes /@ sorrywav[[1, 1, 1]];
-Export[&quot;r:\\idiot.wav&quot;, sorrywav];
-</code></pre>
-
+Export[&#34;r:\\idiot.wav&#34;, sorrywav];</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://www.pythonchallenge.com/pc/hex/idiot2.html">Level 20&amp;21</a>:<br />
 URLFetch, ImportString&hellip; omited.</p>
 
 <p><a href="http://www.pythonchallenge.com/pc/hex/copper.html">Level 22</a>:</p>
-
-<pre><code>pts = Position [#,9][[1]]&amp;/@Import[&quot;R:\\white.gif&quot;, &quot;RawData&quot;];
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">pts = Position [#,9][[1]]&amp;/@Import[&#34;R:\\white.gif&#34;, &#34;RawData&#34;];
 moves = Cases[SplitBy[(#-{101, 101})&amp;/@pts,#==={0, 0}&amp;],Except[{ {0, 0} }]];
 imgpts = Flatten[MapIndexed[Accumulate[Prepend[#1, First[#2]*{30, 30}]] &amp;,  moves, {1}],  1];
-Image[SparseArray[Append[Map[# -&gt; 1 &amp;, imgpts], {_, _} -&gt; 0], {200, 200}]]
-</code></pre>
-
+Image[SparseArray[Append[Map[# -&gt; 1 &amp;, imgpts], {_, _} -&gt; 0], {200, 200}]]</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://www.pythonchallenge.com/pc/hex/bonus.html">Level 23</a>:<br />
 <code>import this</code>,   omited.</p>
 
 <p><a href="http://www.pythonchallenge.com/pc/hex/ambiguity.html">Level 24</a>:<br />
 Mathematica even has a function to solve mazes!</p>
-
-<pre><code>data = Import[&quot;R:\\maze.png&quot;, &quot;Data&quot;];
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">data = Import[&#34;R:\\maze.png&#34;, &#34;Data&#34;];
 data[[;; 60, ;; 60]] = {255, 255, 255, 255};
 maze = Map[If[# != {255, 255, 255, 255}, 1, 0] &amp;, data, {2}];
 size = Dimensions@maze;
@@ -409,66 +530,127 @@ graphEdges = Union[Select[Flatten[{edgeH, edgeV}], Length@# &gt;= 2 &amp;]];
 {start, end}=Cases[  Position[maze,1], {1|641, _} ];
 mazePath=FindShortestPath[Graph[graphEdges], start, end ];
 RedValues = Extract[data, mazePath][[All, 1]][[2 ;; -1 ;; 2]];
-Export[&quot;r:\\a.zip&quot;, FromCharacterCode[RedValues], &quot;String&quot;];
-</code></pre>
-
+Export[&#34;r:\\a.zip&#34;, FromCharacterCode[RedValues], &#34;String&#34;];</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://www.pythonchallenge.com/pc/hex/lake.html">Level 25</a>:</p>
-
-<pre><code>For[i = 1, i &lt; 26, i++,
-URLSave[StringJoin[   &quot;http://butter:fly@www.pythonchallenge.com/pc/hex/lake&quot;,ToString[i], &quot;.wav&quot;],
-  StringJoin[&quot;R:\\lake&quot;, ToString[i], &quot;.wav&quot;]]];
-filenames =  Table[StringJoin[&quot;R:\\lake&quot;, ToString[i], &quot;.wav&quot;], {i, 25}];
-ImageAdjust[ImageAssemble[ Partition[  Image[InverseFlat[Flatten[Import[#, &quot;Data&quot;]], {60, 60, 3}]] &amp; /@   filenames, 5]]]
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">For[i = 1, i &lt; 26, i++,
+URLSave[StringJoin[   &#34;http://butter:fly@www.pythonchallenge.com/pc/hex/lake&#34;,ToString[i], &#34;.wav&#34;],
+  StringJoin[&#34;R:\\lake&#34;, ToString[i], &#34;.wav&#34;]]];
+filenames =  Table[StringJoin[&#34;R:\\lake&#34;, ToString[i], &#34;.wav&#34;], {i, 25}];
+ImageAdjust[ImageAssemble[ Partition[  Image[InverseFlat[Flatten[Import[#, &#34;Data&#34;]], {60, 60, 3}]] &amp; /@   filenames, 5]]]</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://www.pythonchallenge.com/pc/hex/decent.html">Level 26</a>:</p>
-
-<pre><code>d = Import[&quot;R:\\mybroken.zip&quot;, &quot;Byte&quot;];
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">d = Import[&#34;R:\\mybroken.zip&#34;, &#34;Byte&#34;];
 For[i = 1, i &lt;= Length[d], i++,
   For[j = 0, j &lt; 256, j++,
-   If[Hash[FromCharacterCode[ReplacePart[d, i -&gt; j]],&quot;MD5&quot;] ==
+   If[Hash[FromCharacterCode[ReplacePart[d, i -&gt; j]],&#34;MD5&#34;] ==
       16^^bbb8b499a0eef99b52c7f13f4e78c24b, Return[{i, j}]]
    ]]
-Export[&quot;R:\\fixed.zip&quot;,ReplacePart[d, 1235-&gt;168],&quot;Byte&quot;];
-</code></pre>
-
+Export[&#34;R:\\fixed.zip&#34;,ReplacePart[d, 1235-&gt;168],&#34;Byte&#34;];</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://www.pythonchallenge.com/pc/hex/speedboat.html">Level 27</a>:</p>
-
-<pre><code>d = ImageData[Import[&quot;R:\\zigzag.gif&quot;], &quot;Byte&quot;,   Interleaving -&gt; False][[1]];
-rd = Import[&quot;R:\\zigzag.gif&quot;, &quot;RawData&quot;] - 1;
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">d = ImageData[Import[&#34;R:\\zigzag.gif&#34;], &#34;Byte&#34;,   Interleaving -&gt; False][[1]];
+rd = Import[&#34;R:\\zigzag.gif&#34;, &#34;RawData&#34;] - 1;
 df = Most[Flatten[d]] ;  rdf = Rest[Flatten[rd]];
 diffpos = Position[MapThread[Unequal, {df, rdf}], True];
 {diffd1, nouse} = {Extract[rdf, diffpos], Extract[df, diffpos]};
 Image[SparseArray[
   Thread[Table[{Quotient[p, 320] + 1, Mod[p, 320] + 1}, {p,  Flatten[diffpos]}] -&gt; 1], {270, 320}]]
-s = Tally[ImportString[FromCharacterCode[diffd1], {&quot;BZIP2&quot;, &quot;Words&quot;}]]
-</code></pre>
-
+s = Tally[ImportString[FromCharacterCode[diffd1], {&#34;BZIP2&#34;, &#34;Words&#34;}]]</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://repeat:switch@www.pythonchallenge.com/pc/ring/bell.html">Level 28</a>:</p>
-
-<pre><code>gdata = Flatten[ImageData[Import[&quot;R:\\bell.png&quot;],&quot;Byte&quot;, Interleaving -&gt; False][[2]]];
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">gdata = Flatten[ImageData[Import[&#34;R:\\bell.png&#34;],&#34;Byte&#34;, Interleaving -&gt; False][[2]]];
 FromCharacterCode[Abs[DeleteCases[ Flatten[Differences[Downsample[gf, 2, #] &amp; /@ {1, 2}]], 42 | -42]]]
-&quot;whodunnit().split()[0] ?&quot;
-</code></pre>
-
+&#34;whodunnit().split()[0] ?&#34;</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://www.pythonchallenge.com/pc/ring/guido.html">Level 29</a>:</p>
-
-<pre><code>s=URLFetch[&quot;http://repeat:switch@www.pythonchallenge.com/pc/ring/guido.html&quot;];
-ImportString[FromCharacterCode[StringLength /@ StringSplit[s, &quot;\n&quot;][[13 ;;]]], &quot;BZip2&quot;]
-&quot;Isn't it clear? I am yankeedoodle!&quot;
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">s=URLFetch[&#34;http://repeat:switch@www.pythonchallenge.com/pc/ring/guido.html&#34;];
+ImportString[FromCharacterCode[StringLength /@ StringSplit[s, &#34;\n&#34;][[13 ;;]]], &#34;BZip2&#34;]
+&#34;Isn&#39;t it clear? I am yankeedoodle!&#34;</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://www.pythonchallenge.com/pc/ring/yankeedoodle.html">Level 30</a>:</p>
-
-<pre><code>a = DeleteCases[Flatten[Import[&quot;R:\\yankeedoodle.csv&quot;]], &quot;&quot;];
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">a = DeleteCases[Flatten[Import[&#34;R:\\yankeedoodle.csv&#34;]], &#34;&#34;];
 ImageReflect@ImageRotate@Image[Partition[a, 53]];
-b = StringSplit[ Import[&quot;R:\\yankeedoodle.csv&quot;, &quot;String&quot;]];
-FromCharacterCode[FromDigits[#, 10] &amp; /@ (StringJoin[StringTake[#[[1]], {6}], StringTake[#[[2]], {6}], StringTake[#[[3]], {7}]] &amp; /@ Partition[b, 3])]
-</code></pre>
-
+b = StringSplit[ Import[&#34;R:\\yankeedoodle.csv&#34;, &#34;String&#34;]];
+FromCharacterCode[FromDigits[#, 10] &amp; /@ (StringJoin[StringTake[#[[1]], {6}], StringTake[#[[2]], {6}], StringTake[#[[3]], {7}]] &amp; /@ Partition[b, 3])]</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://www.pythonchallenge.com/pc/ring/grandpa.html">Level 31</a>:</p>
-
-<pre><code>ori = Import[&quot;R:\\mandelbrot.gif&quot;, &quot;RawData&quot;];
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">ori = Import[&#34;R:\\mandelbrot.gif&#34;, &#34;RawData&#34;];
 {w, h} = ImageDimensions[img];
 {startx, starty, xstep, ystep} = {0.34, 0.57, 0.036/w, 0.027/h};
 s = Table[For[c = (startx + x*xstep) + (starty + y*ystep) I; z = 0.;
@@ -477,27 +659,36 @@ s = Table[For[c = (startx + x*xstep) + (starty + y*ystep) I; z = 0.;
     If[Abs[z] &gt; 2, Break[]]];
    If[i == 129, 128, i], {y, 480 - 1, 0, -1}, {x, 0, 640 - 1}];
 diff = DeleteCases[Flatten[ori] - Flatten[s], 0];
-Image[Partition[diff, 23]]
-</code></pre>
-
+Image[Partition[diff, 23]]</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://www.pythonchallenge.com/pc/rock/arecibo.html">Level 32</a>:<br />
 It&rsquo;s a <a href="http://en.wikipedia.org/wiki/Nonogram">Nonogram</a> puzzle. I had written a <a href="../../../../2014/06/17/magic-griddlers-solver">solver</a> before.</p>
 
 <p><a href="http://www.pythonchallenge.com/pc/rock/beer.html">Level 33</a>:</p>
-
-<pre><code>d = Flatten[ ImageData[Import[&quot;R:\\beer2.png&quot;], &quot;Byte&quot;]];
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">d = Flatten[ ImageData[Import[&#34;R:\\beer2.png&#34;], &#34;Byte&#34;]];
 f[n_] := Module[{c1, c2},
    {c1, c2} = Take[Reverse[Union[n]], 2];
    Sow[Image[Partition[n /. {x_ /; IntegerQ[x] &amp;&amp; x != c1 -&gt; 0}, Sqrt[Length[n]]]]];
    DeleteCases[n, c1 | c2]
    ];
-ArrayReshape[Flatten[Reap[Nest[f, d, 33]][[2]]], {6, 6}, &quot;&quot;] // TableForm
-</code></pre>
-
+ArrayReshape[Flatten[Reap[Nest[f, d, 33]][[2]]], {6, 6}, &#34;&#34;] // TableForm</pre></td></tr></table>
+</div>
+</div>
 <p><a href="http://kohsamui:thailand@www.pythonchallenge.com/pc/rock/gremlins.html">Way Out</a></p>
     </div>
 
-    
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
@@ -505,7 +696,10 @@ ArrayReshape[Flatten[Reap[Nest[f, d, 33]][[2]]], {6, 6}, &quot;&quot;] // TableF
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">2014-07-11 20:40:02 CST</span>
+    <span class="item-content">
+        2014-07-11 20:40:02 CST
+        
+    </span>
   </p>
   
   <p class="copyright-item">
@@ -513,56 +707,41 @@ ArrayReshape[Flatten[Reap[Nest[f, d, 33]][[2]]], {6, 6}, &quot;&quot;] // TableF
     <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
   </p>
 </div>
-
-    
-    
 <div class="post-reward">
   <input type="checkbox" name="reward" id="reward" hidden />
   <label class="reward-button" for="reward">Reward</label>
   <div class="qr-code">
     
-    
-      <label class="qr-code-image" for="reward">
+    <label class="qr-code-image" for="reward">
         <img class="image" src="/img/reward/wechat.jpg">
         <span>wechat</span>
       </label>
-    
-      <label class="qr-code-image" for="reward">
+    <label class="qr-code-image" for="reward">
         <img class="image" src="/img/reward/alipay.jpg">
         <span>alipay</span>
       </label>
   </div>
-</div>
-
-    <footer class="post-footer">
+</div><footer class="post-footer">
       <div class="post-tags">
-          
           <a href="/tags/mathematica/">Mathematica</a>
-          
           <a href="/tags/pythonchallenge/">PythonChallenge</a>
-          
-        </div>
-
-      
+          </div>
       <nav class="post-nav">
-        
-          <a class="prev" href="/post/dive-into-project-euler-part-1-1-20/">
+        <a class="prev" href="/post/dive-into-project-euler-part-1-1-20/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">Dive into Project Euler Part 1 (1-20)</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        
-          <a class="next" href="/post/mummy-maze-solver/">
+        <a class="next" href="/post/mummy-maze-solver/">
             <span class="next-text nav-default">Mummy Maze Solver</span>
-            <span class="prev-text nav-mobile">Next</span>
+            <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
       </nav>
     </footer>
   </article>
         </div>
-        
-  <div id="disqus_thread"></div>
+        <div id="disqus_thread"></div>
     <script type="text/javascript">
     (function() {
       
@@ -576,12 +755,13 @@ ArrayReshape[Flatten[Reap[Nest[f, d, 33]][[2]]], {6, 6}, &quot;&quot;] // TableF
     })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
       </div>
     </main>
 
     <footer id="footer" class="footer">
       <div class="social-links">
-      <a href="mailto:bigheadghost@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="mailto:bigheadghost@gmail.com" class="iconfont icon-email" title="email"></a>
       <a href="https://math.stackexchange.com/users/157947/bigheadghost" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
       <a href="https://github.com/bigheadghost" class="iconfont icon-github" title="github"></a>
       <a href="https://www.douban.com/people/1254984/" class="iconfont icon-douban" title="douban"></a>
@@ -602,9 +782,8 @@ ArrayReshape[Flatten[Reap[Nest[f, d, 33]][[2]]], {6, 6}, &quot;&quot;] // TableF
 
   <span class="copyright-year">
     &copy; 
-    
-      2014 - 
-    2018
+    2014 - 
+    2019
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
@@ -618,10 +797,10 @@ ArrayReshape[Flatten[Reap[Nest[f, d, 33]][[2]]], {6, 6}, &quot;&quot;] // TableF
     </div>
   </div>
   
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
-<script type="text/javascript" src="/dist/even.min.js?v=3.0.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
 
 
 

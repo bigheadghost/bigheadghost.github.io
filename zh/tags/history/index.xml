@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>History on Reading and Thinking</title>
+    <title>history on Reading and Thinking</title>
     <link>https://bigheadghost.github.io/zh/tags/history/</link>
-    <description>Recent content in History on Reading and Thinking</description>
+    <description>Recent content in history on Reading and Thinking</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Tue, 28 Feb 2006 22:17:59 +0800</lastBuildDate>
     
 	<atom:link href="https://bigheadghost.github.io/zh/tags/history/index.xml" rel="self" type="application/rss+xml" />
@@ -32,8 +33,7 @@
 &lt;p&gt;我有一个对这个命题的十分美妙的证明，这里空白太小，写不下。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;1665年费马去世，1670年他的儿子整理出版了附有费马批注的丢番图的算术， 费马猜想开始为世人所知。 数林中一场腥风血雨拉开了帷幕，数百年来，不计其数的人前赴后继在这迷一样的荒原上探险：绘就的是地图，而真正的探险者却已消失在别处……&lt;br /&gt;
-&lt;/p&gt;</description>
+&lt;p&gt;1665年费马去世，1670年他的儿子整理出版了附有费马批注的丢番图的算术， 费马猜想开始为世人所知。 数林中一场腥风血雨拉开了帷幕，数百年来，不计其数的人前赴后继在这迷一样的荒原上探险：绘就的是地图，而真正的探险者却已消失在别处……&lt;/p&gt;</description>
     </item>
     
   </channel>
