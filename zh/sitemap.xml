@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bigheadghost.github.io/zh/post/scmc_flow/</loc>
+    <lastmod>2019-04-30T10:07:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://bigheadghost.github.io/zh/post/movies-parents-guide-201x/</loc>
     <lastmod>2019-03-30T13:28:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -66,14 +73,14 @@
   
   <url>
     <loc>https://bigheadghost.github.io/zh/post/</loc>
-    <lastmod>2019-03-30T13:28:32+08:00</lastmod>
+    <lastmod>2019-04-30T10:07:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://bigheadghost.github.io/zh/</loc>
-    <lastmod>2019-03-30T13:28:32+08:00</lastmod>
+    <lastmod>2019-04-30T10:07:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -129,6 +136,13 @@
   <url>
     <loc>https://bigheadghost.github.io/zh/tags/%E7%94%B5%E5%BD%B1/</loc>
     <lastmod>2019-03-30T13:28:32+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/tags/%E9%AD%94%E9%83%BD%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2019-04-30T10:07:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
