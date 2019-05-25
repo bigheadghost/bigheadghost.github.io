@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>puzzle · Reading and Thinking</title>
+  <title>Reading and Thinking</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -26,9 +26,9 @@
 <meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
 
 
-<link rel="canonical" href="https://bigheadghost.github.io/zh/tags/puzzle/" />
-  <link href="https://bigheadghost.github.io/zh/tags/puzzle/index.xml" rel="alternate" type="application/rss+xml" title="Reading and Thinking" />
-  <link href="https://bigheadghost.github.io/zh/tags/puzzle/index.xml" rel="feed" type="application/rss+xml" title="Reading and Thinking" />
+<link rel="canonical" href="https://bigheadghost.github.io/zh/" />
+  <link href="https://bigheadghost.github.io/zh/index.xml" rel="alternate" type="application/rss+xml" title="Reading and Thinking" />
+  <link href="https://bigheadghost.github.io/zh/index.xml" rel="feed" type="application/rss+xml" title="Reading and Thinking" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,18 +40,18 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="puzzle" />
+<meta property="og:title" content="Reading and Thinking" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://bigheadghost.github.io/zh/tags/puzzle/" />
+<meta property="og:url" content="https://bigheadghost.github.io/zh/" />
 
-<meta property="og:updated_time" content="2019-05-25T12:09:27&#43;08:00"/>
+<meta property="og:updated_time" content="2006-02-28T22:17:59&#43;08:00"/>
 
-<meta itemprop="name" content="puzzle">
+<meta itemprop="name" content="Reading and Thinking">
 <meta itemprop="description" content="">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="puzzle"/>
+<meta name="twitter:title" content="Reading and Thinking"/>
 <meta name="twitter:description" content=""/>
 
 <!--[if lte IE 9]>
@@ -116,36 +116,53 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <section id="archive" class="archive">
-  <div class="archive-title tag">
-        <h2 class="archive-name">puzzle</h2>
-      </div>
-
-  <div class="archive-post">
-      <span class="archive-post-time">
-        2019-05-25 12:09:27 CST
-      </span>
-      <span class="archive-post-title">
-        <a href="/zh/post/triangles_of_absolute_di%EF%AC%80erences/" class="archive-post-link">
-          正差三角形
-        </a>
-      </span>
-    </div><div class="archive-post">
-      <span class="archive-post-time">
-        2019-05-21 22:30:05 CST
-      </span>
-      <span class="archive-post-title">
-        <a href="/zh/post/bruteforce_reasoning/" class="archive-post-link">
-          逻辑推理题爆破
-        </a>
-      </span>
+          <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/zh/post/history-of-proof-of-fermats-last-theorem/">费马大定理证明始末</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2006-02-28 22:17:59 CST </span>
+      
+        <span class="more-meta"> 约 7770 字 </span>
+        <span class="more-meta"> 预计阅读 16 分钟 </span>
     </div>
-</section>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>推荐阅读Simon Singh写的这本探险小说《<a href="https://book.douban.com/subject/1322358/">费马大定理：一个困惑了世间智者358年的谜</a>》</p>
 
-<nav class="pagination">
+<h1 id="一-缘起">一、缘起</h1>
+
+<p>1637年， 法国数学家费马(Fermat 1601-1665)在看丢番图的&lt;算术&gt;(的拉丁文译本)时，被毕达哥拉斯三元组的种类和数量之多吸引。考虑 \( x^2+y^2=z^2 \) 的一种变异方程： \( x^3+y^3=z^3 \) 反复的试算表明，要找到方程的正整数解是困难的。他进一步将幂改成大于3的数，得到新的方程，并且发现要寻找每一个这种方程的解有着同样的困难。费马在书的页边处写下了一个结论：</p>
+
+<blockquote>
+<p>不可能将一个立方数写成两个立方数之和；或者将一个4次幂写成两个4次幕之和；或者，总的来说，不可能将一个高于2次的幕写成两个同样次幂的和。</p>
+</blockquote>
+
+<p>并且给出了自己的“证明”：</p>
+
+<blockquote>
+<p>我有一个对这个命题的十分美妙的证明，这里空白太小，写不下。</p>
+</blockquote>
+
+<p>1665年费马去世，1670年他的儿子整理出版了附有费马批注的丢番图的算术， 费马猜想开始为世人所知。 数林中一场腥风血雨拉开了帷幕，数百年来，不计其数的人前赴后继在这迷一样的荒原上探险：绘就的是地图，而真正的探险者却已消失在别处……</p>
+    </div>
+    <div class="read-more">
+      <a href="/zh/post/history-of-proof-of-fermats-last-theorem/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    </section>
   
-  
-</nav>
+  <nav class="pagination">
+    <a class="prev" href="/zh/page/2/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text">上一页</span>
+      </a>
+    
+  </nav>
         </div>
         
 
