@@ -6,10 +6,23 @@
     <description>Recent content in puzzle on 略知一二</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 25 May 2019 12:09:27 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Jun 2019 15:52:30 +0800</lastBuildDate>
     
 	<atom:link href="https://bigheadghost.github.io/zh/tags/puzzle/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>等和积数</title>
+      <link>https://bigheadghost.github.io/zh/post/equal_sum_product_problem/</link>
+      <pubDate>Mon, 10 Jun 2019 15:52:30 +0800</pubDate>
+      
+      <guid>https://bigheadghost.github.io/zh/post/equal_sum_product_problem/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;对任意自然数&lt;code&gt;n&lt;/code&gt;，请找出&lt;code&gt;n&lt;/code&gt;个自然数，使其和等于积。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;据我所能找到的资料看，该问题最早是1970年，Simmons和Rawlinson&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:Simmons1971&#34;&gt;&lt;a href=&#34;#fn:Simmons1971&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;在计算对称群的最大循环子群时提出的，当时叫Sets of Natural Numbers with Equal Sum and Product。Ian Stewart&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:ian&#34;&gt;&lt;a href=&#34;#fn:ian&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;的《数学万花筒》一书里也收录了，加上了故事情境，称做误打误撞问题(Compensating Errors)。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>正差三角形</title>
