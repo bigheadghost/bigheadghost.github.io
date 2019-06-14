@@ -6,10 +6,22 @@
     <description>Recent content in Posts on 略知一二</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Jun 2019 15:52:30 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 14 Jun 2019 13:08:43 +0800</lastBuildDate>
     
 	<atom:link href="https://bigheadghost.github.io/zh/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>奇偶因数赛马</title>
+      <link>https://bigheadghost.github.io/zh/post/polya_conjecture/</link>
+      <pubDate>Fri, 14 Jun 2019 13:08:43 +0800</pubDate>
+      
+      <guid>https://bigheadghost.github.io/zh/post/polya_conjecture/</guid>
+      <description>&lt;p&gt;每个整数都可以分解成若干个质数相乘，即分解质因数。如果需要偶数个质数相乘，我们称其为偶类型（我们定义1也是偶类型），反之则为奇类型。&lt;br /&gt;
+对于&lt;code&gt;1~10&lt;/code&gt;这前&lt;code&gt;10&lt;/code&gt;个整数，奇类型有&lt;code&gt;2，3，5，7，8&lt;/code&gt;，偶类型有&lt;code&gt;1，4，6，9，10&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race），即想象奇马、偶马两匹马赛跑，让它们在同一起跑线上，按数字&lt;code&gt;1、2、3&lt;/code&gt;念下去，碰到奇类型，奇马前进一步，反之，偶马前进一步。奇马似乎总是在并排或超前位置，相当形象。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>等和积数</title>

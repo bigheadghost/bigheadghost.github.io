@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bigheadghost.github.io/zh/post/polya_conjecture/</loc>
+    <lastmod>2019-06-14T13:08:43+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://bigheadghost.github.io/zh/post/equal_sum_product_problem/</loc>
     <lastmod>2019-06-10T15:52:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -101,7 +108,7 @@
   
   <url>
     <loc>https://bigheadghost.github.io/zh/post/</loc>
-    <lastmod>2019-06-10T15:52:30+08:00</lastmod>
+    <lastmod>2019-06-14T13:08:43+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -171,7 +178,7 @@
   
   <url>
     <loc>https://bigheadghost.github.io/zh/</loc>
-    <lastmod>2019-06-10T15:52:30+08:00</lastmod>
+    <lastmod>2019-06-14T13:08:43+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>奇偶因数赛马 - 略知一二</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigheadghost" /><meta name="description" content="每个整数都可以分解成若干个质数相乘，即分解质因数。如果需要偶数个质数相乘，我们称其为偶类型（我们定义1也是偶类型），反之则为奇类型。
+对于1~10这前10个整数，奇类型有2，3，5，7，8，偶类型有1，4，6，9，10
+Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race），即想象奇马、偶马两匹马赛跑，让它们在同一起跑线上，按数字1、2、3念下去，碰到奇类型，奇马前进一步，反之，偶马前进一步。奇马似乎总是在并排或超前位置，相当形象。
+" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://bigheadghost.github.io/zh/post/polya_conjecture/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="奇偶因数赛马" />
+<meta property="og:description" content="每个整数都可以分解成若干个质数相乘，即分解质因数。如果需要偶数个质数相乘，我们称其为偶类型（我们定义1也是偶类型），反之则为奇类型。
+对于1~10这前10个整数，奇类型有2，3，5，7，8，偶类型有1，4，6，9，10
+
+Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race），即想象奇马、偶马两匹马赛跑，让它们在同一起跑线上，按数字1、2、3念下去，碰到奇类型，奇马前进一步，反之，偶马前进一步。奇马似乎总是在并排或超前位置，相当形象。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigheadghost.github.io/zh/post/polya_conjecture/" />
+<meta property="article:published_time" content="2019-06-14T13:08:43&#43;08:00"/>
+<meta property="article:modified_time" content="2019-06-14T13:08:43&#43;08:00"/><meta property="og:site_name" content="略知一二" />
+
+<meta itemprop="name" content="奇偶因数赛马">
+<meta itemprop="description" content="每个整数都可以分解成若干个质数相乘，即分解质因数。如果需要偶数个质数相乘，我们称其为偶类型（我们定义1也是偶类型），反之则为奇类型。
+对于1~10这前10个整数，奇类型有2，3，5，7，8，偶类型有1，4，6，9，10
+
+Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race），即想象奇马、偶马两匹马赛跑，让它们在同一起跑线上，按数字1、2、3念下去，碰到奇类型，奇马前进一步，反之，偶马前进一步。奇马似乎总是在并排或超前位置，相当形象。">
+
+
+<meta itemprop="datePublished" content="2019-06-14T13:08:43&#43;08:00" />
+<meta itemprop="dateModified" content="2019-06-14T13:08:43&#43;08:00" />
+<meta itemprop="wordCount" content="789">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="奇偶因数赛马"/>
+<meta name="twitter:description" content="每个整数都可以分解成若干个质数相乘，即分解质因数。如果需要偶数个质数相乘，我们称其为偶类型（我们定义1也是偶类型），反之则为奇类型。
+对于1~10这前10个整数，奇类型有2，3，5，7，8，偶类型有1，4，6，9，10
+
+Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race），即想象奇马、偶马两匹马赛跑，让它们在同一起跑线上，按数字1、2、3念下去，碰到奇类型，奇马前进一步，反之，偶马前进一步。奇马似乎总是在并排或超前位置，相当形象。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/zh/" class="logo">略知一二</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/zh">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/zh/post">
+        <li class="mobile-menu-item">存档</li>
+      </a><a href="/zh/tags">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a><a href="/">
+        <li class="mobile-menu-item">英文版(English Version)</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/zh/" class="logo">略知一二</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/zh">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/zh/post">存档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/zh/tags">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/">英文版(English Version)</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">奇偶因数赛马</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-06-14 13:08:43 CST </span>
+        
+          <span class="more-meta"> 约 789 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+    <div class="post-content">
+      <p>每个整数都可以分解成若干个质数相乘，即分解质因数。如果需要偶数个质数相乘，我们称其为偶类型（我们定义1也是偶类型），反之则为奇类型。<br />
+对于<code>1~10</code>这前<code>10</code>个整数，奇类型有<code>2，3，5，7，8</code>，偶类型有<code>1，4，6，9，10</code></p>
+
+<p>Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race），即想象奇马、偶马两匹马赛跑，让它们在同一起跑线上，按数字<code>1、2、3</code>念下去，碰到奇类型，奇马前进一步，反之，偶马前进一步。奇马似乎总是在并排或超前位置，相当形象。</p>
+
+<p>1919年，匈牙利数学家（《怎样解题》作者）<a href="https://en.wikipedia.org/wiki/Pólya_conjecture">George Pólya猜想</a>：对任意自然数<code>n</code>，它以内的所有自然数中奇类型至少占一半。<br />
+1958年，Colin Brian Haselgrove证明该猜想是错的。<br />
+1980年，Minoru Tanaka用计算机找到最小的反例<code>906,150,257</code>。<br />
+测试了<code>9</code>亿多个数字都正确，但保不准下<code>1</code>秒就打脸，就是这么无情残酷<del>无理取闹</del>。<br />
+Every number is meaningful and all have their purposes.<br />
+万数皆有意，一数一菩提。</p>
+
+<p>下面我们验算一下。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">(*可以直接用LiouvilleLambda，但比这个略慢一些*)
+PCType[n_] := If[EvenQ@PrimeOmega@n, 1, -1]; 
+blocksize = 10^7; (*分成91组计算，每组1千万*)
+blocks = 91;
+(bks = ParallelTable[Total[PCType[(i - 1)*blocksize + #] &amp; /@ Range[blocksize]], 
+    {i, blocks}];) // AbsoluteTiming
+{4023.83, Null}
+(*一泻千里*)
+acc = Accumulate@bks
+{-842, -4510, -5630, -3192, -7608, -3016, -6598, -7132, -2176, -3884, 
+-10162, -8592, -11162, -5636, -3244, -7206, -10696, -17010, -15562, 
+-11126, -9698, -4922, -6086, -9594, -7970, -9628, -14754, -17252, 
+-16346, -16648, -17882, -12168, -11464, -6452, -8508, -4110, -4244, 
+-8500, -11184, -11200, -14386, -14942, -19500, -20456, -24366, 
+-23732, -22644, -19746, -18196, -18804, -11604, -11950, -10062, 
+-7442, -6866, -5544, -6456, -9230, -11014, -15350, -15668, -14892, 
+-18936, -20766, -20196, -21820, -22404, -27546, -22948, -25384, 
+-27772, -26580, -25558, -25602, -27618, -22166, -15564, -15628, 
+-15656, -19292, -17546, -19704, -19386, -19754, -14908, -17416, 
+-13780, -12306, -8570, -4630, -4702}
+
+(lastblock = ParallelTable[PCType[(blocks - 1)*blocksize + i],
+    {i, blocksize}];) // AbsoluteTiming
+{47.6069, Null}
+lastacc = acc[[90]] + Accumulate@lastblock;
+
+SelectFirst[lastacc, Positive]
+1
+FirstPosition[lastacc, 1]
+{6150257}
+MinMax@lastacc
+{-6077, 829}
+Count[lastacc, _?Positive]
+305426
+Position[overall, 1][[{1, -1}]]
+{{6150257}, {6488079}}</pre></td></tr></table>
+</div>
+</div>
+<p>对于<code>906150257≤n≤906488079</code>之间的<code>305426</code>个整数，偶数马领先，<code>906316571</code>时达到顶峰，领先<code>829</code>位。<br />
+但是这种交替领先是否一直存在，即是否在某个数字<code>N</code>之后，只有一种类型马保持持续领先，<strong>未知</strong>。<br />
+<img src="/img/2019/polya_conjecture.jpg" alt="polya_conjecture" /></p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigheadghost</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-06-14 13:08:43 CST
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/reward/wechat.jpg">
+        <span>微信打赏</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/reward/alipay.jpg">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/zh/post/equal_sum_product_problem/">
+            <span class="next-text nav-default">等和积数</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2019-06-14 13:08:43 \x2b0800 CST',
+        title: '奇偶因数赛马',
+        clientID: '8df39bfde8ffe9150142',
+        clientSecret: 'cc215a1e82ed12f21d6c0eb1ad05e8b5eac1878b',
+        repo: 'bigheadghost.github.io',
+        owner: 'bigheadghost',
+        admin: ['bigheadghost'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:bigheadghost@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://math.stackexchange.com/users/157947/bigheadghost" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/bigheadghost" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/1254984/" class="iconfont icon-douban" title="douban"></a>
+  <a href="https://bigheadghost.github.io/zh/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">bigheadghost</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
