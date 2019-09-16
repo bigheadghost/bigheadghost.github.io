@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.58.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/post/frog-mania/" />
@@ -44,9 +44,8 @@
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/post/frog-mania/" />
-<meta property="article:published_time" content="2014-06-25T14:14:28&#43;08:00"/>
-<meta property="article:modified_time" content="2014-06-25T14:14:28&#43;08:00"/>
-
+<meta property="article:published_time" content="2014-06-25T14:14:28+08:00" />
+<meta property="article:modified_time" content="2014-06-25T14:14:28+08:00" />
 <meta itemprop="name" content="Frog Mania">
 <meta itemprop="description" content="Frog Mania is a flash game. It is quite easy to play, so this is not about its solver, but the way to get the underlying matrix representation of each level.
 ">
@@ -213,10 +212,10 @@ getpat[l_] := Module[{},
    ];
 GetFrogManiaMatrix[img_] := Module[{TimeScoreOuterColor = {248, 217, 152}/255., PoolColor = {120, 211, 255}/255., EyeColor = 0.95, minx, t, imgt},
       (* get only the pool zone*)
-    minx = Max[PixelValuePositions[img, TimeScoreOuterColor][[All, 1]]];
-    t = Transpose[Select[Sort[PixelValuePositions[img, PoolColor]], #[[1]] &gt; minx &amp;]];
-    imgt = ImageTrim[img, Transpose[Map[minMax, t]]];
-    Map[getpat,  ImagePartition[Binarize[imgt, EyeColor], ImageDimensions[imgt]/{6, 5}], {2}] // Grid
+	minx = Max[PixelValuePositions[img, TimeScoreOuterColor][[All, 1]]];
+ 	t = Transpose[Select[Sort[PixelValuePositions[img, PoolColor]], #[[1]] &gt; minx &amp;]];
+  	imgt = ImageTrim[img, Transpose[Map[minMax, t]]];
+  	Map[getpat,  ImagePartition[Binarize[imgt, EyeColor], ImageDimensions[imgt]/{6, 5}], {2}] // Grid
   ]
 
 GetFrogManiaMatrix[img]
@@ -300,6 +299,10 @@ _ → _ ↓ D _
       gitalk.render('gitalk-container');
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
 
       </div>
     </main>

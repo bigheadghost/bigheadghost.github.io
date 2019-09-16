@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.58.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/post/dive-into-project-euler-part-3-41-60/" />
@@ -106,9 +106,8 @@ FromDigits /@ Pick[#, cf@#, 1] &amp;@Permutations@Range[0, 9] // Tr
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/post/dive-into-project-euler-part-3-41-60/" />
-<meta property="article:published_time" content="2014-09-02T12:04:41&#43;08:00"/>
-<meta property="article:modified_time" content="2014-09-02T12:04:41&#43;08:00"/>
-
+<meta property="article:published_time" content="2014-09-02T12:04:41+08:00" />
+<meta property="article:modified_time" content="2014-09-02T12:04:41+08:00" />
 <meta itemprop="name" content="Dive into Project Euler Part 3 (41-60)">
 <meta itemprop="description" content="Problem 41
 
@@ -464,28 +463,28 @@ FromDigits /@ Pick[#, cf@#, 1] &amp;@Permutations@Range[0, 9] // Tr
 </span><span class="cp">#include</span> <span class="cpf">&lt;cmath&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-    <span class="kt">bool</span> <span class="n">flag</span><span class="o">=</span><span class="nb">true</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">j</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">;</span>
-    <span class="kt">double</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
-    <span class="k">while</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">n</span><span class="o">=</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-        <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-        <span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">;</span><span class="o">--</span><span class="n">j</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">m</span><span class="o">=</span><span class="n">j</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-            <span class="n">a</span><span class="o">=</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">24</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">m</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">6</span><span class="p">;</span>
-            <span class="n">b</span><span class="o">=</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">24</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">m</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">6</span><span class="p">;</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="kt">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="n">b</span><span class="o">==</span><span class="kt">int</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
-            <span class="p">{</span>
-                <span class="n">flag</span><span class="o">=</span><span class="nb">false</span><span class="p">;</span>
-                <span class="k">break</span><span class="p">;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="n">i</span><span class="o">++</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;j:%d</span><span class="se">\n</span><span class="s">i:%d</span><span class="se">\n</span><span class="s">m:%d</span><span class="se">\n</span><span class="s">n:%d</span><span class="se">\n</span><span class="s">n-m:%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="n">m</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+	<span class="kt">bool</span> <span class="n">flag</span><span class="o">=</span><span class="nb">true</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">j</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">;</span>
+	<span class="kt">double</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
+	<span class="k">while</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">n</span><span class="o">=</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+		<span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">;</span><span class="o">--</span><span class="n">j</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">m</span><span class="o">=</span><span class="n">j</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+			<span class="n">a</span><span class="o">=</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">24</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">m</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">6</span><span class="p">;</span>
+			<span class="n">b</span><span class="o">=</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">24</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">m</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">6</span><span class="p">;</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="kt">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="n">b</span><span class="o">==</span><span class="kt">int</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+			<span class="p">{</span>
+				<span class="n">flag</span><span class="o">=</span><span class="nb">false</span><span class="p">;</span>
+				<span class="k">break</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+		<span class="n">i</span><span class="o">++</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;j:%d</span><span class="se">\n</span><span class="s">i:%d</span><span class="se">\n</span><span class="s">m:%d</span><span class="se">\n</span><span class="s">n:%d</span><span class="se">\n</span><span class="s">n-m:%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="n">m</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="nl">j</span><span class="p">:</span><span class="mi">1020</span>
 <span class="nl">i</span><span class="p">:</span><span class="mi">2168</span>
@@ -903,6 +902,10 @@ Return[26033]</pre></td></tr></table>
       gitalk.render('gitalk-container');
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
 
       </div>
     </main>

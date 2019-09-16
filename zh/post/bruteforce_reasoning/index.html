@@ -27,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.58.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/zh/post/bruteforce_reasoning/" />
@@ -49,9 +49,8 @@
 话说有了计算机以后，干啥都喜欢简单粗暴的，纯推理是越来越懒了。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/zh/post/bruteforce_reasoning/" />
-<meta property="article:published_time" content="2019-05-21T22:30:05&#43;08:00"/>
-<meta property="article:modified_time" content="2019-05-21T22:30:05&#43;08:00"/><meta property="og:site_name" content="略知一二" />
-
+<meta property="article:published_time" content="2019-05-21T22:30:05+08:00" />
+<meta property="article:modified_time" content="2019-05-21T22:30:05+08:00" /><meta property="og:site_name" content="略知一二" />
 <meta itemprop="name" content="逻辑推理题爆破">
 <meta itemprop="description" content="阮一峰之前有篇文章《Prolog 语言入门教程》，介绍说Prolog（全称Programming in Logic）是一种专门解决逻辑问题的语言。
 其实解决逻辑推理问题也不用特意去学一门新语言，去自己工具箱里找个趁手的兵器也行。
@@ -242,9 +241,8 @@ green    blue     red    blue     red
 <li>线索六：刀子不在饭厅。<br /></li>
 <li>线索七：书房和食品储藏室里面的凶器，没跟 Yolanda 在一起。<br /></li>
 <li>线索八：George 所在的那间屋子有火枪。<br /></li>
-<li>线索九：Boddy 先生死在食品储藏室里，那里的凶器是煤气。<br />
-<br /></li>
-</ul>
+
+<li><p>线索九：Boddy 先生死在食品储藏室里，那里的凶器是煤气。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt"> 1
@@ -286,33 +284,35 @@ women = {&#34;barbara&#34;, &#34;christine&#34;, &#34;yolanda&#34;};
 people = Flatten@{men, women};
 allcases = Flatten /@ Permutations[Permutations[people], {2}];
 murderQ[case_] := Module[{p},
-  p = AssociationThread[props, case];
-    And @@ {MemberQ[men, p[&#34;kitchen&#34;]], !MemberQ[{p[&#34;knife&#34;], p[&#34;bag&#34;], p[&#34;firearm&#34;], p[&#34;rope&#34;]}, p[&#34;kitchen&#34;]], 
-      Sort@{p[&#34;bathroom&#34;], p[&#34;study&#34;]} == {&#34;barbara&#34;, &#34;yolanda&#34;}, 
-        !MemberQ[{&#34;barbara&#34;, &#34;george&#34;, p[&#34;bathroom&#34;], p[&#34;dining&#34;]}, p[&#34;bag&#34;]], 
-        And[p[&#34;study&#34;] == p[&#34;rope&#34;], MemberQ[women, p[&#34;study&#34;]]], 
-        MemberQ[{&#34;george&#34;, &#34;john&#34;}, p[&#34;livingroom&#34;]], 
-        p[&#34;knife&#34;] != p[&#34;dining&#34;], 
-        And[p[&#34;study&#34;] != &#34;yolanda&#34;, p[&#34;pantry&#34;] != &#34;yolanda&#34;], 
-        p[&#34;firearm&#34;] == &#34;george&#34;, 
-        p[&#34;pantry&#34;] == p[&#34;gas&#34;]}
-      ];
-      sol = First@Select[allcases, murderQ];
-  StringRiffle[ Transpose@{StringPadLeft@props, StringPadRight@sol}, &#34;\n&#34;, &#34;-&gt;&#34;]
-  bathroom-&gt;yolanda  
-    dining-&gt;george   
-   kitchen-&gt;robert   
+p = AssociationThread[props, case];
+And @@ {MemberQ[men, p[&#34;kitchen&#34;]], !MemberQ[{p[&#34;knife&#34;], p[&#34;bag&#34;], p[&#34;firearm&#34;], p[&#34;rope&#34;]}, p[&#34;kitchen&#34;]], 
+  Sort@{p[&#34;bathroom&#34;], p[&#34;study&#34;]} == {&#34;barbara&#34;, &#34;yolanda&#34;}, 
+    !MemberQ[{&#34;barbara&#34;, &#34;george&#34;, p[&#34;bathroom&#34;], p[&#34;dining&#34;]}, p[&#34;bag&#34;]], 
+    And[p[&#34;study&#34;] == p[&#34;rope&#34;], MemberQ[women, p[&#34;study&#34;]]], 
+    MemberQ[{&#34;george&#34;, &#34;john&#34;}, p[&#34;livingroom&#34;]], 
+    p[&#34;knife&#34;] != p[&#34;dining&#34;], 
+    And[p[&#34;study&#34;] != &#34;yolanda&#34;, p[&#34;pantry&#34;] != &#34;yolanda&#34;], 
+    p[&#34;firearm&#34;] == &#34;george&#34;, 
+    p[&#34;pantry&#34;] == p[&#34;gas&#34;]}
+  ];
+  sol = First@Select[allcases, murderQ];
+StringRiffle[ Transpose@{StringPadLeft@props, StringPadRight@sol}, &#34;\n&#34;, &#34;-&gt;&#34;]
+bathroom-&gt;yolanda  
+dining-&gt;george   
+kitchen-&gt;robert   
 livingroom-&gt;john     
-    pantry-&gt;christine
-     study-&gt;barbara  
-       bag-&gt;john     
-   firearm-&gt;george   
-       gas-&gt;christine
-     knife-&gt;yolanda  
-    poison-&gt;robert   
-      rope-&gt;barbara  </pre></td></tr></table>
+pantry-&gt;christine
+ study-&gt;barbara  
+   bag-&gt;john     
+firearm-&gt;george   
+   gas-&gt;christine
+ knife-&gt;yolanda  
+poison-&gt;robert   
+  rope-&gt;barbara  </pre></td></tr></table>
 </div>
-</div>
+</div></li>
+</ul>
+
 <h1 id="4-关联题目">4.关联题目</h1>
 
 <p>网传的2018年刑侦科推理试题，实为<a href="http://society.people.com.cn/n1/2018/0308/c1008-29854595.html">2014年杭州学军中学推理社的招新考题</a>。</p>
@@ -536,6 +536,10 @@ StringJoin@Characters[&#34;ABCD&#34;][[#]] &amp; /@ sol
       gitalk.render('gitalk-container');
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
 
       </div>
     </main>
