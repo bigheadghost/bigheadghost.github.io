@@ -3,7 +3,35 @@
   
   <url>
     <loc>https://bigheadghost.github.io/zh/post/</loc>
-    <lastmod>2019-09-16T22:15:09+08:00</lastmod>
+    <lastmod>2020-01-23T20:09:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/tags/</loc>
+    <lastmod>2020-01-23T20:09:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/tags/%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2020-01-23T20:09:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/</loc>
+    <lastmod>2020-01-23T20:09:01+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/post/lost-phone-lauras-story/</loc>
+    <lastmod>2020-01-23T20:09:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -11,20 +39,6 @@
   <url>
     <loc>https://bigheadghost.github.io/zh/post/chinese_strokes/</loc>
     <lastmod>2019-09-16T15:46:32+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigheadghost.github.io/zh/</loc>
-    <lastmod>2019-09-16T22:15:09+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigheadghost.github.io/zh/tags/</loc>
-    <lastmod>2019-09-16T22:15:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -137,13 +151,6 @@
   <url>
     <loc>https://bigheadghost.github.io/zh/post/movies-parents-guide-200x/</loc>
     <lastmod>2019-02-17T23:34:42+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigheadghost.github.io/zh/tags/movie/</loc>
-    <lastmod>2018-05-01T13:39:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
