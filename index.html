@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bigheadghost.github.io/" />
 
-<meta property="og:updated_time" content="2014-09-09T12:05:23+08:00" />
+<meta property="og:updated_time" content="2020-03-05T13:20:16+08:00" />
 <meta itemprop="name" content="Know Nothing">
 <meta itemprop="description" content="">
 
@@ -116,6 +116,28 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/arrange_sequence_using_auxiliary_slots/">Clurichaun Puzzle from Labyrinths of the world fools gold</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-03-05 13:20:16 CST </span>
+      
+        <span class="more-meta"> 379 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p><a href="http://www.bigfishgames.com/games/14590/labyrinths-of-the-world-fools-gold/">Labyrinths of the World: Fool&rsquo;s Gold</a> is an AVG game from Domini Games and released by BigFish. The 4th minigame named Clurichaun is really nice.<br />
+<img src="/img/2020/minigame_clurichaun.jpg" alt="Arrange sequence using auxiliary slots Puzzle" /></p>
+    </div>
+    <div class="read-more">
+      <a href="/post/arrange_sequence_using_auxiliary_slots/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/dive-into-project-euler-part-5-81-100/">Dive into Project Euler Part 5 (81-100)</a></h1>
@@ -430,113 +452,6 @@ Total@Complement[Range[1, 28123],
     </div>
     <div class="read-more">
       <a href="/post/dive-into-project-euler-part-2-21-40/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/dive-into-project-euler-part-1-1-20/">Dive into Project Euler Part 1 (1-20)</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-08-29 08:41:09 CST </span>
-      
-        <span class="more-meta"> 566 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>Although calculation of mathematica codes could be slower than those written in C/C++, or even those in python, the prodigious and interesting if not funny functions do save coding time a lot.</p>
-
-<h1 id="problem-1">Problem 1</h1>
-
-<p>Brute force solution at first thought:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">Total@Select[Range[999], 3\[Divides]# || 5\[Divides]# &amp;]
-233168</pre></td></tr></table>
-</div>
-</div>
-<p>What if the upper limit is extreme large, like \(10^{10}\), or \(10^{10^7}\)? Calculating one after another or even saving them using Range is impossible. Here comes the mathematical way:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">top = 10^(10^7) - 1;
-SumMultiplesOf[n_] := (p = Quotient[top, n]; n*p*(p + 1)/2);
-SumMultiplesOf[m_, n_] := SumMultiplesOf[m] + SumMultiplesOf[n] - SumMultiplesOf[LCM[m, n]];
-N[SumMultiplesOf[3, 5], 2] // AbsoluteTiming
-{2.222280, 2.3*10^19999999}</pre></td></tr></table>
-</div>
-</div>
-<h1 id="problem-2">Problem 2</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">n=NestWhile[# + 1 &amp;, 1, Fibonacci@# &lt;= 4*^6 &amp;] - 1
-Total@Select[Array[Fibonacci,n] ,  EvenQ]
-4613732</pre></td></tr></table>
-</div>
-</div>
-<p>Even numbers appear every 3rd positions in Fibonacci series:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">Total@Table[Fibonacci@i, {i, 3, n, 3}]</pre></td></tr></table>
-</div>
-</div>
-<h1 id="problem-3">Problem 3</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">Max[FactorInteger[600851475143][[All, 1]]]
-6857</pre></td></tr></table>
-</div>
-</div>
-<h1 id="problem-4">Problem 4</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">Catch@Scan[If[FromDigit@Reverse@IntegerDigits@# == #, Throw[#]] &amp;, Reverse@Sort@Flatten@Table[i*j, {i, 999, 100, -1}, {j, i, 100, -1}]]
-906609</pre></td></tr></table>
-</div>
-</div>
-<h1 id="problem-5">Problem 5</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">LCM @@ Range[20]
-232792560</pre></td></tr></table>
-</div>
-</div>
-    </div>
-    <div class="read-more">
-      <a href="/post/dive-into-project-euler-part-1-1-20/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

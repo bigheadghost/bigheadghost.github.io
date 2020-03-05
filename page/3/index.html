@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Reading and Thinking</title>
+  <title>Know Nothing</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -23,12 +23,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.58.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/" />
-  <link href="https://bigheadghost.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Reading and Thinking" />
-  <link href="https://bigheadghost.github.io/index.xml" rel="feed" type="application/rss+xml" title="Reading and Thinking" />
+  <link href="https://bigheadghost.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Know Nothing" />
+  <link href="https://bigheadghost.github.io/index.xml" rel="feed" type="application/rss+xml" title="Know Nothing" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,18 +40,17 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Reading and Thinking" />
+<meta property="og:title" content="Know Nothing" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bigheadghost.github.io/" />
 
-<meta property="og:updated_time" content="2014-09-02T12:04:41&#43;08:00"/>
-
-<meta itemprop="name" content="Reading and Thinking">
+<meta property="og:updated_time" content="2020-03-05T13:20:16+08:00" />
+<meta itemprop="name" content="Know Nothing">
 <meta itemprop="description" content="">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Reading and Thinking"/>
+<meta name="twitter:title" content="Know Nothing"/>
 <meta name="twitter:description" content=""/>
 
 <!--[if lte IE 9]>
@@ -67,7 +66,7 @@
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/" class="logo">Reading and Thinking</a>
+    <a href="/" class="logo">Know Nothing</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -93,7 +92,7 @@
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
-  <a href="/" class="logo">Reading and Thinking</a>
+  <a href="/" class="logo">Know Nothing</a>
 </div>
 
 <nav class="site-navbar">
@@ -119,85 +118,22 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/dive-into-project-euler-part-3-41-60/">Dive into Project Euler Part 3 (41-60)</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/magic-griddlers-solver/">Magic Griddlers Solver</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2014-09-02 12:04:41 CST </span>
+      <span class="post-time"> 2014-06-17 12:53:53 CST </span>
       
-        <span class="more-meta"> 1031 words </span>
-        <span class="more-meta"> 3 mins read </span>
+        <span class="more-meta"> 311 words </span>
+        <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      <h1 id="problem-41">Problem 41</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">Max@Table[ Select[FromDigits /@ Permutations[Range[i]], PrimeQ], {i, 9}]
-7652413</pre></td></tr></table>
-</div>
-</div>
-<h1 id="problem-42">Problem 42</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">s = (Total[ToCharacterCode[#] - First@ToCharacterCode[&#34;A&#34;] + 1]) &amp; /@ StringSplit[StringReplace[Import[&#34;R:\\words.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;],   &#34;,&#34;];
-Reduce[n*(n + 1)/2 &gt;Max[s] &amp;&amp; n &gt; 0, n, Integers]
-n &gt;= 20
-In[37]:= tn = Array[#*(# + 1)/2 &amp;, 20];
-In[38]:= Select[s, MemberQ[tn, #] &amp;] // Length
-Out[38]= 162</pre></td></tr></table>
-</div>
-</div>
-<h1 id="problem-43">Problem 43</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">cf = With[{
-    code =
-     And @@ Thread[
-         Table[100 A[[i]] + 10 A[[i + 1]] + A[[i + 2]], {i, 2, 8}]~
-           Mod~{2, 3, 5, 7, 11, 13, 17} == 0] // Boole // Quiet
-    },
-   Compile[{ {A, _Integer, 1} },
-    code,
-    RuntimeAttributes -&gt; Listable,
-    RuntimeOptions -&gt; &#34;Speed&#34;, CompilationTarget -&gt; &#34;C&#34;
-    ]
-   ];
-FromDigits /@ Pick[#, cf@#, 1] &amp;@Permutations@Range[0, 9] // Tr
-16695334890</pre></td></tr></table>
-</div>
-</div>
+      <p>Recently  I came across a number puzzle called <a href="http://www.bigfishgames.com/download-games/26504/magic-griddlers/index.html">Magic Griddlers</a> from <a href="http://www.bigfishgames.com">Big Fish</a>. It&rsquo;s kind of attractive, so I wrote a puzzle solver with several lines of python. It gives the solution in a few seconds.<br />
+<img src="http://cdn-games.bigfishsites.com/en_magic-griddlers/screen1.jpg" alt="" /></p>
     </div>
     <div class="read-more">
-      <a href="/post/dive-into-project-euler-part-3-41-60/" class="read-more-link">Read more..</a>
+      <a href="/post/magic-griddlers-solver/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -209,10 +145,7 @@ FromDigits /@ Pick[#, cf@#, 1] &amp;@Permutations@Range[0, 9] // Tr
         <i class="iconfont icon-left"></i>
         <span class="prev-text">Prev</span>
       </a>
-    <a class="next" href="/page/4/">
-        <span class="next-text">Next</span>
-        <i class="iconfont icon-right"></i>
-      </a>
+    
   </nav>
         </div>
         
@@ -244,7 +177,7 @@ FromDigits /@ Pick[#, cf@#, 1] &amp;@Permutations@Range[0, 9] // Tr
   <span class="copyright-year">
     &copy; 
     2014 - 
-    2019
+    2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

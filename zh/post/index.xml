@@ -6,10 +6,20 @@
     <description>Recent content in Posts on 略知一二</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Jan 2020 20:09:01 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 05 Mar 2020 12:28:32 +0800</lastBuildDate>
     
 	<atom:link href="https://bigheadghost.github.io/zh/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Clurichaun序列重排谜题</title>
+      <link>https://bigheadghost.github.io/zh/post/arrange_sequence_using_auxiliary_slots/</link>
+      <pubDate>Thu, 05 Mar 2020 12:28:32 +0800</pubDate>
+      
+      <guid>https://bigheadghost.github.io/zh/post/arrange_sequence_using_auxiliary_slots/</guid>
+      <description>&lt;p&gt;《&lt;a href=&#34;http://www.bigfishgames.com/games/14590/labyrinths-of-the-world-fools-gold/&#34;&gt;世界迷宫10：愚者之财&lt;/a&gt;（Labyrinths of the World: Fool&amp;rsquo;s Gold）》是Domini Games制作、BigFish发行的一款冒险解谜游戏。画风精美，剧情优良，其中有一道谜题 &lt;strong&gt;minigame 4 - Clurichaun&lt;/strong&gt; 很有意思。&lt;br /&gt;
+&lt;img src=&#34;https://bigheadghost.github.io/img/2020/minigame_clurichaun.jpg&#34; alt=&#34;Clurichaun序列重排谜题&#34; /&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>遗失手机之劳拉的故事</title>

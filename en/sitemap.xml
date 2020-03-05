@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bigheadghost.github.io/post/arrange_sequence_using_auxiliary_slots/</loc>
+    <lastmod>2020-03-05T13:20:16+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/</loc>
+    <lastmod>2020-03-05T13:20:16+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/post/</loc>
+    <lastmod>2020-03-05T13:20:16+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/tags/puzzle/</loc>
+    <lastmod>2020-03-05T13:20:16+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/tags/</loc>
+    <lastmod>2020-03-05T13:20:16+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://bigheadghost.github.io/post/dive-into-project-euler-part-5-81-100/</loc>
     <lastmod>2014-09-09T12:05:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -9,28 +44,7 @@
   </url>
   
   <url>
-    <loc>https://bigheadghost.github.io/</loc>
-    <lastmod>2014-09-09T12:05:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigheadghost.github.io/tags/mathematica/</loc>
-    <lastmod>2014-09-09T12:05:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigheadghost.github.io/post/</loc>
-    <lastmod>2014-09-09T12:05:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigheadghost.github.io/tags/</loc>
     <lastmod>2014-09-09T12:05:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -87,13 +101,6 @@
   
   <url>
     <loc>https://bigheadghost.github.io/post/mummy-maze-solver/</loc>
-    <lastmod>2014-07-02T10:17:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigheadghost.github.io/tags/puzzle/</loc>
     <lastmod>2014-07-02T10:17:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

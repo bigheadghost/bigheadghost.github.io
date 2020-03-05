@@ -6,10 +6,19 @@
     <description>Recent content in Tags on 略知一二</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Jan 2020 20:09:01 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 05 Mar 2020 12:28:32 +0800</lastBuildDate>
     
 	<atom:link href="https://bigheadghost.github.io/zh/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>puzzle</title>
+      <link>https://bigheadghost.github.io/zh/tags/puzzle/</link>
+      <pubDate>Thu, 05 Mar 2020 12:28:32 +0800</pubDate>
+      
+      <guid>https://bigheadghost.github.io/zh/tags/puzzle/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>游戏</title>
@@ -39,16 +48,7 @@
     </item>
     
     <item>
-      <title>puzzle</title>
-      <link>https://bigheadghost.github.io/zh/tags/puzzle/</link>
-      <pubDate>Mon, 10 Jun 2019 15:52:30 +0800</pubDate>
-      
-      <guid>https://bigheadghost.github.io/zh/tags/puzzle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mathematica</title>
+      <title>Mathematica</title>
       <link>https://bigheadghost.github.io/zh/tags/mathematica/</link>
       <pubDate>Tue, 21 May 2019 22:30:05 +0800</pubDate>
       
