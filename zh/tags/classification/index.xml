@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>movie on 略知一二</title>
-    <link>https://bigheadghost.github.io/zh/tags/movie/</link>
-    <description>Recent content in movie on 略知一二</description>
+    <title>classification on 略知一二</title>
+    <link>https://bigheadghost.github.io/zh/tags/classification/</link>
+    <description>Recent content in classification on 略知一二</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Mar 2020 15:56:18 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 30 Jun 2019 22:10:02 +0800</lastBuildDate>
     
-	<atom:link href="https://bigheadghost.github.io/zh/tags/movie/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://bigheadghost.github.io/zh/tags/classification/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>脸盲参考书: 中国功夫电影中的黄金配角</title>
-      <link>https://bigheadghost.github.io/zh/post/best_kungfu_costars_reference_for_face_blindness/</link>
-      <pubDate>Wed, 11 Mar 2020 15:56:18 +0800</pubDate>
-      
-      <guid>https://bigheadghost.github.io/zh/post/best_kungfu_costars_reference_for_face_blindness/</guid>
-      <description>&lt;p&gt;中国功夫电影里有很多经典配角，多为心狠手辣、武功超群的大反派。观众一想起他们来就恨（爱）得牙痒痒。不过，脸盲症患者们，别痒错了人。&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>儿童电影父母指导-199x年</title>
@@ -78,15 +69,6 @@
       <guid>https://bigheadghost.github.io/zh/post/movies-parents-guide-200x/</guid>
       <description>&lt;p&gt;鉴于很多儿童作品（影视、图书）良莠不齐，国内无分级制度，国外IMDB收录不全，特开此系列，会长久做下去，为广大父母提供参考。&lt;br /&gt;
 欢迎来信或留言提供更多信息。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>倚天屠龙记之魔教教主105分钟完整版</title>
-      <link>https://bigheadghost.github.io/zh/post/mojiaojiaozhu-complete/</link>
-      <pubDate>Tue, 01 May 2018 13:39:01 +0800</pubDate>
-      
-      <guid>https://bigheadghost.github.io/zh/post/mojiaojiaozhu-complete/</guid>
-      <description>版本 (1)韩版蓝光，1:40:51(fps24)，比较常见的高清版片源，带KOR.BluRay字样的就是。 (2)法二D9=港三美亚D9，早期</description>
     </item>
     
   </channel>
