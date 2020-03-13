@@ -53,7 +53,7 @@
 
 <meta itemprop="datePublished" content="2020-03-05T13:20:16&#43;08:00" />
 <meta itemprop="dateModified" content="2020-03-05T13:20:16&#43;08:00" />
-<meta itemprop="wordCount" content="379">
+<meta itemprop="wordCount" content="202">
 
 
 
@@ -133,8 +133,8 @@
       <div class="post-meta">
         <span class="post-time"> 2020-03-05 13:20:16 CST </span>
         
-          <span class="more-meta"> 379 words </span>
-          <span class="more-meta"> 2 mins read </span>
+          <span class="more-meta"> 202 words </span>
+          <span class="more-meta"> 1 min read </span>
         
       </div>
     </header>
@@ -160,36 +160,11 @@ Move each center token to the slot whose path leads to their match. Use the side
 <p>Change a given number(1234567800) to the target number(6345281700) through a series of moves, each move substitutes two adjacent digits in the number with digits in 2 auxiliary slots (denoted as 0).</p>
 </blockquote>
 
-<p>8 tokens plus 2 auxiliary slots makes 10 digits. And there are 7 positions where the sword can be placed. So it would be time cosuming through direct brutal force.</p>
+<p><a href="https://www.bigfishgames.com/blog/walkthrough/labyrinths-of-the-world-fools-gold-strategy-guide-hints-cheats-codes-tips-tricks/">The Official Walkthrough</a> gives a solution as: <code>{6, 1, 6, 2, 4, 2, 3, 7, 6, 3, 2, 6, 5, 2}</code>, 14 steps in total.</p>
 
-<p>If <strong>A</strong> solution is all we want, there is no need to find the best/shortest. We can split the number into shorter ones.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">12345 - 678  → 34521 - 678  【6 steps: {2, 1, 2, 1, 4, 2}】
-3452 - 1678  → 3452 - 6817  【no solution】, changes into：
-345 - 21678  → 345 - 26817  【9 steps: {2, 1, 2, 1, 3, 4, 1, 2, 3}】
-34526 - 817  → 63452 - 817  【7 steps: {2, 4, 2, 1, 4, 3, 1}】
-22 steps in total.</pre></td></tr></table>
-</div>
-</div>
-<p>Each number in steps denotes the position of sword&rsquo;s left slot.</p>
-
-<p><a href="https://www.bigfishgames.com/blog/walkthrough/labyrinths-of-the-world-fools-gold-strategy-guide-hints-cheats-codes-tips-tricks/">The Official Walkthrough</a>gives a solution as: <code>{{6, 1, 6, 2, 4, 2}, {3, 7, 6, 3, 2, 6, 5, 2}}</code>, 14 steps in total.<br />
-The first 6 steps complete <code>12345678 → 64573128</code>, the latter 8 steps complete the puzzle.</p>
-
-<p>Further calculation shows：<br />
-The transform of <code>12345678 → 64573128</code> does need 6 steps(with a little variation here)，but <code>64573128 → 63452817</code> just needs 5 steps, not 8.</p>
-
-<p>So here comes a solution, better than the Official, 11 steps in total:<br />
-<code>{{1, 6, 1, 2, 4, 2}, {5, 2, 3, 7, 5}}</code><br />
-<strong>12</strong>34567800  =&gt;  00345<strong>67</strong>812  =&gt;  <strong>00</strong>34512867  =&gt;  6<strong>73</strong>4512800  =&gt;  600<strong>45</strong>12873  =&gt;  6<strong>00</strong>7312845  =&gt;  6457<strong>31</strong>2800  =&gt;  6<strong>45</strong>7002831  =&gt;  63<strong>17</strong>002845  =&gt;  634500<strong>28</strong>17  =&gt;  6345<strong>00</strong>1728  =&gt;  6345281700</p>
+<p>Well, DFS (Depth First Scan) found out the only best solution, 9 steps in total:<br />
+<code>{1, 6, 7, 6, 4, 3, 6, 5, 1}</code><br />
+<strong>12</strong>34567800 =&gt; 00345<strong>67</strong>812 =&gt; 003451<strong>28</strong>67 =&gt; 00345<strong>16</strong>728 =&gt; 003<strong>45</strong>28716 =&gt; 00<strong>31</strong>628745 =&gt; 00456<strong>28</strong>731 =&gt; 0045<strong>63</strong>1728 =&gt; <strong>00</strong>45281763 =&gt; 6345281700</p>
     </div>
 
     <div class="post-copyright">

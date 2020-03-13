@@ -53,7 +53,7 @@
 
 <meta itemprop="datePublished" content="2020-03-05T12:28:32&#43;08:00" />
 <meta itemprop="dateModified" content="2020-03-05T12:28:32&#43;08:00" />
-<meta itemprop="wordCount" content="725">
+<meta itemprop="wordCount" content="404">
 
 
 
@@ -133,8 +133,8 @@
       <div class="post-meta">
         <span class="post-time"> 2020-03-05 12:28:32 CST </span>
         
-          <span class="more-meta"> 约 725 字 </span>
-          <span class="more-meta"> 预计阅读 2 分钟 </span>
+          <span class="more-meta"> 约 404 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
         
       </div>
     </header>
@@ -156,32 +156,11 @@
 <p>我们对内圈图案从左到右依次编码为<code>1~8</code>，那么问题就变成：<br />
 通过两个辅助位，如何把序列<code>12345678</code>重新排列为<code>63452817</code>？</p>
 
-<p>8个图案加上两个辅助位，一共10个位置，宝剑的位置也有7种，直接求解的话，复杂度较高。<br />
-仔细观察起止序列，对数字进行拆解，分成位数较小的，复杂度一下子就降下来了。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">12345 - 678  → 34521 - 678  【6步: {2, 1, 2, 1, 4, 2}】
-3452 - 1678  → 3452 - 6817  【没有解，不存在这样的路径】，改成：
-345 - 21678  → 345 - 26817  【9步: {2, 1, 2, 1, 3, 4, 1, 2, 3}】
-34526 - 817  → 63452 - 817  【7步: {2, 4, 2, 1, 4, 3, 1}】
-一共需要22步。</pre></td></tr></table>
-</div>
-</div>
-<p>每个数字代表剑的位置（左槽对应的内圈图案位置）。</p>
+<p><a href="https://www.bigfishgames.com/blog/walkthrough/labyrinths-of-the-world-fools-gold-strategy-guide-hints-cheats-codes-tips-tricks/">官方</a>给出的答案是<code>{6, 1, 6, 2, 4, 2, 3, 7, 6, 3, 2, 6, 5, 2}</code>, 一共14步。</p>
 
-<p><a href="https://www.bigfishgames.com/blog/walkthrough/labyrinths-of-the-world-fools-gold-strategy-guide-hints-cheats-codes-tips-tricks/">官方</a>给出的答案是<code>{{6, 1, 6, 2, 4, 2}, {3, 7, 6, 3, 2, 6, 5, 2}}</code>, 一共14步。前6步完成了<code>12345678 → 64573128</code>的变换，后8步完成了<code>64573128 → 63452817</code>。<br />
-进一步计算得知：<br />
-<code>12345678 → 64573128</code>确实需要6步(具体步骤略有不同)，但<code>64573128 → 63452817</code>最少只要5步即可，一共只要11步。<br />
-所以这里就有了一个比官方更好的答案(0代表剑槽)：<br />
-<code>{{1, 6, 1, 2, 4, 2}, {5, 2, 3, 7, 5}}</code><br />
-<strong>12</strong>34567800  =&gt;  00345<strong>67</strong>812  =&gt;  <strong>00</strong>34512867  =&gt;  6<strong>73</strong>4512800  =&gt;  600<strong>45</strong>12873  =&gt;  6<strong>00</strong>7312845  =&gt;  6457<strong>31</strong>2800  =&gt;  6<strong>45</strong>7002831  =&gt;  63<strong>17</strong>002845  =&gt;  634500<strong>28</strong>17  =&gt;  6345<strong>00</strong>1728  =&gt;  6345281700</p>
+<p>DFS可以得到一个比官方更好的答案(0代表剑槽)，一共9步(最优解)：<br />
+<code>{1, 6, 7, 6, 4, 3, 6, 5, 1}</code><br />
+<strong>12</strong>34567800 =&gt; 00345<strong>67</strong>812 =&gt; 003451<strong>28</strong>67 =&gt; 00345<strong>16</strong>728 =&gt; 003<strong>45</strong>28716 =&gt; 00<strong>31</strong>628745 =&gt; 00456<strong>28</strong>731 =&gt; 0045<strong>63</strong>1728 =&gt; <strong>00</strong>45281763 =&gt; 6345281700</p>
     </div>
 
     <div class="post-copyright">
