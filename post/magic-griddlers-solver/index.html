@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.2 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/post/magic-griddlers-solver/" />
@@ -49,16 +49,13 @@
 <meta itemprop="name" content="Magic Griddlers Solver">
 <meta itemprop="description" content="Recently  I came across a number puzzle called Magic Griddlers from Big Fish. It&rsquo;s kind of attractive, so I wrote a puzzle solver with several lines of python. It gives the solution in a few seconds.
 ">
-
-
 <meta itemprop="datePublished" content="2014-06-17T12:53:53&#43;08:00" />
 <meta itemprop="dateModified" content="2014-06-17T12:53:53&#43;08:00" />
-<meta itemprop="wordCount" content="311">
+<meta itemprop="wordCount" content="308">
 
 
 
-<meta itemprop="keywords" content="puzzle,python," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="puzzle,python," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Magic Griddlers Solver"/>
 <meta name="twitter:description" content="Recently  I came across a number puzzle called Magic Griddlers from Big Fish. It&rsquo;s kind of attractive, so I wrote a puzzle solver with several lines of python. It gives the solution in a few seconds.
 "/>
@@ -133,7 +130,7 @@
       <div class="post-meta">
         <span class="post-time"> 2014-06-17 12:53:53 CST </span>
         
-          <span class="more-meta"> 311 words </span>
+          <span class="more-meta"> 308 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -142,32 +139,31 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
-      <p>Recently  I came across a number puzzle called <a href="http://www.bigfishgames.com/download-games/26504/magic-griddlers/index.html">Magic Griddlers</a> from <a href="http://www.bigfishgames.com">Big Fish</a>. It&rsquo;s kind of attractive, so I wrote a puzzle solver with several lines of python. It gives the solution in a few seconds.<br />
-<img src="http://cdn-games.bigfishsites.com/en_magic-griddlers/screen1.jpg" alt="" /></p>
-
+      <p>Recently  I came across a number puzzle called <a href="http://www.bigfishgames.com/download-games/26504/magic-griddlers/index.html">Magic Griddlers</a> from <a href="http://www.bigfishgames.com">Big Fish</a>. It&rsquo;s kind of attractive, so I wrote a puzzle solver with several lines of python. It gives the solution in a few seconds.<br>
+<img src="http://cdn-games.bigfishsites.com/en_magic-griddlers/screen1.jpg" alt=""></p>
 <ol>
-<li>Input the patterns of rows and columns. If none of the numbers of a pattern is larger than 9, it can be input as a whole number, e.g. a pattern of &lsquo;1  3 5&rsquo; can be input as 135. Otherwise, you should input them as a list. e.g. a pattern of &lsquo;1 3 12&rsquo; as [1, 3, 12]<br /></li>
-<li>Run the <a href="https://github.com/bigheadghost/PuzzleSolvers/blob/master/Magic%20Griddlers%20solver.py">python code</a>. Python 3 is required.<br />
-<br /></li>
+<li>Input the patterns of rows and columns. If none of the numbers of a pattern is larger than 9, it can be input as a whole number, e.g. a pattern of &lsquo;1  3 5&rsquo; can be input as 135. Otherwise, you should input them as a list. e.g. a pattern of &lsquo;1 3 12&rsquo; as [1, 3, 12]</li>
+<li>Run the <a href="https://github.com/bigheadghost/PuzzleSolvers/blob/master/Magic%20Griddlers%20solver.py">python code</a>. Python 3 is required.</li>
 </ol>
-
-<p>Some Notes:<br />
-1. intermediate data are saved for calculation performance in savedata func. For the lattices used in the puzzle, only row count or column count is 5, 10, 15, 20 are pre calculated.<br />
-2. on the <a href="http://www.bigfishgames.com/download-games/26504/magic-griddlers/index.html">Magic Griddlers</a> page, a reviewer <a href="http://ugc.bigfishgames.com/profiles/8524-en_us/52928688/profile.htm">geniegal</a>  said: &ldquo;The puzzles require guesses (or hints). Good puzzles rely on logic to complete without any guess work.&rdquo;. well, I haven&rsquo;t played all levels. But I agreed with that &ldquo;logic only&rdquo; comment. According to my test, for 2×2 grid dimensions, there exist 2 lattices share a pattern:[&lsquo;01&rsquo;,&lsquo;10&rsquo;] and [&lsquo;10&rsquo;,&lsquo;01&rsquo;].<br />
-and for 3×3 grid dimensions, there are 2^(3×3)=512 kinds of lattices, but with only 445 patterns, so it is true some lattices share a pattern. The largest community in 3×3 case is:<br />
-[&lsquo;001&rsquo;, &lsquo;010&rsquo;, &lsquo;100&rsquo;]<br />
-[&lsquo;001&rsquo;, &lsquo;100&rsquo;, &lsquo;010&rsquo;]<br />
-[&lsquo;010&rsquo;, &lsquo;001&rsquo;, &lsquo;100&rsquo;]<br />
-[&lsquo;010&rsquo;, &lsquo;100&rsquo;, &lsquo;001&rsquo;]<br />
-[&lsquo;100&rsquo;, &lsquo;001&rsquo;, &lsquo;010&rsquo;]<br />
-[&lsquo;100&rsquo;, &lsquo;010&rsquo;, &lsquo;001&rsquo;]<br />
-these 6 lattices have pattern in common.<br />
-So if you want to design a puzzle, you can use my solver to test whether the lattice is a good one. if not, the solver would not find a solution since it is based on logic only.<br />
-3. A interesting <a href="http://math.stackexchange.com/questions/839310/binary-sequence-count-of-unique-patterns">note</a> of the count of unique patterns of binary sequence, it follows fibonacci numbers as the sequence length increases.</p>
+<p>Some Notes:</p>
+<ol>
+<li>intermediate data are saved for calculation performance in savedata func. For the lattices used in the puzzle, only row count or column count is 5, 10, 15, 20 are pre calculated.</li>
+<li>on the <a href="http://www.bigfishgames.com/download-games/26504/magic-griddlers/index.html">Magic Griddlers</a> page, a reviewer <a href="http://ugc.bigfishgames.com/profiles/8524-en_us/52928688/profile.htm">geniegal</a>  said: &ldquo;The puzzles require guesses (or hints). Good puzzles rely on logic to complete without any guess work.&quot;. well, I haven&rsquo;t played all levels. But I agreed with that &ldquo;logic only&rdquo; comment. According to my test, for 2×2 grid dimensions, there exist 2 lattices share a pattern:[&lsquo;01&rsquo;,&lsquo;10&rsquo;] and [&lsquo;10&rsquo;,&lsquo;01&rsquo;]. <br>
+and for 3×3 grid dimensions, there are 2^(3×3)=512 kinds of lattices, but with only 445 patterns, so it is true some lattices share a pattern. The largest community in 3×3 case is:<br>
+[&lsquo;001&rsquo;, &lsquo;010&rsquo;, &lsquo;100&rsquo;]<br>
+[&lsquo;001&rsquo;, &lsquo;100&rsquo;, &lsquo;010&rsquo;]<br>
+[&lsquo;010&rsquo;, &lsquo;001&rsquo;, &lsquo;100&rsquo;]<br>
+[&lsquo;010&rsquo;, &lsquo;100&rsquo;, &lsquo;001&rsquo;]<br>
+[&lsquo;100&rsquo;, &lsquo;001&rsquo;, &lsquo;010&rsquo;]<br>
+[&lsquo;100&rsquo;, &lsquo;010&rsquo;, &lsquo;001&rsquo;]<br>
+these 6 lattices have pattern in common.<br>
+So if you want to design a puzzle, you can use my solver to test whether the lattice is a good one. if not, the solver would not find a solution since it is based on logic only.</li>
+<li>A interesting <a href="http://math.stackexchange.com/questions/839310/binary-sequence-count-of-unique-patterns">note</a> of the count of unique patterns of binary sequence, it follows fibonacci numbers as the sequence length increases.</li>
+</ol>
     </div>
 
     <div class="post-copyright">

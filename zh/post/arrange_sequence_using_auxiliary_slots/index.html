@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.2 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/zh/post/arrange_sequence_using_auxiliary_slots/" />
@@ -49,16 +49,13 @@
 <meta itemprop="name" content="Clurichaun序列重排谜题">
 <meta itemprop="description" content="《世界迷宫10：愚者之财（Labyrinths of the World: Fool&rsquo;s Gold）》是Domini Games制作、BigFish发行的一款冒险解谜游戏。画风精美，剧情优良，其中有一道谜题 minigame 4 - Clurichaun 很有意思。
 ">
-
-
 <meta itemprop="datePublished" content="2020-03-05T12:28:32&#43;08:00" />
 <meta itemprop="dateModified" content="2020-03-05T12:28:32&#43;08:00" />
 <meta itemprop="wordCount" content="404">
 
 
 
-<meta itemprop="keywords" content="puzzle," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="puzzle," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Clurichaun序列重排谜题"/>
 <meta name="twitter:description" content="《世界迷宫10：愚者之财（Labyrinths of the World: Fool&rsquo;s Gold）》是Domini Games制作、BigFish发行的一款冒险解谜游戏。画风精美，剧情优良，其中有一道谜题 minigame 4 - Clurichaun 很有意思。
 "/>
@@ -142,24 +139,20 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
-      <p>《<a href="http://www.bigfishgames.com/games/14590/labyrinths-of-the-world-fools-gold/">世界迷宫10：愚者之财</a>（Labyrinths of the World: Fool&rsquo;s Gold）》是Domini Games制作、BigFish发行的一款冒险解谜游戏。画风精美，剧情优良，其中有一道谜题 <strong>minigame 4 - Clurichaun</strong> 很有意思。<br />
-<img src="/img/2020/minigame_clurichaun.jpg" alt="Clurichaun序列重排谜题" /></p>
-
-<p>图中最内一圈有8个图案，迷宫内部也有8个图案，前后两组图案通过迷宫建立对应关系，内圈每个图案最终要通过变换位置变为它对应的迷宫内的图案。<br />
-内圈图案位置则通过操作宝剑来调整。剑上有两个空位置，点击左右箭头移动剑，点击中间箭头，则会将剑槽内的图案 同 其对应的内圈上的两个图案 交换。<br />
+      <p>《<a href="http://www.bigfishgames.com/games/14590/labyrinths-of-the-world-fools-gold/">世界迷宫10：愚者之财</a>（Labyrinths of the World: Fool&rsquo;s Gold）》是Domini Games制作、BigFish发行的一款冒险解谜游戏。画风精美，剧情优良，其中有一道谜题 <strong>minigame 4 - Clurichaun</strong> 很有意思。<br>
+<img src="/img/2020/minigame_clurichaun.jpg" alt="Clurichaun序列重排谜题"></p>
+<p>图中最内一圈有8个图案，迷宫内部也有8个图案，前后两组图案通过迷宫建立对应关系，内圈每个图案最终要通过变换位置变为它对应的迷宫内的图案。<br>
+内圈图案位置则通过操作宝剑来调整。剑上有两个空位置，点击左右箭头移动剑，点击中间箭头，则会将剑槽内的图案 同 其对应的内圈上的两个图案 交换。<br>
 通过不断的交换，实现对 内圈图案 的重排。</p>
-
-<p>我们对内圈图案从左到右依次编码为<code>1~8</code>，那么问题就变成：<br />
+<p>我们对内圈图案从左到右依次编码为<code>1~8</code>，那么问题就变成：<br>
 通过两个辅助位，如何把序列<code>12345678</code>重新排列为<code>63452817</code>？</p>
-
 <p><a href="https://www.bigfishgames.com/blog/walkthrough/labyrinths-of-the-world-fools-gold-strategy-guide-hints-cheats-codes-tips-tricks/">官方</a>给出的答案是<code>{6, 1, 6, 2, 4, 2, 3, 7, 6, 3, 2, 6, 5, 2}</code>, 一共14步。</p>
-
-<p>DFS可以得到一个比官方更好的答案(0代表剑槽)，一共9步(最优解)：<br />
-<code>{1, 6, 7, 6, 4, 3, 6, 5, 1}</code><br />
+<p>DFS可以得到一个比官方更好的答案(0代表剑槽)，一共9步(最优解)：<br>
+<code>{1, 6, 7, 6, 4, 3, 6, 5, 1}</code><br>
 <strong>12</strong>34567800 =&gt; 00345<strong>67</strong>812 =&gt; 003451<strong>28</strong>67 =&gt; 00345<strong>16</strong>728 =&gt; 003<strong>45</strong>28716 =&gt; 00<strong>31</strong>628745 =&gt; 00456<strong>28</strong>731 =&gt; 0045<strong>63</strong>1728 =&gt; <strong>00</strong>45281763 =&gt; 6345281700</p>
     </div>
 

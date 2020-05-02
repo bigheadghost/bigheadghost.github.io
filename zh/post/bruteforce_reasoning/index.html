@@ -27,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.2 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/zh/post/bruteforce_reasoning/" />
@@ -56,16 +56,13 @@
 其实解决逻辑推理问题也不用特意去学一门新语言，去自己工具箱里找个趁手的兵器也行。
 本文采用Mathematica解题，可与上文对照阅读，文末还求解了一道更复杂的题目。
 话说有了计算机以后，干啥都喜欢简单粗暴的，纯推理是越来越懒了。">
-
-
 <meta itemprop="datePublished" content="2019-05-21T22:30:05&#43;08:00" />
 <meta itemprop="dateModified" content="2019-05-21T22:30:05&#43;08:00" />
-<meta itemprop="wordCount" content="1648">
+<meta itemprop="wordCount" content="1644">
 
 
 
-<meta itemprop="keywords" content="puzzle,Mathematica," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="puzzle,Mathematica," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="逻辑推理题爆破"/>
 <meta name="twitter:description" content="阮一峰之前有篇文章《Prolog 语言入门教程》，介绍说Prolog（全称Programming in Logic）是一种专门解决逻辑问题的语言。
 其实解决逻辑推理问题也不用特意去学一门新语言，去自己工具箱里找个趁手的兵器也行。
@@ -142,7 +139,7 @@
       <div class="post-meta">
         <span class="post-time"> 2019-05-21 22:30:05 CST </span>
         
-          <span class="more-meta"> 约 1648 字 </span>
+          <span class="more-meta"> 约 1644 字 </span>
           <span class="more-meta"> 预计阅读 4 分钟 </span>
         
       </div>
@@ -152,25 +149,24 @@
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li><a href="#1-找朋友">1.找朋友</a></li>
-<li><a href="#2-地图着色问题">2.地图着色问题</a></li>
-<li><a href="#3-谁是凶手">3.谁是凶手</a></li>
-<li><a href="#4-关联题目">4.关联题目</a></li>
-</ul>
+  <ul>
+    <li><a href="#1找朋友">1.找朋友</a></li>
+    <li><a href="#2地图着色问题">2.地图着色问题</a></li>
+    <li><a href="#3谁是凶手">3.谁是凶手</a></li>
+    <li><a href="#4关联题目">4.关联题目</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <p>阮一峰之前有篇文章<a href="http://www.ruanyifeng.com/blog/2019/01/prolog.html">《Prolog 语言入门教程》</a>，介绍说Prolog（全称Programming in Logic）是一种专门解决逻辑问题的语言。<br />
-其实解决逻辑推理问题也不用特意去学一门新语言，去自己工具箱里找个趁手的兵器也行。<br />
-本文采用Mathematica解题，可与上文对照阅读，文末还求解了一道更复杂的题目。<br />
+      <p>阮一峰之前有篇文章<a href="http://www.ruanyifeng.com/blog/2019/01/prolog.html">《Prolog 语言入门教程》</a>，介绍说Prolog（全称Programming in Logic）是一种专门解决逻辑问题的语言。<br>
+其实解决逻辑推理问题也不用特意去学一门新语言，去自己工具箱里找个趁手的兵器也行。<br>
+本文采用Mathematica解题，可与上文对照阅读，文末还求解了一道更复杂的题目。<br>
 话说有了计算机以后，干啥都喜欢简单粗暴的，纯推理是越来越懒了。</p>
-
-<h1 id="1-找朋友">1.找朋友</h1>
+<h1 id="1找朋友">1.找朋友</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -180,9 +176,9 @@
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">(*给定4对（单向）朋友*)
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">(*给定4对（单向）朋友*)
 friends = {{&#34;john&#34;, &#34;julia&#34;}, {&#34;john&#34;, &#34;jack&#34;}, {&#34;julia&#34;, &#34;sam&#34;}, {&#34;julia&#34;, &#34;molly&#34;}};
 allpeople = DeleteDuplicates@Flatten@friends;
 (*查询a、b是否是朋友*)
@@ -191,17 +187,15 @@ FriendQ[&#34;john&#34;, &#34;sam&#34;]
 False
 (*查询john有多少个朋友*)
 Select[allpeople, FriendQ[&#34;john&#34;, #] &amp;]
-{&#34;julia&#34;, &#34;jack&#34;}</pre></td></tr></table>
+{&#34;julia&#34;, &#34;jack&#34;}
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>列出所有的朋友关系？friends列表本身就是了。</p>
-
-<h1 id="2-地图着色问题">2.地图着色问题</h1>
-
+</div><p>列出所有的朋友关系？friends列表本身就是了。</p>
+<h1 id="2地图着色问题">2.地图着色问题</h1>
 <p>用红、绿、蓝给分成A、B、C、D、E五块的地图上色，要求相邻区域不能使用同一种颜色。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -211,9 +205,9 @@ Select[allpeople, FriendQ[&#34;john&#34;, #] &amp;]
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">colors = {&#34;red&#34;, &#34;green&#34;, &#34;blue&#34;};
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">colors = {&#34;red&#34;, &#34;green&#34;, &#34;blue&#34;};
 colorOK[{a_, b_, c_, d_, e_}] := And[a != b, a != c, a != d, a != e, b != c, c != d, d != e];
 sol = Select[Tuples[colors, 5], colorOK];
 StringPadLeft /@ sol // TableForm
@@ -222,30 +216,30 @@ StringPadLeft /@ sol // TableForm
 green     red    blue     red    blue
 green    blue     red    blue     red
  blue     red   green     red   green
- blue   green     red   green     red</pre></td></tr></table>
+ blue   green     red   green     red
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="3-谁是凶手">3.谁是凶手</h1>
-
+</div><h1 id="3谁是凶手">3.谁是凶手</h1>
 <p>Boddy 先生死于谋杀，现有六个嫌疑犯，每个人在不同的房间，每间房间各有一件可能的凶器，但不知道嫌疑犯、房间、凶器的对应关系。请根据下面的条件和线索，找出谁是凶手。已知条件：</p>
-
 <ul>
-<li>六个嫌疑犯是三男（George、John、Robert）三女（Barbara、Christine、Yolanda）。<br /></li>
-<li>六个嫌疑犯分别待在六个房间：浴室（Bathroom）、饭厅（Dining Room）、厨房（Kitchen）、起居室（Living Room）、 储藏室（Pantry）、书房（Study）。<br /></li>
-<li>每间房间都有一件可疑的物品，可以当作凶器：包（Bag）、火枪（Firearm）、煤气（Gas）、刀（Knife）、毒药（Poison）、绳索（Rope）。<br /></li>
-<li>线索一：厨房里面是一个男人，那里的凶器不是绳索、刀子、包和火枪。<br /></li>
-<li>线索二：Barbara 和 Yolanda 在浴室和书房。<br /></li>
-<li>线索三：带包的那个人不是 Barbara 和 George，也不在浴室和饭厅。<br /></li>
-<li>线索四：书房里面是一个带绳子的女人。<br /></li>
-<li>线索五：起居室里面那件凶器，与 John 或 George 在一起。<br /></li>
-<li>线索六：刀子不在饭厅。<br /></li>
-<li>线索七：书房和食品储藏室里面的凶器，没跟 Yolanda 在一起。<br /></li>
-<li>线索八：George 所在的那间屋子有火枪。<br /></li>
-
-<li><p>线索九：Boddy 先生死在食品储藏室里，那里的凶器是煤气。</p>
+<li>六个嫌疑犯是三男（George、John、Robert）三女（Barbara、Christine、Yolanda）。</li>
+<li>六个嫌疑犯分别待在六个房间：浴室（Bathroom）、饭厅（Dining Room）、厨房（Kitchen）、起居室（Living Room）、 储藏室（Pantry）、书房（Study）。</li>
+<li>每间房间都有一件可疑的物品，可以当作凶器：包（Bag）、火枪（Firearm）、煤气（Gas）、刀（Knife）、毒药（Poison）、绳索（Rope）。</li>
+</ul>
+<ul>
+<li>线索一：厨房里面是一个男人，那里的凶器不是绳索、刀子、包和火枪。</li>
+<li>线索二：Barbara 和 Yolanda 在浴室和书房。</li>
+<li>线索三：带包的那个人不是 Barbara 和 George，也不在浴室和饭厅。</li>
+<li>线索四：书房里面是一个带绳子的女人。</li>
+<li>线索五：起居室里面那件凶器，与 John 或 George 在一起。</li>
+<li>线索六：刀子不在饭厅。</li>
+<li>线索七：书房和食品储藏室里面的凶器，没跟 Yolanda 在一起。</li>
+<li>线索八：George 所在的那间屋子有火枪。</li>
+<li>线索九：Boddy 先生死在食品储藏室里，那里的凶器是煤气。</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -276,47 +270,43 @@ green    blue     red    blue     red
 </span><span class="lnt">29
 </span><span class="lnt">30
 </span><span class="lnt">31
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">props = {&#34;bathroom&#34;, &#34;dining&#34;, &#34;kitchen&#34;, &#34;livingroom&#34;, &#34;pantry&#34;, &#34;study&#34;, &#34;bag&#34;, &#34;firearm&#34;, &#34;gas&#34;, &#34;knife&#34;, &#34;poison&#34;, &#34;rope&#34;};
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">props = {&#34;bathroom&#34;, &#34;dining&#34;, &#34;kitchen&#34;, &#34;livingroom&#34;, &#34;pantry&#34;, &#34;study&#34;, &#34;bag&#34;, &#34;firearm&#34;, &#34;gas&#34;, &#34;knife&#34;, &#34;poison&#34;, &#34;rope&#34;};
 men = {&#34;george&#34;, &#34;john&#34;, &#34;robert&#34;};
 women = {&#34;barbara&#34;, &#34;christine&#34;, &#34;yolanda&#34;};
 people = Flatten@{men, women};
 allcases = Flatten /@ Permutations[Permutations[people], {2}];
 murderQ[case_] := Module[{p},
-p = AssociationThread[props, case];
-And @@ {MemberQ[men, p[&#34;kitchen&#34;]], !MemberQ[{p[&#34;knife&#34;], p[&#34;bag&#34;], p[&#34;firearm&#34;], p[&#34;rope&#34;]}, p[&#34;kitchen&#34;]], 
-  Sort@{p[&#34;bathroom&#34;], p[&#34;study&#34;]} == {&#34;barbara&#34;, &#34;yolanda&#34;}, 
-    !MemberQ[{&#34;barbara&#34;, &#34;george&#34;, p[&#34;bathroom&#34;], p[&#34;dining&#34;]}, p[&#34;bag&#34;]], 
-    And[p[&#34;study&#34;] == p[&#34;rope&#34;], MemberQ[women, p[&#34;study&#34;]]], 
-    MemberQ[{&#34;george&#34;, &#34;john&#34;}, p[&#34;livingroom&#34;]], 
-    p[&#34;knife&#34;] != p[&#34;dining&#34;], 
-    And[p[&#34;study&#34;] != &#34;yolanda&#34;, p[&#34;pantry&#34;] != &#34;yolanda&#34;], 
-    p[&#34;firearm&#34;] == &#34;george&#34;, 
-    p[&#34;pantry&#34;] == p[&#34;gas&#34;]}
-  ];
-  sol = First@Select[allcases, murderQ];
-StringRiffle[ Transpose@{StringPadLeft@props, StringPadRight@sol}, &#34;\n&#34;, &#34;-&gt;&#34;]
-bathroom-&gt;yolanda  
-dining-&gt;george   
-kitchen-&gt;robert   
+  p = AssociationThread[props, case];
+    And @@ {MemberQ[men, p[&#34;kitchen&#34;]], !MemberQ[{p[&#34;knife&#34;], p[&#34;bag&#34;], p[&#34;firearm&#34;], p[&#34;rope&#34;]}, p[&#34;kitchen&#34;]], 
+      Sort@{p[&#34;bathroom&#34;], p[&#34;study&#34;]} == {&#34;barbara&#34;, &#34;yolanda&#34;}, 
+        !MemberQ[{&#34;barbara&#34;, &#34;george&#34;, p[&#34;bathroom&#34;], p[&#34;dining&#34;]}, p[&#34;bag&#34;]], 
+        And[p[&#34;study&#34;] == p[&#34;rope&#34;], MemberQ[women, p[&#34;study&#34;]]], 
+        MemberQ[{&#34;george&#34;, &#34;john&#34;}, p[&#34;livingroom&#34;]], 
+        p[&#34;knife&#34;] != p[&#34;dining&#34;], 
+        And[p[&#34;study&#34;] != &#34;yolanda&#34;, p[&#34;pantry&#34;] != &#34;yolanda&#34;], 
+        p[&#34;firearm&#34;] == &#34;george&#34;, 
+        p[&#34;pantry&#34;] == p[&#34;gas&#34;]}
+      ];
+      sol = First@Select[allcases, murderQ];
+  StringRiffle[ Transpose@{StringPadLeft@props, StringPadRight@sol}, &#34;\n&#34;, &#34;-&gt;&#34;]
+  bathroom-&gt;yolanda  
+    dining-&gt;george   
+   kitchen-&gt;robert   
 livingroom-&gt;john     
-pantry-&gt;christine
- study-&gt;barbara  
-   bag-&gt;john     
-firearm-&gt;george   
-   gas-&gt;christine
- knife-&gt;yolanda  
-poison-&gt;robert   
-  rope-&gt;barbara  </pre></td></tr></table>
+    pantry-&gt;christine
+     study-&gt;barbara  
+       bag-&gt;john     
+   firearm-&gt;george   
+       gas-&gt;christine
+     knife-&gt;yolanda  
+    poison-&gt;robert   
+      rope-&gt;barbara  
+</code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
-
-<h1 id="4-关联题目">4.关联题目</h1>
-
+</div><h1 id="4关联题目">4.关联题目</h1>
 <p>网传的2018年刑侦科推理试题，实为<a href="http://society.people.com.cn/n1/2018/0308/c1008-29854595.html">2014年杭州学军中学推理社的招新考题</a>。</p>
-
 <table>
 <thead>
 <tr>
@@ -328,7 +318,6 @@ poison-&gt;robert
 <th>选项D</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>1</td>
@@ -338,7 +327,6 @@ poison-&gt;robert
 <td>C</td>
 <td>D</td>
 </tr>
-
 <tr>
 <td>2</td>
 <td>第5题的答案是</td>
@@ -347,7 +335,6 @@ poison-&gt;robert
 <td>A</td>
 <td>B</td>
 </tr>
-
 <tr>
 <td>3</td>
 <td>以下选项中哪一题的答案与其他三项不同</td>
@@ -356,7 +343,6 @@ poison-&gt;robert
 <td>2</td>
 <td>4</td>
 </tr>
-
 <tr>
 <td>4</td>
 <td>以下选项中哪两题的答案相同</td>
@@ -365,7 +351,6 @@ poison-&gt;robert
 <td>1、9</td>
 <td>6、10</td>
 </tr>
-
 <tr>
 <td>5</td>
 <td>以下选项中哪一题的答案与本题相同</td>
@@ -374,7 +359,6 @@ poison-&gt;robert
 <td>9</td>
 <td>7</td>
 </tr>
-
 <tr>
 <td>6</td>
 <td>以下选项中哪两题的答案与第8题相同</td>
@@ -383,7 +367,6 @@ poison-&gt;robert
 <td>3、10</td>
 <td>5、9</td>
 </tr>
-
 <tr>
 <td>7</td>
 <td>在此十道题中，被选中次数最少的选项字母为</td>
@@ -392,7 +375,6 @@ poison-&gt;robert
 <td>A</td>
 <td>D</td>
 </tr>
-
 <tr>
 <td>8</td>
 <td>以下选项中哪一题的答案与第1题的答案在字母中不相邻</td>
@@ -401,16 +383,14 @@ poison-&gt;robert
 <td>2</td>
 <td>10</td>
 </tr>
-
 <tr>
 <td>9</td>
-<td>已知&rdquo;第1题与第6题的答案相同&rdquo;与&rdquo;第X题与第5题的答案相同&rdquo;的真假性相反，那么X为</td>
+<td>已知&quot;第1题与第6题的答案相同&quot;与&quot;第X题与第5题的答案相同&quot;的真假性相反，那么X为</td>
 <td>6</td>
 <td>10</td>
 <td>2</td>
 <td>9</td>
 </tr>
-
 <tr>
 <td>10</td>
 <td>在此10道题中，ABCD四个字母出现次数最多与最少者的差为</td>
@@ -423,7 +403,7 @@ poison-&gt;robert
 </table>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -442,9 +422,9 @@ poison-&gt;robert
 </span><span class="lnt">17
 </span><span class="lnt">18
 </span><span class="lnt">19
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Clear@checkQ; checkQ[c_] := Module[{t, t3, t4, t6},
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Clear@checkQ; checkQ[c_] := Module[{t, t3, t4, t6},
   t = Count[c, #] &amp; /@ Range@4;
   Ans[i_] := c[[i]]; (*题目i的答案*)
   OfAns[l_, i_] := l[[c[[i]]]];  (*题目i的答案内容*)
@@ -462,7 +442,8 @@ poison-&gt;robert
   ];
 sol = Select[Tuples[{1, 2, 3, 4}, {10}], checkQ];
 StringJoin@Characters[&#34;ABCD&#34;][[#]] &amp; /@ sol
-{&#34;BCACACDABA&#34;}  (*唯一解*)</pre></td></tr></table>
+{&#34;BCACACDABA&#34;}  (*唯一解*)
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>

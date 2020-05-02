@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.2 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/" />
@@ -44,12 +44,9 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bigheadghost.github.io/" />
-
-<meta property="og:updated_time" content="2020-03-05T13:20:16+08:00" />
+<meta property="og:updated_time" content="2014-07-03T08:55:44+08:00" />
 <meta itemprop="name" content="Know Nothing">
-<meta itemprop="description" content="">
-
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Know Nothing"/>
 <meta name="twitter:description" content=""/>
 
@@ -130,90 +127,89 @@
   <div class="post-content">
     <div class="post-summary">
       <p>Although calculation of mathematica codes could be slower than those written in C/C++, or even those in python, the prodigious and interesting if not funny functions do save coding time a lot.</p>
-
 <h1 id="problem-1">Problem 1</h1>
-
 <p>Brute force solution at first thought:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Total@Select[Range[999], 3\[Divides]# || 5\[Divides]# &amp;]
-233168</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Total@Select[Range[999], 3\[Divides]# || 5\[Divides]# &amp;]
+233168
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>What if the upper limit is extreme large, like \(10^{10}\), or \(10^{10^7}\)? Calculating one after another or even saving them using Range is impossible. Here comes the mathematical way:</p>
+</div><p>What if the upper limit is extreme large, like \(10^{10}\), or \(10^{10^7}\)? Calculating one after another or even saving them using Range is impossible. Here comes the mathematical way:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">top = 10^(10^7) - 1;
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">top = 10^(10^7) - 1;
 SumMultiplesOf[n_] := (p = Quotient[top, n]; n*p*(p + 1)/2);
 SumMultiplesOf[m_, n_] := SumMultiplesOf[m] + SumMultiplesOf[n] - SumMultiplesOf[LCM[m, n]];
 N[SumMultiplesOf[3, 5], 2] // AbsoluteTiming
-{2.222280, 2.3*10^19999999}</pre></td></tr></table>
+{2.222280, 2.3*10^19999999}
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-2">Problem 2</h1>
+</div><h1 id="problem-2">Problem 2</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">n=NestWhile[# + 1 &amp;, 1, Fibonacci@# &lt;= 4*^6 &amp;] - 1
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">n=NestWhile[# + 1 &amp;, 1, Fibonacci@# &lt;= 4*^6 &amp;] - 1
 Total@Select[Array[Fibonacci,n] ,  EvenQ]
-4613732</pre></td></tr></table>
+4613732
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Even numbers appear every 3rd positions in Fibonacci series:</p>
+</div><p>Even numbers appear every 3rd positions in Fibonacci series:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Total@Table[Fibonacci@i, {i, 3, n, 3}]</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Total@Table[Fibonacci@i, {i, 3, n, 3}]
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-3">Problem 3</h1>
+</div><h1 id="problem-3">Problem 3</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Max[FactorInteger[600851475143][[All, 1]]]
-6857</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Max[FactorInteger[600851475143][[All, 1]]]
+6857
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-4">Problem 4</h1>
+</div><h1 id="problem-4">Problem 4</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Catch@Scan[If[FromDigit@Reverse@IntegerDigits@# == #, Throw[#]] &amp;, Reverse@Sort@Flatten@Table[i*j, {i, 999, 100, -1}, {j, i, 100, -1}]]
-906609</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Catch@Scan[If[FromDigit@Reverse@IntegerDigits@# == #, Throw[#]] &amp;, Reverse@Sort@Flatten@Table[i*j, {i, 999, 100, -1}, {j, i, 100, -1}]]
+906609
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-5">Problem 5</h1>
+</div><h1 id="problem-5">Problem 5</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">LCM @@ Range[20]
-232792560</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">LCM @@ Range[20]
+232792560
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -239,50 +235,49 @@ Total@Select[Array[Fibonacci,n] ,  EvenQ]
       <p><a href="http://www.pythonchallenge.com/pc/def/map.html">Level 1</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">a = CharacterRange[&#34;a&#34;, &#34;z&#34;]; StringJoin[Characters[s] /. Thread[a -&gt; RotateLeft[a, 2]]]</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">a = CharacterRange[&#34;a&#34;, &#34;z&#34;]; StringJoin[Characters[s] /. Thread[a -&gt; RotateLeft[a, 2]]]
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><a href="http://www.pythonchallenge.com/pc/def/ocr.html">Level 2</a>:</p>
+</div><p><a href="http://www.pythonchallenge.com/pc/def/ocr.html">Level 2</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Sort[Tally[Characters[s]], #1[[2]] &lt;= #2[[2]] &amp;]</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Sort[Tally[Characters[s]], #1[[2]] &lt;= #2[[2]] &amp;]
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><a href="http://www.pythonchallenge.com/pc/def/equality.html">Level 3</a>:</p>
+</div><p><a href="http://www.pythonchallenge.com/pc/def/equality.html">Level 3</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">StringJoin[StringCases[s,RegularExpression[&#34;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&#34;] -&gt;  &#34;$1&#34;]]</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">StringJoin[StringCases[s,RegularExpression[&#34;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&#34;] -&gt;  &#34;$1&#34;]]
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Level 4:</p>
+</div><p>Level 4:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">NestWhileList[(resp = Import[&#34;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&#34;&lt;&gt;#];
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">NestWhileList[(resp = Import[&#34;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&#34;&lt;&gt;#];
    m = StringCases[resp ,&#34;next nothing is &#34; ~~ (x : DigitCharacter ..) -&gt; x];
    If[m != {}, m[[1]], Print[resp]; &#34;&#34;]) &amp;,
 &#34;12345&#34;,
-StringLength[#] &gt; 0 &amp;]</pre></td></tr></table>
+StringLength[#] &gt; 0 &amp;]
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>16044-&gt;8022, continue</p>
-
-<p><a href="http://www.pythonchallenge.com/pc/def/peak.html">Level 5</a>:<br />
+</div><p>16044-&gt;8022, continue</p>
+<p><a href="http://www.pythonchallenge.com/pc/def/peak.html">Level 5</a>:<br>
 pickle module needed, python only.</p>
     </div>
     <div class="read-more">
@@ -304,12 +299,10 @@ pickle module needed, python only.</p>
   
   <div class="post-content">
     <div class="post-summary">
-      <p>Mummy Maze is a game created by <a href="http://www.popcap.com/">PopCap</a> in 2002. It is based on <a href="http://www.logicmazes.com/">Robert Abbott</a>&rsquo;s <a href="http://www.logicmazes.com/theseus.html">Theseus maze</a>. There are 3 scales of lattices: 6*6, 8*8, 10*10. With white mummy functioning as Minotaur, Mummy Maze introduced many varieties: red mummy, scorpion, trap, gate and key. There is only one Minotaur in the original Theseus maze, while the explorer in Mummy Maze faces more enemies.</p>
-
+      <p>Mummy Maze is a game created by <a href="http://www.popcap.com/">PopCap</a> in 2002. It is based on <a href="http://www.logicmazes.com/">Robert Abbott</a>&lsquo;s <a href="http://www.logicmazes.com/theseus.html">Theseus maze</a>. There are 3 scales of lattices: 6*6, 8*8, 10*10. With white mummy functioning as Minotaur, Mummy Maze introduced many varieties: red mummy, scorpion, trap, gate and key. There is only one Minotaur in the original Theseus maze, while the explorer in Mummy Maze faces more enemies.</p>
 <p>If solutions are all you want, please visit this <a href="http://www.gamefaqs.com/pc/932088-mummy-maze-deluxe/faqs/42610">Complete Walktrough</a>.</p>
-
-<p>The 14th puzzle in Pharaoh&rsquo;s Tomb, has the solution with the most moves, 66 steps.<br />
-<img src="/img/2014/mummy_maze_with_longest_solution.jpg" alt="mummy maze demo" /></p>
+<p>The 14th puzzle in Pharaoh&rsquo;s Tomb, has the solution with the most moves, 66 steps.<br>
+<img src="/img/2014/mummy_maze_with_longest_solution.jpg" alt="mummy maze demo"></p>
     </div>
     <div class="read-more">
       <a href="/post/mummy-maze-solver/" class="read-more-link">Read more...</a>
@@ -323,15 +316,15 @@ pickle module needed, python only.</p>
     <div class="post-meta">
       <span class="post-time"> 2014-06-25 14:14:28 CST </span>
       
-        <span class="more-meta"> 300 words </span>
+        <span class="more-meta"> 296 words </span>
         <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      <p><a href="http://www.bigfishgames.com/online-games/18111/frog-mania/index.html">Frog Mania</a> is a flash game. It is quite easy to play, so this is not about its solver, but the way to get the underlying matrix representation of each level.<br />
-<img src="/img/2014/frog_mania.jpg" alt="frog_mania" /></p>
+      <p><a href="http://www.bigfishgames.com/online-games/18111/frog-mania/index.html">Frog Mania</a> is a flash game. It is quite easy to play, so this is not about its solver, but the way to get the underlying matrix representation of each level.<br>
+<img src="/img/2014/frog_mania.jpg" alt="frog_mania"></p>
     </div>
     <div class="read-more">
       <a href="/post/frog-mania/" class="read-more-link">Read more...</a>
@@ -345,18 +338,16 @@ pickle module needed, python only.</p>
     <div class="post-meta">
       <span class="post-time"> 2014-06-23 12:11:27 CST </span>
       
-        <span class="more-meta"> 666 words </span>
+        <span class="more-meta"> 662 words </span>
         <span class="more-meta"> 4 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      <p><img src="/img/2014/kami.jpg" alt="Kami" /><br />
+      <p><img src="/img/2014/kami.jpg" alt="Kami"><br>
 Actually, all puzzles data are located in the &ldquo;puzzles&rdquo;  folder under the game directory, including classic group from A to E, and pays needed premium &ldquo;5C1&rdquo; and &ldquo;Pat1&rdquo;.</p>
-
 <p>PuzzleData are stored in files such as SAL1_TwoSides.xml(Stage A Level 1). colours variable denotes the grid. gold, silver, bronze variables are the moves count to achieve these medals. The &ldquo;solution&rdquo; part, well, is the solution. Following computer world&rsquo;s tradition, in each turn, x, y mean the column, row coordinates, both originating from 0.</p>
-
 <p>If solution is all your want, it&rsquo;s done.</p>
     </div>
     <div class="read-more">

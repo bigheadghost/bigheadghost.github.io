@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.2 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/zh/post/archimedes-cattle-problem/" />
@@ -47,7 +47,6 @@
 <meta property="og:title" content="阿基米德群牛问题" />
 <meta property="og:description" content="网上以讹传讹，计算结果很多是错的，比如百度百科、博士论文。
 
-
 太阳神有一个由公牛和母牛组成的牛群，其中一部分是白牛，一部分是黑牛，一部分是花牛，其余的都是棕色的牛。
 在公牛中，白牛的数量比棕色的牛多黑牛的二分之一加三分之一；黑牛的数量比棕色的牛多花牛的四分之一加五分之一；花牛的数量比棕色的牛多白牛的六分之一加七分之一。
 在母牛中，白牛的数量是所有黑牛的三分之一加四分之一；黑牛的数量是所有花牛的四分之一加五分之一；花牛的数量是所有棕色牛的五分之一加六分之一；棕色的牛的数量是所有白牛的六分之一加七分之一。
@@ -61,26 +60,21 @@
 <meta itemprop="name" content="阿基米德群牛问题">
 <meta itemprop="description" content="网上以讹传讹，计算结果很多是错的，比如百度百科、博士论文。
 
-
 太阳神有一个由公牛和母牛组成的牛群，其中一部分是白牛，一部分是黑牛，一部分是花牛，其余的都是棕色的牛。
 在公牛中，白牛的数量比棕色的牛多黑牛的二分之一加三分之一；黑牛的数量比棕色的牛多花牛的四分之一加五分之一；花牛的数量比棕色的牛多白牛的六分之一加七分之一。
 在母牛中，白牛的数量是所有黑牛的三分之一加四分之一；黑牛的数量是所有花牛的四分之一加五分之一；花牛的数量是所有棕色牛的五分之一加六分之一；棕色的牛的数量是所有白牛的六分之一加七分之一。
 问题1：这群牛总共有多少头？各种颜色的牛分别是多少头？
 问题2：若把白色公牛和黑色公牛放在一起，其数量刚好是一个完全平方数；把棕色公牛和花色公牛放在一起，其数量正好是一个三角数，则这群牛共有多少头？
 ">
-
-
 <meta itemprop="datePublished" content="2018-03-09T12:39:01&#43;08:00" />
 <meta itemprop="dateModified" content="2018-03-09T12:39:01&#43;08:00" />
-<meta itemprop="wordCount" content="656">
+<meta itemprop="wordCount" content="672">
 
 
 
-<meta itemprop="keywords" content="mathematica," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="mathematica," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="阿基米德群牛问题"/>
 <meta name="twitter:description" content="网上以讹传讹，计算结果很多是错的，比如百度百科、博士论文。
-
 
 太阳神有一个由公牛和母牛组成的牛群，其中一部分是白牛，一部分是黑牛，一部分是花牛，其余的都是棕色的牛。
 在公牛中，白牛的数量比棕色的牛多黑牛的二分之一加三分之一；黑牛的数量比棕色的牛多花牛的四分之一加五分之一；花牛的数量比棕色的牛多白牛的六分之一加七分之一。
@@ -159,7 +153,7 @@
       <div class="post-meta">
         <span class="post-time"> 2018-03-09 12:39:01 CST </span>
         
-          <span class="more-meta"> 约 656 字 </span>
+          <span class="more-meta"> 约 672 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
@@ -168,53 +162,49 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>网上以讹传讹，计算结果很多是错的，比如<a href="https://baike.baidu.com/item/%E9%98%BF%E5%9F%BA%E7%B1%B3%E5%BE%B7%E7%BE%A4%E7%89%9B%E9%97%AE%E9%A2%98">百度百科</a>、<a href="http://cdmd.cnki.com.cn/Article/CDMD-10697-2004103986.htm">博士论文</a>。</p>
-
 <blockquote>
-<p>太阳神有一个由公牛和母牛组成的牛群，其中一部分是白牛，一部分是黑牛，一部分是花牛，其余的都是棕色的牛。<br />
-在公牛中，白牛的数量比棕色的牛多黑牛的二分之一加三分之一；黑牛的数量比棕色的牛多花牛的四分之一加五分之一；花牛的数量比棕色的牛多白牛的六分之一加七分之一。<br />
-在母牛中，白牛的数量是所有黑牛的三分之一加四分之一；黑牛的数量是所有花牛的四分之一加五分之一；花牛的数量是所有棕色牛的五分之一加六分之一；棕色的牛的数量是所有白牛的六分之一加七分之一。<br />
-问题1：这群牛总共有多少头？各种颜色的牛分别是多少头？<br />
+<p>太阳神有一个由公牛和母牛组成的牛群，其中一部分是白牛，一部分是黑牛，一部分是花牛，其余的都是棕色的牛。<br>
+在公牛中，白牛的数量比棕色的牛多黑牛的二分之一加三分之一；黑牛的数量比棕色的牛多花牛的四分之一加五分之一；花牛的数量比棕色的牛多白牛的六分之一加七分之一。<br>
+在母牛中，白牛的数量是所有黑牛的三分之一加四分之一；黑牛的数量是所有花牛的四分之一加五分之一；花牛的数量是所有棕色牛的五分之一加六分之一；棕色的牛的数量是所有白牛的六分之一加七分之一。<br>
+问题1：这群牛总共有多少头？各种颜色的牛分别是多少头？<br>
 问题2：若把白色公牛和黑色公牛放在一起，其数量刚好是一个完全平方数；把棕色公牛和花色公牛放在一起，其数量正好是一个三角数，则这群牛共有多少头？</p>
 </blockquote>
-
-<p>用W、B、H、Y代表白公牛、黑公牛、花公牛、棕公牛, w, b, h, y代表相应颜色的母牛.<br />
+<p>用W、B、H、Y代表白公牛、黑公牛、花公牛、棕公牛, w, b, h, y代表相应颜色的母牛.<br>
 问题1就是解方程：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">sol = Solve[  W == 5 B/6 + Y &amp;&amp; B == 9 H/20 + Y &amp;&amp; H == 13 W/42 + Y &amp;&amp; 
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">sol = Solve[  W == 5 B/6 + Y &amp;&amp; B == 9 H/20 + Y &amp;&amp; H == 13 W/42 + Y &amp;&amp; 
    w == 7/12 (B + b) &amp;&amp; b == 9/20 (H + h) &amp;&amp; h == 11/30 (Y + y) &amp;&amp; y == 13/42 (W + w),
    {W, B, H, Y, w, b, h, y}, Integers];
 
 {W, B, H, Y, w, b, h, y} /. sol[[1]] /. C[1] -&gt; 1
-{10366482, 7460514, 7358060, 4149387, 7206360, 4893246, 3515820, 5439213}</pre></td></tr></table>
+{10366482, 7460514, 7358060, 4149387, 7206360, 4893246, 3515820, 5439213}
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>第二个问题则是求解：<br />
-（1）\( W+B=U^2 \)<br />
+</div><p>第二个问题则是求解：<br>
+（1）\( W+B=U^2 \)<br>
 （2）H+Y=V(V+1)/2</p>
-
-<p>假设<code>{W,B,H,Y,w,b,h,y} = {10366482, 7460514, 7358060, 4149387, 7206360, 4893246, 3515820, 5439213} n</code><br />
-则由（1）得：\( U^2 = W+B = 17826996n = 4*3*11*29*4657n \)<br />
-令 \( n=3*11*29*4657m^2 \)<br />
+<p>假设<code>{W,B,H,Y,w,b,h,y} = {10366482, 7460514, 7358060, 4149387, 7206360, 4893246, 3515820, 5439213} n</code><br>
+则由（1）得：\( U^2 = W+B = 17826996 n = 4 * 3 * 11 * 29 * 4657n \)<br>
+令 \( n=3 * 11 * 29 * 4657 m^2 \)<br>
 代入（2）得：\( (2V+1)^2-410286423278424 m^2=1 \)</p>
-
 <p>求解Pell方程：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -226,9 +216,9 @@
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">sols = Solve[x^2 - 410286423278424 y^2 == 1 &amp;&amp; x &gt; 0 &amp;&amp; y &gt; 0, {x, y}, Integers];
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">sols = Solve[x^2 - 410286423278424 y^2 == 1 &amp;&amp; x &gt; 0 &amp;&amp; y &gt; 0, {x, y}, Integers];
 onesol = sols[[1]] /. C[1] -&gt; 1;
 n = 3*11*29*4657 y^2 /. onesol;
 
@@ -239,7 +229,8 @@ Short@W
 15965108046711&lt;&lt;206517&gt;&gt;29385150341800
 
 Short@T
-77602714064868&lt;&lt;206517&gt;&gt;26719455081800</pre></td></tr></table>
+77602714064868&lt;&lt;206517&gt;&gt;26719455081800
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>

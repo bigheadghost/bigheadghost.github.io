@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.2 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/post/frog-mania/" />
@@ -49,16 +49,13 @@
 <meta itemprop="name" content="Frog Mania">
 <meta itemprop="description" content="Frog Mania is a flash game. It is quite easy to play, so this is not about its solver, but the way to get the underlying matrix representation of each level.
 ">
-
-
 <meta itemprop="datePublished" content="2014-06-25T14:14:28&#43;08:00" />
 <meta itemprop="dateModified" content="2014-06-25T14:14:28&#43;08:00" />
-<meta itemprop="wordCount" content="300">
+<meta itemprop="wordCount" content="296">
 
 
 
-<meta itemprop="keywords" content="puzzle,image processing,mathematica," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="puzzle,image processing,mathematica," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Frog Mania"/>
 <meta name="twitter:description" content="Frog Mania is a flash game. It is quite easy to play, so this is not about its solver, but the way to get the underlying matrix representation of each level.
 "/>
@@ -133,7 +130,7 @@
       <div class="post-meta">
         <span class="post-time"> 2014-06-25 14:14:28 CST </span>
         
-          <span class="more-meta"> 300 words </span>
+          <span class="more-meta"> 296 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -142,23 +139,23 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
-      <p><a href="http://www.bigfishgames.com/online-games/18111/frog-mania/index.html">Frog Mania</a> is a flash game. It is quite easy to play, so this is not about its solver, but the way to get the underlying matrix representation of each level.<br />
-<img src="/img/2014/frog_mania.jpg" alt="frog_mania" /></p>
-
+      <p><a href="http://www.bigfishgames.com/online-games/18111/frog-mania/index.html">Frog Mania</a> is a flash game. It is quite easy to play, so this is not about its solver, but the way to get the underlying matrix representation of each level.<br>
+<img src="/img/2014/frog_mania.jpg" alt="frog_mania"></p>
 <p>Alt+PrintScreen to get the whole game screen image like above. then use the code below to get the Empty/Frog/Dragonfly pattern.</p>
-
-<p>Basic idea:<br />
-* Trim the whole image to get the pool<br />
-* binarize to only the white frog eyes and dragonfly wings<br />
-* split it into 5×6 items<br />
-* judge each part by the white zone&rsquo;s position, whether it&rsquo;s on the left/right/up/down part of the item</p>
+<p>Basic idea:</p>
+<ul>
+<li>Trim the whole image to get the pool</li>
+<li>binarize to only the white frog eyes and dragonfly wings</li>
+<li>split it into 5×6 items</li>
+<li>judge each part by the white zone&rsquo;s position, whether it&rsquo;s on the left/right/up/down part of the item</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -190,9 +187,9 @@
 </span><span class="lnt">30
 </span><span class="lnt">31
 </span><span class="lnt">32
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">(*find both min and max in list fast*)
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">(*find both min and max in list fast*)
 minMax = Compile[{ {list, _Integer, 1} }, 
    Module[{currentMin, currentMax}, 
     currentMin = currentMax = First[list];
@@ -223,10 +220,10 @@ _ ↓ _ ← ↓ ←
 ← _ _ D ↓ _
 D _ _ _ _ _
 _ → _ ↓ D _
-↑ _ → → D ↑</pre></td></tr></table>
+↑ _ → → D ↑
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>mixMax function is taken from <a href="http://stackoverflow.com/questions/5883603/is-there-a-faster-way-to-find-both-min-and-max-values">here</a>.</p>
+</div><p>mixMax function is taken from <a href="http://stackoverflow.com/questions/5883603/is-there-a-faster-way-to-find-both-min-and-max-values">here</a>.</p>
     </div>
 
     <div class="post-copyright">

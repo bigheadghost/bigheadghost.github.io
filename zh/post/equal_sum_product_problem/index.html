@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.2 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/zh/post/equal_sum_product_problem/" />
@@ -44,7 +44,6 @@
 <meta property="og:description" content="
 对任意自然数n，请找出n个自然数，使其和等于积。
 
-
 据我所能找到的资料看，该问题最早是1970年，Simmons和Rawlinson1在计算对称群的最大循环子群时提出的，当时叫Sets of Natural Numbers with Equal Sum and Product。Ian Stewart2的《数学万花筒》一书里也收录了，加上了故事情境，称做误打误撞问题(Compensating Errors)。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/zh/post/equal_sum_product_problem/" />
@@ -54,22 +53,17 @@
 <meta itemprop="description" content="
 对任意自然数n，请找出n个自然数，使其和等于积。
 
-
 据我所能找到的资料看，该问题最早是1970年，Simmons和Rawlinson1在计算对称群的最大循环子群时提出的，当时叫Sets of Natural Numbers with Equal Sum and Product。Ian Stewart2的《数学万花筒》一书里也收录了，加上了故事情境，称做误打误撞问题(Compensating Errors)。">
-
-
 <meta itemprop="datePublished" content="2019-06-10T15:52:30&#43;08:00" />
 <meta itemprop="dateModified" content="2019-06-10T15:52:30&#43;08:00" />
 <meta itemprop="wordCount" content="575">
 
 
 
-<meta itemprop="keywords" content="puzzle," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="puzzle," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="等和积数"/>
 <meta name="twitter:description" content="
 对任意自然数n，请找出n个自然数，使其和等于积。
-
 
 据我所能找到的资料看，该问题最早是1970年，Simmons和Rawlinson1在计算对称群的最大循环子群时提出的，当时叫Sets of Natural Numbers with Equal Sum and Product。Ian Stewart2的《数学万花筒》一书里也收录了，加上了故事情境，称做误打误撞问题(Compensating Errors)。"/>
 
@@ -152,39 +146,34 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <blockquote>
 <p>对任意自然数<code>n</code>，请找出<code>n</code>个自然数，使其和等于积。</p>
 </blockquote>
-
-<p>据我所能找到的资料看，该问题最早是1970年，Simmons和Rawlinson<sup class="footnote-ref" id="fnref:Simmons1971"><a href="#fn:Simmons1971">1</a></sup>在计算对称群的最大循环子群时提出的，当时叫Sets of Natural Numbers with Equal Sum and Product。Ian Stewart<sup class="footnote-ref" id="fnref:ian"><a href="#fn:ian">2</a></sup>的《数学万花筒》一书里也收录了，加上了故事情境，称做误打误撞问题(Compensating Errors)。</p>
-
+<p>据我所能找到的资料看，该问题最早是1970年，Simmons和Rawlinson<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>在计算对称群的最大循环子群时提出的，当时叫Sets of Natural Numbers with Equal Sum and Product。Ian Stewart<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>的《数学万花筒》一书里也收录了，加上了故事情境，称做误打误撞问题(Compensating Errors)。</p>
 <p>问题的数学描述是寻找主方程: $ x_1+x_2+\ldots+x_n= x_1x_2 \ldots x_n $ 的整数解$ (x_1,x_2,\ldots,x_n) $，其中 $ 1 \le x_1 \le x_2 \le x_3 \le \ldots \le x_n $。</p>
-
-<p>(1)给定<code>n</code>，是否有解？<br />
+<p>(1)给定<code>n</code>，是否有解？<br>
 答案是肯定的，因为<code>(1, 1, ... , 2, n)</code>总是主方程的一个解，我们把这个解叫做基本解(trivial solution)或平凡解(basic solution)。</p>
-
-<p>(2)给定<code>n</code>，如何找出所有解？<br />
+<p>(2)给定<code>n</code>，如何找出所有解？<br>
 <a href="https://projecteuler.net/problem=88">欧拉项目第88题</a>product-sum number算是本问题的逆问题，<a href="/post/dive-into-project-euler-part-5-81-100">解法</a>可参考。</p>
-
-<p>(3)使得主方程只有一个解（即平凡解是唯一解）的<code>n</code>有哪些？<br />
-目前仅发现<code>8</code>个：<code>2、3、4、6、24、114、174、444</code>。<br />
-至少算到<code>13587782064</code>都没有找到其他的，不知道是否只有这些，也不知道是否有限。<br />
+<p>(3)使得主方程只有一个解（即平凡解是唯一解）的<code>n</code>有哪些？<br>
+目前仅发现<code>8</code>个：<code>2、3、4、6、24、114、174、444</code>。<br>
+至少算到<code>13587782064</code>都没有找到其他的，不知道是否只有这些，也不知道是否有限。<br>
 Starke已经证明：只有当<code>n-1</code>是<a href="http://mathworld.wolfram.com/SophieGermainPrime.html">Sophie Germain质数</a>时，才可能。后者尽管稀少，但人们猜测有无穷个。</p>
-<div class="footnotes">
-
-<hr />
-
+<section class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn:Simmons1971">G. J. Simmons, D. B. Rawlinson and E. P. Starke. The American Mathematical Monthly. Vol. 78, No. 9 (Nov., 1971), pp. 1021-1022<br />
- <a class="footnote-return" href="#fnref:Simmons1971"><sup>[return]</sup></a></li>
-<li id="fn:ian">Ian Stewart, Professor Stewart’s Cabinet of Mathematical Curiosities, 中译2017修订版《数学万花筒》, pp. 83<br />
- <a class="footnote-return" href="#fnref:ian"><sup>[return]</sup></a></li>
+<li id="fn:1" role="doc-endnote">
+<p>G. J. Simmons, D. B. Rawlinson and E. P. Starke. The American Mathematical Monthly. Vol. 78, No. 9 (Nov., 1971), pp. 1021-1022 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Ian Stewart, Professor Stewart’s Cabinet of Mathematical Curiosities, 中译2017修订版《数学万花筒》, pp. 83 <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
-</div>
+</section>
     </div>
 
     <div class="post-copyright">

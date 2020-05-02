@@ -26,7 +26,7 @@ Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race�
 
 
 
-<meta name="generator" content="Hugo 0.58.2 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/zh/post/polya_conjecture/" />
@@ -44,7 +44,6 @@ Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race�
 <meta property="og:title" content="奇偶因数赛马" />
 <meta property="og:description" content="每个整数都可以分解成若干个质数相乘，即分解质因数。如果需要偶数个质数相乘，我们称其为偶类型（我们定义1也是偶类型），反之则为奇类型。
 对于1~10这前10个整数，奇类型有2，3，5，7，8，偶类型有1，4，6，9，10
-
 Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race），即想象奇马、偶马两匹马赛跑，让它们在同一起跑线上，按数字1、2、3念下去，碰到奇类型，奇马前进一步，反之，偶马前进一步。奇马似乎总是在并排或超前位置，相当形象。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/zh/post/polya_conjecture/" />
@@ -53,22 +52,17 @@ Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race�
 <meta itemprop="name" content="奇偶因数赛马">
 <meta itemprop="description" content="每个整数都可以分解成若干个质数相乘，即分解质因数。如果需要偶数个质数相乘，我们称其为偶类型（我们定义1也是偶类型），反之则为奇类型。
 对于1~10这前10个整数，奇类型有2，3，5，7，8，偶类型有1，4，6，9，10
-
 Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race），即想象奇马、偶马两匹马赛跑，让它们在同一起跑线上，按数字1、2、3念下去，碰到奇类型，奇马前进一步，反之，偶马前进一步。奇马似乎总是在并排或超前位置，相当形象。">
-
-
 <meta itemprop="datePublished" content="2019-06-14T13:08:43&#43;08:00" />
 <meta itemprop="dateModified" content="2019-06-14T13:08:43&#43;08:00" />
 <meta itemprop="wordCount" content="789">
 
 
 
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="奇偶因数赛马"/>
 <meta name="twitter:description" content="每个整数都可以分解成若干个质数相乘，即分解质因数。如果需要偶数个质数相乘，我们称其为偶类型（我们定义1也是偶类型），反之则为奇类型。
 对于1~10这前10个整数，奇类型有2，3，5，7，8，偶类型有1，4，6，9，10
-
 Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race），即想象奇马、偶马两匹马赛跑，让它们在同一起跑线上，按数字1、2、3念下去，碰到奇类型，奇马前进一步，反之，偶马前进一步。奇马似乎总是在并排或超前位置，相当形象。"/>
 
 <!--[if lte IE 9]>
@@ -150,26 +144,23 @@ Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race�
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
-      <p>每个整数都可以分解成若干个质数相乘，即分解质因数。如果需要偶数个质数相乘，我们称其为偶类型（我们定义1也是偶类型），反之则为奇类型。<br />
+      <p>每个整数都可以分解成若干个质数相乘，即分解质因数。如果需要偶数个质数相乘，我们称其为偶类型（我们定义1也是偶类型），反之则为奇类型。<br>
 对于<code>1~10</code>这前<code>10</code>个整数，奇类型有<code>2，3，5，7，8</code>，偶类型有<code>1，4，6，9，10</code></p>
-
 <p>Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race），即想象奇马、偶马两匹马赛跑，让它们在同一起跑线上，按数字<code>1、2、3</code>念下去，碰到奇类型，奇马前进一步，反之，偶马前进一步。奇马似乎总是在并排或超前位置，相当形象。</p>
-
-<p>1919年，匈牙利数学家（《怎样解题》作者）<a href="https://en.wikipedia.org/wiki/Pólya_conjecture">George Pólya猜想</a>：对任意自然数<code>n</code>，它以内的所有自然数中奇类型至少占一半。<br />
-1958年，Colin Brian Haselgrove证明该猜想是错的。<br />
-1980年，Minoru Tanaka用计算机找到最小的反例<code>906,150,257</code>。<br />
-测试了<code>9</code>亿多个数字都正确，但保不准下<code>1</code>秒就打脸，就是这么无情残酷<del>无理取闹</del>。<br />
-Every number is meaningful and all have their purposes.<br />
+<p>1919年，匈牙利数学家（《怎样解题》作者）<a href="https://en.wikipedia.org/wiki/P%C3%B3lya_conjecture">George Pólya猜想</a>：对任意自然数<code>n</code>，它以内的所有自然数中奇类型至少占一半。<br>
+1958年，Colin Brian Haselgrove证明该猜想是错的。<br>
+1980年，Minoru Tanaka用计算机找到最小的反例<code>906,150,257</code>。<br>
+测试了<code>9</code>亿多个数字都正确，但保不准下<code>1</code>秒就打脸，就是这么无情残酷<del>无理取闹</del>。<br>
+Every number is meaningful and all have their purposes.<br>
 万数皆有意，一数一菩提。</p>
-
 <p>下面我们验算一下。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -205,9 +196,9 @@ Every number is meaningful and all have their purposes.<br />
 </span><span class="lnt">34
 </span><span class="lnt">35
 </span><span class="lnt">36
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">(*可以直接用LiouvilleLambda，但比这个略慢一些*)
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">(*可以直接用LiouvilleLambda，但比这个略慢一些*)
 PCType[n_] := If[EvenQ@PrimeOmega@n, 1, -1]; 
 blocksize = 10^7; (*分成91组计算，每组1千万*)
 blocks = 91;
@@ -242,12 +233,12 @@ MinMax@lastacc
 Count[lastacc, _?Positive]
 305426
 Position[overall, 1][[{1, -1}]]
-{{6150257}, {6488079}}</pre></td></tr></table>
+{{6150257}, {6488079}}
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>对于<code>906150257≤n≤906488079</code>之间的<code>305426</code>个整数，偶数马领先，<code>906316571</code>时达到顶峰，领先<code>829</code>位。<br />
-但是这种交替领先是否一直存在，即是否在某个数字<code>N</code>之后，只有一种类型马保持持续领先，<strong>未知</strong>。<br />
-<img src="/img/2019/polya_conjecture.jpg" alt="polya_conjecture" /></p>
+</div><p>对于<code>906150257≤n≤906488079</code>之间的<code>305426</code>个整数，偶数马领先，<code>906316571</code>时达到顶峰，领先<code>829</code>位。<br>
+但是这种交替领先是否一直存在，即是否在某个数字<code>N</code>之后，只有一种类型马保持持续领先，<strong>未知</strong>。<br>
+<img src="/img/2019/polya_conjecture.jpg" alt="polya_conjecture"></p>
     </div>
 
     <div class="post-copyright">

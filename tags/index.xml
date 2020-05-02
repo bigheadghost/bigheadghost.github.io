@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Know Nothing</title>
@@ -30,20 +30,20 @@
     </item>
     
     <item>
+      <title>python</title>
+      <link>https://bigheadghost.github.io/tags/python/</link>
+      <pubDate>Fri, 11 Jul 2014 20:40:02 +0800</pubDate>
+      
+      <guid>https://bigheadghost.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>PythonChallenge</title>
       <link>https://bigheadghost.github.io/tags/pythonchallenge/</link>
       <pubDate>Fri, 11 Jul 2014 20:40:02 +0800</pubDate>
       
       <guid>https://bigheadghost.github.io/tags/pythonchallenge/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://bigheadghost.github.io/tags/python/</link>
-      <pubDate>Wed, 02 Jul 2014 10:17:48 +0800</pubDate>
-      
-      <guid>https://bigheadghost.github.io/tags/python/</guid>
       <description></description>
     </item>
     

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>puzzle on 略知一二</title>
@@ -17,8 +17,8 @@
       <pubDate>Thu, 05 Mar 2020 12:28:32 +0800</pubDate>
       
       <guid>https://bigheadghost.github.io/zh/post/arrange_sequence_using_auxiliary_slots/</guid>
-      <description>&lt;p&gt;《&lt;a href=&#34;http://www.bigfishgames.com/games/14590/labyrinths-of-the-world-fools-gold/&#34;&gt;世界迷宫10：愚者之财&lt;/a&gt;（Labyrinths of the World: Fool&amp;rsquo;s Gold）》是Domini Games制作、BigFish发行的一款冒险解谜游戏。画风精美，剧情优良，其中有一道谜题 &lt;strong&gt;minigame 4 - Clurichaun&lt;/strong&gt; 很有意思。&lt;br /&gt;
-&lt;img src=&#34;https://bigheadghost.github.io/img/2020/minigame_clurichaun.jpg&#34; alt=&#34;Clurichaun序列重排谜题&#34; /&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;《&lt;a href=&#34;http://www.bigfishgames.com/games/14590/labyrinths-of-the-world-fools-gold/&#34;&gt;世界迷宫10：愚者之财&lt;/a&gt;（Labyrinths of the World: Fool&amp;rsquo;s Gold）》是Domini Games制作、BigFish发行的一款冒险解谜游戏。画风精美，剧情优良，其中有一道谜题 &lt;strong&gt;minigame 4 - Clurichaun&lt;/strong&gt; 很有意思。&lt;br&gt;
+&lt;img src=&#34;https://bigheadghost.github.io/img/2020/minigame_clurichaun.jpg&#34; alt=&#34;Clurichaun序列重排谜题&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -30,8 +30,7 @@
       <description>&lt;blockquote&gt;
 &lt;p&gt;对任意自然数&lt;code&gt;n&lt;/code&gt;，请找出&lt;code&gt;n&lt;/code&gt;个自然数，使其和等于积。&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;据我所能找到的资料看，该问题最早是1970年，Simmons和Rawlinson&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:Simmons1971&#34;&gt;&lt;a href=&#34;#fn:Simmons1971&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;在计算对称群的最大循环子群时提出的，当时叫Sets of Natural Numbers with Equal Sum and Product。Ian Stewart&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:ian&#34;&gt;&lt;a href=&#34;#fn:ian&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;的《数学万花筒》一书里也收录了，加上了故事情境，称做误打误撞问题(Compensating Errors)。&lt;/p&gt;</description>
+&lt;p&gt;据我所能找到的资料看，该问题最早是1970年，Simmons和Rawlinson&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;在计算对称群的最大循环子群时提出的，当时叫Sets of Natural Numbers with Equal Sum and Product。Ian Stewart&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;的《数学万花筒》一书里也收录了，加上了故事情境，称做误打误撞问题(Compensating Errors)。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,10 +39,9 @@
       <pubDate>Sat, 25 May 2019 12:09:27 +0800</pubDate>
       
       <guid>https://bigheadghost.github.io/zh/post/triangles_of_absolute_differences/</guid>
-      <description>&lt;h1 id=&#34;1-问题&#34;&gt;1.问题&lt;/h1&gt;
-
-&lt;p&gt;&lt;code&gt;1 ~ n(n+1)/2&lt;/code&gt;的整数，排列成类似帕萨卡三角形的等边三角形数阵（从上到下，每行依次有1、2、&amp;hellip;、n个数字）, 其中每个不在最后一行的数都恰好等于排在它下面的两个数的差的绝对值。满足这样排列的三角形称为&lt;strong&gt;正差三角形&lt;/strong&gt;（Triangles of Absolute Diﬀerences，&lt;strong&gt;TAD&lt;/strong&gt;）。&lt;br /&gt;
-行数n称作TAD的阶。&lt;br /&gt;
+      <description>&lt;h1 id=&#34;1问题&#34;&gt;1.问题&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;1 ~ n(n+1)/2&lt;/code&gt;的整数，排列成类似帕萨卡三角形的等边三角形数阵（从上到下，每行依次有1、2、&amp;hellip;、n个数字）, 其中每个不在最后一行的数都恰好等于排在它下面的两个数的差的绝对值。满足这样排列的三角形称为&lt;strong&gt;正差三角形&lt;/strong&gt;（Triangles of Absolute Diﬀerences，&lt;strong&gt;TAD&lt;/strong&gt;）。&lt;br&gt;
+行数n称作TAD的阶。&lt;br&gt;
 有时候，为方便分析，TAD也可以摆成从上到下的每行依次有n、n-1、&amp;hellip;、1个数字。为加以区分，尖头朝上的三角形我们称之为正差上三角形（Up-Pointing TAD，UPTAD），尖头朝下的我们称之为正差下三角形（Down-Pointing TAD，DPTAD）。&lt;/p&gt;</description>
     </item>
     
@@ -53,9 +51,9 @@
       <pubDate>Tue, 21 May 2019 22:30:05 +0800</pubDate>
       
       <guid>https://bigheadghost.github.io/zh/post/bruteforce_reasoning/</guid>
-      <description>&lt;p&gt;阮一峰之前有篇文章&lt;a href=&#34;http://www.ruanyifeng.com/blog/2019/01/prolog.html&#34;&gt;《Prolog 语言入门教程》&lt;/a&gt;，介绍说Prolog（全称Programming in Logic）是一种专门解决逻辑问题的语言。&lt;br /&gt;
-其实解决逻辑推理问题也不用特意去学一门新语言，去自己工具箱里找个趁手的兵器也行。&lt;br /&gt;
-本文采用Mathematica解题，可与上文对照阅读，文末还求解了一道更复杂的题目。&lt;br /&gt;
+      <description>&lt;p&gt;阮一峰之前有篇文章&lt;a href=&#34;http://www.ruanyifeng.com/blog/2019/01/prolog.html&#34;&gt;《Prolog 语言入门教程》&lt;/a&gt;，介绍说Prolog（全称Programming in Logic）是一种专门解决逻辑问题的语言。&lt;br&gt;
+其实解决逻辑推理问题也不用特意去学一门新语言，去自己工具箱里找个趁手的兵器也行。&lt;br&gt;
+本文采用Mathematica解题，可与上文对照阅读，文末还求解了一道更复杂的题目。&lt;br&gt;
 话说有了计算机以后，干啥都喜欢简单粗暴的，纯推理是越来越懒了。&lt;/p&gt;</description>
     </item>
     

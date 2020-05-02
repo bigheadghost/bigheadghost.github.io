@@ -20,14 +20,14 @@
 Problem 1 Brute force solution at first thought:
 1 2  Total@Select[Range[999], 3\[Divides]# || 5\[Divides]# &amp;amp;] 233168   What if the upper limit is extreme large, like \(10^{10}\), or \(10^{10^7}\)? Calculating one after another or even saving them using Range is impossible. Here comes the mathematical way:
 1 2 3 4 5  top = 10^(10^7) - 1; SumMultiplesOf[n_] := (p = Quotient[top, n]; n*p*(p &#43; 1)/2); SumMultiplesOf[m_, n_] := SumMultiplesOf[m] &#43; SumMultiplesOf[n] - SumMultiplesOf[LCM[m, n]]; N[SumMultiplesOf[3, 5], 2] // AbsoluteTiming {2.222280, 2.3*10^19999999}   Problem 2 1 2 3  n=NestWhile[# &#43; 1 &amp;amp;, 1, Fibonacci@# &amp;lt;= 4*^6 &amp;amp;] - 1 Total@Select[Array[Fibonacci,n] , EvenQ] 4613732   Even numbers appear every 3rd positions in Fibonacci series:
-1  Total@Table[Fibonacci@i, {i, 3, n, 3}]   Problem 3 1 2  Max[FactorInteger[600851475143][[All, 1]]] 6857   Problem 4 1 2  Catch@Scan[If[FromDigit@Reverse@IntegerDigits@# == #, Throw[#]] &amp;amp;, Reverse@Sort@Flatten@Table[i*j, {i, 999, 100, -1}, {j, i, 100, -1}]] 906609   Problem 5 1 2  LCM @@ Range[20] 232792560  " />
+1  Total@Table[Fibonacci@i, {i, 3, n, 3}]   Problem 3 1 2  Max[FactorInteger[600851475143][[All, 1]]] 6857   Problem 4 1 2  Catch@Scan[If[FromDigit@Reverse@IntegerDigits@# == #, Throw[#]] &amp;amp;, Reverse@Sort@Flatten@Table[i*j, {i, 999, 100, -1}, {j, i, 100, -1}]] 906609   Problem 5 1 2  LCM @@ Range[20] 232792560   " />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.58.2 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/post/dive-into-project-euler-part-1-1-20/" />
@@ -44,9 +44,7 @@ Problem 1 Brute force solution at first thought:
 
 <meta property="og:title" content="Dive into Project Euler Part 1 (1-20)" />
 <meta property="og:description" content="Although calculation of mathematica codes could be slower than those written in C/C&#43;&#43;, or even those in python, the prodigious and interesting if not funny functions do save coding time a lot.
-
 Problem 1
-
 Brute force solution at first thought:
 
 
@@ -128,6 +126,7 @@ Problem 5
 
 LCM @@ Range[20]
 232792560
+
 
 " />
 <meta property="og:type" content="article" />
@@ -136,9 +135,7 @@ LCM @@ Range[20]
 <meta property="article:modified_time" content="2014-08-29T08:41:09+08:00" />
 <meta itemprop="name" content="Dive into Project Euler Part 1 (1-20)">
 <meta itemprop="description" content="Although calculation of mathematica codes could be slower than those written in C/C&#43;&#43;, or even those in python, the prodigious and interesting if not funny functions do save coding time a lot.
-
 Problem 1
-
 Brute force solution at first thought:
 
 
@@ -221,22 +218,18 @@ Problem 5
 LCM @@ Range[20]
 232792560
 
+
 ">
-
-
 <meta itemprop="datePublished" content="2014-08-29T08:41:09&#43;08:00" />
 <meta itemprop="dateModified" content="2014-08-29T08:41:09&#43;08:00" />
 <meta itemprop="wordCount" content="566">
 
 
 
-<meta itemprop="keywords" content="Mathematica," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="Mathematica," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Dive into Project Euler Part 1 (1-20)"/>
 <meta name="twitter:description" content="Although calculation of mathematica codes could be slower than those written in C/C&#43;&#43;, or even those in python, the prodigious and interesting if not funny functions do save coding time a lot.
-
 Problem 1
-
 Brute force solution at first thought:
 
 
@@ -318,6 +311,7 @@ Problem 5
 
 LCM @@ Range[20]
 232792560
+
 
 "/>
 
@@ -401,343 +395,338 @@ LCM @@ Range[20]
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li><a href="#problem-1">Problem 1</a></li>
-<li><a href="#problem-2">Problem 2</a></li>
-<li><a href="#problem-3">Problem 3</a></li>
-<li><a href="#problem-4">Problem 4</a></li>
-<li><a href="#problem-5">Problem 5</a></li>
-<li><a href="#problem-6">Problem 6</a></li>
-<li><a href="#problem-7">Problem 7</a></li>
-<li><a href="#problem-8">Problem 8</a></li>
-<li><a href="#problem-9">Problem 9</a></li>
-<li><a href="#problem-10">Problem 10</a></li>
-<li><a href="#problem-11">Problem 11</a></li>
-<li><a href="#problem-12">Problem 12</a></li>
-<li><a href="#problem-13">Problem 13</a></li>
-<li><a href="#problem-14">Problem 14</a></li>
-<li><a href="#problem-15">Problem 15</a></li>
-<li><a href="#problem-16">Problem 16</a></li>
-<li><a href="#problem-17">Problem 17</a></li>
-<li><a href="#problem-18">Problem 18</a></li>
-<li><a href="#problem-19">Problem 19</a></li>
-<li><a href="#problem-20">Problem 20</a></li>
-</ul>
+  <ul>
+    <li><a href="#problem-1">Problem 1</a></li>
+    <li><a href="#problem-2">Problem 2</a></li>
+    <li><a href="#problem-3">Problem 3</a></li>
+    <li><a href="#problem-4">Problem 4</a></li>
+    <li><a href="#problem-5">Problem 5</a></li>
+    <li><a href="#problem-6">Problem 6</a></li>
+    <li><a href="#problem-7">Problem 7</a></li>
+    <li><a href="#problem-8">Problem 8</a></li>
+    <li><a href="#problem-9">Problem 9</a></li>
+    <li><a href="#problem-10">Problem 10</a></li>
+    <li><a href="#problem-11">Problem 11</a></li>
+    <li><a href="#problem-12">Problem 12</a></li>
+    <li><a href="#problem-13">Problem 13</a></li>
+    <li><a href="#problem-14">Problem 14</a></li>
+    <li><a href="#problem-15">Problem 15</a></li>
+    <li><a href="#problem-16">Problem 16</a></li>
+    <li><a href="#problem-17">Problem 17</a></li>
+    <li><a href="#problem-18">Problem 18</a></li>
+    <li><a href="#problem-19">Problem 19</a></li>
+    <li><a href="#problem-20">Problem 20</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
       <p>Although calculation of mathematica codes could be slower than those written in C/C++, or even those in python, the prodigious and interesting if not funny functions do save coding time a lot.</p>
-
 <h1 id="problem-1">Problem 1</h1>
-
 <p>Brute force solution at first thought:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Total@Select[Range[999], 3\[Divides]# || 5\[Divides]# &amp;]
-233168</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Total@Select[Range[999], 3\[Divides]# || 5\[Divides]# &amp;]
+233168
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>What if the upper limit is extreme large, like \(10^{10}\), or \(10^{10^7}\)? Calculating one after another or even saving them using Range is impossible. Here comes the mathematical way:</p>
+</div><p>What if the upper limit is extreme large, like \(10^{10}\), or \(10^{10^7}\)? Calculating one after another or even saving them using Range is impossible. Here comes the mathematical way:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">top = 10^(10^7) - 1;
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">top = 10^(10^7) - 1;
 SumMultiplesOf[n_] := (p = Quotient[top, n]; n*p*(p + 1)/2);
 SumMultiplesOf[m_, n_] := SumMultiplesOf[m] + SumMultiplesOf[n] - SumMultiplesOf[LCM[m, n]];
 N[SumMultiplesOf[3, 5], 2] // AbsoluteTiming
-{2.222280, 2.3*10^19999999}</pre></td></tr></table>
+{2.222280, 2.3*10^19999999}
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-2">Problem 2</h1>
+</div><h1 id="problem-2">Problem 2</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">n=NestWhile[# + 1 &amp;, 1, Fibonacci@# &lt;= 4*^6 &amp;] - 1
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">n=NestWhile[# + 1 &amp;, 1, Fibonacci@# &lt;= 4*^6 &amp;] - 1
 Total@Select[Array[Fibonacci,n] ,  EvenQ]
-4613732</pre></td></tr></table>
+4613732
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Even numbers appear every 3rd positions in Fibonacci series:</p>
+</div><p>Even numbers appear every 3rd positions in Fibonacci series:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Total@Table[Fibonacci@i, {i, 3, n, 3}]</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Total@Table[Fibonacci@i, {i, 3, n, 3}]
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-3">Problem 3</h1>
+</div><h1 id="problem-3">Problem 3</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Max[FactorInteger[600851475143][[All, 1]]]
-6857</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Max[FactorInteger[600851475143][[All, 1]]]
+6857
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-4">Problem 4</h1>
+</div><h1 id="problem-4">Problem 4</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Catch@Scan[If[FromDigit@Reverse@IntegerDigits@# == #, Throw[#]] &amp;, Reverse@Sort@Flatten@Table[i*j, {i, 999, 100, -1}, {j, i, 100, -1}]]
-906609</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Catch@Scan[If[FromDigit@Reverse@IntegerDigits@# == #, Throw[#]] &amp;, Reverse@Sort@Flatten@Table[i*j, {i, 999, 100, -1}, {j, i, 100, -1}]]
+906609
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-5">Problem 5</h1>
+</div><h1 id="problem-5">Problem 5</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">LCM @@ Range[20]
-232792560</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">LCM @@ Range[20]
+232792560
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-6">Problem 6</h1>
-
+</div><h1 id="problem-6">Problem 6</h1>
 <p>Sum is clever to use equations like \(\sum_{i=1}^{n}{i}=\frac{n(n+1)}{2}\)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">(Sum[i, {i, 100}])^2 - Sum[i^2, {i, 100}]
-25164150</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">(Sum[i, {i, 100}])^2 - Sum[i^2, {i, 100}]
+25164150
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-7">Problem 7</h1>
+</div><h1 id="problem-7">Problem 7</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Prime[10001]
-104743</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Prime[10001]
+104743
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-8">Problem 8</h1>
+</div><h1 id="problem-8">Problem 8</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Max[Times @@@ Partition[IntegerDigits[n], 13, 1]]
-23514624000</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Max[Times @@@ Partition[IntegerDigits[n], 13, 1]]
+23514624000
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-9">Problem 9</h1>
+</div><h1 id="problem-9">Problem 9</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">a b c /. Solve[{a^2 + b^2 == c^2, a + b + c == 1000, c&gt;a &gt; b &gt; 0}, {a, b, c}, Integers]
-{31875000}</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">a b c /. Solve[{a^2 + b^2 == c^2, a + b + c == 1000, c&gt;a &gt; b &gt; 0}, {a, b, c}, Integers]
+{31875000}
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-10">Problem 10</h1>
+</div><h1 id="problem-10">Problem 10</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Sum[Prime[i], {i, PrimePi[2*^6]}]
-142913828922</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Sum[Prime[i], {i, PrimePi[2*^6]}]
+142913828922
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-11">Problem 11</h1>
+</div><h1 id="problem-11">Problem 11</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Max@Table[{Times@@@a, Times@@Diagonal@a, Times@@@Transpose@a, Times@@Diagonal@Reverse[a, 2]}, {a, Flatten[Partition[n, {4, 4}, 1], 1]}]
-70600674</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Max@Table[{Times@@@a, Times@@Diagonal@a, Times@@@Transpose@a, Times@@Diagonal@Reverse[a, 2]}, {a, Flatten[Partition[n, {4, 4}, 1], 1]}]
+70600674
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-12">Problem 12</h1>
+</div><h1 id="problem-12">Problem 12</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">i = 1; NestWhile[(i++; # + i) &amp;, 1, Length@Divisors@# &lt;= 500 &amp;]
-76576500</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">i = 1; NestWhile[(i++; # + i) &amp;, 1, Length@Divisors@# &lt;= 500 &amp;]
+76576500
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-13">Problem 13</h1>
+</div><h1 id="problem-13">Problem 13</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">FromDigits@Take[IntegerDigits@Total@nl, 10]
-5537376230</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">FromDigits@Take[IntegerDigits@Total@nl, 10]
+5537376230
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-14">Problem 14</h1>
-
+</div><h1 id="problem-14">Problem 14</h1>
 <p>Using memoized function:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">f[1] = 1;
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">f[1] = 1;
 f[n_] := f[n] = If[EvenQ[n], f[n/2] + 1, f[3 n + 1] + 1];
 Ordering[Table[f[i], {i, 1*^6}], -1]]//AbsoluteTiming
-{27.099414, {837799}}</pre></td></tr></table>
+{27.099414, {837799}}
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Using compiled function:</p>
+</div><p>Using compiled function:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
 </span><span class="lnt">7
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">f=Compile[{ {top, _Integer} }, Module[{len, maxLen = 0, maxN = 0}, 
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">f=Compile[{ {top, _Integer} }, Module[{len, maxLen = 0, maxN = 0}, 
 Do[len = 1;
      NestWhile[(len++; If[EvenQ@#, #~Quotient~2, 3 # + 1]) &amp;, n, # != 1 &amp;];
      If[len &gt;  maxLen, {maxLen, maxN} = {len + Floor[Log[2, top/N[n]]],  n}], {n, 1, top, 2}];
     {maxLen, maxN}], CompilationTarget -&gt; &#34;C&#34;];
 f[10^6] // AbsoluteTiming
-{5.010632, {525, 837799}}</pre></td></tr></table>
+{5.010632, {525, 837799}}
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-15">Problem 15</h1>
-
+</div><h1 id="problem-15">Problem 15</h1>
 <p>memoized function way, comes along with heavy memory load and deeply-nested recursive calls.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">f[0, n_] = f[m_, 0] = 1;
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">f[0, n_] = f[m_, 0] = 1;
 f[m_, n_] := f[m, n] = f[m - 1, n] + f[m, n - 1];
 f[20, 20]
-137846528820</pre></td></tr></table>
+137846528820
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>In a m \(\times\) n grid, each path contains exactly n movements to the right ( R ) and m movements down (D). So here it is \({m+n \choose m}\)</p>
+</div><p>In a m \(\times\) n grid, each path contains exactly n movements to the right ( R ) and m movements down (D). So here it is \({m+n \choose m}\)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Binomial[40, 20]</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Binomial[40, 20]
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-16">Problem 16</h1>
+</div><h1 id="problem-16">Problem 16</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Total[IntegerDigits[2^1000]]
-1366</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Total[IntegerDigits[2^1000]]
+1366
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-17">Problem 17</h1>
-
+</div><h1 id="problem-17">Problem 17</h1>
 <p><a href="http://mathematica.stackexchange.com/a/1075">inWords</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">StringReplace[StringJoin[inWords /@ Range[1000]],   &#34; &#34; -&gt; &#34;&#34;] // StringLength
-21124</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">StringReplace[StringJoin[inWords /@ Range[1000]],   &#34; &#34; -&gt; &#34;&#34;] // StringLength
+21124
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-18">Problem 18</h1>
+</div><h1 id="problem-18">Problem 18</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">d=Import[&#34;R:\\triangle.txt&#34;, &#34;Table&#34;];
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">d=Import[&#34;R:\\triangle.txt&#34;, &#34;Table&#34;];
 f[Length[d], j_] := d[[Length[d], j]];
 f[i_, j_] := f[i, j] = d[[i, j]] + Max[f[i + 1, j], f[i + 1, j + 1]];
 f[1, 1]
-1074</pre></td></tr></table>
+1074
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>or using patterns to calculate bottom-up</p>
+</div><p>or using patterns to calculate bottom-up</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">d //. {x___, a_, b_} :&gt; {x, a + Max /@ Partition[b, 2, 1]}</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">d //. {x___, a_, b_} :&gt; {x, a + Max /@ Partition[b, 2, 1]}
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-19">Problem 19</h1>
+</div><h1 id="problem-19">Problem 19</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Count[DateRange[{1901, 1}, {2000, 12}, &#34;Month&#34;],d_ /; DayName@d == Sunday]
-171</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Count[DateRange[{1901, 1}, {2000, 12}, &#34;Month&#34;],d_ /; DayName@d == Sunday]
+171
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-20">Problem 20</h1>
+</div><h1 id="problem-20">Problem 20</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Total@IntegerDigits@Factorial@100
-648</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Total@IntegerDigits@Factorial@100
+648
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>

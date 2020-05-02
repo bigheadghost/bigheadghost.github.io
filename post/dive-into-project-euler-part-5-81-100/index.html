@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigheadghost" /><meta name="description" content="Problem 81 1 2 3 4 5 6 7 8 9  s = Import[&amp;#34;p081_matrix.txt&amp;#34;, &amp;#34;Data&amp;#34;]; Clear@MinPathSum; MinPathSum[1, 1] := s[[1, 1]] MinPathSum[r_, c_] := MinPathSum[r, c] = If[r == 1, MinPathSum[r, c - 1], If[c == 1, MinPathSum[r - 1, c], Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] &#43; s[[r, c]]; MinPathSum[80, 80] 427337  " />
+<meta name="author" content="bigheadghost" /><meta name="description" content="Problem 81 1 2 3 4 5 6 7 8 9  s = Import[&amp;#34;p081_matrix.txt&amp;#34;, &amp;#34;Data&amp;#34;]; Clear@MinPathSum; MinPathSum[1, 1] := s[[1, 1]] MinPathSum[r_, c_] := MinPathSum[r, c] = If[r == 1, MinPathSum[r, c - 1], If[c == 1, MinPathSum[r - 1, c], Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] &#43; s[[r, c]]; MinPathSum[80, 80] 427337   " />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.58.2 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/post/dive-into-project-euler-part-5-81-100/" />
@@ -63,6 +63,7 @@ MinPathSum[r_, c_] := MinPathSum[r, c] =
 MinPathSum[80, 80]
 427337
 
+
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/post/dive-into-project-euler-part-5-81-100/" />
@@ -93,17 +94,15 @@ MinPathSum[r_, c_] := MinPathSum[r, c] =
 MinPathSum[80, 80]
 427337
 
+
 ">
-
-
 <meta itemprop="datePublished" content="2014-09-09T12:05:23&#43;08:00" />
 <meta itemprop="dateModified" content="2014-09-09T12:05:23&#43;08:00" />
 <meta itemprop="wordCount" content="1538">
 
 
 
-<meta itemprop="keywords" content="Mathematica," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="Mathematica," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Dive into Project Euler Part 5 (81-100)"/>
 <meta name="twitter:description" content="Problem 81
 
@@ -128,6 +127,7 @@ MinPathSum[r_, c_] := MinPathSum[r, c] =
       Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] &#43; s[[r, c]];
 MinPathSum[80, 80]
 427337
+
 
 "/>
 
@@ -211,28 +211,28 @@ MinPathSum[80, 80]
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li><a href="#problem-81">Problem 81</a></li>
-<li><a href="#problem-82">Problem 82</a></li>
-<li><a href="#problem-83">Problem 83</a></li>
-<li><a href="#problem-84">Problem 84</a></li>
-<li><a href="#problem-85">Problem 85</a></li>
-<li><a href="#problem-86">Problem 86</a></li>
-<li><a href="#problem-87">Problem 87</a></li>
-<li><a href="#problem-88">Problem 88</a></li>
-<li><a href="#problem-89">Problem 89</a></li>
-<li><a href="#problem-90">Problem 90</a></li>
-<li><a href="#problem-91">Problem 91</a></li>
-<li><a href="#problem-92">Problem 92</a></li>
-<li><a href="#problem-93">Problem 93</a></li>
-<li><a href="#problem-94">Problem 94</a></li>
-<li><a href="#problem-95">Problem 95</a></li>
-<li><a href="#problem-96">Problem 96</a></li>
-<li><a href="#problem-97">Problem 97</a></li>
-<li><a href="#problem-98">Problem 98</a></li>
-<li><a href="#problem-99">Problem 99</a></li>
-<li><a href="#problem-100">Problem 100</a></li>
-</ul>
+  <ul>
+    <li><a href="#problem-81">Problem 81</a></li>
+    <li><a href="#problem-82">Problem 82</a></li>
+    <li><a href="#problem-83">Problem 83</a></li>
+    <li><a href="#problem-84">Problem 84</a></li>
+    <li><a href="#problem-85">Problem 85</a></li>
+    <li><a href="#problem-86">Problem 86</a></li>
+    <li><a href="#problem-87">Problem 87</a></li>
+    <li><a href="#problem-88">Problem 88</a></li>
+    <li><a href="#problem-89">Problem 89</a></li>
+    <li><a href="#problem-90">Problem 90</a></li>
+    <li><a href="#problem-91">Problem 91</a></li>
+    <li><a href="#problem-92">Problem 92</a></li>
+    <li><a href="#problem-93">Problem 93</a></li>
+    <li><a href="#problem-94">Problem 94</a></li>
+    <li><a href="#problem-95">Problem 95</a></li>
+    <li><a href="#problem-96">Problem 96</a></li>
+    <li><a href="#problem-97">Problem 97</a></li>
+    <li><a href="#problem-98">Problem 98</a></li>
+    <li><a href="#problem-99">Problem 99</a></li>
+    <li><a href="#problem-100">Problem 100</a></li>
+  </ul>
 </nav>
   </div>
 </div>
@@ -240,7 +240,7 @@ MinPathSum[80, 80]
       <h1 id="problem-81">Problem 81</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -249,9 +249,9 @@ MinPathSum[80, 80]
 </span><span class="lnt">7
 </span><span class="lnt">8
 </span><span class="lnt">9
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">s = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">s = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
 Clear@MinPathSum;
 MinPathSum[1, 1] := s[[1, 1]]
 MinPathSum[r_, c_] := MinPathSum[r, c] =
@@ -259,13 +259,13 @@ MinPathSum[r_, c_] := MinPathSum[r, c] =
      If[c == 1, MinPathSum[r - 1, c],
       Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] + s[[r, c]];
 MinPathSum[80, 80]
-427337</pre></td></tr></table>
+427337
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-82">Problem 82</h1>
+</div><h1 id="problem-82">Problem 82</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -277,9 +277,9 @@ MinPathSum[80, 80]
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">m = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">m = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
 n = Length@m;
 dirs = { {0, 1}, {1, 0}, {-1, 0} };
 ew = Flatten[
@@ -290,13 +290,13 @@ ew = Flatten[
        dirs}];], 1];
 gr = Graph[ew[[1]], EdgeWeight -&gt; ew[[2]]];
 Min@Table[GraphDistance[%, {i, 1}, {j, n}] + m[[i, 1]], {i, n}, {j, n}]
-260324</pre></td></tr></table>
+260324
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-83">Problem 83</h1>
+</div><h1 id="problem-83">Problem 83</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -308,9 +308,9 @@ Min@Table[GraphDistance[%, {i, 1}, {j, n}] + m[[i, 1]], {i, n}, {j, n}]
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">m = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">m = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
 n = Length@m;
 dirs = { {0, 1}, {1, 0}, {-1, 0}, {0, -1} };
 ew = Flatten[
@@ -321,34 +321,32 @@ ew = Flatten[
        dirs}];], 1];
 gr = Graph[ew[[1]], EdgeWeight -&gt; ew[[2]]];
 m[[1, 1]] + GraphDistance[gr, {1, 1}, {n, n}]
-425185</pre></td></tr></table>
+425185
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-84">Problem 84</h1>
-
+</div><h1 id="problem-84">Problem 84</h1>
 <p>Not interested</p>
-
 <h1 id="problem-85">Problem 85</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">s = Abs[Table[Binomial[x + 1, 2]*Binomial[y + 1, 2], {x, 2000, 1, -1}, {y, 2001 - x}] - 2*10^6];
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">s = Abs[Table[Binomial[x + 1, 2]*Binomial[y + 1, 2], {x, 2000, 1, -1}, {y, 2001 - x}] - 2*10^6];
 Position[s, Min@s]
 { {1924, 36}, {1965, 77} }
 36*77
-2772</pre></td></tr></table>
+2772
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-86">Problem 86</h1>
+</div><h1 id="problem-86">Problem 86</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -394,11 +392,10 @@ Position[s, Min@s]
 <span class="nl">count</span><span class="p">:</span><span class="mi">1000457</span>
 </code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-87">Problem 87</h1>
+</div><h1 id="problem-87">Problem 87</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -411,9 +408,9 @@ Position[s, Min@s]
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">limit = 5*10^7;
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">limit = 5*10^7;
 ps = Array[Prime, PrimePi@Sqrt@limit];
 ret = {};
 For[i = 1, i &lt;= Length@ps, i++,
@@ -425,13 +422,13 @@ For[j = 1, j &lt;= yset, j++,
   ]
 ];
 Length@DeleteDuplicates@Flatten@ret
-1097343</pre></td></tr></table>
+1097343
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-88">Problem 88</h1>
+</div><h1 id="problem-88">Problem 88</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -454,9 +451,9 @@ Length@DeleteDuplicates@Flatten@ret
 </span><span class="lnt">21
 </span><span class="lnt">22
 </span><span class="lnt">23
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">uf[m_, 1] := { {} }
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">uf[m_, 1] := { {} }
 uf[1, n_] := { {} }
 uf[m_, n_?PrimeQ] := If[m &lt; n, {}, { {n} }]
 uf[m_, n_] :=
@@ -478,43 +475,40 @@ mf[fl_, pos_] :=
    0];
 MapIndexed[mf, s];
 Total@DeleteDuplicates@arr
-7587457</pre></td></tr></table>
+7587457
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-89">Problem 89</h1>
+</div><h1 id="problem-89">Problem 89</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Total[StringLength@# - StringLength@IntegerString[FromDigits[#, &#34;Roman&#34;], &#34;Roman&#34;] &amp; /@  ps]</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Total[StringLength@# - StringLength@IntegerString[FromDigits[#, &#34;Roman&#34;], &#34;Roman&#34;] &amp; /@  ps]
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-90">Problem 90</h1>
-
+</div><h1 id="problem-90">Problem 90</h1>
 <p>Not interested</p>
-
 <h1 id="problem-91">Problem 91</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">r = 50; Pts = Flatten[Table[{i, j}, {i, r}, {j, r}], 1];
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">r = 50; Pts = Flatten[Table[{i, j}, {i, r}, {j, r}], 1];
 NatPt[i_, j_] :=  Module[{}, k = j/i; knew = -1/k; b = j - knew*i;   Count[(knew*# + b) &amp; /@ Range[0, r],   a_ /; IntegerQ@a &amp;&amp; 0 &lt;= a &lt;= r] - 1];
 Total[NatPt @@@ Pts] + 3 r^2
-14234</pre></td></tr></table>
+14234
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-92">Problem 92</h1>
-
+</div><h1 id="problem-92">Problem 92</h1>
 <p><a href="www.mathblog.dk/project-euler-92-square-digits-number-chain">ref</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -624,11 +618,10 @@ Total[NatPt @@@ Pts] + 3 r^2
 <span class="n">Solution</span> <span class="n">took</span> <span class="m">1930.5379</span> <span class="n">ms</span>
 </code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-93">Problem 93</h1>
+</div><h1 id="problem-93">Problem 93</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -773,13 +766,13 @@ Total[NatPt @@@ Pts] + 3 r^2
         <span class="n">data</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="mi">1258</span></code></pre></td></tr></table>
+<span class="mi">1258</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-94">Problem 94</h1>
+</div><h1 id="problem-94">Problem 94</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -814,13 +807,13 @@ Total[NatPt @@@ Pts] + 3 r^2
         <span class="nb">sum</span><span class="o">+=</span><span class="n">p</span>
  
 <span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
-<span class="mi">518408346</span></code></pre></td></tr></table>
+<span class="mi">518408346</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-95">Problem 95</h1>
+</div><h1 id="problem-95">Problem 95</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -832,9 +825,9 @@ Total[NatPt @@@ Pts] + 3 r^2
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">f[n_] := DivisorSigma[1, n] - n;
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">f[n_] := DivisorSigma[1, n] - n;
 fl[n_] := Module[{}, i = 1;
    x = n; ret = {x};
    While[True, x = f@x;
@@ -845,13 +838,13 @@ fl[n_] := Module[{}, i = 1;
 ps = Position[fl /@ Range[10000, 1000000], a_ /; a &gt; 0]
 fres = fl @@@ (10000 + ps - 1)
 ps[[FirstPosition[fres, Max@fres]]]
-14316</pre></td></tr></table>
+14316
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-96">Problem 96</h1>
+</div><h1 id="problem-96">Problem 96</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -862,9 +855,9 @@ ps[[FirstPosition[fres, Max@fres]]]
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">grids = Map[FromDigits, Characters[  Rest /@ Partition[Import[&#34;p096_sudoku.txt&#34;, &#34;Data&#34;], 10]], {3}];
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">grids = Map[FromDigits, Characters[  Rest /@ Partition[Import[&#34;p096_sudoku.txt&#34;, &#34;Data&#34;], 10]], {3}];
 f[g_, i_, j_] := Complement[Range[9], DeleteDuplicates@ DeleteCases[ Join[g[[i, All]], g[[All, j]], Flatten@g[[3 Floor[(i - 1)/3] + 1 ;; 3 Floor[(i - 1)/3] + 3, 3 Floor[(j - 1)/3] + 1 ;; 3 Floor[(j - 1)/3] + 3]]], 0]];
 SpreadCands[l_] := Module[{candis = &lt;||&gt;},  Do[If[l[[i, j]] == 0, candis[{i, j}] = f[l, i, j]], {i, 9}, {j,9}]; Sort@candis];
 Step[] :=  Module[{assc, g, rule, pt, values}, g = Last@gl;  assc = SpreadCands[g];
@@ -874,24 +867,24 @@ Step[] :=  Module[{assc, g, rule, pt, values}, g = Last@gl;  assc = SpreadCands[
     Do[g[[Sequence @@ pt]] = v;  gl = {gl, g}; Step[], {v, values}]];
    ];
 AbsoluteTiming@Total@Table[gl = { {}, i}; Catch@Step[], {i, grids}]
-{49.13, 24702}</pre></td></tr></table>
+{49.13, 24702}
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-97">Problem 97</h1>
+</div><h1 id="problem-97">Problem 97</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">FromDigits@Take[IntegerDigits[28433*2^7830457 + 1], -10]
-8739992577</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">FromDigits@Take[IntegerDigits[28433*2^7830457 + 1], -10]
+8739992577
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-98">Problem 98</h1>
+</div><h1 id="problem-98">Problem 98</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -911,9 +904,9 @@ AbsoluteTiming@Total@Table[gl = { {}, i}; Catch@Step[], {i, grids}]
 </span><span class="lnt">18
 </span><span class="lnt">19
 </span><span class="lnt">20
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">words = StringSplit[StringReplace[Import[&#34;p098_words.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;], &#34;,&#34;];
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">words = StringSplit[StringReplace[Import[&#34;p098_words.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;], &#34;,&#34;];
 wordpairs= SortBy[Select[GatherBy[words, Sort@Characters@# &amp;], Length@# &gt; 1 &amp;],100 - StringLength@First@# &amp;];
 f[w1_, w2_] :=
 Module[{}, l = StringLength@w1; ret = {};
@@ -932,27 +925,28 @@ Module[{}, l = StringLength@w1; ret = {};
    ]; Flatten@ret];
 Take[f@@@wordpairs,-20]
 {f[&#34;POST&#34;, &#34;SPOT&#34;,  &#34;STOP&#34;], {}, {&lt;|&#34;B&#34; -&gt; 1, &#34;O&#34; -&gt; 7, &#34;A&#34; -&gt; 6, &#34;R&#34; -&gt; 8,   &#34;D&#34; -&gt; 9|&gt;}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} }
-18769</pre></td></tr></table>
+18769
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-99">Problem 99</h1>
+</div><h1 id="problem-99">Problem 99</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Ordering[Import[&#34;p099_base_exp.txt&#34;, &#34;Data&#34;], -1, #1[[2]]*Log@#1[[1]] &lt; #2[[2]]*Log@#2[[1]] &amp;]
-{709}</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Ordering[Import[&#34;p099_base_exp.txt&#34;, &#34;Data&#34;], -1, #1[[2]]*Log@#1[[1]] &lt; #2[[2]]*Log@#2[[1]] &amp;]
+{709}
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-100">Problem 100</h1>
+</div><h1 id="problem-100">Problem 100</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">First@Solve[b/(b + r)*(b - 1)/(b + r - 1) == 1/2 &amp;&amp; b + r &gt; 10^12 &amp;&amp; b &gt; 0 &amp;&amp;  r &gt; 0, {b, r}, Integers]</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">First@Solve[b/(b + r)*(b - 1)/(b + r - 1) == 1/2 &amp;&amp; b + r &gt; 10^12 &amp;&amp; b &gt; 0 &amp;&amp;  r &gt; 0, {b, r}, Integers]
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>

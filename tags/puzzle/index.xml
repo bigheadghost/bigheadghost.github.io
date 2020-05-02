@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>puzzle on Know Nothing</title>
@@ -17,8 +17,8 @@
       <pubDate>Thu, 05 Mar 2020 13:20:16 +0800</pubDate>
       
       <guid>https://bigheadghost.github.io/post/arrange_sequence_using_auxiliary_slots/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.bigfishgames.com/games/14590/labyrinths-of-the-world-fools-gold/&#34;&gt;Labyrinths of the World: Fool&amp;rsquo;s Gold&lt;/a&gt; is an AVG game from Domini Games and released by BigFish. The 4th minigame named Clurichaun is really nice.&lt;br /&gt;
-&lt;img src=&#34;https://bigheadghost.github.io/img/2020/minigame_clurichaun.jpg&#34; alt=&#34;Arrange sequence using auxiliary slots Puzzle&#34; /&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.bigfishgames.com/games/14590/labyrinths-of-the-world-fools-gold/&#34;&gt;Labyrinths of the World: Fool&amp;rsquo;s Gold&lt;/a&gt; is an AVG game from Domini Games and released by BigFish. The 4th minigame named Clurichaun is really nice.&lt;br&gt;
+&lt;img src=&#34;https://bigheadghost.github.io/img/2020/minigame_clurichaun.jpg&#34; alt=&#34;Arrange sequence using auxiliary slots Puzzle&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,12 +27,10 @@
       <pubDate>Wed, 02 Jul 2014 10:17:48 +0800</pubDate>
       
       <guid>https://bigheadghost.github.io/post/mummy-maze-solver/</guid>
-      <description>&lt;p&gt;Mummy Maze is a game created by &lt;a href=&#34;http://www.popcap.com/&#34;&gt;PopCap&lt;/a&gt; in 2002. It is based on &lt;a href=&#34;http://www.logicmazes.com/&#34;&gt;Robert Abbott&lt;/a&gt;&amp;rsquo;s &lt;a href=&#34;http://www.logicmazes.com/theseus.html&#34;&gt;Theseus maze&lt;/a&gt;. There are 3 scales of lattices: 6*6, 8*8, 10*10. With white mummy functioning as Minotaur, Mummy Maze introduced many varieties: red mummy, scorpion, trap, gate and key. There is only one Minotaur in the original Theseus maze, while the explorer in Mummy Maze faces more enemies.&lt;/p&gt;
-
+      <description>&lt;p&gt;Mummy Maze is a game created by &lt;a href=&#34;http://www.popcap.com/&#34;&gt;PopCap&lt;/a&gt; in 2002. It is based on &lt;a href=&#34;http://www.logicmazes.com/&#34;&gt;Robert Abbott&lt;/a&gt;&amp;lsquo;s &lt;a href=&#34;http://www.logicmazes.com/theseus.html&#34;&gt;Theseus maze&lt;/a&gt;. There are 3 scales of lattices: 6*6, 8*8, 10*10. With white mummy functioning as Minotaur, Mummy Maze introduced many varieties: red mummy, scorpion, trap, gate and key. There is only one Minotaur in the original Theseus maze, while the explorer in Mummy Maze faces more enemies.&lt;/p&gt;
 &lt;p&gt;If solutions are all you want, please visit this &lt;a href=&#34;http://www.gamefaqs.com/pc/932088-mummy-maze-deluxe/faqs/42610&#34;&gt;Complete Walktrough&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The 14th puzzle in Pharaoh&amp;rsquo;s Tomb, has the solution with the most moves, 66 steps.&lt;br /&gt;
-&lt;img src=&#34;https://bigheadghost.github.io/img/2014/mummy_maze_with_longest_solution.jpg&#34; alt=&#34;mummy maze demo&#34; /&gt;&lt;/p&gt;</description>
+&lt;p&gt;The 14th puzzle in Pharaoh&amp;rsquo;s Tomb, has the solution with the most moves, 66 steps.&lt;br&gt;
+&lt;img src=&#34;https://bigheadghost.github.io/img/2014/mummy_maze_with_longest_solution.jpg&#34; alt=&#34;mummy maze demo&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -41,8 +39,8 @@
       <pubDate>Wed, 25 Jun 2014 14:14:28 +0800</pubDate>
       
       <guid>https://bigheadghost.github.io/post/frog-mania/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.bigfishgames.com/online-games/18111/frog-mania/index.html&#34;&gt;Frog Mania&lt;/a&gt; is a flash game. It is quite easy to play, so this is not about its solver, but the way to get the underlying matrix representation of each level.&lt;br /&gt;
-&lt;img src=&#34;https://bigheadghost.github.io/img/2014/frog_mania.jpg&#34; alt=&#34;frog_mania&#34; /&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.bigfishgames.com/online-games/18111/frog-mania/index.html&#34;&gt;Frog Mania&lt;/a&gt; is a flash game. It is quite easy to play, so this is not about its solver, but the way to get the underlying matrix representation of each level.&lt;br&gt;
+&lt;img src=&#34;https://bigheadghost.github.io/img/2014/frog_mania.jpg&#34; alt=&#34;frog_mania&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -51,11 +49,9 @@
       <pubDate>Mon, 23 Jun 2014 12:11:27 +0800</pubDate>
       
       <guid>https://bigheadghost.github.io/post/kamisolver/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://bigheadghost.github.io/img/2014/kami.jpg&#34; alt=&#34;Kami&#34; /&gt;&lt;br /&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;https://bigheadghost.github.io/img/2014/kami.jpg&#34; alt=&#34;Kami&#34;&gt;&lt;br&gt;
 Actually, all puzzles data are located in the &amp;ldquo;puzzles&amp;rdquo;  folder under the game directory, including classic group from A to E, and pays needed premium &amp;ldquo;5C1&amp;rdquo; and &amp;ldquo;Pat1&amp;rdquo;.&lt;/p&gt;
-
 &lt;p&gt;PuzzleData are stored in files such as SAL1_TwoSides.xml(Stage A Level 1). colours variable denotes the grid. gold, silver, bronze variables are the moves count to achieve these medals. The &amp;ldquo;solution&amp;rdquo; part, well, is the solution. Following computer world&amp;rsquo;s tradition, in each turn, x, y mean the column, row coordinates, both originating from 0.&lt;/p&gt;
-
 &lt;p&gt;If solution is all your want, it&amp;rsquo;s done.&lt;/p&gt;</description>
     </item>
     
@@ -65,8 +61,8 @@ Actually, all puzzles data are located in the &amp;ldquo;puzzles&amp;rdquo;  fol
       <pubDate>Tue, 17 Jun 2014 12:53:53 +0800</pubDate>
       
       <guid>https://bigheadghost.github.io/post/magic-griddlers-solver/</guid>
-      <description>&lt;p&gt;Recently  I came across a number puzzle called &lt;a href=&#34;http://www.bigfishgames.com/download-games/26504/magic-griddlers/index.html&#34;&gt;Magic Griddlers&lt;/a&gt; from &lt;a href=&#34;http://www.bigfishgames.com&#34;&gt;Big Fish&lt;/a&gt;. It&amp;rsquo;s kind of attractive, so I wrote a puzzle solver with several lines of python. It gives the solution in a few seconds.&lt;br /&gt;
-&lt;img src=&#34;http://cdn-games.bigfishsites.com/en_magic-griddlers/screen1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Recently  I came across a number puzzle called &lt;a href=&#34;http://www.bigfishgames.com/download-games/26504/magic-griddlers/index.html&#34;&gt;Magic Griddlers&lt;/a&gt; from &lt;a href=&#34;http://www.bigfishgames.com&#34;&gt;Big Fish&lt;/a&gt;. It&amp;rsquo;s kind of attractive, so I wrote a puzzle solver with several lines of python. It gives the solution in a few seconds.&lt;br&gt;
+&lt;img src=&#34;http://cdn-games.bigfishsites.com/en_magic-griddlers/screen1.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.2 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/" />
@@ -44,12 +44,9 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bigheadghost.github.io/" />
-
-<meta property="og:updated_time" content="2020-03-05T13:20:16+08:00" />
+<meta property="og:updated_time" content="2014-07-03T08:55:44+08:00" />
 <meta itemprop="name" content="Know Nothing">
-<meta itemprop="description" content="">
-
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Know Nothing"/>
 <meta name="twitter:description" content=""/>
 
@@ -129,8 +126,8 @@
   
   <div class="post-content">
     <div class="post-summary">
-      <p><a href="http://www.bigfishgames.com/games/14590/labyrinths-of-the-world-fools-gold/">Labyrinths of the World: Fool&rsquo;s Gold</a> is an AVG game from Domini Games and released by BigFish. The 4th minigame named Clurichaun is really nice.<br />
-<img src="/img/2020/minigame_clurichaun.jpg" alt="Arrange sequence using auxiliary slots Puzzle" /></p>
+      <p><a href="http://www.bigfishgames.com/games/14590/labyrinths-of-the-world-fools-gold/">Labyrinths of the World: Fool&rsquo;s Gold</a> is an AVG game from Domini Games and released by BigFish. The 4th minigame named Clurichaun is really nice.<br>
+<img src="/img/2020/minigame_clurichaun.jpg" alt="Arrange sequence using auxiliary slots Puzzle"></p>
     </div>
     <div class="read-more">
       <a href="/post/arrange_sequence_using_auxiliary_slots/" class="read-more-link">Read more...</a>
@@ -154,7 +151,7 @@
       <h1 id="problem-81">Problem 81</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -163,9 +160,9 @@
 </span><span class="lnt">7
 </span><span class="lnt">8
 </span><span class="lnt">9
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">s = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">s = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
 Clear@MinPathSum;
 MinPathSum[1, 1] := s[[1, 1]]
 MinPathSum[r_, c_] := MinPathSum[r, c] =
@@ -173,7 +170,8 @@ MinPathSum[r_, c_] := MinPathSum[r, c] =
      If[c == 1, MinPathSum[r - 1, c],
       Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] + s[[r, c]];
 MinPathSum[80, 80]
-427337</pre></td></tr></table>
+427337
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -199,7 +197,7 @@ MinPathSum[80, 80]
       <h1 id="problem-61">Problem 61</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -278,7 +276,8 @@ MinPathSum[80, 80]
         <span class="k">print</span><span class="p">(</span><span class="n">solution</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">solution</span><span class="p">))</span>
         <span class="k">break</span>
 
-<span class="p">[</span><span class="mi">8256</span><span class="p">,</span> <span class="mi">5625</span><span class="p">,</span> <span class="mi">2882</span><span class="p">,</span> <span class="mi">8128</span><span class="p">,</span> <span class="mi">2512</span><span class="p">,</span> <span class="mi">1281</span><span class="p">]</span> <span class="mi">28684</span></code></pre></td></tr></table>
+<span class="p">[</span><span class="mi">8256</span><span class="p">,</span> <span class="mi">5625</span><span class="p">,</span> <span class="mi">2882</span><span class="p">,</span> <span class="mi">8128</span><span class="p">,</span> <span class="mi">2512</span><span class="p">,</span> <span class="mi">1281</span><span class="p">]</span> <span class="mi">28684</span>
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -304,37 +303,37 @@ MinPathSum[80, 80]
       <h1 id="problem-41">Problem 41</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Max@Table[ Select[FromDigits /@ Permutations[Range[i]], PrimeQ], {i, 9}]
-7652413</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Max@Table[ Select[FromDigits /@ Permutations[Range[i]], PrimeQ], {i, 9}]
+7652413
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-42">Problem 42</h1>
+</div><h1 id="problem-42">Problem 42</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">s = (Total[ToCharacterCode[#] - First@ToCharacterCode[&#34;A&#34;] + 1]) &amp; /@ StringSplit[StringReplace[Import[&#34;R:\\words.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;],   &#34;,&#34;];
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">s = (Total[ToCharacterCode[#] - First@ToCharacterCode[&#34;A&#34;] + 1]) &amp; /@ StringSplit[StringReplace[Import[&#34;R:\\words.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;],   &#34;,&#34;];
 Reduce[n*(n + 1)/2 &gt;Max[s] &amp;&amp; n &gt; 0, n, Integers]
 n &gt;= 20
 In[37]:= tn = Array[#*(# + 1)/2 &amp;, 20];
 In[38]:= Select[s, MemberQ[tn, #] &amp;] // Length
-Out[38]= 162</pre></td></tr></table>
+Out[38]= 162
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-43">Problem 43</h1>
+</div><h1 id="problem-43">Problem 43</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -348,9 +347,9 @@ Out[38]= 162</pre></td></tr></table>
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">cf = With[{
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cf = With[{
     code =
      And @@ Thread[
          Table[100 A[[i]] + 10 A[[i + 1]] + A[[i + 2]], {i, 2, 8}]~
@@ -363,7 +362,8 @@ Out[38]= 162</pre></td></tr></table>
     ]
    ];
 FromDigits /@ Pick[#, cf@#, 1] &amp;@Permutations@Range[0, 9] // Tr
-16695334890</pre></td></tr></table>
+16695334890
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -389,64 +389,65 @@ FromDigits /@ Pick[#, cf@#, 1] &amp;@Permutations@Range[0, 9] // Tr
       <h1 id="problem-21">Problem 21</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">f = DivisorSigma[1, #] - # &amp;;
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">f = DivisorSigma[1, #] - # &amp;;
 Total@Select[Range[9999], (a = f@#; a &lt; 9999 &amp;&amp; a != # &amp;&amp; f@a == #) &amp;]
-31626</pre></td></tr></table>
+31626
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-22">Problem 22</h1>
+</div><h1 id="problem-22">Problem 22</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">nl=Sort@StringSplit[StringReplace[Import[&#34;p022_names.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;], &#34;,&#34;];
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">nl=Sort@StringSplit[StringReplace[Import[&#34;p022_names.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;], &#34;,&#34;];
 Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&#34;A&#34;]] + 1] * First[#2] &amp;, nl]
-871198282</pre></td></tr></table>
+871198282
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-23">Problem 23</h1>
+</div><h1 id="problem-23">Problem 23</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &gt; # &amp;];
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &gt; # &amp;];
 Total@Complement[Range[1, 28123],
   DeleteDuplicates@(   (Abundants[[#]] + Abundants[[# ;; -1]]) &amp; /@ Range[Length@Abundants] // Flatten  )]
-4179871</pre></td></tr></table>
+4179871
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-24">Problem 24</h1>
+</div><h1 id="problem-24">Problem 24</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]]
-2783915460</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]]
+2783915460
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="problem-25">Problem 25</h1>
+</div><h1 id="problem-25">Problem 25</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">NestWhile[(# + 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
-4782</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">NestWhile[(# + 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
+4782
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>

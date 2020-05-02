@@ -26,7 +26,7 @@ If solution is all your want, it&amp;rsquo;s done.
 
 
 
-<meta name="generator" content="Hugo 0.58.2 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/post/kamisolver/" />
@@ -44,9 +44,7 @@ If solution is all your want, it&amp;rsquo;s done.
 <meta property="og:title" content="Kami Solver" />
 <meta property="og:description" content="
 Actually, all puzzles data are located in the &ldquo;puzzles&rdquo;  folder under the game directory, including classic group from A to E, and pays needed premium &ldquo;5C1&rdquo; and &ldquo;Pat1&rdquo;.
-
 PuzzleData are stored in files such as SAL1_TwoSides.xml(Stage A Level 1). colours variable denotes the grid. gold, silver, bronze variables are the moves count to achieve these medals. The &ldquo;solution&rdquo; part, well, is the solution. Following computer world&rsquo;s tradition, in each turn, x, y mean the column, row coordinates, both originating from 0.
-
 If solution is all your want, it&rsquo;s done." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/post/kamisolver/" />
@@ -55,26 +53,19 @@ If solution is all your want, it&rsquo;s done." />
 <meta itemprop="name" content="Kami Solver">
 <meta itemprop="description" content="
 Actually, all puzzles data are located in the &ldquo;puzzles&rdquo;  folder under the game directory, including classic group from A to E, and pays needed premium &ldquo;5C1&rdquo; and &ldquo;Pat1&rdquo;.
-
 PuzzleData are stored in files such as SAL1_TwoSides.xml(Stage A Level 1). colours variable denotes the grid. gold, silver, bronze variables are the moves count to achieve these medals. The &ldquo;solution&rdquo; part, well, is the solution. Following computer world&rsquo;s tradition, in each turn, x, y mean the column, row coordinates, both originating from 0.
-
 If solution is all your want, it&rsquo;s done.">
-
-
 <meta itemprop="datePublished" content="2014-06-23T12:11:27&#43;08:00" />
 <meta itemprop="dateModified" content="2014-06-23T12:11:27&#43;08:00" />
-<meta itemprop="wordCount" content="666">
+<meta itemprop="wordCount" content="662">
 
 
 
-<meta itemprop="keywords" content="puzzle,python," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="puzzle,python," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Kami Solver"/>
 <meta name="twitter:description" content="
 Actually, all puzzles data are located in the &ldquo;puzzles&rdquo;  folder under the game directory, including classic group from A to E, and pays needed premium &ldquo;5C1&rdquo; and &ldquo;Pat1&rdquo;.
-
 PuzzleData are stored in files such as SAL1_TwoSides.xml(Stage A Level 1). colours variable denotes the grid. gold, silver, bronze variables are the moves count to achieve these medals. The &ldquo;solution&rdquo; part, well, is the solution. Following computer world&rsquo;s tradition, in each turn, x, y mean the column, row coordinates, both originating from 0.
-
 If solution is all your want, it&rsquo;s done."/>
 
 <!--[if lte IE 9]>
@@ -147,7 +138,7 @@ If solution is all your want, it&rsquo;s done."/>
       <div class="post-meta">
         <span class="post-time"> 2014-06-23 12:11:27 CST </span>
         
-          <span class="more-meta"> 666 words </span>
+          <span class="more-meta"> 662 words </span>
           <span class="more-meta"> 4 mins read </span>
         
       </div>
@@ -156,49 +147,51 @@ If solution is all your want, it&rsquo;s done."/>
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
-      <p><img src="/img/2014/kami.jpg" alt="Kami" /><br />
+      <p><img src="/img/2014/kami.jpg" alt="Kami"><br>
 Actually, all puzzles data are located in the &ldquo;puzzles&rdquo;  folder under the game directory, including classic group from A to E, and pays needed premium &ldquo;5C1&rdquo; and &ldquo;Pat1&rdquo;.</p>
-
 <p>PuzzleData are stored in files such as SAL1_TwoSides.xml(Stage A Level 1). colours variable denotes the grid. gold, silver, bronze variables are the moves count to achieve these medals. The &ldquo;solution&rdquo; part, well, is the solution. Following computer world&rsquo;s tradition, in each turn, x, y mean the column, row coordinates, both originating from 0.</p>
-
 <p>If solution is all your want, it&rsquo;s done.</p>
-
 <p>Here is my <a href="https://github.com/bigheadghost/PuzzleSolvers/blob/master/KamiSolver.py">KamiSolver</a>. It works out in seconds for most cases, but sometimes takes longer particularly when zones are much scattered and maximum moves are larger.</p>
-
 <p>The whole idea is: calculate all possible moves from the initial lattice, and then the possible moves of each of those moves &hellip; typical depth first search algorithm.</p>
-
 <p>Here are some tune tech used:</p>
-
 <ol>
-<li><p>Given the maximum moves, we do not need to go deep down, i.e. to a lattice with single color. Whenever the count of colors we have to wipe out is larger than the moves we left, this try has no future and can be closed. Because one move can only decrease one color at most.</p></li>
-
-<li><p>If after a candidate move, the lattice is someone which we have checked before, it is ignored. It is very common for turn sequences like  [A, B] and [B, A].<br />
-There is no need to walk along a wrong path twice, right? But there are exceptions. Just ignoring it would result in solution miss.<br />
-What if the second solution has less moves?  e.g. [D, E] reaches the same lattice as [A, B, C] dose. Then it should be reconsidered, and the solution log is updated with less moves for later reference.</p></li>
-
-<li><p>If a candidate dose not decrease the zone count, it is dismissed. FYI, zones are scattered area according to color connectivity. This kind of candidate is a move with an aiming color not found in its neighborhoods. It is not an effective move.<br />
-Will the lattice reached from such move be met again after a sequence of effective moves which downsize zone counts? Indeed.<br />
-For example, when faced with the lattice shown in the following picture, these two turn sequences reached the same status.<br />
-1) Change left black 2’s to red 1’s, zone count decreases by 2. Then change it back to black 2’s, zone count remains the same.<br />
-2) Change upper-left red 1’s to black 2’s, zone count decreases by 1. Then change lower-left red 1’s to black 2’s, zone count decreases by 1.<br />
-Since one step in solution 1) can achieve the goal, why bother two steps in solution 2)?<br />
-It seems we should just add the lattice in the blacklist, and should not give a second consideration, unlike the situations in tune tech #2.<br />
-Does this rule have exceptions? What if the latter solution has less moves? I am not sure, but I believe not. Anyway I include a similar reconsideration mechanism just in case. It can be removed for performance improvement.<br />
-<img src="/img/2014/kami_tune_tech_demo.jpg" alt="tune tech demo" title="tune tech demo" /></p></li>
-
-<li><p>Candidate moves are checked in some preferential order:<br />
-1) Less zone count. A better move should decrease more zones.<br />
-2) Larger zone combined. A better move should make the combined zone with more cells.<br />
-Usually these preferences are cool, one try hits the right solution.<br />
-But, for some levels, the right solution comes out from latter candidates, not with the least zone count, nor with the largest zone combined.<br />
-I guess that is why it is so fascinating.<br />
-You can add your preferences strategy and do some tests to check whether it works. Actually, Number of single zones has been added. Single zone is a zone whose color only shows in this zone. Its increase means a color with scattered zones has joined. Unfortunately, it turns out not that helpful.</p></li>
+<li>
+<p>Given the maximum moves, we do not need to go deep down, i.e. to a lattice with single color. Whenever the count of colors we have to wipe out is larger than the moves we left, this try has no future and can be closed. Because one move can only decrease one color at most.</p>
+</li>
+<li>
+<p>If after a candidate move, the lattice is someone which we have checked before, it is ignored. It is very common for turn sequences like  [A, B] and [B, A].<br>
+There is no need to walk along a wrong path twice, right? But there are exceptions. Just ignoring it would result in solution miss.<br>
+What if the second solution has less moves?  e.g. [D, E] reaches the same lattice as [A, B, C] dose. Then it should be reconsidered, and the solution log is updated with less moves for later reference.</p>
+</li>
+<li>
+<p>If a candidate dose not decrease the zone count, it is dismissed. FYI, zones are scattered area according to color connectivity. This kind of candidate is a move with an aiming color not found in its neighborhoods. It is not an effective move. <br>
+Will the lattice reached from such move be met again after a sequence of effective moves which downsize zone counts? Indeed.<br>
+For example, when faced with the lattice shown in the following picture, these two turn sequences reached the same status.</p>
+</li>
 </ol>
-
+<ol>
+<li>Change left black 2’s to red 1’s, zone count decreases by 2. Then change it back to black 2’s, zone count remains the same.</li>
+<li>Change upper-left red 1’s to black 2’s, zone count decreases by 1. Then change lower-left red 1’s to black 2’s, zone count decreases by 1.<br>
+Since one step in solution 1) can achieve the goal, why bother two steps in solution 2)?<br>
+It seems we should just add the lattice in the blacklist, and should not give a second consideration, unlike the situations in tune tech #2.<br>
+Does this rule have exceptions? What if the latter solution has less moves? I am not sure, but I believe not. Anyway I include a similar reconsideration mechanism just in case. It can be removed for performance improvement.<br>
+<img src="/img/2014/kami_tune_tech_demo.jpg" alt="tune tech demo" title="tune tech demo"></li>
+</ol>
+<ol start="4">
+<li>Candidate moves are checked in some preferential order:</li>
+</ol>
+<ol>
+<li>Less zone count. A better move should decrease more zones.</li>
+<li>Larger zone combined. A better move should make the combined zone with more cells.<br>
+Usually these preferences are cool, one try hits the right solution.<br>
+But, for some levels, the right solution comes out from latter candidates, not with the least zone count, nor with the largest zone combined.<br>
+I guess that is why it is so fascinating.<br>
+You can add your preferences strategy and do some tests to check whether it works. Actually, Number of single zones has been added. Single zone is a zone whose color only shows in this zone. Its increase means a color with scattered zones has joined. Unfortunately, it turns out not that helpful.</li>
+</ol>
 <p>PS: If you want to design a puzzle level, BFSolve function (Breadth First Search) in the solver would be helpful to get the maximum moves.</p>
     </div>
 
