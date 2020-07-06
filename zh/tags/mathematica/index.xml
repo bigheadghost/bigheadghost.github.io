@@ -13,10 +13,10 @@
     
     <item>
       <title>逻辑推理题爆破</title>
-      <link>https://bigheadghost.github.io/zh/post/bruteforce_reasoning/</link>
+      <link>https://bigheadghost.github.io/zh/post/bruteforce-reasoning/</link>
       <pubDate>Tue, 21 May 2019 22:30:05 +0800</pubDate>
       
-      <guid>https://bigheadghost.github.io/zh/post/bruteforce_reasoning/</guid>
+      <guid>https://bigheadghost.github.io/zh/post/bruteforce-reasoning/</guid>
       <description>&lt;p&gt;阮一峰之前有篇文章&lt;a href=&#34;http://www.ruanyifeng.com/blog/2019/01/prolog.html&#34;&gt;《Prolog 语言入门教程》&lt;/a&gt;，介绍说Prolog（全称Programming in Logic）是一种专门解决逻辑问题的语言。&lt;br&gt;
 其实解决逻辑推理问题也不用特意去学一门新语言，去自己工具箱里找个趁手的兵器也行。&lt;br&gt;
 本文采用Mathematica解题，可与上文对照阅读，文末还求解了一道更复杂的题目。&lt;br&gt;

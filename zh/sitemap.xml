@@ -2,21 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://bigheadghost.github.io/zh/tags/novel/</loc>
-    <lastmod>2020-05-02T13:29:02+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigheadghost.github.io/zh/post/</loc>
-    <lastmod>2020-05-02T13:29:02+08:00</lastmod>
+    <lastmod>2020-07-06T15:03:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigheadghost.github.io/zh/tags/</loc>
+    <lastmod>2020-07-06T15:03:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/post/shanghai-social-insurance-and-gjj-adjustment-date-unified/</loc>
+    <lastmod>2020-07-06T15:03:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/</loc>
+    <lastmod>2020-07-06T15:03:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/tags/%E9%AD%94%E9%83%BD%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2020-07-06T15:03:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/tags/novel/</loc>
     <lastmod>2020-05-02T13:29:02+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -30,14 +51,7 @@
   </url>
   
   <url>
-    <loc>https://bigheadghost.github.io/zh/</loc>
-    <lastmod>2020-05-02T13:29:02+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigheadghost.github.io/zh/post/wisteria_garden/</loc>
+    <loc>https://bigheadghost.github.io/zh/post/wisteria-garden/</loc>
     <lastmod>2020-05-02T13:29:02+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -51,14 +65,14 @@
   </url>
   
   <url>
-    <loc>https://bigheadghost.github.io/zh/post/best_kungfu_costars_reference_for_face_blindness/</loc>
+    <loc>https://bigheadghost.github.io/zh/post/best-kungfu-costars-reference-for-face-blindness/</loc>
     <lastmod>2020-03-11T15:56:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://bigheadghost.github.io/zh/post/arrange_sequence_using_auxiliary_slots/</loc>
+    <loc>https://bigheadghost.github.io/zh/post/arrange-sequence-using-auxiliary-slots/</loc>
     <lastmod>2020-03-05T12:28:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -86,7 +100,7 @@
   </url>
   
   <url>
-    <loc>https://bigheadghost.github.io/zh/post/chinese_strokes/</loc>
+    <loc>https://bigheadghost.github.io/zh/post/chinese-strokes/</loc>
     <lastmod>2019-09-16T15:46:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -107,21 +121,21 @@
   </url>
   
   <url>
-    <loc>https://bigheadghost.github.io/zh/post/polya_conjecture/</loc>
+    <loc>https://bigheadghost.github.io/zh/post/polya-conjecture/</loc>
     <lastmod>2019-06-14T13:08:43+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://bigheadghost.github.io/zh/post/equal_sum_product_problem/</loc>
+    <loc>https://bigheadghost.github.io/zh/post/equal-sum-product-problem/</loc>
     <lastmod>2019-06-10T15:52:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://bigheadghost.github.io/zh/post/triangles_of_absolute_differences/</loc>
+    <loc>https://bigheadghost.github.io/zh/post/triangles-of-absolute-differences/</loc>
     <lastmod>2019-05-25T12:09:27+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -135,21 +149,14 @@
   </url>
   
   <url>
-    <loc>https://bigheadghost.github.io/zh/post/bruteforce_reasoning/</loc>
+    <loc>https://bigheadghost.github.io/zh/post/bruteforce-reasoning/</loc>
     <lastmod>2019-05-21T22:30:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://bigheadghost.github.io/zh/post/scmc_flow/</loc>
-    <lastmod>2019-09-16T22:15:09+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigheadghost.github.io/zh/tags/%E9%AD%94%E9%83%BD%E6%8C%87%E5%8D%97/</loc>
+    <loc>https://bigheadghost.github.io/zh/post/scmc-flow/</loc>
     <lastmod>2019-09-16T22:15:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

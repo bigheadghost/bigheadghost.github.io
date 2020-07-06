@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>正差三角形 - 日种</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigheadghost" /><meta name="description" content="1.问题 1 ~ n(n&#43;1)/2的整数，排列成类似帕萨卡三角形的等边三角形数阵（从上到下，每行依次有1、2、&amp;hellip;、n个数字）, 其中每个不在最后一行的数都恰好等于排在它下面的两个数的差的绝对值。满足这样排列的三角形称为正差三角形（Triangles of Absolute Diﬀerences，TAD）。
+行数n称作TAD的阶。
+有时候，为方便分析，TAD也可以摆成从上到下的每行依次有n、n-1、&amp;hellip;、1个数字。为加以区分，尖头朝上的三角形我们称之为正差上三角形（Up-Pointing TAD，UPTAD），尖头朝下的我们称之为正差下三角形（Down-Pointing TAD，DPTAD）。
+" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
+
+
+<link rel="canonical" href="https://bigheadghost.github.io/zh/post/triangles-of-absolute-differences/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="正差三角形" />
+<meta property="og:description" content="1.问题
+1 ~ n(n&#43;1)/2的整数，排列成类似帕萨卡三角形的等边三角形数阵（从上到下，每行依次有1、2、&hellip;、n个数字）, 其中每个不在最后一行的数都恰好等于排在它下面的两个数的差的绝对值。满足这样排列的三角形称为正差三角形（Triangles of Absolute Diﬀerences，TAD）。
+行数n称作TAD的阶。
+有时候，为方便分析，TAD也可以摆成从上到下的每行依次有n、n-1、&hellip;、1个数字。为加以区分，尖头朝上的三角形我们称之为正差上三角形（Up-Pointing TAD，UPTAD），尖头朝下的我们称之为正差下三角形（Down-Pointing TAD，DPTAD）。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigheadghost.github.io/zh/post/triangles-of-absolute-differences/" />
+<meta property="article:published_time" content="2019-05-25T12:09:27+08:00" />
+<meta property="article:modified_time" content="2019-05-25T12:09:27+08:00" /><meta property="og:site_name" content="日种" />
+<meta itemprop="name" content="正差三角形">
+<meta itemprop="description" content="1.问题
+1 ~ n(n&#43;1)/2的整数，排列成类似帕萨卡三角形的等边三角形数阵（从上到下，每行依次有1、2、&hellip;、n个数字）, 其中每个不在最后一行的数都恰好等于排在它下面的两个数的差的绝对值。满足这样排列的三角形称为正差三角形（Triangles of Absolute Diﬀerences，TAD）。
+行数n称作TAD的阶。
+有时候，为方便分析，TAD也可以摆成从上到下的每行依次有n、n-1、&hellip;、1个数字。为加以区分，尖头朝上的三角形我们称之为正差上三角形（Up-Pointing TAD，UPTAD），尖头朝下的我们称之为正差下三角形（Down-Pointing TAD，DPTAD）。">
+<meta itemprop="datePublished" content="2019-05-25T12:09:27&#43;08:00" />
+<meta itemprop="dateModified" content="2019-05-25T12:09:27&#43;08:00" />
+<meta itemprop="wordCount" content="2706">
+
+
+
+<meta itemprop="keywords" content="puzzle," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="正差三角形"/>
+<meta name="twitter:description" content="1.问题
+1 ~ n(n&#43;1)/2的整数，排列成类似帕萨卡三角形的等边三角形数阵（从上到下，每行依次有1、2、&hellip;、n个数字）, 其中每个不在最后一行的数都恰好等于排在它下面的两个数的差的绝对值。满足这样排列的三角形称为正差三角形（Triangles of Absolute Diﬀerences，TAD）。
+行数n称作TAD的阶。
+有时候，为方便分析，TAD也可以摆成从上到下的每行依次有n、n-1、&hellip;、1个数字。为加以区分，尖头朝上的三角形我们称之为正差上三角形（Up-Pointing TAD，UPTAD），尖头朝下的我们称之为正差下三角形（Down-Pointing TAD，DPTAD）。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/zh/" class="logo">日种</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/zh">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/zh/post">
+        <li class="mobile-menu-item">存档</li>
+      </a><a href="/zh/tags">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a><a href="/">
+        <li class="mobile-menu-item">英文版(English Version)</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/zh/" class="logo">日种</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/zh">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/zh/post">存档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/zh/tags">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/">英文版(English Version)</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">正差三角形</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-05-25 12:09:27 CST </span>
+        
+          <span class="more-meta"> 约 2706 字 </span>
+          <span class="more-meta"> 预计阅读 6 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1问题">1.问题</a></li>
+    <li><a href="#2历史">2.历史</a></li>
+    <li><a href="#3答案">3.答案</a></li>
+    <li><a href="#4brutefroce求解">4.BruteFroce求解</a>
+      <ul>
+        <li><a href="#41-用差优化">4.1 用差优化</a></li>
+        <li><a href="#42-用模式优化">4.2 用模式优化</a></li>
+      </ul>
+    </li>
+    <li><a href="#5数学证明">5.数学证明</a></li>
+    <li><a href="#参考文献">参考文献</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="1问题">1.问题</h1>
+<p><code>1 ~ n(n+1)/2</code>的整数，排列成类似帕萨卡三角形的等边三角形数阵（从上到下，每行依次有1、2、&hellip;、n个数字）, 其中每个不在最后一行的数都恰好等于排在它下面的两个数的差的绝对值。满足这样排列的三角形称为<strong>正差三角形</strong>（Triangles of Absolute Diﬀerences，<strong>TAD</strong>）。<br>
+行数n称作TAD的阶。<br>
+有时候，为方便分析，TAD也可以摆成从上到下的每行依次有n、n-1、&hellip;、1个数字。为加以区分，尖头朝上的三角形我们称之为正差上三角形（Up-Pointing TAD，UPTAD），尖头朝下的我们称之为正差下三角形（Down-Pointing TAD，DPTAD）。</p>
+<h1 id="2历史">2.历史</h1>
+<ul>
+<li>1976年，趣味数学家<a href="https://userpages.monmouth.com/~colonel/">Colonel George Sicherman</a>在观看台球比赛时想到一个问题：比赛开始前先要把数字1-15的台球摆成三角形，那么这15个数字是否可以摆成一个“差值三角形”（difference triangle）呢？即每个数字都是它上面一对数字的正差（positive difference）。Sicherman先是手算出了答案，然后编写Fortran程序分析了任意行数n的情况，不过当时计算机性能有限，很难分析n较大时的情况。研究n=21时，他找到了一个有关奇偶性的简单证明。</li>
+<li>1977年4月，Sicherman的朋友Martin Gardner把这个问题写进其在《科学美国人》杂志上的《数学游戏》专栏里<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>（后来题集成书<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>时也被收录了进去）。Charles Trigg<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>详细研究了5阶TAD，并推测: 不存在n&gt;5的TAD。</li>
+<li>1977年，Herbert Taylor证明：不存在9阶及以上的TAD，但他并未发表该证明。</li>
+<li>1977年6月，台湾中央研究院Chang, Hu, Lih 和 Shieh四人<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>给出证明：<strong>不存在6阶及以上的TAD</strong>。</li>
+<li>2008年，Ian Stewart在书<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>中收录了该题目，名为纸牌三角（Triangle of Cards），用的5阶UPTAD。</li>
+<li>2010年，第9届 Gathering for Gardner 大会上，Andy Liu等人（有两个作者当时还是初中生和高中生）发表文章<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>，Herbert Taylor的证明重见天日。</li>
+<li>2015年，纽约时报官博上有一期智力游戏用了这个题目<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>，Sicherman还留言评论提供了很多信息。</li>
+<li>2018年，第59届国际奥林匹克数学竞赛（IMO）<a href="http://www.omaths.com/2018/07/11/2018imo/">第3题</a>与之有关，称其为反帕斯卡三角形（anti-Pascal triangle）。</li>
+</ul>
+<h1 id="3答案">3.答案</h1>
+<p>解是左右镜像：找到一个解，沿三角形中心线左右翻转一下，仍然是解。<br>
+下图列出了所有的DPTAD（不包括镜像的）：<br>
+<img src="/img/2019/tadAll.jpg" alt="tadAll"></p>
+<h1 id="4brutefroce求解">4.BruteFroce求解</h1>
+<p>UPTAD有两个约束条件：<br>
+①总行数为n的差三角，使用<code>1 ~ n(n+1)/2</code>的数字，每个数字仅用1次；<br>
+②每行的差分等于前一行。</p>
+<p>简单粗暴，直接上所有数字的全排列，自动满足约束条件①；<br>
+对每一种可能的排列，DynamicPartition函数将其分割成n行，构造出三角形的形状，DifferenceTriangleQ函数计算每行的差分，判断是否等于前一行，以满足约束条件②。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">DynamicPartition[l_, p_] := MapThread[l[[# ;; #2]] &amp;, {{0}~Join~Most@# + 1, #} &amp;@Accumulate@p];
+
+DifferenceTriangleQ[l_] := Rest[Abs[Differences /@ l]] == Most@l;
+
+DifferenceTriangle[n_] := Module[{max = n (n + 1)/2, allTries},
+ Select[DynamicPartition[#, Range@n] &amp; /@ Permutations[Range@max, {max}], DifferenceTriangleQ]];
+  
+DifferenceTriangle[2] (*4个解*)
+{{{1}, {2, 3}}, {{1}, {3, 2}}, {{2}, {1, 3}}, {{2}, {3, 1}}}
+
+DifferenceTriangle[3] (*8个解*)
+{{{1}, {3, 4}, {5, 2, 6}}, {{1}, {4, 3}, {6, 2, 5}}, {{2}, {3, 5}, {4, 1, 6}}, {{2}, {5, 3}, {6, 1, 4}}, {{3}, {1, 4}, {5, 6, 2}}, {{3}, {2, 5}, {4, 6, 1}}, {{3}, {4, 1}, {2, 6, 5}}, {{3}, {5, 2}, {1, 6, 4}}}
+
+DifferenceTriangle@4 // AbsoluteTiming (*8个解*)
+{73.7682, {{{3}, {2, 5}, {7, 9, 4}, {8, 1, 10, 6}}, {{3}, {4, 7}, {5, 9, 2}, {6, 1, 10, 8}}, {{3}, {5, 2}, {4, 9, 7}, {6, 10, 1, 8}}, {{3}, {7, 4}, {2, 9, 5}, {8, 10, 1, 6}}, {{4}, {1, 5}, {6, 7, 2}, {9, 3, 10, 8}}, {{4}, {2, 6}, {5, 7, 1}, {8, 3, 10, 9}}, {{4}, {5, 1}, {2, 7, 6}, {8, 10, 3, 9}}, {{4}, {6, 2}, {1, 7, 5}, {9, 10, 3, 8}}}}
+</code></pre></td></tr></table>
+</div>
+</div><p>全排列要对<code>(n(n+1)/2)!</code>种可能进行测试，当n=4时，就将近400万了，给出8个解，耗时1分钟。</p>
+<h2 id="41-用差优化">4.1 用差优化</h2>
+<p>UPTAD中的数字并非随机排列，每一行都等于下面一行的差分。所以最后一行定了，上面各行也就定了。<br>
+所以，这里我们换个视角，用台球问题的DPTAD形式。<br>
+仅需对<code>n(n+1)/2</code>个数字中取n个进行排列，对于n=4，测试数量一下子就降到5040个了。<br>
+此时构造出的三角形满足了约束条件②，仍需要对约束条件①进行判断。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">DifferenceTriangle[n_] := Module[{max = n*(n + 1)/2},
+   Select[Permutations[Range@max, {n}], DuplicateFreeQ@Flatten@NestList[Composition[Abs, Differences], #, n - 1] &amp;]];
+
+DifferenceTriangle@5 // AbsoluteTiming (*2个解*)
+{4.16812, {{6, 14, 15, 3, 13}, {13, 3, 15, 14, 6}}}
+
+PrintTAD[t_] := Column[Grid[{#}] &amp; /@ t, Center];
+PrintTAD@NestList[Composition[Abs, Differences], {6, 14, 15, 3, 13}, 4]
+6     14     15     3     13
+   8      1     12     10
+      7     11     2
+         4      9
+            5
+</code></pre></td></tr></table>
+</div>
+</div><p>n=6时，测试数量仍然需要近400万。</p>
+<h2 id="42-用模式优化">4.2 用模式优化</h2>
+<p>即便是第一行，也不是随便取的，有一些规律可循，比如：<br>
+①最大数肯定在第1行<br>
+②通过第1行每个数字的奇偶性，可以计算整个三角形上所有数字的奇偶性，而这些必然奇偶各半。<br>
+先计算奇偶性的模式，测试对象是在{False, True}里选n个的排列，数量仅2^n。<br>
+n=6时，数量从近400万一下子降到64个，结果发现没有pattern满足，直接就返回空集，不用再继续求解。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Patterns[n_] := DeleteDuplicates[Select[Tuples[{False, True}, n], Count[Flatten@NestList[Xor @@@ Partition[#, 2, 1] &amp;, #, n - 1], False] == Floor[n (n + 1)/4] &amp;], #1 == Reverse@#2 &amp;];
+
+AllTries[n_] := Module[{p = Patterns@n, max = n*(n + 1)/2}, 
+   If[p == {}, {}, Select[Permutations[Range@max, {n}], (MemberQ[#, max] &amp;&amp; MemberQ[p, OddQ@#]) &amp;]]];
+
+DifferenceTriangle[n_] := DeleteDuplicates[Select[AllTries@n, DuplicateFreeQ@Flatten@NestList[Composition[Abs, Differences], #, n - 1] &amp;], #1 == Reverse@#2 &amp;];
+
+DifferenceTriangle@5 // AbsoluteTiming
+{1.30141, {{6, 14, 15, 3, 13}}}
+</code></pre></td></tr></table>
+</div>
+</div><p>n=7时，仍然需要测试P(28,7)，近60亿个。</p>
+<h1 id="5数学证明">5.数学证明</h1>
+<p>考虑3阶以上的DPTAD，从最下面那个数字开始往上找，其肩膀上两个数字，较大的那个用粗线连接，较小的那个（叫做脚，为方便起见，第一行的数字也叫做脚）用细线连接。一直到第一行，最大的那个叫做头，所有粗线连接起来叫做脊柱（spine），如下图所示。<br>
+<img src="/img/2019/tad5demo.jpg" alt="tad5demo"><br>
+不难证明：头=<code>n(n+1)/2</code>, n只脚是<code>1~n</code>，所有脚加起来等于头，每只脚是其所在行最小的数字。<br>
+现在，从第一行的头脚左右两侧 画 三角形两条侧边的平行线，将TAD分成包含脊柱的主三角和左右两侧的副三角，当第一行的头脚两侧尚有空间时会有两个副三角，当头脚偏向一边时则只有一个副三角。<br>
+无论哪种情况，副三角（们）共包含<code>n-2</code>只脚。它们的头之和<code>Q ≥ (n+1)+(n+2)+...+(2n-2)=(n-2)(3n-2)/2</code> <br>
+由于TAD最大的数<code>n(n+1)/2</code>已经被主三角的头用掉了，所以:<br>
+①有1个副三角时，<code>Q ≤ n(n+1)/2-1</code>，与上式联立得<code>n≤3</code><br>
+②有2个副三角时，<code>Q ≤ (n(n+1)/2-1) + (n(n+1)/2-2)</code>，与上式联立得<code>n≤8</code></p>
+<p>数学最可爱的地方就是：当计算机吭哧吭哧算不出来的时候，数学幽幽地来一句：<strong>不用算了，哥给你个上限</strong>。</p>
+<h1 id="参考文献">参考文献</h1>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Martin Gardner, Mathematical games, Scientific American 236(1977), No.4, 129-136. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Martin Gardner, Penrose Tiles to Trapdoor Ciphers, 2nd edition, Mathematical Association of America, Washington, (1997) 119–120 and 128–129. 另见  The Colossal Book of Short Puzzles and Problems, W. W. Norton &amp; Co., New York, (2006) 16–17 and 36–38. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>Charles Trigg. Absolute Difference Triangles, Journal of Recreational Mathematics(vol. 9, 1976-1977, pages 271-275) <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>G. J. Chang, M. C. Hu, K. W. Lih and T. C. Shieh, Exact Difference Triangles<a href="https://w3.math.sinica.edu.tw/bulletin/bulletin_old/d51/5120.pdf">(pdf)</a>, Bulletin of the Institute of Mathematics, Academia Sinica, Taipei, Taiwan (vol. 5, June 1977, pages 191- 197) <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p>Ian Stewart, Professor Stewart’s Cabinet of Mathematical Curiosities, 中译版《数学万花筒》 <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p>Brian Chen, YunHao Fu, Andy Liu, George Sicherman, Herbert Taylor, Po-Sheng Wu. Triangles of Absolute Diﬀerences <a href="http://services.artofproblemsolving.com/download.php?id=YXR0YWNobWVudHMvMi81Lzk3MzFkYjRiOWFkZDI5NjhiZDdmYmU0NGI0MWNmOTQ1OGVhZGI1LnBkZg==&amp;rn=dG9hZHMucGRm">(pdf)</a> <a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7" role="doc-endnote">
+<p><a href="https://wordplay.blogs.nytimes.com/2015/01/26/sicherman/">George Sicherman’s Pool Puzzles</a>, NYTimes Blog, 2015-01-26. <a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigheadghost</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-05-25 12:09:27 CST
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/reward/wechat.jpg">
+        <span>微信打赏</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/reward/alipay.jpg">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/zh/tags/puzzle/">puzzle</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/zh/post/equal-sum-product-problem/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">等和积数</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/zh/post/bruteforce-reasoning/">
+            <span class="next-text nav-default">逻辑推理题爆破</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2019-05-25 12:09:27 \x2b0800 CST',
+        title: '正差三角形',
+        clientID: '8df39bfde8ffe9150142',
+        clientSecret: 'cc215a1e82ed12f21d6c0eb1ad05e8b5eac1878b',
+        repo: 'bigheadghost.github.io',
+        owner: 'bigheadghost',
+        admin: ['bigheadghost'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:bigheadghost@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://math.stackexchange.com/users/157947/bigheadghost" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/bigheadghost" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/1254984/" class="iconfont icon-douban" title="douban"></a>
+  <a href="https://bigheadghost.github.io/zh/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">bigheadghost</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
