@@ -6,10 +6,20 @@
     <description>Recent content on 日种</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 Jul 2020 15:03:29 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2020 14:01:31 +0800</lastBuildDate>
     
 	<atom:link href="https://bigheadghost.github.io/zh/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2020高考理科数学全国1卷的计算机求解</title>
+      <link>https://bigheadghost.github.io/zh/post/gaokao-2020-math-science-set-1-solved-by-mathematica/</link>
+      <pubDate>Sat, 11 Jul 2020 14:01:31 +0800</pubDate>
+      
+      <guid>https://bigheadghost.github.io/zh/post/gaokao-2020-math-science-set-1-solved-by-mathematica/</guid>
+      <description>&lt;p&gt;2020年高考已经结束，本文尝试基于有限的先验知识（读懂题目），用Mathematica软件计算求解题目。&lt;/p&gt;
+&lt;center&gt;&lt;strong&gt; 2020年普通高等学校招生全国统一考试 (I卷)&lt;br /&gt;理科数学&lt;/strong&gt;&lt;/center&gt;</description>
+    </item>
     
     <item>
       <title>上海市社保公积金调整日统一大业</title>
