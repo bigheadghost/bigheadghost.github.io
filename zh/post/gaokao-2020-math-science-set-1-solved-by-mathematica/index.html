@@ -53,7 +53,7 @@
  2020年普通高等学校招生全国统一考试 (I卷)理科数学">
 <meta itemprop="datePublished" content="2020-07-11T14:01:31&#43;08:00" />
 <meta itemprop="dateModified" content="2020-07-11T14:01:31&#43;08:00" />
-<meta itemprop="wordCount" content="2745">
+<meta itemprop="wordCount" content="2743">
 
 
 
@@ -132,7 +132,7 @@
       <div class="post-meta">
         <span class="post-time"> 2020-07-11 14:01:31 CST </span>
         
-          <span class="more-meta"> 约 2745 字 </span>
+          <span class="more-meta"> 约 2743 字 </span>
           <span class="more-meta"> 预计阅读 6 分钟 </span>
         
       </div>
@@ -345,8 +345,8 @@ Reduce[D[f[x], x] &gt; 0, x]
 </div>
 </div><p>x&gt;0 增，x&lt;0 减<br>
 (2)当 $x\ge 0$时，$f(x)\ge \frac12 x^3+1$,求a的取值范围<br>
-<code>MaxValue[(-Exp[x] + x + x^3/2 + 1)/x^2, x]</code><br>
-$a\ge \frac18 (14-2 e^2)$<br>
+<code>Simplify@MaxValue[(-Exp[x] + x + x^3/2 + 1)/x^2, x]</code><br>
+$a\ge \frac{7-e^2}{4}$<br>
 22.在直角坐标系$xOy$中，曲线$C_1$的参数方程为$\left \{ \begin{array}{l}x=cos^kt \cr y=sin^kt\end{array}\right.$ ( $t$ 为参数), 以坐标原点为极点，$x$轴正半轴为极轴建立极坐标系，曲线$C_2$的极坐标方程为 $ 4 \rho cos\theta -16\rho sin\theta +3=0$<br>
 (1)当 $k=1$ 时，$C_1$是什么曲线？<code>单位圆</code><br>
 <code>Eliminate[{x == Cos[t], y == Sin[t]}, t]</code><br>
@@ -408,7 +408,11 @@ Plot[{f[x], f[x + 1]}, {x, -10, 10}, PlotLabels -&gt; Automatic, Epilog -&gt; Po
 </div><footer class="post-footer">
       
       <nav class="post-nav">
-        
+        <a class="prev" href="/zh/post/deep-trap-and-complain/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">套路深深深几许</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
         <a class="next" href="/zh/post/shanghai-social-insurance-and-gjj-adjustment-date-unified/">
             <span class="next-text nav-default">上海市社保公积金调整日统一大业</span>
             <span class="next-text nav-mobile">下一篇</span>

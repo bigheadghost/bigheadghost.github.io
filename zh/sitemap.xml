@@ -2,29 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://bigheadghost.github.io/zh/post/gaokao-2020-math-science-set-1-solved-by-mathematica/</loc>
-    <lastmod>2020-07-11T14:01:31+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigheadghost.github.io/zh/post/</loc>
-    <lastmod>2020-07-11T14:01:31+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigheadghost.github.io/zh/</loc>
-    <lastmod>2020-07-11T14:01:31+08:00</lastmod>
+    <lastmod>2020-08-07T09:41:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigheadghost.github.io/zh/tags/</loc>
-    <lastmod>2020-07-06T15:03:29+08:00</lastmod>
+    <lastmod>2020-08-07T09:41:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/tags/%E4%BA%BA%E9%97%B4%E6%8C%87%E5%8D%97%E5%A7%91%E5%A6%84%E5%90%AC%E4%B9%8B/</loc>
+    <lastmod>2020-08-07T09:41:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/post/deep-trap-and-complain/</loc>
+    <lastmod>2020-08-07T09:41:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/</loc>
+    <lastmod>2020-08-07T09:41:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/post/gaokao-2020-math-science-set-1-solved-by-mathematica/</loc>
+    <lastmod>2020-07-11T14:01:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -37,7 +51,7 @@
   </url>
   
   <url>
-    <loc>https://bigheadghost.github.io/zh/tags/%E9%AD%94%E9%83%BD%E6%8C%87%E5%8D%97/</loc>
+    <loc>https://bigheadghost.github.io/zh/tags/%E9%AD%94%E9%83%BD/</loc>
     <lastmod>2020-07-06T15:03:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
