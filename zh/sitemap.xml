@@ -3,14 +3,35 @@
   
   <url>
     <loc>https://bigheadghost.github.io/zh/post/</loc>
-    <lastmod>2020-08-07T09:41:18+08:00</lastmod>
+    <lastmod>2020-09-02T16:24:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigheadghost.github.io/zh/tags/</loc>
-    <lastmod>2020-08-07T09:41:18+08:00</lastmod>
+    <lastmod>2020-09-02T16:24:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/post/shanghai-2020-utility-costs-gift/</loc>
+    <lastmod>2020-09-02T16:24:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/</loc>
+    <lastmod>2020-09-02T16:24:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/tags/%E9%AD%94%E9%83%BD/</loc>
+    <lastmod>2020-09-02T16:24:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -30,13 +51,6 @@
   </url>
   
   <url>
-    <loc>https://bigheadghost.github.io/zh/</loc>
-    <lastmod>2020-08-07T09:41:18+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigheadghost.github.io/zh/post/gaokao-2020-math-science-set-1-solved-by-mathematica/</loc>
     <lastmod>2020-07-11T14:01:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -45,13 +59,6 @@
   
   <url>
     <loc>https://bigheadghost.github.io/zh/post/shanghai-social-insurance-and-gjj-adjustment-date-unified/</loc>
-    <lastmod>2020-07-06T15:03:29+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigheadghost.github.io/zh/tags/%E9%AD%94%E9%83%BD/</loc>
     <lastmod>2020-07-06T15:03:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
