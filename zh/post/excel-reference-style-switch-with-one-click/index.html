@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>一户多人口，一份850元的大礼包 - 日种</title>
+  <title>Excel A1/R1C1 引用样式一键切换 - 日种</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,12 +16,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigheadghost" /><meta name="description" content="2020年9月1日起，上海居民水、电、气阶梯价格执行“一户多人口” 政策（沪发改价管〔2020〕19号）。
-按照新政策，同住累计人数满5人及以上可申请增加用水、用电、用气的阶梯基数，累计人数满7人及以上可申请选择执行居民阶梯平均价格。
-用水、用电、用气可增加的阶梯基数分别为每户每年100立方米水量、每户每月100千瓦时电量、每户每年度150立方米气量。
-以前政策要求都是上海户籍，现在放宽到居住证，惠及面更广。
-现在很多二胎家庭，再加上爷爷奶奶或者外公外婆，同住人很容易超过5人。当然要是政策变为4/6人就更好啦。
-目前仅开放一网通办网站，点击此处办理，有随申办账户的可以直接app扫码登录。
+<meta name="author" content="bigheadghost" /><meta name="description" content="Excel单元格引用有两种方式：
+  A1：默认的引用类型，用字母标志列，数字标志行。A是第1列，AA是第27列。
+  R1C1：行列均用数字表示，R代表行（Row），C代表列（Column）。
+  有时候，特别是写公式时，会需要知道某一列是第几列，从字母到数字的转换通常不太容易。
 " />
 
 
@@ -32,7 +30,7 @@
 <meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
-<link rel="canonical" href="https://bigheadghost.github.io/zh/post/shanghai-2020-utility-costs-gift/" />
+<link rel="canonical" href="https://bigheadghost.github.io/zh/post/excel-reference-style-switch-with-one-click/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -45,38 +43,50 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="一户多人口，一份850元的大礼包" />
-<meta property="og:description" content="2020年9月1日起，上海居民水、电、气阶梯价格执行“一户多人口” 政策（沪发改价管〔2020〕19号）。
-按照新政策，同住累计人数满5人及以上可申请增加用水、用电、用气的阶梯基数，累计人数满7人及以上可申请选择执行居民阶梯平均价格。
-用水、用电、用气可增加的阶梯基数分别为每户每年100立方米水量、每户每月100千瓦时电量、每户每年度150立方米气量。
-以前政策要求都是上海户籍，现在放宽到居住证，惠及面更广。
-现在很多二胎家庭，再加上爷爷奶奶或者外公外婆，同住人很容易超过5人。当然要是政策变为4/6人就更好啦。
-目前仅开放一网通办网站，点击此处办理，有随申办账户的可以直接app扫码登录。" />
+<meta property="og:title" content="Excel A1/R1C1 引用样式一键切换" />
+<meta property="og:description" content="Excel单元格引用有两种方式：
+
+
+A1：默认的引用类型，用字母标志列，数字标志行。A是第1列，AA是第27列。
+
+
+R1C1：行列均用数字表示，R代表行（Row），C代表列（Column）。
+
+
+有时候，特别是写公式时，会需要知道某一列是第几列，从字母到数字的转换通常不太容易。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigheadghost.github.io/zh/post/shanghai-2020-utility-costs-gift/" />
-<meta property="article:published_time" content="2020-09-02T16:24:20+08:00" />
-<meta property="article:modified_time" content="2020-09-02T16:24:20+08:00" /><meta property="og:site_name" content="日种" />
-<meta itemprop="name" content="一户多人口，一份850元的大礼包">
-<meta itemprop="description" content="2020年9月1日起，上海居民水、电、气阶梯价格执行“一户多人口” 政策（沪发改价管〔2020〕19号）。
-按照新政策，同住累计人数满5人及以上可申请增加用水、用电、用气的阶梯基数，累计人数满7人及以上可申请选择执行居民阶梯平均价格。
-用水、用电、用气可增加的阶梯基数分别为每户每年100立方米水量、每户每月100千瓦时电量、每户每年度150立方米气量。
-以前政策要求都是上海户籍，现在放宽到居住证，惠及面更广。
-现在很多二胎家庭，再加上爷爷奶奶或者外公外婆，同住人很容易超过5人。当然要是政策变为4/6人就更好啦。
-目前仅开放一网通办网站，点击此处办理，有随申办账户的可以直接app扫码登录。">
-<meta itemprop="datePublished" content="2020-09-02T16:24:20&#43;08:00" />
-<meta itemprop="dateModified" content="2020-09-02T16:24:20&#43;08:00" />
-<meta itemprop="wordCount" content="634">
+<meta property="og:url" content="https://bigheadghost.github.io/zh/post/excel-reference-style-switch-with-one-click/" />
+<meta property="article:published_time" content="2020-09-09T11:23:38+08:00" />
+<meta property="article:modified_time" content="2020-09-09T11:23:38+08:00" /><meta property="og:site_name" content="日种" />
+<meta itemprop="name" content="Excel A1/R1C1 引用样式一键切换">
+<meta itemprop="description" content="Excel单元格引用有两种方式：
+
+
+A1：默认的引用类型，用字母标志列，数字标志行。A是第1列，AA是第27列。
+
+
+R1C1：行列均用数字表示，R代表行（Row），C代表列（Column）。
+
+
+有时候，特别是写公式时，会需要知道某一列是第几列，从字母到数字的转换通常不太容易。">
+<meta itemprop="datePublished" content="2020-09-09T11:23:38&#43;08:00" />
+<meta itemprop="dateModified" content="2020-09-09T11:23:38&#43;08:00" />
+<meta itemprop="wordCount" content="365">
 
 
 
-<meta itemprop="keywords" content="魔都," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="一户多人口，一份850元的大礼包"/>
-<meta name="twitter:description" content="2020年9月1日起，上海居民水、电、气阶梯价格执行“一户多人口” 政策（沪发改价管〔2020〕19号）。
-按照新政策，同住累计人数满5人及以上可申请增加用水、用电、用气的阶梯基数，累计人数满7人及以上可申请选择执行居民阶梯平均价格。
-用水、用电、用气可增加的阶梯基数分别为每户每年100立方米水量、每户每月100千瓦时电量、每户每年度150立方米气量。
-以前政策要求都是上海户籍，现在放宽到居住证，惠及面更广。
-现在很多二胎家庭，再加上爷爷奶奶或者外公外婆，同住人很容易超过5人。当然要是政策变为4/6人就更好啦。
-目前仅开放一网通办网站，点击此处办理，有随申办账户的可以直接app扫码登录。"/>
+<meta itemprop="keywords" content="software," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Excel A1/R1C1 引用样式一键切换"/>
+<meta name="twitter:description" content="Excel单元格引用有两种方式：
+
+
+A1：默认的引用类型，用字母标志列，数字标志行。A是第1列，AA是第27列。
+
+
+R1C1：行列均用数字表示，R代表行（Row），C代表列（Column）。
+
+
+有时候，特别是写公式时，会需要知道某一列是第几列，从字母到数字的转换通常不太容易。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -143,40 +153,59 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">一户多人口，一份850元的大礼包</h1>
+      <h1 class="post-title">Excel A1/R1C1 引用样式一键切换</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2020-09-02 16:24:20 CST </span>
+        <span class="post-time"> 2020-09-09 11:23:38 CST </span>
         
-          <span class="more-meta"> 约 634 字 </span>
-          <span class="more-meta"> 预计阅读 2 分钟 </span>
+          <span class="more-meta"> 约 365 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
         
       </div>
     </header>
 
     
     <div class="post-content">
-      <p>2020年9月1日起，上海居民水、电、气阶梯价格执行“一户多人口” 政策（<a href="http://fgw.sh.gov.cn/jgl/20200803/a1949caabf4044c6bac5894040ec18f3.html">沪发改价管〔2020〕19号</a>）。</p>
-<p>按照新政策，同住累计人数满5人及以上可申请增加用水、用电、用气的阶梯基数，累计人数满7人及以上可申请选择执行居民阶梯平均价格。</p>
-<p>用水、用电、用气可增加的阶梯基数分别为每户每年100立方米水量、每户每月100千瓦时电量、每户每年度150立方米气量。</p>
-<p>以前政策要求都是上海户籍，现在放宽到居住证，惠及面更广。</p>
-<p>现在很多二胎家庭，再加上爷爷奶奶或者外公外婆，同住人很容易超过5人。当然要是政策变为4/6人就更好啦。</p>
-<p>目前仅开放一网通办网站，点击<a href="https://zwdt.sh.gov.cn/smzy/shell_pc/scene_wapper/wegnote?id=155870">此处办理</a>，有随申办账户的可以直接app扫码登录。</p>
-<p>9月1日开放办理后第一时间试了下，报错：</p>
-<blockquote>
-<p>户号校验正确，但您输入户号的用气地址和业务申请地址不相同。</p>
-</blockquote>
-<p>原因在于：系统根据身份证/户口本检测到的申请地址前面有：上海市xx区。而根据水电气户号检测出来的居住地址没有前缀。结果系统就判为不相同。直接Game Over。</p>
-<p>在上海发布公众号后台反馈了这个bug。今天再试就可以了，解决办法简单粗暴：</p>
-<blockquote>
-<p>户号校验正确成功，您输入户号的用气地址和业务申请地址不相同，如您确认实际地址一致，可在页面下方点击”下一步“继续申请</p>
-</blockquote>
-<p>校验权利交给你了。</p>
-<p>下面我们具体算一下，到底能省多少钱？按极端情况使用到最高档：</p>
-<p>用水节省：100×(5.83-3.45)=238</p>
-<p>用电节省：1200×(0.977-0.617)=432</p>
-<p>用气节省：150×(4.2-3)=180</p>
-<p>合计节省：850元。</p>
+      <p>Excel单元格引用有两种方式：</p>
+<ul>
+<li>
+<p>A1：默认的引用类型，用字母标志列，数字标志行。A是第1列，AA是第27列。</p>
+</li>
+<li>
+<p>R1C1：行列均用数字表示，R代表行（Row），C代表列（Column）。</p>
+</li>
+</ul>
+<p>有时候，特别是写公式时，会需要知道某一列是第几列，从字母到数字的转换通常不太容易。</p>
+<p>Excel有个选项，可以切换引用方式：Excel 选项→公式→使用公式→R1C1引用方式。</p>
+<p>但每次都要这么设置也比较麻烦，可以在工具栏上添加一个按钮，实现一键切换。</p>
+<p>效果图：</p>
+<p><img src="/img/2020/excel-r1c1.gif" alt="excel-r1c1"></p>
+<p>第一步，工具栏上，开发工具→Visual Basic，在Personal.xlsb里编写一个函数，比如命名为ToggleR1C1：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Sub ToggleR1C1()
+    With Application
+        If .ReferenceStyle = xlR1C1 Then
+            .ReferenceStyle = xlA1
+        Else
+            .ReferenceStyle = xlR1C1
+        End If
+    End With
+End Sub
+</code></pre></td></tr></table>
+</div>
+</div><p>第二步，Excel 选项→自定义功能区，从宏里，把上述函数添加到需要的位置上。可以自定义按钮的显示名称和图标。</p>
     </div>
 
     <div class="post-copyright">
@@ -187,7 +216,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2020-09-02 16:24:20 CST
+        2020-09-09 11:23:38 CST
         
     </span>
   </p>
@@ -213,16 +242,12 @@
   </div>
 </div><footer class="post-footer">
       <div class="post-tags">
-          <a href="/zh/tags/%E9%AD%94%E9%83%BD/">魔都</a>
+          <a href="/zh/tags/software/">software</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/zh/post/excel-reference-style-switch-with-one-click/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Excel A1/R1C1 引用样式一键切换</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        <a class="next" href="/zh/post/deep-trap-and-complain/">
-            <span class="next-text nav-default">套路深深深几许</span>
+        
+        <a class="next" href="/zh/post/shanghai-2020-utility-costs-gift/">
+            <span class="next-text nav-default">一户多人口，一份850元的大礼包</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -235,8 +260,8 @@
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
       var gitalk = new Gitalk({
-        id: '2020-09-02 16:24:20 \x2b0800 CST',
-        title: '一户多人口，一份850元的大礼包',
+        id: '2020-09-09 11:23:38 \x2b0800 CST',
+        title: 'Excel A1\/R1C1 引用样式一键切换',
         clientID: '8df39bfde8ffe9150142',
         clientSecret: 'cc215a1e82ed12f21d6c0eb1ad05e8b5eac1878b',
         repo: 'bigheadghost.github.io',

@@ -2,28 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bigheadghost.github.io/zh/post/excel-reference-style-switch-with-one-click/</loc>
+    <lastmod>2020-09-09T11:23:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://bigheadghost.github.io/zh/post/</loc>
-    <lastmod>2020-09-02T16:24:20+08:00</lastmod>
+    <lastmod>2020-09-09T11:23:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/tags/software/</loc>
+    <lastmod>2020-09-09T11:23:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigheadghost.github.io/zh/tags/</loc>
-    <lastmod>2020-09-02T16:24:20+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigheadghost.github.io/zh/post/shanghai-2020-utility-costs-gift/</loc>
-    <lastmod>2020-09-02T16:24:20+08:00</lastmod>
+    <lastmod>2020-09-09T11:23:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigheadghost.github.io/zh/</loc>
+    <lastmod>2020-09-09T11:23:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/post/shanghai-2020-utility-costs-gift/</loc>
     <lastmod>2020-09-02T16:24:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -38,14 +52,14 @@
   
   <url>
     <loc>https://bigheadghost.github.io/zh/tags/%E4%BA%BA%E9%97%B4%E6%8C%87%E5%8D%97%E5%A7%91%E5%A6%84%E5%90%AC%E4%B9%8B/</loc>
-    <lastmod>2020-08-07T09:41:18+08:00</lastmod>
+    <lastmod>2020-09-09T09:34:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://bigheadghost.github.io/zh/post/deep-trap-and-complain/</loc>
-    <lastmod>2020-08-07T09:41:18+08:00</lastmod>
+    <lastmod>2020-09-09T09:34:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
