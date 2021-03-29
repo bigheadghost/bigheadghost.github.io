@@ -6,18 +6,14 @@
     <description>Recent content in python on Know Nothing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 11 Jul 2014 20:40:02 +0800</lastBuildDate>
-    
-	<atom:link href="https://bigheadghost.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 02 Jul 2014 10:17:48 +0800</lastBuildDate><atom:link href="https://bigheadghost.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mummy Maze Solver</title>
       <link>https://bigheadghost.github.io/post/mummy-maze-solver/</link>
       <pubDate>Wed, 02 Jul 2014 10:17:48 +0800</pubDate>
       
       <guid>https://bigheadghost.github.io/post/mummy-maze-solver/</guid>
-      <description>&lt;p&gt;Mummy Maze is a game created by &lt;a href=&#34;http://www.popcap.com/&#34;&gt;PopCap&lt;/a&gt; in 2002. It is based on &lt;a href=&#34;http://www.logicmazes.com/&#34;&gt;Robert Abbott&lt;/a&gt;&amp;lsquo;s &lt;a href=&#34;http://www.logicmazes.com/theseus.html&#34;&gt;Theseus maze&lt;/a&gt;. There are 3 scales of lattices: 6*6, 8*8, 10*10. With white mummy functioning as Minotaur, Mummy Maze introduced many varieties: red mummy, scorpion, trap, gate and key. There is only one Minotaur in the original Theseus maze, while the explorer in Mummy Maze faces more enemies.&lt;/p&gt;
+      <description>&lt;p&gt;Mummy Maze is a game created by &lt;a href=&#34;http://www.popcap.com/&#34;&gt;PopCap&lt;/a&gt; in 2002. It is based on &lt;a href=&#34;http://www.logicmazes.com/&#34;&gt;Robert Abbott&lt;/a&gt;&amp;rsquo;s &lt;a href=&#34;http://www.logicmazes.com/theseus.html&#34;&gt;Theseus maze&lt;/a&gt;. There are 3 scales of lattices: 6*6, 8*8, 10*10. With white mummy functioning as Minotaur, Mummy Maze introduced many varieties: red mummy, scorpion, trap, gate and key. There is only one Minotaur in the original Theseus maze, while the explorer in Mummy Maze faces more enemies.&lt;/p&gt;
 &lt;p&gt;If solutions are all you want, please visit this &lt;a href=&#34;http://www.gamefaqs.com/pc/932088-mummy-maze-deluxe/faqs/42610&#34;&gt;Complete Walktrough&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The 14th puzzle in Pharaoh&amp;rsquo;s Tomb, has the solution with the most moves, 66 steps.&lt;br&gt;
 &lt;img src=&#34;https://bigheadghost.github.io/img/2014/mummy_maze_with_longest_solution.jpg&#34; alt=&#34;mummy maze demo&#34;&gt;&lt;/p&gt;</description>

@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.69.2 with theme even" />
+<meta name="generator" content="Hugo 0.82.0 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/zh/post/gaokao-2020-math-science-set-1-solved-by-mathematica/" />
@@ -37,7 +37,7 @@
 
 
 
-<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -45,18 +45,15 @@
 <meta property="og:description" content="2020年高考已经结束，本文尝试基于有限的先验知识（读懂题目），用Mathematica软件计算求解题目。
  2020年普通高等学校招生全国统一考试 (I卷)理科数学" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigheadghost.github.io/zh/post/gaokao-2020-math-science-set-1-solved-by-mathematica/" />
-<meta property="article:published_time" content="2020-07-11T14:01:31+08:00" />
-<meta property="article:modified_time" content="2020-07-11T14:01:31+08:00" /><meta property="og:site_name" content="日种" />
+<meta property="og:url" content="https://bigheadghost.github.io/zh/post/gaokao-2020-math-science-set-1-solved-by-mathematica/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-07-11T14:01:31&#43;08:00" />
+<meta property="article:modified_time" content="2020-07-11T14:01:31&#43;08:00" /><meta property="og:site_name" content="日种" />
+
 <meta itemprop="name" content="2020高考理科数学全国1卷的计算机求解">
 <meta itemprop="description" content="2020年高考已经结束，本文尝试基于有限的先验知识（读懂题目），用Mathematica软件计算求解题目。
- 2020年普通高等学校招生全国统一考试 (I卷)理科数学">
-<meta itemprop="datePublished" content="2020-07-11T14:01:31&#43;08:00" />
+ 2020年普通高等学校招生全国统一考试 (I卷)理科数学"><meta itemprop="datePublished" content="2020-07-11T14:01:31&#43;08:00" />
 <meta itemprop="dateModified" content="2020-07-11T14:01:31&#43;08:00" />
 <meta itemprop="wordCount" content="2743">
-
-
-
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="2020高考理科数学全国1卷的计算机求解"/>
 <meta name="twitter:description" content="2020年高考已经结束，本文尝试基于有限的先验知识（读懂题目），用Mathematica软件计算求解题目。
@@ -97,12 +94,21 @@
         <li class="mobile-menu-item">英文版(English Version)</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/zh/" class="logo">日种</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -119,6 +125,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -427,7 +434,7 @@ Plot[{f[x], f[x + 1]}, {x, -10, 10}, PlotLabels -&gt; Automatic, Epilog -&gt; Po
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
       var gitalk = new Gitalk({
-        id: '2020-07-11 14:01:31 \x2b0800 CST',
+        id: '2020-07-11 14:01:31 \u002b0800 CST',
         title: '2020高考理科数学全国1卷的计算机求解',
         clientID: '8df39bfde8ffe9150142',
         clientSecret: 'cc215a1e82ed12f21d6c0eb1ad05e8b5eac1878b',
@@ -471,13 +478,10 @@ Plot[{f[x], f[x + 1]}, {x, -10, 10}, PlotLabels -&gt; Automatic, Epilog -&gt; Po
   <span class="copyright-year">
     &copy; 
     2014 - 
-    2020
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">bigheadghost</span>
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigheadghost</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -491,15 +495,15 @@ Plot[{f[x], f[x + 1]}, {x, -10, 10}, PlotLabels -&gt; Automatic, Epilog -&gt; Po
 
 
 
-<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
   <script type="text/javascript">
     window.MathJax = {
-      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
-      showProcessingMessages: false,
-      messageStyle: 'none'
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
     };
   </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
 
 
 

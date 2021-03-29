@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>https://bigheadghost.github.io/</loc>
+    <lastmod>2020-03-05T13:20:16+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://bigheadghost.github.io/post/</loc>
     <lastmod>2020-03-05T13:20:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -72,13 +79,6 @@
   </url>
   
   <url>
-    <loc>https://bigheadghost.github.io/tags/python/</loc>
-    <lastmod>2014-07-11T20:40:02+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigheadghost.github.io/tags/pythonchallenge/</loc>
     <lastmod>2014-07-11T20:40:02+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -100,14 +100,14 @@
   </url>
   
   <url>
-    <loc>https://bigheadghost.github.io/</loc>
-    <lastmod>2014-07-03T08:55:44+08:00</lastmod>
+    <loc>https://bigheadghost.github.io/post/mummy-maze-solver/</loc>
+    <lastmod>2014-07-02T10:17:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://bigheadghost.github.io/post/mummy-maze-solver/</loc>
+    <loc>https://bigheadghost.github.io/tags/python/</loc>
     <lastmod>2014-07-02T10:17:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

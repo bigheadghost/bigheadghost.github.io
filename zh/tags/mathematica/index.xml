@@ -6,11 +6,7 @@
     <description>Recent content in mathematica on 日种</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 21 May 2019 22:30:05 +0800</lastBuildDate>
-    
-	<atom:link href="https://bigheadghost.github.io/zh/tags/mathematica/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 21 May 2019 22:30:05 +0800</lastBuildDate><atom:link href="https://bigheadghost.github.io/zh/tags/mathematica/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>逻辑推理题爆破</title>
       <link>https://bigheadghost.github.io/zh/post/bruteforce-reasoning/</link>

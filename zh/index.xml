@@ -6,11 +6,7 @@
     <description>Recent content on 日种</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 09 Sep 2020 11:23:38 +0800</lastBuildDate>
-    
-	<atom:link href="https://bigheadghost.github.io/zh/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 09 Sep 2020 11:23:38 +0800</lastBuildDate><atom:link href="https://bigheadghost.github.io/zh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Excel A1/R1C1 引用样式一键切换</title>
       <link>https://bigheadghost.github.io/zh/post/excel-reference-style-switch-with-one-click/</link>
