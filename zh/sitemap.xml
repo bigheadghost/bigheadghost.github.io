@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bigheadghost.github.io/zh/post/gaokao-2021-math-science-set-1-solved-by-mathematica/</loc>
+    <lastmod>2021-06-09T11:40:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/tags/mathematica/</loc>
+    <lastmod>2021-06-09T11:40:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/post/</loc>
+    <lastmod>2021-06-09T11:40:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/tags/</loc>
+    <lastmod>2021-06-09T11:40:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/</loc>
+    <lastmod>2021-06-09T11:40:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://bigheadghost.github.io/zh/post/excel-reference-style-switch-with-one-click/</loc>
     <lastmod>2020-09-09T11:23:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -9,29 +44,8 @@
   </url>
   
   <url>
-    <loc>https://bigheadghost.github.io/zh/post/</loc>
-    <lastmod>2021-03-29T12:01:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigheadghost.github.io/zh/tags/software/</loc>
     <lastmod>2020-09-09T11:23:38+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigheadghost.github.io/zh/tags/</loc>
-    <lastmod>2020-10-20T16:24:20+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigheadghost.github.io/zh/</loc>
-    <lastmod>2021-03-29T12:01:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -179,13 +193,6 @@
   <url>
     <loc>https://bigheadghost.github.io/zh/post/triangles-of-absolute-differences/</loc>
     <lastmod>2019-05-25T12:09:27+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigheadghost.github.io/zh/tags/mathematica/</loc>
-    <lastmod>2019-05-21T22:30:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

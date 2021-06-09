@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>2021高考理科数学全国1卷的计算机求解 - 日种</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="bigheadghost" /><meta name="description" content="2021年高考已经结束，本文尝试基于有限的先验知识（读懂题目），用Mathematica软件计算求解题目。
+ 2021年普通高等学校招生全国统一考试 (I卷)
+理科数学" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.82.0 with theme even" />
+
+
+<link rel="canonical" href="https://bigheadghost.github.io/zh/post/gaokao-2021-math-science-set-1-solved-by-mathematica/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="2021高考理科数学全国1卷的计算机求解" />
+<meta property="og:description" content="2021年高考已经结束，本文尝试基于有限的先验知识（读懂题目），用Mathematica软件计算求解题目。
+ 2021年普通高等学校招生全国统一考试 (I卷)理科数学" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bigheadghost.github.io/zh/post/gaokao-2021-math-science-set-1-solved-by-mathematica/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-06-09T11:40:39&#43;08:00" />
+<meta property="article:modified_time" content="2021-06-09T11:40:39&#43;08:00" /><meta property="og:site_name" content="日种" />
+
+<meta itemprop="name" content="2021高考理科数学全国1卷的计算机求解">
+<meta itemprop="description" content="2021年高考已经结束，本文尝试基于有限的先验知识（读懂题目），用Mathematica软件计算求解题目。
+ 2021年普通高等学校招生全国统一考试 (I卷)理科数学"><meta itemprop="datePublished" content="2021-06-09T11:40:39&#43;08:00" />
+<meta itemprop="dateModified" content="2021-06-09T11:40:39&#43;08:00" />
+<meta itemprop="wordCount" content="3039">
+<meta itemprop="keywords" content="mathematica," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="2021高考理科数学全国1卷的计算机求解"/>
+<meta name="twitter:description" content="2021年高考已经结束，本文尝试基于有限的先验知识（读懂题目），用Mathematica软件计算求解题目。
+ 2021年普通高等学校招生全国统一考试 (I卷)理科数学"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/zh/" class="logo">日种</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/zh">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/zh/post">
+        <li class="mobile-menu-item">存档</li>
+      </a><a href="/zh/tags">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a><a href="/">
+        <li class="mobile-menu-item">英文版(English Version)</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/zh/" class="logo">日种</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/zh">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/zh/post">存档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/zh/tags">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/">英文版(English Version)</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">2021高考理科数学全国1卷的计算机求解</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-06-09 11:40:39 CST </span>
+        
+          <span class="more-meta"> 约 3039 字 </span>
+          <span class="more-meta"> 预计阅读 7 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一选择题">一、选择题</a></li>
+    <li><a href="#二填空题">二、填空题</a></li>
+    <li><a href="#三解答题">三、解答题</a>
+      <ul>
+        <li><a href="#一必考题">（一）必考题</a></li>
+        <li><a href="#二选考题">（二）选考题</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>2021年高考已经结束，本文尝试基于有限的先验知识（读懂题目），用Mathematica软件计算求解题目。</p>
+<center><strong> 2021年普通高等学校招生全国统一考试 (I卷)<br />理科数学</strong></center>
+<h1 id="一选择题">一、选择题</h1>
+<p><strong>本题共12小题，每小题5分，共60分。</strong></p>
+<ol>
+<li>
+<p>设 $ 2(z+\bar{z})+3(z-\bar{z})=4+6i $  , 则$z=1+i$</p>
+<p><code>Solve[2 (z + Conjugate@z) + 3 (z - Conjugate@z) == 4 + 6 I]</code></p>
+</li>
+<li>
+<p>已知集合$S=\lbrace s | s=2n+1, n \in \mathbb{Z}\rbrace , T=\lbrace  t| t=4n+1, n \in \mathbb{Z}\rbrace $, 则$S\cap T=T$</p>
+<p><code>{Resolve[Exists[m, 4 n + 1 == 2 m + 1], Integers], Resolve[Exists[n, 4 n + 1 == 2 m + 1], Integers]}</code></p>
+</li>
+<li>
+<p>已知命题$p:\exists x \in \mathbb{R}, \sin x&lt;1$; 命题$q: \forall x \in \mathbb{R}, e^{|x|} \ge 1$，则下列命题中为真命题的是：$p\land q$</p>
+<p><code>{Resolve[Exists[x, Sin[x] &lt; 1], Reals], Resolve[ForAll[x, Exp[Abs[x]] &gt;= 1], Reals]}</code></p>
+</li>
+<li>
+<p>设函数$f(x)=\frac{1-x}{1+x}$，则下列函数中为奇函数的是：$f(x-1)+1$</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">ClearAll[f, g];
+f[x_] := (1 - x)/(1 + x); 
+g[x_] := f[x - 1] + 1; 
+Resolve[ForAll[x, g[x] == -g[-x]], Reals]
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>在正方体$ABCD-A_1B_1C_1D_1$中，$P$为$B_1D_1$的中点，则直线$PB$与$AD_1$所成的角为：$\pi /6$</p>
+</li>
+</ol>
+<p><img src="/img/2021/gaokao5.png" alt="gaokao5"></p>
+<p><code>With[{ad1 = {0, 1, 1}, pb = {1/2, 1/2, 1} - {1, 0, 0}}, VectorAngle[pb, ad1]]</code></p>
+<ol start="6">
+<li>
+<p>将<code>5</code>名北京冬奥会志愿者分配到花样滑冰、短道速滑、冰球和冰壶<code>4</code>个项目进行培训，每名志愿者只分配到<code>1</code>个项目，每个项目至少分配<code>1</code>名志愿者，则不同的分配方案共有<code>240</code>种</p>
+<p><code>Binomial[5, 2]*4!</code></p>
+</li>
+<li>
+<p>把函数$y=f(x)$图像上所有点的横坐标缩短到原来的$\frac{1}{2}$倍，纵坐标不变，再把所得曲线向右平移$\frac{\pi}{3}$个单位长度，得到函数$y=\sin (x-\frac{\pi}{4})$的图像，则$f(x)=\sin (\frac{x}{2}+\frac{\pi}{12})$ (略)</p>
+</li>
+<li>
+<p>在区间<code>(0,1)</code>与<code>(1,2)</code>中各随机取<code>1</code>个数，则两数之和大于$\frac{7}{4}$的概率为：$\frac{23}{32}$(略)</p>
+</li>
+<li>
+<p>魏晋时期刘徽撰写的《海岛算经》是关于测量的数学著作，其中第一题是测量海岛的高。如图，点$E,H,G$在水平线$AC$上，$DE$和$FG$是两个垂直于水平面且等高的测量标杆的高度，称为“表高”，$EG$称为“表距”，$GC$和$EH$都称为“表目距”，$GC$与$EH$的差称为“表目距的差”，则海岛的高$AB=\frac{表高 × 表距}{表目距的差}+表高$</p>
+</li>
+</ol>
+<p><img src="/img/2021/gaokao9.png" alt="gaokao9"></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Simplify@Reduce[{表高/ab == eh/ah, 表高/ab == gc/ac, gc - eh == 表目距的差, ac - ah == 表距 + 表目距的差, 
+    表距 &gt; 0, 表目距的差 &gt; 0, ac &gt; ah &gt; 0, eh &gt; 0, 表高 &gt; 0}, 
+    {ab, ac, ah, eh, gc}, Reals]
+</code></pre></td></tr></table>
+</div>
+</div><ol start="10">
+<li>
+<p>设$a \ne 0$，若$x=a$为函数$f(x)=a(x-a)^2(x-b)$的极大值点，则：$ab&gt;a^2$</p>
+<p><code>f[x_] := a (x - a)^2 (x - b); Simplify[(D[f[x], {x, 2}] /. x -&gt; a) &lt; 0]</code></p>
+</li>
+<li>
+<p>设$B$是椭圆$C: \frac{x^2}{a^2}+\frac{x^2}{b^2}=1(a&gt;b&gt;0)$的上顶点，若$C$上的任意一点$P$都满足$|PB|\le 2b$，则$C$的离心率的取值范围是：$(0,\sqrt{2}/2]$</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Simplify@Reduce[ForAll[{x, y}, {x^2/a^2 + y^2/b^2 == 1, a &gt; b &gt; 0}, x^2 + (y - b)^2 &lt;= 4 b^2], Reals]
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>设$a=2 \ln 1.01, b=\ln 1.02, c=\sqrt{1.04}-1$，则：$a&gt;c&gt;b$ (略)</p>
+</li>
+</ol>
+<h1 id="二填空题">二、填空题</h1>
+<p><strong>本题共4小题，每小题5分，共20分。</strong></p>
+<ol start="13">
+<li>
+<p>已知双曲线$C: \frac{x^2}{m}-y^2=1(m&gt;0)$的一条渐近线为$\sqrt{3}x+my=0$，则$C$的焦距为：<code>4</code>(略)</p>
+</li>
+<li>
+<p>已知向量$a = (1,3), b=(3,4)$，若$(a-\lambda b) \bot b$，则$\lambda=3/5$</p>
+<p><code>With[{a = {1, 3}, b = {3, 4}}, Solve[VectorAngle[a - b x, b] == Pi/2]]</code></p>
+</li>
+<li>
+<p>记$\triangle ABC$的内角$A,B,C$的对边分别为$a,b,c$，面积为$\sqrt{3}. B=60^\circ, a^2+c^2=3ac $，则$b=2\sqrt{2}$</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">ClearAll[a, b, c]; Simplify@
+Solve[{a c Sin[Pi/3]/2 == Sqrt[3], b^2 == a^2 + c^2 - 2 a c Cos[Pi/3], a^2 + c^2 == 3 a c, 
+ a &gt; 0, b &gt; 0, c &gt; 0}, {a, b, c}, Reals]
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>以图①为正视图，在图②③④⑤中选两个分别作为侧视图和俯视图，组成某个三棱锥的三视图，则所选侧视图和俯视图的编号依次为②⑤或③④(略)</p>
+</li>
+</ol>
+<h1 id="三解答题">三、解答题</h1>
+<p><strong>共70分。第17~21题为必考题，第22、23题为选考题</strong></p>
+<h2 id="一必考题">（一）必考题</h2>
+<p><strong>共5小题，每小题12分，共60分。</strong></p>
+<ol start="17">
+<li>
+<p>某厂研制了一种生产高精产品的设备，为检验新设备生产产品的某项指标有无提高，用一台旧设备和新设备各生产了<code>10</code>件产品，得到个件产品该项指标数据如下：</p>
+<p>旧设备和新设备生产产品的该项指标的样本平均数分别记为$\bar{x}$和$\bar{y}$，样本方差分别记为$s_1^2$和$s_2^2$</p>
+<p>（1）求$\bar{x},\bar{y},s_1^2,s_2^2$. <code>10, 10.3, 0.036, 0.04</code></p>
+<p>（2）判断新设备生产产品的该项指标的均值较旧设备是否有显著提高（如果$\bar{y}-\bar{x} \ge 2\sqrt{\frac{s_1^2+s_2^2}{2}}$，则认为新设备生产产品的该项指标的均值较旧设备是否有显著提高，否则不认为有显著提高）.  <code>否</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">old = {9.8, 10.3, 10.0, 10.2, 9.9, 9.8, 10.0, 10.1, 10.2, 9.7};
+new = {10.1, 10.4, 10.1, 10.0, 10.1, 10.3, 10.6, 10.5, 10.4, 10.5};
+{{a, b} = Mean /@ {old, new}, 
+{c, d} = Variance[#]*(Length[#] - 1)/Length[#] &amp; /@ {old, new}, 
+b - a &gt;= 2 Sqrt[(c + d)/2]}
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>如图，四棱锥$P_ABCD$的底面是矩形，$PD \bot$底面$ABCD, PD=DC=1, M$ 为$BC$的中点，且$PB \bot AM$</p>
+<p>（1）求$BC=\sqrt{2}$</p>
+<p>（2）求二面角$A-PM-B$的正弦值：$\sqrt{5/14}$</p>
+<p><img src="/img/2021/gaokao18.png" alt="gaokao18"></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">ClearAll[p, b, a, m, t]; With[{p = {0, 0, 1}, b = {t, 1, 0}, a = {t, 0, 0}, m = {t/2, 1, 0}}, 
+{Solve[{VectorAngle[p - b, a - m] == Pi/2, t &gt; 0}, t, Reals], 
+  Sin@DihedralAngle[{p, m}, {a - m, b - m}] /. t -&gt; Sqrt[2]}]
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>记$S_n$为数列$\lbrace a_n\rbrace $的前<code>n</code>项和，$b_n$为数列$\lbrace S_n\rbrace $的前<code>n</code>项积，已知$\frac{2}{S_n}+\frac{1}{b_n}=2$</p>
+<p>（1）证明：数列$\lbrace b_n\rbrace $是等差数列.</p>
+<p>（2）求$\lbrace a_n\rbrace $的通项公式<br>
+$$ b[n]=\frac{n+2}{2}, \qquad S[n]=\frac{n+2}{n+1}, \qquad <br>
+a[n]=\Big\lbrace \begin{eqnarray} 3/2, \qquad &amp;n=1 \cr -\frac{1}{n(n+1)} \qquad &amp;n \ge 2 \end{eqnarray}$$</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">RSolve[{b[1] == 3/2, 2 b[n - 1] + 1 == 2 b[n]}, {b}, n]
+b[n]/b[n - 1] /. b -&gt; Function[{n}, (2 + n)/2]
+RSolve[{a[n] == S[n] - S[n - 1], a[2] == -1/6} /. S -&gt; Function[{n}, (2 + n)/(1 + n)], {a}, n]
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>设函数$f(x)=\ln (a-x)$，已知$x=0$是函数$y=xf(x)$的极值点</p>
+<p>（1）求<code>a=1</code></p>
+<p><code>ClearAll[a, x]; Solve[((D[x Log[a - x], x]) /. x -&gt; 0) == 0]</code></p>
+<p>（2）设函数$g(x)=\frac{x+f(x)}{xf(x)}$，证明$g(x)&lt;1$</p>
+<p><code>Resolve[ForAll[x, x &lt; 1 &amp;&amp; x != 0, x + Log[1 - x] &gt; x Log[1 - x]], Reals]</code></p>
+</li>
+<li>
+<p>已知抛物线$C: x^2=2py(p&gt;0)$的焦点为$F$，且$F$与圆$M: x^2+(y+4)^2=1$上点的距离的最小值为<code>4</code></p>
+<p>（1）求<code>p=2</code></p>
+<p><code>Solve[{RegionDistance[ImplicitRegion[x^2 + (y + 4)^2 == 1, {x, y}], {0, p/2}] == 4, p &gt; 0}]</code></p>
+<p>（2）若点$P$在$M$上，$PA，PB$是$C$的两条切线，$A，B$是切点，求$\triangle PAB$面积的最大值：$20\sqrt{5}$</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Simplify@Reduce[{px^2 + (py + 4)^2 == 1, y - py == k (x - px), x^2 == 4 y, k^2 - k px + py == 0}, {x, y}]
+Maximize[{Area@Triangle@Append[{2 k, 2 k^2 - k px + py} /. Solve[k^2 - k px + py == 0, k], {px, py}], 
+px^2 + (py + 4)^2 == 1}, {px, py}]
+{20 Sqrt[5], {px -&gt; 0, py -&gt; -5}}
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h2 id="二选考题">（二）选考题</h2>
+<p><strong>共10分。请考生在第22、23题中任选一题作答，如果多做，则按所做的第一题计分。</strong></p>
+<ol start="22">
+<li>
+<p>【选修4-4：坐标系与参数方程】</p>
+<p>在直角坐标系$xOy$中，$\bigodot C$的圆心为$C(2,1)$，半径为<code>1</code></p>
+<p>（1）写出$\bigodot C$的一个参数方程:  $\Big\lbrace  \begin{eqnarray} &amp;x =2+\cos \theta \cr  &amp;y=1+\sin \theta \end{eqnarray}  $ (略)</p>
+<p>（2）过点$F(4,1)$作$\bigodot C$的两条切线，以坐标原点为极点，$x$轴正半轴为极轴建立极坐标系，求这两条切线的极坐标方程: $r \sin \theta =1 \pm \frac{r \cos \theta-4}{\sqrt{3}}$</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">TransformedField[ &#34;Cartesian&#34; -&gt; &#34;Polar&#34;, 
+  y - 1 == k (x - 4), {x, y} -&gt; {r, \[Theta]}] /. 
+ Solve[RegionDistance[ImplicitRegion[y - 1 == k (x - 4), {x, y}], {2, 1}] == 1]
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>【选秀4-5：不等式选讲】</p>
+<p>已知函数$f(x)=|x-a|+|x+3|$</p>
+<p>（1）当$a=1$时，求不等式$f(x)\ge 6$的解集: $ (-\infty,-4] \bigcup [2, \infty)$</p>
+<p><code>Reduce[Abs[x - 1] + Abs[x + 3] &gt;= 6, x, Reals]</code></p>
+<p>（2）若$f(x)&gt;-a$，求a的取值范围:  <code>a&gt;-3/2</code></p>
+<p><code>Reduce[ForAll[x, Abs[x - a] + Abs[x + 3] &gt; -a], Reals]</code></p>
+</li>
+</ol>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">bigheadghost</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2021-06-09 11:40:39 CST
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/reward/wechat.jpg">
+        <span>微信打赏</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/reward/alipay.jpg">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/zh/tags/mathematica/">mathematica</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/zh/post/excel-reference-style-switch-with-one-click/">
+            <span class="next-text nav-default">Excel A1/R1C1 引用样式一键切换</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2021-06-09 11:40:39 \u002b0800 CST',
+        title: '2021高考理科数学全国1卷的计算机求解',
+        clientID: '8df39bfde8ffe9150142',
+        clientSecret: 'cc215a1e82ed12f21d6c0eb1ad05e8b5eac1878b',
+        repo: 'bigheadghost.github.io',
+        owner: 'bigheadghost',
+        admin: ['bigheadghost'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:bigheadghost@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://math.stackexchange.com/users/157947/bigheadghost" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/bigheadghost" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/1254984/" class="iconfont icon-douban" title="douban"></a>
+  <a href="https://bigheadghost.github.io/zh/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2014 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigheadghost</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

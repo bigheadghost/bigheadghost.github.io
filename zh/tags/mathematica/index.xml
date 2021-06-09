@@ -6,7 +6,27 @@
     <description>Recent content in mathematica on 日种</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 21 May 2019 22:30:05 +0800</lastBuildDate><atom:link href="https://bigheadghost.github.io/zh/tags/mathematica/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Jun 2021 11:40:39 +0800</lastBuildDate><atom:link href="https://bigheadghost.github.io/zh/tags/mathematica/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2021高考理科数学全国1卷的计算机求解</title>
+      <link>https://bigheadghost.github.io/zh/post/gaokao-2021-math-science-set-1-solved-by-mathematica/</link>
+      <pubDate>Wed, 09 Jun 2021 11:40:39 +0800</pubDate>
+      
+      <guid>https://bigheadghost.github.io/zh/post/gaokao-2021-math-science-set-1-solved-by-mathematica/</guid>
+      <description>&lt;p&gt;2021年高考已经结束，本文尝试基于有限的先验知识（读懂题目），用Mathematica软件计算求解题目。&lt;/p&gt;
+&lt;center&gt;&lt;strong&gt; 2021年普通高等学校招生全国统一考试 (I卷)&lt;br /&gt;理科数学&lt;/strong&gt;&lt;/center&gt;</description>
+    </item>
+    
+    <item>
+      <title>2020高考理科数学全国1卷的计算机求解</title>
+      <link>https://bigheadghost.github.io/zh/post/gaokao-2020-math-science-set-1-solved-by-mathematica/</link>
+      <pubDate>Sat, 11 Jul 2020 14:01:31 +0800</pubDate>
+      
+      <guid>https://bigheadghost.github.io/zh/post/gaokao-2020-math-science-set-1-solved-by-mathematica/</guid>
+      <description>&lt;p&gt;2020年高考已经结束，本文尝试基于有限的先验知识（读懂题目），用Mathematica软件计算求解题目。&lt;/p&gt;
+&lt;center&gt;&lt;strong&gt; 2020年普通高等学校招生全国统一考试 (I卷)&lt;br /&gt;理科数学&lt;/strong&gt;&lt;/center&gt;</description>
+    </item>
+    
     <item>
       <title>逻辑推理题爆破</title>
       <link>https://bigheadghost.github.io/zh/post/bruteforce-reasoning/</link>
