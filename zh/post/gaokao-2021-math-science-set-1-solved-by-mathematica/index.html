@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0 with theme even" />
+<meta name="generator" content="Hugo 0.83.1 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/zh/post/gaokao-2021-math-science-set-1-solved-by-mathematica/" />
@@ -53,7 +53,7 @@
 <meta itemprop="description" content="2021年高考已经结束，本文尝试基于有限的先验知识（读懂题目），用Mathematica软件计算求解题目。
  2021年普通高等学校招生全国统一考试 (I卷)理科数学"><meta itemprop="datePublished" content="2021-06-09T11:40:39&#43;08:00" />
 <meta itemprop="dateModified" content="2021-06-09T11:40:39&#43;08:00" />
-<meta itemprop="wordCount" content="3039">
+<meta itemprop="wordCount" content="3052">
 <meta itemprop="keywords" content="mathematica," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="2021高考理科数学全国1卷的计算机求解"/>
 <meta name="twitter:description" content="2021年高考已经结束，本文尝试基于有限的先验知识（读懂题目），用Mathematica软件计算求解题目。
@@ -139,7 +139,7 @@
       <div class="post-meta">
         <span class="post-time"> 2021-06-09 11:40:39 CST </span>
         
-          <span class="more-meta"> 约 3039 字 </span>
+          <span class="more-meta"> 约 3052 字 </span>
           <span class="more-meta"> 预计阅读 7 分钟 </span>
         
       </div>
@@ -328,9 +328,8 @@ b - a &gt;= 2 Sqrt[(c + d)/2]}
 <li>
 <p>记$S_n$为数列$\lbrace a_n\rbrace $的前<code>n</code>项和，$b_n$为数列$\lbrace S_n\rbrace $的前<code>n</code>项积，已知$\frac{2}{S_n}+\frac{1}{b_n}=2$</p>
 <p>（1）证明：数列$\lbrace b_n\rbrace $是等差数列.</p>
-<p>（2）求$\lbrace a_n\rbrace $的通项公式<br>
-$$ b[n]=\frac{n+2}{2}, \qquad S[n]=\frac{n+2}{n+1}, \qquad <br>
-a[n]=\Big\lbrace \begin{eqnarray} 3/2, \qquad &amp;n=1 \cr -\frac{1}{n(n+1)} \qquad &amp;n \ge 2 \end{eqnarray}$$</p>
+<p>（2）求$\lbrace a_n\rbrace $的通项公式</p>
+<p>$$\begin{aligned} &amp;b[n]=\frac{n+2}{2} \cr &amp;S[n]=\frac{n+2}{n+1} \cr &amp;a[n]=\left \lbrace \begin{aligned} 3/2, \quad &amp;n=1 \cr -\frac{1}{n(n+1)},\quad &amp;n \ge 2  \end{aligned} \right.\end{aligned}$$</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -378,7 +377,7 @@ px^2 + (py + 4)^2 == 1}, {px, py}]
 <li>
 <p>【选修4-4：坐标系与参数方程】</p>
 <p>在直角坐标系$xOy$中，$\bigodot C$的圆心为$C(2,1)$，半径为<code>1</code></p>
-<p>（1）写出$\bigodot C$的一个参数方程:  $\Big\lbrace  \begin{eqnarray} &amp;x =2+\cos \theta \cr  &amp;y=1+\sin \theta \end{eqnarray}  $ (略)</p>
+<p>（1）写出$\bigodot C$的一个参数方程:  $\Big\lbrace \begin{aligned} &amp;x =2+\cos \theta \cr  &amp;y=1+\sin \theta \end{aligned}$(略)</p>
 <p>（2）过点$F(4,1)$作$\bigodot C$的两条切线，以坐标原点为极点，$x$轴正半轴为极轴建立极坐标系，求这两条切线的极坐标方程: $r \sin \theta =1 \pm \frac{r \cos \theta-4}{\sqrt{3}}$</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -458,8 +457,8 @@ px^2 + (py + 4)^2 == 1}, {px, py}]
       var gitalk = new Gitalk({
         id: '2021-06-09 11:40:39 \u002b0800 CST',
         title: '2021高考理科数学全国1卷的计算机求解',
-        clientID: '8df39bfde8ffe9150142',
-        clientSecret: 'cc215a1e82ed12f21d6c0eb1ad05e8b5eac1878b',
+        clientID: '475a8b92e37771f12f1f',
+        clientSecret: 'd20ef7f3742b04f540f45755d7c3e986aed524fa',
         repo: 'bigheadghost.github.io',
         owner: 'bigheadghost',
         admin: ['bigheadghost'],
