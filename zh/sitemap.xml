@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bigheadghost.github.io/zh/post/</loc>
+    <lastmod>2021-12-21T14:24:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/tags/society/</loc>
+    <lastmod>2021-12-21T14:24:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/tags/</loc>
+    <lastmod>2021-12-21T14:24:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/post/divorce_battle_between_wanglihong_and_lijinglei/</loc>
+    <lastmod>2021-12-21T14:24:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigheadghost.github.io/zh/</loc>
+    <lastmod>2021-12-21T14:24:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://bigheadghost.github.io/zh/post/nob-yoshigahara-puzzles-modified/</loc>
     <lastmod>2021-06-18T12:22:03+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -9,29 +44,8 @@
   </url>
   
   <url>
-    <loc>https://bigheadghost.github.io/zh/post/</loc>
-    <lastmod>2021-11-23T09:24:20+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://bigheadghost.github.io/zh/tags/puzzle/</loc>
     <lastmod>2021-06-18T12:22:03+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigheadghost.github.io/zh/tags/</loc>
-    <lastmod>2021-11-23T09:24:20+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigheadghost.github.io/zh/</loc>
-    <lastmod>2021-11-23T09:24:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
