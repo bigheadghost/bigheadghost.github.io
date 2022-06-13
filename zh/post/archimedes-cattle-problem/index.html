@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="bigheadghost" /><meta name="description" content="网上以讹传讹，计算结果很多是错的，比如百度百科、博士论文。
- 太阳神有一个由公牛和母牛组成的牛群，其中一部分是白牛，一部分是黑牛，一部分是花牛，其余的都是棕色的牛。
+太阳神有一个由公牛和母牛组成的牛群，其中一部分是白牛，一部分是黑牛，一部分是花牛，其余的都是棕色的牛。
 在公牛中，白牛的数量比棕色的牛多黑牛的二分之一加三分之一；黑牛的数量比棕色的牛多花牛的四分之一加五分之一；花牛的数量比棕色的牛多白牛的六分之一加七分之一。
 在母牛中，白牛的数量是所有黑牛的三分之一加四分之一；黑牛的数量是所有花牛的四分之一加五分之一；花牛的数量是所有棕色牛的五分之一加六分之一；棕色的牛的数量是所有白牛的六分之一加七分之一。
 问题1：这群牛总共有多少头？各种颜色的牛分别是多少头？
@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.83.1 with theme even" />
+<meta name="generator" content="Hugo 0.100.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/zh/post/archimedes-cattle-problem/" />
@@ -42,7 +42,7 @@
 
 
 <link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
 
 
 <meta property="og:title" content="阿基米德群牛问题" />
@@ -56,8 +56,8 @@
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/zh/post/archimedes-cattle-problem/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2018-03-09T12:39:01&#43;08:00" />
-<meta property="article:modified_time" content="2018-03-09T12:39:01&#43;08:00" /><meta property="og:site_name" content="日种" />
+<meta property="article:published_time" content="2018-03-09T12:39:01+08:00" />
+<meta property="article:modified_time" content="2018-03-09T12:39:01+08:00" /><meta property="og:site_name" content="日种" />
 
 <meta itemprop="name" content="阿基米德群牛问题">
 <meta itemprop="description" content="网上以讹传讹，计算结果很多是错的，比如百度百科、博士论文。
@@ -67,8 +67,8 @@
 在母牛中，白牛的数量是所有黑牛的三分之一加四分之一；黑牛的数量是所有花牛的四分之一加五分之一；花牛的数量是所有棕色牛的五分之一加六分之一；棕色的牛的数量是所有白牛的六分之一加七分之一。
 问题1：这群牛总共有多少头？各种颜色的牛分别是多少头？
 问题2：若把白色公牛和黑色公牛放在一起，其数量刚好是一个完全平方数；把棕色公牛和花色公牛放在一起，其数量正好是一个三角数，则这群牛共有多少头？
-"><meta itemprop="datePublished" content="2018-03-09T12:39:01&#43;08:00" />
-<meta itemprop="dateModified" content="2018-03-09T12:39:01&#43;08:00" />
+"><meta itemprop="datePublished" content="2018-03-09T12:39:01+08:00" />
+<meta itemprop="dateModified" content="2018-03-09T12:39:01+08:00" />
 <meta itemprop="wordCount" content="672">
 <meta itemprop="keywords" content="mathematica," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="阿基米德群牛问题"/>
@@ -181,7 +181,7 @@
 问题1就是解方程：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -189,13 +189,13 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sol = Solve[  W == 5 B/6 + Y &amp;&amp; B == 9 H/20 + Y &amp;&amp; H == 13 W/42 + Y &amp;&amp; 
-   w == 7/12 (B + b) &amp;&amp; b == 9/20 (H + h) &amp;&amp; h == 11/30 (Y + y) &amp;&amp; y == 13/42 (W + w),
-   {W, B, H, Y, w, b, h, y}, Integers];
-
-{W, B, H, Y, w, b, h, y} /. sol[[1]] /. C[1] -&gt; 1
-{10366482, 7460514, 7358060, 4149387, 7206360, 4893246, 3515820, 5439213}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sol = Solve[  W == 5 B/6 + Y &amp;&amp; B == 9 H/20 + Y &amp;&amp; H == 13 W/42 + Y &amp;&amp; 
+</span></span><span class="line"><span class="cl">   w == 7/12 (B + b) &amp;&amp; b == 9/20 (H + h) &amp;&amp; h == 11/30 (Y + y) &amp;&amp; y == 13/42 (W + w),
+</span></span><span class="line"><span class="cl">   {W, B, H, Y, w, b, h, y}, Integers];
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{W, B, H, Y, w, b, h, y} /. sol[[1]] /. C[1] -&gt; 1
+</span></span><span class="line"><span class="cl">{10366482, 7460514, 7358060, 4149387, 7206360, 4893246, 3515820, 5439213}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>第二个问题则是求解：<br>
 （1）\( W+B=U^2 \)<br>
@@ -207,7 +207,7 @@
 <p>求解Pell方程：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -221,19 +221,19 @@
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sols = Solve[x^2 - 410286423278424 y^2 == 1 &amp;&amp; x &gt; 0 &amp;&amp; y &gt; 0, {x, y}, Integers];
-onesol = sols[[1]] /. C[1] -&gt; 1;
-n = 3*11*29*4657 y^2 /. onesol;
-
-{W,B,H,Y,w,b,h,y} = {10366482, 7460514, 7358060, 4149387, 7206360, 4893246, 3515820, 5439213} n
-T = Total[{W, B, H, Y, w, b, h, y}];
-
-Short@W
-15965108046711&lt;&lt;206517&gt;&gt;29385150341800
-
-Short@T
-77602714064868&lt;&lt;206517&gt;&gt;26719455081800
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sols = Solve[x^2 - 410286423278424 y^2 == 1 &amp;&amp; x &gt; 0 &amp;&amp; y &gt; 0, {x, y}, Integers];
+</span></span><span class="line"><span class="cl">onesol = sols[[1]] /. C[1] -&gt; 1;
+</span></span><span class="line"><span class="cl">n = 3*11*29*4657 y^2 /. onesol;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{W,B,H,Y,w,b,h,y} = {10366482, 7460514, 7358060, 4149387, 7206360, 4893246, 3515820, 5439213} n
+</span></span><span class="line"><span class="cl">T = Total[{W, B, H, Y, w, b, h, y}];
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Short@W
+</span></span><span class="line"><span class="cl">15965108046711&lt;&lt;206517&gt;&gt;29385150341800
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Short@T
+</span></span><span class="line"><span class="cl">77602714064868&lt;&lt;206517&gt;&gt;26719455081800
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -351,11 +351,11 @@ Short@T
   
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+  
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.191509a5c8442abdb6eb5020a332fd59bdd83a7e78a2d2241108df9113504292.js"></script>
   <script type="text/javascript">
     window.MathJax = {
       tex: {

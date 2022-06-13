@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="bigheadghost" /><meta name="description" content="2020年高考已经结束，本文尝试基于有限的先验知识（读懂题目），用Mathematica软件计算求解题目。
- 2020年普通高等学校招生全国统一考试 (I卷)
+2020年普通高等学校招生全国统一考试 (I卷)
 理科数学" />
 
 
@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.83.1 with theme even" />
+<meta name="generator" content="Hugo 0.100.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/zh/post/gaokao-2020-math-science-set-1-solved-by-mathematica/" />
@@ -38,7 +38,7 @@
 
 
 <link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
 
 
 <meta property="og:title" content="2020高考理科数学全国1卷的计算机求解" />
@@ -46,13 +46,13 @@
  2020年普通高等学校招生全国统一考试 (I卷)理科数学" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/zh/post/gaokao-2020-math-science-set-1-solved-by-mathematica/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-07-11T14:01:31&#43;08:00" />
-<meta property="article:modified_time" content="2020-07-11T14:01:31&#43;08:00" /><meta property="og:site_name" content="日种" />
+<meta property="article:published_time" content="2020-07-11T14:01:31+08:00" />
+<meta property="article:modified_time" content="2020-07-11T14:01:31+08:00" /><meta property="og:site_name" content="日种" />
 
 <meta itemprop="name" content="2020高考理科数学全国1卷的计算机求解">
 <meta itemprop="description" content="2020年高考已经结束，本文尝试基于有限的先验知识（读懂题目），用Mathematica软件计算求解题目。
- 2020年普通高等学校招生全国统一考试 (I卷)理科数学"><meta itemprop="datePublished" content="2020-07-11T14:01:31&#43;08:00" />
-<meta itemprop="dateModified" content="2020-07-11T14:01:31&#43;08:00" />
+ 2020年普通高等学校招生全国统一考试 (I卷)理科数学"><meta itemprop="datePublished" content="2020-07-11T14:01:31+08:00" />
+<meta itemprop="dateModified" content="2020-07-11T14:01:31+08:00" />
 <meta itemprop="wordCount" content="2743">
 <meta itemprop="keywords" content="mathematica," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="2020高考理科数学全国1卷的计算机求解"/>
@@ -166,13 +166,13 @@
 <p>2.设集合 $A=\{ x|x^2-4\le0 \}, B=\{x|2x+a\le0\}$, 且 $A\bigcap B=\{x|-2\le x\le 1\}$, 则 $a=$<code>-2</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Reduce[{2 x + a &lt;= 0, x^2 - 4 &lt;= 0}]
-(a &lt;= -4 &amp;&amp; -2 &lt;= x &lt;= 2) || (-4 &lt; a &lt; 4 &amp;&amp; -2 &lt;= x &lt;= -(a/2)) || (a == 4 &amp;&amp; x == -2)
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Reduce[{2 x + a &lt;= 0, x^2 - 4 &lt;= 0}]
+</span></span><span class="line"><span class="cl">(a &lt;= -4 &amp;&amp; -2 &lt;= x &lt;= 2) || (-4 &lt; a &lt; 4 &amp;&amp; -2 &lt;= x &lt;= -(a/2)) || (a == 4 &amp;&amp; x == -2)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>3.埃及胡夫金字塔是古代世界建筑奇迹之一，它的形状可视为一个正四棱锥， 以该四棱锥的高为边长的正方形面积等于该四棱锥一个侧面三角形的面积，则其侧面三角形底边上的高与底面正方形的边长的比值为 $\frac{\sqrt{5}+1}{4}$</p>
 <p><img src="/img/2020/gaokao3.jpg" alt="gaokao3"></p>
@@ -200,31 +200,31 @@
 <img src="/img/2020/gaokao11.gif" alt="gaokao11" style="zoom:50%;" /></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">p = {t, -2 t - 2}; m = {1, 1};
-pm = EuclideanDistance[p, m];
-t = ArgMin[pm, t];
-{a, b} = {x, y} /. Solve[{EuclideanDistance[p, {x, y}]^2 == pm^2 - 2^2, x^2 + y^2 - 2 x - 2 y - 2 == 0}, {x, y}]; 
-Simplify[y - InterpolatingPolynomial[{a, b}, x] == 0]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">p = {t, -2 t - 2}; m = {1, 1};
+</span></span><span class="line"><span class="cl">pm = EuclideanDistance[p, m];
+</span></span><span class="line"><span class="cl">t = ArgMin[pm, t];
+</span></span><span class="line"><span class="cl">{a, b} = {x, y} /. Solve[{EuclideanDistance[p, {x, y}]^2 == pm^2 - 2^2, x^2 + y^2 - 2 x - 2 y - 2 == 0}, {x, y}]; 
+</span></span><span class="line"><span class="cl">Simplify[y - InterpolatingPolynomial[{a, b}, x] == 0]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>12.若 $2^a +log_2a=4^b+2log_4b$，则<code>a&lt;2b</code></p>
 <p>尚未找到理想的求解方法。不过作为选择题，找到答案没问题。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">f[a_] := b /. FindRoot[2^a + Log[2, a] == 4^b + 2 Log[4, b], {b, 1}]; 
-{# &lt; 2 f[#], # &gt; f[#]^2} &amp; /@ Range@5
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">f[a_] := b /. FindRoot[2^a + Log[2, a] == 4^b + 2 Log[4, b], {b, 1}]; 
+</span></span><span class="line"><span class="cl">{# &lt; 2 f[#], # &gt; f[#]^2} &amp; /@ Range@5
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="二填空题">二、填空题</h1>
 <p>13.若x，y满足约束条件：$\left \{ \begin{array}{l} 2x+y-2\le0 \cr x-y-1\ge 0 \cr y+1\ge0 \end{array} \right.$，则 $z=x+7y$ 的最大值为<code>1</code></p>
@@ -234,33 +234,33 @@ Simplify[y - InterpolatingPolynomial[{a, b}, x] == 0]
 <p>15.已知F为双曲线$C: \frac{x^2}{a^2}-\frac{y^2}{b^2}=1 (a&gt;0,b&gt;0)$的右焦点，A为C的右顶点，B为C上的点，且BF垂直于x轴，若AB的斜率为3，则C的离心率为<code>2</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">f[x_] := b*Sqrt[x^2/a^2 - 1];
-c/a /. Simplify[Solve[{f[c] == 3 c - 3 a, c^2 == a^2 + b^2, a &gt; 0, b &gt; 0, c &gt; 0}], 
-  Assumptions -&gt; a &gt; 0]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">f[x_] := b*Sqrt[x^2/a^2 - 1];
+</span></span><span class="line"><span class="cl">c/a /. Simplify[Solve[{f[c] == 3 c - 3 a, c^2 == a^2 + b^2, a &gt; 0, b &gt; 0, c &gt; 0}], 
+</span></span><span class="line"><span class="cl">  Assumptions -&gt; a &gt; 0]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>16.如图，在三棱锥P-ABC的平面展开图中，$AC=1，AB=AD=\sqrt{3}, AB \bot AC, AB \bot AD,\angle CAE=30^\circ $, 则$cos\angle FCB=$<code>-1/4</code></p>
 <p><img src="/img/2020/gaokao16.jpg" alt="gaokao16"></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">With[{a = {0, 0, 0}, b = {Sqrt@3, 0, 0}, c = {0, -1, 0}, p = {x, y, z}}, 
- p = {x, y, z} /. First@Solve[{Norm[p - a] == Sqrt@3, 
-    VectorAngle[p - a, b - a] == Pi/2, 
-    VectorAngle[p - a, c - a] == Pi/6, z &gt; 0}, Reals];
- {Cos[VectorAngle[p - c, b - c]], p}]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">With[{a = {0, 0, 0}, b = {Sqrt@3, 0, 0}, c = {0, -1, 0}, p = {x, y, z}}, 
+</span></span><span class="line"><span class="cl"> p = {x, y, z} /. First@Solve[{Norm[p - a] == Sqrt@3, 
+</span></span><span class="line"><span class="cl">    VectorAngle[p - a, b - a] == Pi/2, 
+</span></span><span class="line"><span class="cl">    VectorAngle[p - a, c - a] == Pi/6, z &gt; 0}, Reals];
+</span></span><span class="line"><span class="cl"> {Cos[VectorAngle[p - c, b - c]], p}]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="三解答题">三、解答题</h1>
 <p>17.设${a_n}$是公比不为 $1$ 的等比数列，$a_1$为 $a_2, a_3$ 的等差中项</p>
@@ -274,7 +274,7 @@ c/a /. Simplify[Solve[{f[c] == 3 c - 3 a, c^2 == a^2 + b^2, a &gt; 0, b &gt; 0, 
 <p>(2)求二面角 $B-PC-E$ 的余弦值: $\frac{2}{\sqrt{5}}$</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -283,14 +283,14 @@ c/a /. Simplify[Solve[{f[c] == 3 c - 3 a, c^2 == a^2 + b^2, a &gt; 0, b &gt; 0, 
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">With[{a = {-Cos[Pi/6], -Sin[Pi/6], 0}, 
-  e = {Cos[Pi/6], Sin[Pi/6], 0}, 
-  b = {Cos[Pi/6], -Sin[Pi/6], 0}, 
-  c = {0, 1, 0}, 
-  d = {0, 0, Sqrt@3}, 
-  p = {0, 0, Sqrt@3*Sqrt@6/6}},
- {VectorAngle[a - p, c - p], VectorAngle[a - p, b - p], Cos[DihedralAngle[{p, c}, {b - c, e - c}]]}]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">With[{a = {-Cos[Pi/6], -Sin[Pi/6], 0}, 
+</span></span><span class="line"><span class="cl">  e = {Cos[Pi/6], Sin[Pi/6], 0}, 
+</span></span><span class="line"><span class="cl">  b = {Cos[Pi/6], -Sin[Pi/6], 0}, 
+</span></span><span class="line"><span class="cl">  c = {0, 1, 0}, 
+</span></span><span class="line"><span class="cl">  d = {0, 0, Sqrt@3}, 
+</span></span><span class="line"><span class="cl">  p = {0, 0, Sqrt@3*Sqrt@6/6}},
+</span></span><span class="line"><span class="cl"> {VectorAngle[a - p, c - p], VectorAngle[a - p, b - p], Cos[DihedralAngle[{p, c}, {b - c, e - c}]]}]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>19.甲、乙、丙三位同学进行羽毛球比赛，约定赛制如下：<br>
 累计负两场者被淘汰；比赛前抽签决定首先比赛的两人，另一人轮空；每场比赛的胜者与轮空者进行下一场比赛，负者下一轮轮空，直至有一人被淘汰：当 —人被淘汰后，剩余的两人继续比赛，直至其中一人被淘汰，另一人最终获胜， 比赛结束.<br>
@@ -302,7 +302,7 @@ c/a /. Simplify[Solve[{f[c] == 3 c - 3 a, c^2 == a^2 + b^2, a &gt; 0, b &gt; 0, 
 起点 start = {{1, 2}, {0, 0, 0}, {0, 0, 0}};</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -310,13 +310,13 @@ c/a /. Simplify[Solve[{f[c] == 3 c - 3 a, c^2 == a^2 + b^2, a &gt; 0, b &gt; 0, 
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">EndNodes = Select[VertexList@g, VertexOutDegree[g, #] == 0 &amp;];
-AllPaths = Flatten[FindPath[g, start, #, Infinity, All] &amp; /@ EndNodes, 1];
-Prob[p_] := Total[(1/2)^(Length[#] - 1) &amp; /@ p];
-AWin4Paths = Select[AllPaths, (Length[#] == 5 &amp;&amp; #[[-1, 2, 1]] == 4) &amp;]; AWin4Paths // Prob
-L5Paths = Select[AllPaths, Length[#] == 6 &amp;]; L5Paths // Prob
-CWinPaths = Select[AllPaths, #[[-1, 3, 3]] &lt; 2 &amp;]; CWinPaths // Prob
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">EndNodes = Select[VertexList@g, VertexOutDegree[g, #] == 0 &amp;];
+</span></span><span class="line"><span class="cl">AllPaths = Flatten[FindPath[g, start, #, Infinity, All] &amp; /@ EndNodes, 1];
+</span></span><span class="line"><span class="cl">Prob[p_] := Total[(1/2)^(Length[#] - 1) &amp; /@ p];
+</span></span><span class="line"><span class="cl">AWin4Paths = Select[AllPaths, (Length[#] == 5 &amp;&amp; #[[-1, 2, 1]] == 4) &amp;]; AWin4Paths // Prob
+</span></span><span class="line"><span class="cl">L5Paths = Select[AllPaths, Length[#] == 6 &amp;]; L5Paths // Prob
+</span></span><span class="line"><span class="cl">CWinPaths = Select[AllPaths, #[[-1, 3, 3]] &lt; 2 &amp;]; CWinPaths // Prob
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>20.已知 $A，B$ 分别为椭圆$E: \frac{x^2}{a^2}+y^2=1 (a&gt;1)$的左右顶点，$G$ 为 $E$ 上顶点，$\vec{AG} \cdot  \vec{GB}=8$. $P$ 为直线 $x=6$上的动点，$PA$ 与 $E$ 的另一交点为$C$，$PB$与$E$的另一交点为$D$<br>
 (1)求 $E$ 的方程: <code>a=3</code><br>
@@ -324,31 +324,31 @@ CWinPaths = Select[AllPaths, #[[-1, 3, 3]] &lt; 2 &amp;]; CWinPaths // Prob
 (2)证明：直线 $CD$ 过定点: <code>(3/2, 0)</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">lineq[{x1_, y1_}, {x2_, y2_}] := FullSimplify[(y - y1)*(x2 - x1) - (x - x1)*(y2 - y1) == 0];
-a = 3; P = {6, p};
-c = {x, y} /. First@Solve[{x^2/9 + y^2 == 1, lineq[P, A], y != 0}, {x, y}];
-d = {x, y} /. First@Solve[{x^2/9 + y^2 == 1, lineq[P, B], y != 0}, {x, y}];
-lineq[c, d]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">lineq[{x1_, y1_}, {x2_, y2_}] := FullSimplify[(y - y1)*(x2 - x1) - (x - x1)*(y2 - y1) == 0];
+</span></span><span class="line"><span class="cl">a = 3; P = {6, p};
+</span></span><span class="line"><span class="cl">c = {x, y} /. First@Solve[{x^2/9 + y^2 == 1, lineq[P, A], y != 0}, {x, y}];
+</span></span><span class="line"><span class="cl">d = {x, y} /. First@Solve[{x^2/9 + y^2 == 1, lineq[P, B], y != 0}, {x, y}];
+</span></span><span class="line"><span class="cl">lineq[c, d]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>21.已知函数$f(x)=e^x+ax^2-x$<br>
 (1)当 $a=1$时，讨论$f(x)$的单调性</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">f[x_] := Exp@x + x^2 - x;
-Reduce[D[f[x], x] &gt; 0, x]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">f[x_] := Exp@x + x^2 - x;
+</span></span><span class="line"><span class="cl">Reduce[D[f[x], x] &gt; 0, x]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>x&gt;0 增，x&lt;0 减<br>
 (2)当 $x\ge 0$时，$f(x)\ge \frac12 x^3+1$,求a的取值范围<br>
@@ -365,15 +365,15 @@ $(\frac14,\frac14)$<br>
 (2)求不等式 $f(x)&gt;f(x+1)$ 的解集</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">f[x_] := Abs[3 x + 1] - 2 Abs[x - 1]; 
-Reduce[f[x] &gt; f[x + 1], x, Reals]
-Plot[{f[x], f[x + 1]}, {x, -10, 10}, PlotLabels -&gt; Automatic, Epilog -&gt; Point[{-7/6, f[-7/6]}]]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">f[x_] := Abs[3 x + 1] - 2 Abs[x - 1]; 
+</span></span><span class="line"><span class="cl">Reduce[f[x] &gt; f[x + 1], x, Reals]
+</span></span><span class="line"><span class="cl">Plot[{f[x], f[x + 1]}, {x, -10, 10}, PlotLabels -&gt; Automatic, Epilog -&gt; Point[{-7/6, f[-7/6]}]]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>$x&lt;-\frac76$<br>
 <img src="/img/2020/gaokao23.jpg" alt="gaokao23"></p>
@@ -493,11 +493,11 @@ Plot[{f[x], f[x + 1]}, {x, -10, 10}, PlotLabels -&gt; Automatic, Epilog -&gt; Po
   
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+  
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.191509a5c8442abdb6eb5020a332fd59bdd83a7e78a2d2241108df9113504292.js"></script>
   <script type="text/javascript">
     window.MathJax = {
       tex: {

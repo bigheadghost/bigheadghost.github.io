@@ -17,10 +17,10 @@
 
 
 <meta name="author" content="bigheadghost" /><meta name="description" content="Level 1:
-1  a = CharacterRange[&amp;#34;a&amp;#34;, &amp;#34;z&amp;#34;]; StringJoin[Characters[s] /. Thread[a -&amp;gt; RotateLeft[a, 2]]]   Level 2:
-1  Sort[Tally[Characters[s]], #1[[2]] &amp;lt;= #2[[2]] &amp;amp;]   Level 3:
-1  StringJoin[StringCases[s,RegularExpression[&amp;#34;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&amp;#34;] -&amp;gt; &amp;#34;$1&amp;#34;]]   Level 4:
-1 2 3 4 5  NestWhileList[(resp = Import[&amp;#34;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&amp;#34;&amp;lt;&amp;gt;#]; m = StringCases[resp ,&amp;#34;next nothing is &amp;#34; ~~ (x : DigitCharacter ..) -&amp;gt; x]; If[m != {}, m[[1]], Print[resp]; &amp;#34;&amp;#34;]) &amp;amp;, &amp;#34;12345&amp;#34;, StringLength[#] &amp;gt; 0 &amp;amp;]   16044-&amp;gt;8022, continue
+1 a = CharacterRange[&amp;#34;a&amp;#34;, &amp;#34;z&amp;#34;]; StringJoin[Characters[s] /. Thread[a -&amp;gt; RotateLeft[a, 2]]] Level 2:
+1 Sort[Tally[Characters[s]], #1[[2]] &amp;lt;= #2[[2]] &amp;amp;] Level 3:
+1 StringJoin[StringCases[s,RegularExpression[&amp;#34;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&amp;#34;] -&amp;gt; &amp;#34;$1&amp;#34;]] Level 4:
+1 2 3 4 5 NestWhileList[(resp = Import[&amp;#34;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&amp;#34;&amp;lt;&amp;gt;#]; m = StringCases[resp ,&amp;#34;next nothing is &amp;#34; ~~ (x : DigitCharacter ..) -&amp;gt; x]; If[m != {}, m[[1]], Print[resp]; &amp;#34;&amp;#34;]) &amp;amp;, &amp;#34;12345&amp;#34;, StringLength[#] &amp;gt; 0 &amp;amp;] 16044-&amp;gt;8022, continue
 Level 5:
 pickle module needed, python only.
 " />
@@ -30,7 +30,7 @@ pickle module needed, python only.
 
 
 
-<meta name="generator" content="Hugo 0.83.1 with theme even" />
+<meta name="generator" content="Hugo 0.100.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/post/pythonchallenge-solutions-using-mathematica/" />
@@ -43,7 +43,7 @@ pickle module needed, python only.
 
 
 <link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
 
 
 <meta property="og:title" content="PythonChallenge Solutions Using Mathematica" />
@@ -96,8 +96,8 @@ Level 5:
 pickle module needed, python only." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/post/pythonchallenge-solutions-using-mathematica/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2014-07-11T20:40:02&#43;08:00" />
-<meta property="article:modified_time" content="2014-07-11T20:40:02&#43;08:00" />
+<meta property="article:published_time" content="2014-07-11T20:40:02+08:00" />
+<meta property="article:modified_time" content="2014-07-11T20:40:02+08:00" />
 
 <meta itemprop="name" content="PythonChallenge Solutions Using Mathematica">
 <meta itemprop="description" content="Level 1:
@@ -146,8 +146,8 @@ StringLength[#] &gt; 0 &amp;]
 
 16044-&gt;8022, continue
 Level 5:
-pickle module needed, python only."><meta itemprop="datePublished" content="2014-07-11T20:40:02&#43;08:00" />
-<meta itemprop="dateModified" content="2014-07-11T20:40:02&#43;08:00" />
+pickle module needed, python only."><meta itemprop="datePublished" content="2014-07-11T20:40:02+08:00" />
+<meta itemprop="dateModified" content="2014-07-11T20:40:02+08:00" />
 <meta itemprop="wordCount" content="1007">
 <meta itemprop="keywords" content="Mathematica,PythonChallenge," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="PythonChallenge Solutions Using Mathematica"/>
@@ -290,46 +290,46 @@ pickle module needed, python only."/>
       <p><a href="http://www.pythonchallenge.com/pc/def/map.html">Level 1</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">a = CharacterRange[&#34;a&#34;, &#34;z&#34;]; StringJoin[Characters[s] /. Thread[a -&gt; RotateLeft[a, 2]]]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">a = CharacterRange[&#34;a&#34;, &#34;z&#34;]; StringJoin[Characters[s] /. Thread[a -&gt; RotateLeft[a, 2]]]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.pythonchallenge.com/pc/def/ocr.html">Level 2</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Sort[Tally[Characters[s]], #1[[2]] &lt;= #2[[2]] &amp;]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sort[Tally[Characters[s]], #1[[2]] &lt;= #2[[2]] &amp;]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.pythonchallenge.com/pc/def/equality.html">Level 3</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">StringJoin[StringCases[s,RegularExpression[&#34;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&#34;] -&gt;  &#34;$1&#34;]]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">StringJoin[StringCases[s,RegularExpression[&#34;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&#34;] -&gt;  &#34;$1&#34;]]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Level 4:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">NestWhileList[(resp = Import[&#34;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&#34;&lt;&gt;#];
-   m = StringCases[resp ,&#34;next nothing is &#34; ~~ (x : DigitCharacter ..) -&gt; x];
-   If[m != {}, m[[1]], Print[resp]; &#34;&#34;]) &amp;,
-&#34;12345&#34;,
-StringLength[#] &gt; 0 &amp;]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">NestWhileList[(resp = Import[&#34;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&#34;&lt;&gt;#];
+</span></span><span class="line"><span class="cl">   m = StringCases[resp ,&#34;next nothing is &#34; ~~ (x : DigitCharacter ..) -&gt; x];
+</span></span><span class="line"><span class="cl">   If[m != {}, m[[1]], Print[resp]; &#34;&#34;]) &amp;,
+</span></span><span class="line"><span class="cl">&#34;12345&#34;,
+</span></span><span class="line"><span class="cl">StringLength[#] &gt; 0 &amp;]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>16044-&gt;8022, continue</p>
 <p><a href="http://www.pythonchallenge.com/pc/def/peak.html">Level 5</a>:<br>
@@ -339,60 +339,60 @@ pickle module needed, python only.</p>
 <p><a href="http://www.pythonchallenge.com/pc/def/oxygen.html">Level 7</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">t = Cases[ImageData[Import[&#34;R:\\oxygen.png&#34;], &#34;Byte&#34;][[48]], {x_, x_, x_, 255} -&gt; x];
-FromCharacterCode[Take[t, {1, Dimensions[t][[1]], 7}]]
-Out[1]=&#34;smart guy, you made it. the next level is [105, 110, 116, 101, 103, 114, 105, 116, 121]&#34;
-FromCharacterCode[{105, 110, 116, 101, 103, 114, 105, 116, 121}]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">t = Cases[ImageData[Import[&#34;R:\\oxygen.png&#34;], &#34;Byte&#34;][[48]], {x_, x_, x_, 255} -&gt; x];
+</span></span><span class="line"><span class="cl">FromCharacterCode[Take[t, {1, Dimensions[t][[1]], 7}]]
+</span></span><span class="line"><span class="cl">Out[1]=&#34;smart guy, you made it. the next level is [105, 110, 116, 101, 103, 114, 105, 116, 121]&#34;
+</span></span><span class="line"><span class="cl">FromCharacterCode[{105, 110, 116, 101, 103, 114, 105, 116, 121}]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.pythonchallenge.com/pc/def/integrity.html">Level 8</a>:<br>
 un/pw are given in python string format. Just use bz2 module. <code>bz2.BZ2Decompressor().decompress(un)</code> Results are huge and file.</p>
 <p><a href="http://www.pythonchallenge.com/pc/return/good.html">Level 9</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Graphics[Line[{Partition[first, 2], Partition[second, 2]}]]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Graphics[Line[{Partition[first, 2], Partition[second, 2]}]]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.pythonchallenge.com/pc/return/bull.html">Level 10</a>:<br>
 <a href="https://oeis.org/A005150">look-and-say sequence</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">f[n_] := If[n == 0, &#34;1&#34;, StringJoin[Map[StringJoin[ToString[Length[#]], #[[1]]] &amp;,Split[Characters[f[n - 1]]]]]];
-StringLength[f[30]]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">f[n_] := If[n == 0, &#34;1&#34;, StringJoin[Map[StringJoin[ToString[Length[#]], #[[1]]] &amp;,Split[Characters[f[n - 1]]]]]];
+</span></span><span class="line"><span class="cl">StringLength[f[30]]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.pythonchallenge.com/pc/return/5808.html">Level 11</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">ImageTake[Import[&#34;R:\\cave.jpg&#34;], {1, 640, 2}, {1, 640, 2}]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ImageTake[Import[&#34;R:\\cave.jpg&#34;], {1, 640, 2}, {1, 640, 2}]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.pythonchallenge.com/pc/return/evil.html">Level 12</a>:<br>
 evil1.jpg-&gt;evil2.jpg-&gt;evil2.gfx-&gt;evil3.jpg-&gt;evil4.jpg<br>
 evil4.jpg will not rendered correctly in Chrome, because it uses a confusing Content-Type:image/jpeg, while it is in fact a text file telling you &ldquo;Bert is evil!&rdquo;</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">ImportString[FromCharacterCode[#]]&amp; /@ Table[Downsample[Import[&#34;R:\\evil2.gfx&#34;, &#34;Byte&#34;], 5, i], {i, 5}]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ImportString[FromCharacterCode[#]]&amp; /@ Table[Downsample[Import[&#34;R:\\evil2.gfx&#34;, &#34;Byte&#34;], 5, i], {i, 5}]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>The 4th image is kind of corrupt. But you can save it, then use your image viewer or Firefox/Chrome to view it. <a href="http://www.pythonchallenge.com/forums/viewtopic.php?f=1&amp;t=15&amp;p=164&amp;hilit=padding+zeroes#p164">It is said</a> to be truncated on purpose to fit in the gfx pack, and you can try padding it with a few kilobytes of zeroes. But I <strong>did not make it</strong>. However the other images should give you enough information that you don&rsquo;t need that one.</p>
 <p><a href="http://www.pythonchallenge.com/pc/return/disproportional.html">Level 13</a>:<br>
@@ -402,27 +402,27 @@ spiral, nothing special, omited.</p>
 <p><a href="http://www.pythonchallenge.com/pc/return/uzi.html">Level 15</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Select[Table[{i,1,27},{i,1006,2000,10}],And[LeapYearQ[#],DayName[#]==Tuesday]&amp;]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Select[Table[{i,1,27},{i,1006,2000,10}],And[LeapYearQ[#],DayName[#]==Tuesday]&amp;]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.pythonchallenge.com/pc/return/mozart.html">Level 16</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">d = Import[&#34;R:\\mozart.gif&#34;, &#34;Data&#34;];
-Image[MapThread[ RotateLeft, {d, Flatten[Position[#, {255, 0, 255}, 1, 1] &amp; /@ d] - 1}, 1]]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">d = Import[&#34;R:\\mozart.gif&#34;, &#34;Data&#34;];
+</span></span><span class="line"><span class="cl">Image[MapThread[ RotateLeft, {d, Flatten[Position[#, {255, 0, 255}, 1, 1] &amp; /@ d] - 1}, 1]]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.pythonchallenge.com/pc/return/romance.html">Level 17</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -432,22 +432,22 @@ Image[MapThread[ RotateLeft, {d, Flatten[Position[#, {255, 0, 255}, 1, 1] &amp; 
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">CookieInfo = Reap[NestWhileList[(
-    {resp, cookies} = URLFetch[&#34;http://huge:file@www.pythonchallenge.com/pc/def/linkedlist.php?busynothing=&#34; &lt;&gt; #, {&#34;Content&#34;, &#34;Cookies&#34;},&#34;StoreCookies&#34; -&gt; False];
-    Sow[&#34;Value&#34; /. cookies[[1]]];
-    m = StringCases[resp,&#34;next busynothing is &#34; ~~ (x : DigitCharacter ..) -&gt; x];
-    If[m != {}, m[[1]], Print[resp]; &#34;&#34;]) &amp;, &#34;12345&#34;,
-   StringLength[#] &gt; 0 &amp;]];
-ImportString[StringReplace[StringJoin[Flatten[CookieInfo[[2]]] /. &#34;+&#34; -&gt; &#34; &#34;],
-  RegularExpression[&#34;%(..)&#34;] -&gt;FromCharacterCode[FromDigits[&#34;$1&#34;, 16]]], &#34;BZip2&#34;]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">CookieInfo = Reap[NestWhileList[(
+</span></span><span class="line"><span class="cl">    {resp, cookies} = URLFetch[&#34;http://huge:file@www.pythonchallenge.com/pc/def/linkedlist.php?busynothing=&#34; &lt;&gt; #, {&#34;Content&#34;, &#34;Cookies&#34;},&#34;StoreCookies&#34; -&gt; False];
+</span></span><span class="line"><span class="cl">    Sow[&#34;Value&#34; /. cookies[[1]]];
+</span></span><span class="line"><span class="cl">    m = StringCases[resp,&#34;next busynothing is &#34; ~~ (x : DigitCharacter ..) -&gt; x];
+</span></span><span class="line"><span class="cl">    If[m != {}, m[[1]], Print[resp]; &#34;&#34;]) &amp;, &#34;12345&#34;,
+</span></span><span class="line"><span class="cl">   StringLength[#] &gt; 0 &amp;]];
+</span></span><span class="line"><span class="cl">ImportString[StringReplace[StringJoin[Flatten[CookieInfo[[2]]] /. &#34;+&#34; -&gt; &#34; &#34;],
+</span></span><span class="line"><span class="cl">  RegularExpression[&#34;%(..)&#34;] -&gt;FromCharacterCode[FromDigits[&#34;$1&#34;, 16]]], &#34;BZip2&#34;]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.pythonchallenge.com/pc/return/balloons.html">Level 18</a>:<br>
 difflib module in python is nice and powerful.</p>
 <p><a href="http://butter:fly@www.pythonchallenge.com/pc/hex/bin.html">Level 19</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -458,33 +458,33 @@ difflib module in python is nice and powerful.</p>
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sorrywav = ImportString[Import[&#34;R:\\a.txt&#34;, {&#34;Base64&#34;, &#34;String&#34;}]];
-Export[&#34;r:\\sorry.wav&#34;, sorrywav];
-swapbytes[x_] := Module[{hexstr},
-   hexstr = IntegerString[Round[x*2^15], 16, 4];
-   FromDigits[StringTake[hexstr, -2] ~~ StringTake[hexstr, 2], 16]/
-    2^15.
-   ];
-sorrywav[[1, 1, 1]] = swapbytes /@ sorrywav[[1, 1, 1]];
-Export[&#34;r:\\idiot.wav&#34;, sorrywav];
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sorrywav = ImportString[Import[&#34;R:\\a.txt&#34;, {&#34;Base64&#34;, &#34;String&#34;}]];
+</span></span><span class="line"><span class="cl">Export[&#34;r:\\sorry.wav&#34;, sorrywav];
+</span></span><span class="line"><span class="cl">swapbytes[x_] := Module[{hexstr},
+</span></span><span class="line"><span class="cl">   hexstr = IntegerString[Round[x*2^15], 16, 4];
+</span></span><span class="line"><span class="cl">   FromDigits[StringTake[hexstr, -2] ~~ StringTake[hexstr, 2], 16]/
+</span></span><span class="line"><span class="cl">    2^15.
+</span></span><span class="line"><span class="cl">   ];
+</span></span><span class="line"><span class="cl">sorrywav[[1, 1, 1]] = swapbytes /@ sorrywav[[1, 1, 1]];
+</span></span><span class="line"><span class="cl">Export[&#34;r:\\idiot.wav&#34;, sorrywav];
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.pythonchallenge.com/pc/hex/idiot2.html">Level 20&amp;21</a>:<br>
 URLFetch, ImportString&hellip; omited.</p>
 <p><a href="http://www.pythonchallenge.com/pc/hex/copper.html">Level 22</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">pts = Position [#,9][[1]]&amp;/@Import[&#34;R:\\white.gif&#34;, &#34;RawData&#34;];
-moves = Cases[SplitBy[(#-{101, 101})&amp;/@pts,#==={0, 0}&amp;],Except[{ {0, 0} }]];
-imgpts = Flatten[MapIndexed[Accumulate[Prepend[#1, First[#2]*{30, 30}]] &amp;,  moves, {1}],  1];
-Image[SparseArray[Append[Map[# -&gt; 1 &amp;, imgpts], {_, _} -&gt; 0], {200, 200}]]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pts = Position [#,9][[1]]&amp;/@Import[&#34;R:\\white.gif&#34;, &#34;RawData&#34;];
+</span></span><span class="line"><span class="cl">moves = Cases[SplitBy[(#-{101, 101})&amp;/@pts,#==={0, 0}&amp;],Except[{ {0, 0} }]];
+</span></span><span class="line"><span class="cl">imgpts = Flatten[MapIndexed[Accumulate[Prepend[#1, First[#2]*{30, 30}]] &amp;,  moves, {1}],  1];
+</span></span><span class="line"><span class="cl">Image[SparseArray[Append[Map[# -&gt; 1 &amp;, imgpts], {_, _} -&gt; 0], {200, 200}]]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.pythonchallenge.com/pc/hex/bonus.html">Level 23</a>:<br>
 <code>import this</code>,   omited.</p>
@@ -492,7 +492,7 @@ Image[SparseArray[Append[Map[# -&gt; 1 &amp;, imgpts], {_, _} -&gt; 0], {200, 20
 Mathematica even has a function to solve mazes!</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -505,40 +505,40 @@ Mathematica even has a function to solve mazes!</p>
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">data = Import[&#34;R:\\maze.png&#34;, &#34;Data&#34;];
-data[[;; 60, ;; 60]] = {255, 255, 255, 255};
-maze = Map[If[# != {255, 255, 255, 255}, 1, 0] &amp;, data, {2}];
-size = Dimensions@maze;
-edgeH = Table[  If[maze[[i, j]] + maze[[i, j + 1]] == 2,   UndirectedEdge[{i, j}, {i, j + 1}]], {i, 1, size[[1]]}, {j, 1,   size[[2]] - 1}];
-edgeV = Table[  If[maze[[i, j]] + maze[[i + 1, j]] == 2,   UndirectedEdge[{i, j}, {i + 1, j}]], {i, 1, size[[1]] - 1}, {j, 1,   size[[2]]}];
-graphEdges = Union[Select[Flatten[{edgeH, edgeV}], Length@# &gt;= 2 &amp;]];
-{start, end}=Cases[  Position[maze,1], {1|641, _} ];
-mazePath=FindShortestPath[Graph[graphEdges], start, end ];
-RedValues = Extract[data, mazePath][[All, 1]][[2 ;; -1 ;; 2]];
-Export[&#34;r:\\a.zip&#34;, FromCharacterCode[RedValues], &#34;String&#34;];
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">data = Import[&#34;R:\\maze.png&#34;, &#34;Data&#34;];
+</span></span><span class="line"><span class="cl">data[[;; 60, ;; 60]] = {255, 255, 255, 255};
+</span></span><span class="line"><span class="cl">maze = Map[If[# != {255, 255, 255, 255}, 1, 0] &amp;, data, {2}];
+</span></span><span class="line"><span class="cl">size = Dimensions@maze;
+</span></span><span class="line"><span class="cl">edgeH = Table[  If[maze[[i, j]] + maze[[i, j + 1]] == 2,   UndirectedEdge[{i, j}, {i, j + 1}]], {i, 1, size[[1]]}, {j, 1,   size[[2]] - 1}];
+</span></span><span class="line"><span class="cl">edgeV = Table[  If[maze[[i, j]] + maze[[i + 1, j]] == 2,   UndirectedEdge[{i, j}, {i + 1, j}]], {i, 1, size[[1]] - 1}, {j, 1,   size[[2]]}];
+</span></span><span class="line"><span class="cl">graphEdges = Union[Select[Flatten[{edgeH, edgeV}], Length@# &gt;= 2 &amp;]];
+</span></span><span class="line"><span class="cl">{start, end}=Cases[  Position[maze,1], {1|641, _} ];
+</span></span><span class="line"><span class="cl">mazePath=FindShortestPath[Graph[graphEdges], start, end ];
+</span></span><span class="line"><span class="cl">RedValues = Extract[data, mazePath][[All, 1]][[2 ;; -1 ;; 2]];
+</span></span><span class="line"><span class="cl">Export[&#34;r:\\a.zip&#34;, FromCharacterCode[RedValues], &#34;String&#34;];
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.pythonchallenge.com/pc/hex/lake.html">Level 25</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">For[i = 1, i &lt; 26, i++,
-URLSave[StringJoin[   &#34;http://butter:fly@www.pythonchallenge.com/pc/hex/lake&#34;,ToString[i], &#34;.wav&#34;],
-  StringJoin[&#34;R:\\lake&#34;, ToString[i], &#34;.wav&#34;]]];
-filenames =  Table[StringJoin[&#34;R:\\lake&#34;, ToString[i], &#34;.wav&#34;], {i, 25}];
-ImageAdjust[ImageAssemble[ Partition[  Image[InverseFlat[Flatten[Import[#, &#34;Data&#34;]], {60, 60, 3}]] &amp; /@   filenames, 5]]]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">For[i = 1, i &lt; 26, i++,
+</span></span><span class="line"><span class="cl">URLSave[StringJoin[   &#34;http://butter:fly@www.pythonchallenge.com/pc/hex/lake&#34;,ToString[i], &#34;.wav&#34;],
+</span></span><span class="line"><span class="cl">  StringJoin[&#34;R:\\lake&#34;, ToString[i], &#34;.wav&#34;]]];
+</span></span><span class="line"><span class="cl">filenames =  Table[StringJoin[&#34;R:\\lake&#34;, ToString[i], &#34;.wav&#34;], {i, 25}];
+</span></span><span class="line"><span class="cl">ImageAdjust[ImageAssemble[ Partition[  Image[InverseFlat[Flatten[Import[#, &#34;Data&#34;]], {60, 60, 3}]] &amp; /@   filenames, 5]]]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.pythonchallenge.com/pc/hex/decent.html">Level 26</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -547,19 +547,19 @@ ImageAdjust[ImageAssemble[ Partition[  Image[InverseFlat[Flatten[Import[#, &#34;
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">d = Import[&#34;R:\\mybroken.zip&#34;, &#34;Byte&#34;];
-For[i = 1, i &lt;= Length[d], i++,
-  For[j = 0, j &lt; 256, j++,
-   If[Hash[FromCharacterCode[ReplacePart[d, i -&gt; j]],&#34;MD5&#34;] ==
-      16^^bbb8b499a0eef99b52c7f13f4e78c24b, Return[{i, j}]]
-   ]]
-Export[&#34;R:\\fixed.zip&#34;,ReplacePart[d, 1235-&gt;168],&#34;Byte&#34;];
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">d = Import[&#34;R:\\mybroken.zip&#34;, &#34;Byte&#34;];
+</span></span><span class="line"><span class="cl">For[i = 1, i &lt;= Length[d], i++,
+</span></span><span class="line"><span class="cl">  For[j = 0, j &lt; 256, j++,
+</span></span><span class="line"><span class="cl">   If[Hash[FromCharacterCode[ReplacePart[d, i -&gt; j]],&#34;MD5&#34;] ==
+</span></span><span class="line"><span class="cl">      16^^bbb8b499a0eef99b52c7f13f4e78c24b, Return[{i, j}]]
+</span></span><span class="line"><span class="cl">   ]]
+</span></span><span class="line"><span class="cl">Export[&#34;R:\\fixed.zip&#34;,ReplacePart[d, 1235-&gt;168],&#34;Byte&#34;];
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.pythonchallenge.com/pc/hex/speedboat.html">Level 27</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -569,61 +569,61 @@ Export[&#34;R:\\fixed.zip&#34;,ReplacePart[d, 1235-&gt;168],&#34;Byte&#34;];
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">d = ImageData[Import[&#34;R:\\zigzag.gif&#34;], &#34;Byte&#34;,   Interleaving -&gt; False][[1]];
-rd = Import[&#34;R:\\zigzag.gif&#34;, &#34;RawData&#34;] - 1;
-df = Most[Flatten[d]] ;  rdf = Rest[Flatten[rd]];
-diffpos = Position[MapThread[Unequal, {df, rdf}], True];
-{diffd1, nouse} = {Extract[rdf, diffpos], Extract[df, diffpos]};
-Image[SparseArray[
-  Thread[Table[{Quotient[p, 320] + 1, Mod[p, 320] + 1}, {p,  Flatten[diffpos]}] -&gt; 1], {270, 320}]]
-s = Tally[ImportString[FromCharacterCode[diffd1], {&#34;BZIP2&#34;, &#34;Words&#34;}]]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">d = ImageData[Import[&#34;R:\\zigzag.gif&#34;], &#34;Byte&#34;,   Interleaving -&gt; False][[1]];
+</span></span><span class="line"><span class="cl">rd = Import[&#34;R:\\zigzag.gif&#34;, &#34;RawData&#34;] - 1;
+</span></span><span class="line"><span class="cl">df = Most[Flatten[d]] ;  rdf = Rest[Flatten[rd]];
+</span></span><span class="line"><span class="cl">diffpos = Position[MapThread[Unequal, {df, rdf}], True];
+</span></span><span class="line"><span class="cl">{diffd1, nouse} = {Extract[rdf, diffpos], Extract[df, diffpos]};
+</span></span><span class="line"><span class="cl">Image[SparseArray[
+</span></span><span class="line"><span class="cl">  Thread[Table[{Quotient[p, 320] + 1, Mod[p, 320] + 1}, {p,  Flatten[diffpos]}] -&gt; 1], {270, 320}]]
+</span></span><span class="line"><span class="cl">s = Tally[ImportString[FromCharacterCode[diffd1], {&#34;BZIP2&#34;, &#34;Words&#34;}]]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://repeat:switch@www.pythonchallenge.com/pc/ring/bell.html">Level 28</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">gdata = Flatten[ImageData[Import[&#34;R:\\bell.png&#34;],&#34;Byte&#34;, Interleaving -&gt; False][[2]]];
-FromCharacterCode[Abs[DeleteCases[ Flatten[Differences[Downsample[gf, 2, #] &amp; /@ {1, 2}]], 42 | -42]]]
-&#34;whodunnit().split()[0] ?&#34;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">gdata = Flatten[ImageData[Import[&#34;R:\\bell.png&#34;],&#34;Byte&#34;, Interleaving -&gt; False][[2]]];
+</span></span><span class="line"><span class="cl">FromCharacterCode[Abs[DeleteCases[ Flatten[Differences[Downsample[gf, 2, #] &amp; /@ {1, 2}]], 42 | -42]]]
+</span></span><span class="line"><span class="cl">&#34;whodunnit().split()[0] ?&#34;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.pythonchallenge.com/pc/ring/guido.html">Level 29</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">s=URLFetch[&#34;http://repeat:switch@www.pythonchallenge.com/pc/ring/guido.html&#34;];
-ImportString[FromCharacterCode[StringLength /@ StringSplit[s, &#34;\n&#34;][[13 ;;]]], &#34;BZip2&#34;]
-&#34;Isn&#39;t it clear? I am yankeedoodle!&#34;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">s=URLFetch[&#34;http://repeat:switch@www.pythonchallenge.com/pc/ring/guido.html&#34;];
+</span></span><span class="line"><span class="cl">ImportString[FromCharacterCode[StringLength /@ StringSplit[s, &#34;\n&#34;][[13 ;;]]], &#34;BZip2&#34;]
+</span></span><span class="line"><span class="cl">&#34;Isn&#39;t it clear? I am yankeedoodle!&#34;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.pythonchallenge.com/pc/ring/yankeedoodle.html">Level 30</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">a = DeleteCases[Flatten[Import[&#34;R:\\yankeedoodle.csv&#34;]], &#34;&#34;];
-ImageReflect@ImageRotate@Image[Partition[a, 53]];
-b = StringSplit[ Import[&#34;R:\\yankeedoodle.csv&#34;, &#34;String&#34;]];
-FromCharacterCode[FromDigits[#, 10] &amp; /@ (StringJoin[StringTake[#[[1]], {6}], StringTake[#[[2]], {6}], StringTake[#[[3]], {7}]] &amp; /@ Partition[b, 3])]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">a = DeleteCases[Flatten[Import[&#34;R:\\yankeedoodle.csv&#34;]], &#34;&#34;];
+</span></span><span class="line"><span class="cl">ImageReflect@ImageRotate@Image[Partition[a, 53]];
+</span></span><span class="line"><span class="cl">b = StringSplit[ Import[&#34;R:\\yankeedoodle.csv&#34;, &#34;String&#34;]];
+</span></span><span class="line"><span class="cl">FromCharacterCode[FromDigits[#, 10] &amp; /@ (StringJoin[StringTake[#[[1]], {6}], StringTake[#[[2]], {6}], StringTake[#[[3]], {7}]] &amp; /@ Partition[b, 3])]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.pythonchallenge.com/pc/ring/grandpa.html">Level 31</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -635,24 +635,24 @@ FromCharacterCode[FromDigits[#, 10] &amp; /@ (StringJoin[StringTake[#[[1]], {6}]
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">ori = Import[&#34;R:\\mandelbrot.gif&#34;, &#34;RawData&#34;];
-{w, h} = ImageDimensions[img];
-{startx, starty, xstep, ystep} = {0.34, 0.57, 0.036/w, 0.027/h};
-s = Table[For[c = (startx + x*xstep) + (starty + y*ystep) I; z = 0.;
-    i = 1, i &lt;= 128, i++,
-    z = z*z + c;
-    If[Abs[z] &gt; 2, Break[]]];
-   If[i == 129, 128, i], {y, 480 - 1, 0, -1}, {x, 0, 640 - 1}];
-diff = DeleteCases[Flatten[ori] - Flatten[s], 0];
-Image[Partition[diff, 23]]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ori = Import[&#34;R:\\mandelbrot.gif&#34;, &#34;RawData&#34;];
+</span></span><span class="line"><span class="cl">{w, h} = ImageDimensions[img];
+</span></span><span class="line"><span class="cl">{startx, starty, xstep, ystep} = {0.34, 0.57, 0.036/w, 0.027/h};
+</span></span><span class="line"><span class="cl">s = Table[For[c = (startx + x*xstep) + (starty + y*ystep) I; z = 0.;
+</span></span><span class="line"><span class="cl">    i = 1, i &lt;= 128, i++,
+</span></span><span class="line"><span class="cl">    z = z*z + c;
+</span></span><span class="line"><span class="cl">    If[Abs[z] &gt; 2, Break[]]];
+</span></span><span class="line"><span class="cl">   If[i == 129, 128, i], {y, 480 - 1, 0, -1}, {x, 0, 640 - 1}];
+</span></span><span class="line"><span class="cl">diff = DeleteCases[Flatten[ori] - Flatten[s], 0];
+</span></span><span class="line"><span class="cl">Image[Partition[diff, 23]]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://www.pythonchallenge.com/pc/rock/arecibo.html">Level 32</a>:<br>
 It&rsquo;s a <a href="http://en.wikipedia.org/wiki/Nonogram">Nonogram</a> puzzle. I had written a <a href="../../../../2014/06/17/magic-griddlers-solver">solver</a> before.</p>
 <p><a href="http://www.pythonchallenge.com/pc/rock/beer.html">Level 33</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -661,14 +661,14 @@ It&rsquo;s a <a href="http://en.wikipedia.org/wiki/Nonogram">Nonogram</a> puzzle
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">d = Flatten[ ImageData[Import[&#34;R:\\beer2.png&#34;], &#34;Byte&#34;]];
-f[n_] := Module[{c1, c2},
-   {c1, c2} = Take[Reverse[Union[n]], 2];
-   Sow[Image[Partition[n /. {x_ /; IntegerQ[x] &amp;&amp; x != c1 -&gt; 0}, Sqrt[Length[n]]]]];
-   DeleteCases[n, c1 | c2]
-   ];
-ArrayReshape[Flatten[Reap[Nest[f, d, 33]][[2]]], {6, 6}, &#34;&#34;] // TableForm
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">d = Flatten[ ImageData[Import[&#34;R:\\beer2.png&#34;], &#34;Byte&#34;]];
+</span></span><span class="line"><span class="cl">f[n_] := Module[{c1, c2},
+</span></span><span class="line"><span class="cl">   {c1, c2} = Take[Reverse[Union[n]], 2];
+</span></span><span class="line"><span class="cl">   Sow[Image[Partition[n /. {x_ /; IntegerQ[x] &amp;&amp; x != c1 -&gt; 0}, Sqrt[Length[n]]]]];
+</span></span><span class="line"><span class="cl">   DeleteCases[n, c1 | c2]
+</span></span><span class="line"><span class="cl">   ];
+</span></span><span class="line"><span class="cl">ArrayReshape[Flatten[Reap[Nest[f, d, 33]][[2]]], {6, 6}, &#34;&#34;] // TableForm
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="http://kohsamui:thailand@www.pythonchallenge.com/pc/rock/gremlins.html">Way Out</a></p>
     </div>
@@ -787,11 +787,11 @@ ArrayReshape[Flatten[Reap[Nest[f, d, 33]][[2]]], {6, 6}, &#34;&#34;] // TableFor
   
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+  
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.191509a5c8442abdb6eb5020a332fd59bdd83a7e78a2d2241108df9113504292.js"></script>
 
 
 

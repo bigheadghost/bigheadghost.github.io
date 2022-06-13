@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.83.1 with theme even" />
+<meta name="generator" content="Hugo 0.100.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/zh/post/triangles-of-absolute-differences/" />
@@ -39,7 +39,7 @@
 
 
 <link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
 
 
 <meta property="og:title" content="正差三角形" />
@@ -49,15 +49,15 @@
 有时候，为方便分析，TAD也可以摆成从上到下的每行依次有n、n-1、&hellip;、1个数字。为加以区分，尖头朝上的三角形我们称之为正差上三角形（Up-Pointing TAD，UPTAD），尖头朝下的我们称之为正差下三角形（Down-Pointing TAD，DPTAD）。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/zh/post/triangles-of-absolute-differences/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-05-25T12:09:27&#43;08:00" />
-<meta property="article:modified_time" content="2019-05-25T12:09:27&#43;08:00" /><meta property="og:site_name" content="日种" />
+<meta property="article:published_time" content="2019-05-25T12:09:27+08:00" />
+<meta property="article:modified_time" content="2019-05-25T12:09:27+08:00" /><meta property="og:site_name" content="日种" />
 
 <meta itemprop="name" content="正差三角形">
 <meta itemprop="description" content="1.问题
 1 ~ n(n&#43;1)/2的整数，排列成类似帕萨卡三角形的等边三角形数阵（从上到下，每行依次有1、2、&hellip;、n个数字）, 其中每个不在最后一行的数都恰好等于排在它下面的两个数的差的绝对值。满足这样排列的三角形称为正差三角形（Triangles of Absolute Diﬀerences，TAD）。
 行数n称作TAD的阶。
-有时候，为方便分析，TAD也可以摆成从上到下的每行依次有n、n-1、&hellip;、1个数字。为加以区分，尖头朝上的三角形我们称之为正差上三角形（Up-Pointing TAD，UPTAD），尖头朝下的我们称之为正差下三角形（Down-Pointing TAD，DPTAD）。"><meta itemprop="datePublished" content="2019-05-25T12:09:27&#43;08:00" />
-<meta itemprop="dateModified" content="2019-05-25T12:09:27&#43;08:00" />
+有时候，为方便分析，TAD也可以摆成从上到下的每行依次有n、n-1、&hellip;、1个数字。为加以区分，尖头朝上的三角形我们称之为正差上三角形（Up-Pointing TAD，UPTAD），尖头朝下的我们称之为正差下三角形（Down-Pointing TAD，DPTAD）。"><meta itemprop="datePublished" content="2019-05-25T12:09:27+08:00" />
+<meta itemprop="dateModified" content="2019-05-25T12:09:27+08:00" />
 <meta itemprop="wordCount" content="2743">
 <meta itemprop="keywords" content="puzzle," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="正差三角形"/>
@@ -200,7 +200,7 @@
 对每一种可能的排列，DynamicPartition函数将其分割成n行，构造出三角形的形状，DifferenceTriangleQ函数计算每行的差分，判断是否等于前一行，以满足约束条件②。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -217,22 +217,22 @@
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">DynamicPartition[l_, p_] := MapThread[l[[# ;; #2]] &amp;, {{0}~Join~Most@# + 1, #} &amp;@Accumulate@p];
-
-DifferenceTriangleQ[l_] := Rest[Abs[Differences /@ l]] == Most@l;
-
-DifferenceTriangle[n_] := Module[{max = n (n + 1)/2, allTries},
- Select[DynamicPartition[#, Range@n] &amp; /@ Permutations[Range@max, {max}], DifferenceTriangleQ]];
-  
-DifferenceTriangle[2] (*4个解*)
-{{{1}, {2, 3}}, {{1}, {3, 2}}, {{2}, {1, 3}}, {{2}, {3, 1}}}
-
-DifferenceTriangle[3] (*8个解*)
-{{{1}, {3, 4}, {5, 2, 6}}, {{1}, {4, 3}, {6, 2, 5}}, {{2}, {3, 5}, {4, 1, 6}}, {{2}, {5, 3}, {6, 1, 4}}, {{3}, {1, 4}, {5, 6, 2}}, {{3}, {2, 5}, {4, 6, 1}}, {{3}, {4, 1}, {2, 6, 5}}, {{3}, {5, 2}, {1, 6, 4}}}
-
-DifferenceTriangle@4 // AbsoluteTiming (*8个解*)
-{73.7682, {{{3}, {2, 5}, {7, 9, 4}, {8, 1, 10, 6}}, {{3}, {4, 7}, {5, 9, 2}, {6, 1, 10, 8}}, {{3}, {5, 2}, {4, 9, 7}, {6, 10, 1, 8}}, {{3}, {7, 4}, {2, 9, 5}, {8, 10, 1, 6}}, {{4}, {1, 5}, {6, 7, 2}, {9, 3, 10, 8}}, {{4}, {2, 6}, {5, 7, 1}, {8, 3, 10, 9}}, {{4}, {5, 1}, {2, 7, 6}, {8, 10, 3, 9}}, {{4}, {6, 2}, {1, 7, 5}, {9, 10, 3, 8}}}}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">DynamicPartition[l_, p_] := MapThread[l[[# ;; #2]] &amp;, {{0}~Join~Most@# + 1, #} &amp;@Accumulate@p];
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">DifferenceTriangleQ[l_] := Rest[Abs[Differences /@ l]] == Most@l;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">DifferenceTriangle[n_] := Module[{max = n (n + 1)/2, allTries},
+</span></span><span class="line"><span class="cl"> Select[DynamicPartition[#, Range@n] &amp; /@ Permutations[Range@max, {max}], DifferenceTriangleQ]];
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">DifferenceTriangle[2] (*4个解*)
+</span></span><span class="line"><span class="cl">{{{1}, {2, 3}}, {{1}, {3, 2}}, {{2}, {1, 3}}, {{2}, {3, 1}}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">DifferenceTriangle[3] (*8个解*)
+</span></span><span class="line"><span class="cl">{{{1}, {3, 4}, {5, 2, 6}}, {{1}, {4, 3}, {6, 2, 5}}, {{2}, {3, 5}, {4, 1, 6}}, {{2}, {5, 3}, {6, 1, 4}}, {{3}, {1, 4}, {5, 6, 2}}, {{3}, {2, 5}, {4, 6, 1}}, {{3}, {4, 1}, {2, 6, 5}}, {{3}, {5, 2}, {1, 6, 4}}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">DifferenceTriangle@4 // AbsoluteTiming (*8个解*)
+</span></span><span class="line"><span class="cl">{73.7682, {{{3}, {2, 5}, {7, 9, 4}, {8, 1, 10, 6}}, {{3}, {4, 7}, {5, 9, 2}, {6, 1, 10, 8}}, {{3}, {5, 2}, {4, 9, 7}, {6, 10, 1, 8}}, {{3}, {7, 4}, {2, 9, 5}, {8, 10, 1, 6}}, {{4}, {1, 5}, {6, 7, 2}, {9, 3, 10, 8}}, {{4}, {2, 6}, {5, 7, 1}, {8, 3, 10, 9}}, {{4}, {5, 1}, {2, 7, 6}, {8, 10, 3, 9}}, {{4}, {6, 2}, {1, 7, 5}, {9, 10, 3, 8}}}}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>全排列要对<code>(n(n+1)/2)!</code>种可能进行测试，当n=4时，就将近400万了，给出8个解，耗时1分钟。</p>
 <h2 id="41-用差优化">4.1 用差优化</h2>
@@ -242,7 +242,7 @@ DifferenceTriangle@4 // AbsoluteTiming (*8个解*)
 此时构造出的三角形满足了约束条件②，仍需要对约束条件①进行判断。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -257,20 +257,20 @@ DifferenceTriangle@4 // AbsoluteTiming (*8个解*)
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">DifferenceTriangle[n_] := Module[{max = n*(n + 1)/2},
-   Select[Permutations[Range@max, {n}], DuplicateFreeQ@Flatten@NestList[Composition[Abs, Differences], #, n - 1] &amp;]];
-
-DifferenceTriangle@5 // AbsoluteTiming (*2个解*)
-{4.16812, {{6, 14, 15, 3, 13}, {13, 3, 15, 14, 6}}}
-
-PrintTAD[t_] := Column[Grid[{#}] &amp; /@ t, Center];
-PrintTAD@NestList[Composition[Abs, Differences], {6, 14, 15, 3, 13}, 4]
-6     14     15     3     13
-   8      1     12     10
-      7     11     2
-         4      9
-            5
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">DifferenceTriangle[n_] := Module[{max = n*(n + 1)/2},
+</span></span><span class="line"><span class="cl">   Select[Permutations[Range@max, {n}], DuplicateFreeQ@Flatten@NestList[Composition[Abs, Differences], #, n - 1] &amp;]];
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">DifferenceTriangle@5 // AbsoluteTiming (*2个解*)
+</span></span><span class="line"><span class="cl">{4.16812, {{6, 14, 15, 3, 13}, {13, 3, 15, 14, 6}}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">PrintTAD[t_] := Column[Grid[{#}] &amp; /@ t, Center];
+</span></span><span class="line"><span class="cl">PrintTAD@NestList[Composition[Abs, Differences], {6, 14, 15, 3, 13}, 4]
+</span></span><span class="line"><span class="cl">6     14     15     3     13
+</span></span><span class="line"><span class="cl">   8      1     12     10
+</span></span><span class="line"><span class="cl">      7     11     2
+</span></span><span class="line"><span class="cl">         4      9
+</span></span><span class="line"><span class="cl">            5
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>n=6时，测试数量仍然需要近400万。</p>
 <h2 id="42-用模式优化">4.2 用模式优化</h2>
@@ -281,7 +281,7 @@ PrintTAD@NestList[Composition[Abs, Differences], {6, 14, 15, 3, 13}, 4]
 n=6时，数量从近400万一下子降到64个，结果发现没有pattern满足，直接就返回空集，不用再继续求解。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -292,16 +292,16 @@ n=6时，数量从近400万一下子降到64个，结果发现没有pattern满�
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Patterns[n_] := DeleteDuplicates[Select[Tuples[{False, True}, n], Count[Flatten@NestList[Xor @@@ Partition[#, 2, 1] &amp;, #, n - 1], False] == Floor[n (n + 1)/4] &amp;], #1 == Reverse@#2 &amp;];
-
-AllTries[n_] := Module[{p = Patterns@n, max = n*(n + 1)/2}, 
-   If[p == {}, {}, Select[Permutations[Range@max, {n}], (MemberQ[#, max] &amp;&amp; MemberQ[p, OddQ@#]) &amp;]]];
-
-DifferenceTriangle[n_] := DeleteDuplicates[Select[AllTries@n, DuplicateFreeQ@Flatten@NestList[Composition[Abs, Differences], #, n - 1] &amp;], #1 == Reverse@#2 &amp;];
-
-DifferenceTriangle@5 // AbsoluteTiming
-{1.30141, {{6, 14, 15, 3, 13}}}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Patterns[n_] := DeleteDuplicates[Select[Tuples[{False, True}, n], Count[Flatten@NestList[Xor @@@ Partition[#, 2, 1] &amp;, #, n - 1], False] == Floor[n (n + 1)/4] &amp;], #1 == Reverse@#2 &amp;];
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">AllTries[n_] := Module[{p = Patterns@n, max = n*(n + 1)/2}, 
+</span></span><span class="line"><span class="cl">   If[p == {}, {}, Select[Permutations[Range@max, {n}], (MemberQ[#, max] &amp;&amp; MemberQ[p, OddQ@#]) &amp;]]];
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">DifferenceTriangle[n_] := DeleteDuplicates[Select[AllTries@n, DuplicateFreeQ@Flatten@NestList[Composition[Abs, Differences], #, n - 1] &amp;], #1 == Reverse@#2 &amp;];
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">DifferenceTriangle@5 // AbsoluteTiming
+</span></span><span class="line"><span class="cl">{1.30141, {{6, 14, 15, 3, 13}}}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>n=7时，仍然需要测试P(28,7)，近60亿个。</p>
 <h1 id="5数学证明">5.数学证明</h1>
@@ -315,32 +315,32 @@ DifferenceTriangle@5 // AbsoluteTiming
 ②有2个副三角时，<code>Q ≤ (n(n+1)/2-1) + (n(n+1)/2-2)</code>，与上式联立得<code>n≤8</code></p>
 <p>数学最可爱的地方就是：当计算机吭哧吭哧算不出来的时候，数学幽幽地来一句：<strong>不用算了，哥给你个上限</strong>。</p>
 <h1 id="参考文献">参考文献</h1>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>Martin Gardner, Mathematical games, Scientific American 236(1977), No.4, 129-136.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>Martin Gardner, Penrose Tiles to Trapdoor Ciphers, 2nd edition, Mathematical Association of America, Washington, (1997) 119–120 and 128–129. 另见  The Colossal Book of Short Puzzles and Problems, W. W. Norton &amp; Co., New York, (2006) 16–17 and 36–38.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:3" role="doc-endnote">
+<li id="fn:3">
 <p>Charles Trigg. Absolute Difference Triangles, Journal of Recreational Mathematics(vol. 9, 1976-1977, pages 271-275)&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:4" role="doc-endnote">
+<li id="fn:4">
 <p>G. J. Chang, M. C. Hu, K. W. Lih and T. C. Shieh, Exact Difference Triangles<a href="https://w3.math.sinica.edu.tw/bulletin/bulletin_old/d51/5120.pdf">(pdf)</a>, Bulletin of the Institute of Mathematics, Academia Sinica, Taipei, Taiwan (vol. 5, June 1977, pages 191- 197)&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:5" role="doc-endnote">
+<li id="fn:5">
 <p>Ian Stewart, Professor Stewart’s Cabinet of Mathematical Curiosities, 中译版《数学万花筒》&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:6" role="doc-endnote">
+<li id="fn:6">
 <p>Brian Chen, YunHao Fu, Andy Liu, George Sicherman, Herbert Taylor, Po-Sheng Wu. Triangles of Absolute Diﬀerences <a href="http://services.artofproblemsolving.com/download.php?id=YXR0YWNobWVudHMvMi81Lzk3MzFkYjRiOWFkZDI5NjhiZDdmYmU0NGI0MWNmOTQ1OGVhZGI1LnBkZg==&amp;rn=dG9hZHMucGRm">(pdf)</a>&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:7" role="doc-endnote">
+<li id="fn:7">
 <p><a href="https://wordplay.blogs.nytimes.com/2015/01/26/sicherman/">George Sicherman’s Pool Puzzles</a>, NYTimes Blog, 2015-01-26.&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
     </div>
 
     <div class="post-copyright">
@@ -456,11 +456,11 @@ DifferenceTriangle@5 // AbsoluteTiming
   
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+  
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.191509a5c8442abdb6eb5020a332fd59bdd83a7e78a2d2241108df9113504292.js"></script>
 
 
 

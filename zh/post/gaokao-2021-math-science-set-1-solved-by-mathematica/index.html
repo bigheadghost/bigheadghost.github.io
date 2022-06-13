@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="bigheadghost" /><meta name="description" content="2021年高考已经结束，本文尝试基于有限的先验知识（读懂题目），用Mathematica软件计算求解题目。
- 2021年普通高等学校招生全国统一考试 (I卷)
+2021年普通高等学校招生全国统一考试 (I卷)
 理科数学" />
 
 
@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.83.1 with theme even" />
+<meta name="generator" content="Hugo 0.100.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/zh/post/gaokao-2021-math-science-set-1-solved-by-mathematica/" />
@@ -38,7 +38,7 @@
 
 
 <link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
 
 
 <meta property="og:title" content="2021高考理科数学全国1卷的计算机求解" />
@@ -46,13 +46,13 @@
  2021年普通高等学校招生全国统一考试 (I卷)理科数学" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/zh/post/gaokao-2021-math-science-set-1-solved-by-mathematica/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-06-09T11:40:39&#43;08:00" />
-<meta property="article:modified_time" content="2021-06-09T11:40:39&#43;08:00" /><meta property="og:site_name" content="日种" />
+<meta property="article:published_time" content="2021-06-09T11:40:39+08:00" />
+<meta property="article:modified_time" content="2021-06-09T11:40:39+08:00" /><meta property="og:site_name" content="日种" />
 
 <meta itemprop="name" content="2021高考理科数学全国1卷的计算机求解">
 <meta itemprop="description" content="2021年高考已经结束，本文尝试基于有限的先验知识（读懂题目），用Mathematica软件计算求解题目。
- 2021年普通高等学校招生全国统一考试 (I卷)理科数学"><meta itemprop="datePublished" content="2021-06-09T11:40:39&#43;08:00" />
-<meta itemprop="dateModified" content="2021-06-09T11:40:39&#43;08:00" />
+ 2021年普通高等学校招生全国统一考试 (I卷)理科数学"><meta itemprop="datePublished" content="2021-06-09T11:40:39+08:00" />
+<meta itemprop="dateModified" content="2021-06-09T11:40:39+08:00" />
 <meta itemprop="wordCount" content="3052">
 <meta itemprop="keywords" content="mathematica," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="2021高考理科数学全国1卷的计算机求解"/>
@@ -184,17 +184,17 @@
 <p>设函数$f(x)=\frac{1-x}{1+x}$，则下列函数中为奇函数的是：$f(x-1)+1$</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">ClearAll[f, g];
-f[x_] := (1 - x)/(1 + x); 
-g[x_] := f[x - 1] + 1; 
-Resolve[ForAll[x, g[x] == -g[-x]], Reals]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ClearAll[f, g];
+</span></span><span class="line"><span class="cl">f[x_] := (1 - x)/(1 + x); 
+</span></span><span class="line"><span class="cl">g[x_] := f[x - 1] + 1; 
+</span></span><span class="line"><span class="cl">Resolve[ForAll[x, g[x] == -g[-x]], Reals]
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -221,15 +221,15 @@ Resolve[ForAll[x, g[x] == -g[-x]], Reals]
 <p><img src="/img/2021/gaokao9.png" alt="gaokao9"></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Simplify@Reduce[{表高/ab == eh/ah, 表高/ab == gc/ac, gc - eh == 表目距的差, ac - ah == 表距 + 表目距的差, 
-    表距 &gt; 0, 表目距的差 &gt; 0, ac &gt; ah &gt; 0, eh &gt; 0, 表高 &gt; 0}, 
-    {ab, ac, ah, eh, gc}, Reals]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Simplify@Reduce[{表高/ab == eh/ah, 表高/ab == gc/ac, gc - eh == 表目距的差, ac - ah == 表距 + 表目距的差, 
+</span></span><span class="line"><span class="cl">    表距 &gt; 0, 表目距的差 &gt; 0, ac &gt; ah &gt; 0, eh &gt; 0, 表高 &gt; 0}, 
+</span></span><span class="line"><span class="cl">    {ab, ac, ah, eh, gc}, Reals]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="10">
 <li>
@@ -240,11 +240,11 @@ Resolve[ForAll[x, g[x] == -g[-x]], Reals]
 <p>设$B$是椭圆$C: \frac{x^2}{a^2}+\frac{x^2}{b^2}=1(a&gt;b&gt;0)$的上顶点，若$C$上的任意一点$P$都满足$|PB|\le 2b$，则$C$的离心率的取值范围是：$(0,\sqrt{2}/2]$</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Simplify@Reduce[ForAll[{x, y}, {x^2/a^2 + y^2/b^2 == 1, a &gt; b &gt; 0}, x^2 + (y - b)^2 &lt;= 4 b^2], Reals]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Simplify@Reduce[ForAll[{x, y}, {x^2/a^2 + y^2/b^2 == 1, a &gt; b &gt; 0}, x^2 + (y - b)^2 &lt;= 4 b^2], Reals]
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -265,15 +265,15 @@ Resolve[ForAll[x, g[x] == -g[-x]], Reals]
 <p>记$\triangle ABC$的内角$A,B,C$的对边分别为$a,b,c$，面积为$\sqrt{3}. B=60^\circ, a^2+c^2=3ac $，则$b=2\sqrt{2}$</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">ClearAll[a, b, c]; Simplify@
-Solve[{a c Sin[Pi/3]/2 == Sqrt[3], b^2 == a^2 + c^2 - 2 a c Cos[Pi/3], a^2 + c^2 == 3 a c, 
- a &gt; 0, b &gt; 0, c &gt; 0}, {a, b, c}, Reals]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ClearAll[a, b, c]; Simplify@
+</span></span><span class="line"><span class="cl">Solve[{a c Sin[Pi/3]/2 == Sqrt[3], b^2 == a^2 + c^2 - 2 a c Cos[Pi/3], a^2 + c^2 == 3 a c, 
+</span></span><span class="line"><span class="cl"> a &gt; 0, b &gt; 0, c &gt; 0}, {a, b, c}, Reals]
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -292,19 +292,19 @@ Solve[{a c Sin[Pi/3]/2 == Sqrt[3], b^2 == a^2 + c^2 - 2 a c Cos[Pi/3], a^2 + c^2
 <p>（2）判断新设备生产产品的该项指标的均值较旧设备是否有显著提高（如果$\bar{y}-\bar{x} \ge 2\sqrt{\frac{s_1^2+s_2^2}{2}}$，则认为新设备生产产品的该项指标的均值较旧设备是否有显著提高，否则不认为有显著提高）.  <code>否</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">old = {9.8, 10.3, 10.0, 10.2, 9.9, 9.8, 10.0, 10.1, 10.2, 9.7};
-new = {10.1, 10.4, 10.1, 10.0, 10.1, 10.3, 10.6, 10.5, 10.4, 10.5};
-{{a, b} = Mean /@ {old, new}, 
-{c, d} = Variance[#]*(Length[#] - 1)/Length[#] &amp; /@ {old, new}, 
-b - a &gt;= 2 Sqrt[(c + d)/2]}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">old = {9.8, 10.3, 10.0, 10.2, 9.9, 9.8, 10.0, 10.1, 10.2, 9.7};
+</span></span><span class="line"><span class="cl">new = {10.1, 10.4, 10.1, 10.0, 10.1, 10.3, 10.6, 10.5, 10.4, 10.5};
+</span></span><span class="line"><span class="cl">{{a, b} = Mean /@ {old, new}, 
+</span></span><span class="line"><span class="cl">{c, d} = Variance[#]*(Length[#] - 1)/Length[#] &amp; /@ {old, new}, 
+</span></span><span class="line"><span class="cl">b - a &gt;= 2 Sqrt[(c + d)/2]}
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -314,15 +314,15 @@ b - a &gt;= 2 Sqrt[(c + d)/2]}
 <p><img src="/img/2021/gaokao18.png" alt="gaokao18"></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">ClearAll[p, b, a, m, t]; With[{p = {0, 0, 1}, b = {t, 1, 0}, a = {t, 0, 0}, m = {t/2, 1, 0}}, 
-{Solve[{VectorAngle[p - b, a - m] == Pi/2, t &gt; 0}, t, Reals], 
-  Sin@DihedralAngle[{p, m}, {a - m, b - m}] /. t -&gt; Sqrt[2]}]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ClearAll[p, b, a, m, t]; With[{p = {0, 0, 1}, b = {t, 1, 0}, a = {t, 0, 0}, m = {t/2, 1, 0}}, 
+</span></span><span class="line"><span class="cl">{Solve[{VectorAngle[p - b, a - m] == Pi/2, t &gt; 0}, t, Reals], 
+</span></span><span class="line"><span class="cl">  Sin@DihedralAngle[{p, m}, {a - m, b - m}] /. t -&gt; Sqrt[2]}]
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -332,15 +332,15 @@ b - a &gt;= 2 Sqrt[(c + d)/2]}
 <p>$$\begin{aligned} &amp;b[n]=\frac{n+2}{2} \cr &amp;S[n]=\frac{n+2}{n+1} \cr &amp;a[n]=\left \lbrace \begin{aligned} 3/2, \quad &amp;n=1 \cr -\frac{1}{n(n+1)},\quad &amp;n \ge 2  \end{aligned} \right.\end{aligned}$$</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">RSolve[{b[1] == 3/2, 2 b[n - 1] + 1 == 2 b[n]}, {b}, n]
-b[n]/b[n - 1] /. b -&gt; Function[{n}, (2 + n)/2]
-RSolve[{a[n] == S[n] - S[n - 1], a[2] == -1/6} /. S -&gt; Function[{n}, (2 + n)/(1 + n)], {a}, n]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">RSolve[{b[1] == 3/2, 2 b[n - 1] + 1 == 2 b[n]}, {b}, n]
+</span></span><span class="line"><span class="cl">b[n]/b[n - 1] /. b -&gt; Function[{n}, (2 + n)/2]
+</span></span><span class="line"><span class="cl">RSolve[{a[n] == S[n] - S[n - 1], a[2] == -1/6} /. S -&gt; Function[{n}, (2 + n)/(1 + n)], {a}, n]
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -357,17 +357,17 @@ RSolve[{a[n] == S[n] - S[n - 1], a[2] == -1/6} /. S -&gt; Function[{n}, (2 + n)/
 <p>（2）若点$P$在$M$上，$PA，PB$是$C$的两条切线，$A，B$是切点，求$\triangle PAB$面积的最大值：$20\sqrt{5}$</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Simplify@Reduce[{px^2 + (py + 4)^2 == 1, y - py == k (x - px), x^2 == 4 y, k^2 - k px + py == 0}, {x, y}]
-Maximize[{Area@Triangle@Append[{2 k, 2 k^2 - k px + py} /. Solve[k^2 - k px + py == 0, k], {px, py}], 
-px^2 + (py + 4)^2 == 1}, {px, py}]
-{20 Sqrt[5], {px -&gt; 0, py -&gt; -5}}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Simplify@Reduce[{px^2 + (py + 4)^2 == 1, y - py == k (x - px), x^2 == 4 y, k^2 - k px + py == 0}, {x, y}]
+</span></span><span class="line"><span class="cl">Maximize[{Area@Triangle@Append[{2 k, 2 k^2 - k px + py} /. Solve[k^2 - k px + py == 0, k], {px, py}], 
+</span></span><span class="line"><span class="cl">px^2 + (py + 4)^2 == 1}, {px, py}]
+</span></span><span class="line"><span class="cl">{20 Sqrt[5], {px -&gt; 0, py -&gt; -5}}
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 </ol>
@@ -381,15 +381,15 @@ px^2 + (py + 4)^2 == 1}, {px, py}]
 <p>（2）过点$F(4,1)$作$\bigodot C$的两条切线，以坐标原点为极点，$x$轴正半轴为极轴建立极坐标系，求这两条切线的极坐标方程: $r \sin \theta =1 \pm \frac{r \cos \theta-4}{\sqrt{3}}$</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">TransformedField[ &#34;Cartesian&#34; -&gt; &#34;Polar&#34;, 
-  y - 1 == k (x - 4), {x, y} -&gt; {r, \[Theta]}] /. 
- Solve[RegionDistance[ImplicitRegion[y - 1 == k (x - 4), {x, y}], {2, 1}] == 1]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TransformedField[ &#34;Cartesian&#34; -&gt; &#34;Polar&#34;, 
+</span></span><span class="line"><span class="cl">  y - 1 == k (x - 4), {x, y} -&gt; {r, \[Theta]}] /. 
+</span></span><span class="line"><span class="cl"> Solve[RegionDistance[ImplicitRegion[y - 1 == k (x - 4), {x, y}], {2, 1}] == 1]
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -516,11 +516,11 @@ px^2 + (py + 4)^2 == 1}, {px, py}]
   
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+  
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.191509a5c8442abdb6eb5020a332fd59bdd83a7e78a2d2241108df9113504292.js"></script>
   <script type="text/javascript">
     window.MathJax = {
       tex: {

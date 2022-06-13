@@ -17,9 +17,9 @@
 
 
 <meta name="author" content="bigheadghost" /><meta name="description" content="Excel单元格引用有两种方式：
-  A1：默认的引用类型，用字母标志列，数字标志行。A是第1列，AA是第27列。
-  R1C1：行列均用数字表示，R代表行（Row），C代表列（Column）。
-  有时候，特别是写公式时，会需要知道某一列是第几列，从字母到数字的转换通常不太容易。
+A1：默认的引用类型，用字母标志列，数字标志行。A是第1列，AA是第27列。
+R1C1：行列均用数字表示，R代表行（Row），C代表列（Column）。
+有时候，特别是写公式时，会需要知道某一列是第几列，从字母到数字的转换通常不太容易。
 " />
 
 
@@ -27,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.83.1 with theme even" />
+<meta name="generator" content="Hugo 0.100.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/zh/post/excel-reference-style-switch-with-one-click/" />
@@ -40,7 +40,7 @@
 
 
 <link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
 
 
 <meta property="og:title" content="Excel A1/R1C1 引用样式一键切换" />
@@ -56,8 +56,8 @@ R1C1：行列均用数字表示，R代表行（Row），C代表列（Column）�
 有时候，特别是写公式时，会需要知道某一列是第几列，从字母到数字的转换通常不太容易。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/zh/post/excel-reference-style-switch-with-one-click/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-09-09T11:23:38&#43;08:00" />
-<meta property="article:modified_time" content="2020-09-09T11:23:38&#43;08:00" /><meta property="og:site_name" content="日种" />
+<meta property="article:published_time" content="2020-09-09T11:23:38+08:00" />
+<meta property="article:modified_time" content="2020-09-09T11:23:38+08:00" /><meta property="og:site_name" content="日种" />
 
 <meta itemprop="name" content="Excel A1/R1C1 引用样式一键切换">
 <meta itemprop="description" content="Excel单元格引用有两种方式：
@@ -69,8 +69,8 @@ A1：默认的引用类型，用字母标志列，数字标志行。A是第1列�
 R1C1：行列均用数字表示，R代表行（Row），C代表列（Column）。
 
 
-有时候，特别是写公式时，会需要知道某一列是第几列，从字母到数字的转换通常不太容易。"><meta itemprop="datePublished" content="2020-09-09T11:23:38&#43;08:00" />
-<meta itemprop="dateModified" content="2020-09-09T11:23:38&#43;08:00" />
+有时候，特别是写公式时，会需要知道某一列是第几列，从字母到数字的转换通常不太容易。"><meta itemprop="datePublished" content="2020-09-09T11:23:38+08:00" />
+<meta itemprop="dateModified" content="2020-09-09T11:23:38+08:00" />
 <meta itemprop="wordCount" content="365">
 <meta itemprop="keywords" content="software," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Excel A1/R1C1 引用样式一键切换"/>
@@ -190,7 +190,7 @@ R1C1：行列均用数字表示，R代表行（Row），C代表列（Column）�
 <p>第一步，工具栏上，开发工具→Visual Basic，在Personal.xlsb里编写一个函数，比如命名为ToggleR1C1：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -201,16 +201,16 @@ R1C1：行列均用数字表示，R代表行（Row），C代表列（Column）�
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Sub ToggleR1C1()
-    With Application
-        If .ReferenceStyle = xlR1C1 Then
-            .ReferenceStyle = xlA1
-        Else
-            .ReferenceStyle = xlR1C1
-        End If
-    End With
-End Sub
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub ToggleR1C1()
+</span></span><span class="line"><span class="cl">    With Application
+</span></span><span class="line"><span class="cl">        If .ReferenceStyle = xlR1C1 Then
+</span></span><span class="line"><span class="cl">            .ReferenceStyle = xlA1
+</span></span><span class="line"><span class="cl">        Else
+</span></span><span class="line"><span class="cl">            .ReferenceStyle = xlR1C1
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>第二步，Excel 选项→自定义功能区，从宏里，把上述函数添加到需要的位置上。可以自定义按钮的显示名称和图标。</p>
     </div>
@@ -328,11 +328,11 @@ End Sub
   
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+  
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.191509a5c8442abdb6eb5020a332fd59bdd83a7e78a2d2241108df9113504292.js"></script>
 
 
 

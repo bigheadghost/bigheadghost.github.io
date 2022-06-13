@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.83.1 with theme even" />
+<meta name="generator" content="Hugo 0.100.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/" />
@@ -38,7 +38,7 @@
 
 
 <link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
 
 
 <meta property="og:title" content="Know Nothing" />
@@ -152,7 +152,7 @@
     <div class="post-meta">
       <span class="post-time"> 2014-09-09 12:05:23 CST </span>
       
-        <span class="more-meta"> 1538 words </span>
+        <span class="more-meta"> 1540 words </span>
         <span class="more-meta"> 8 mins read </span>
     </div>
   </header>
@@ -162,7 +162,7 @@
       <h1 id="problem-81">Problem 81</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -173,16 +173,16 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">s = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
-Clear@MinPathSum;
-MinPathSum[1, 1] := s[[1, 1]]
-MinPathSum[r_, c_] := MinPathSum[r, c] =
-   If[r == 1, MinPathSum[r, c - 1],
-     If[c == 1, MinPathSum[r - 1, c],
-      Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] + s[[r, c]];
-MinPathSum[80, 80]
-427337
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">s = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
+</span></span><span class="line"><span class="cl">Clear@MinPathSum;
+</span></span><span class="line"><span class="cl">MinPathSum[1, 1] := s[[1, 1]]
+</span></span><span class="line"><span class="cl">MinPathSum[r_, c_] := MinPathSum[r, c] =
+</span></span><span class="line"><span class="cl">   If[r == 1, MinPathSum[r, c - 1],
+</span></span><span class="line"><span class="cl">     If[c == 1, MinPathSum[r - 1, c],
+</span></span><span class="line"><span class="cl">      Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] + s[[r, c]];
+</span></span><span class="line"><span class="cl">MinPathSum[80, 80]
+</span></span><span class="line"><span class="cl">427337
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -208,7 +208,7 @@ MinPathSum[80, 80]
       <h1 id="problem-61">Problem 61</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -249,46 +249,46 @@ MinPathSum[80, 80]
 </span><span class="lnt">39
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">LEN</span><span class="o">=</span><span class="mi">6</span>
-<span class="n">numbers</span><span class="o">=</span><span class="p">[[]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">LEN</span><span class="p">)]</span>
-<span class="n">solution</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">LEN</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">200</span><span class="p">):</span>
-    <span class="k">if</span><span class="p">(</span><span class="mi">1000</span><span class="o">&lt;=</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="o">&lt;</span><span class="mi">10000</span><span class="p">):</span>
-        <span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
-    <span class="k">if</span><span class="p">(</span><span class="mi">1000</span><span class="o">&lt;=</span><span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">10000</span><span class="p">):</span>
-        <span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span>
-    <span class="k">if</span><span class="p">(</span><span class="mi">1000</span><span class="o">&lt;=</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="o">&lt;</span><span class="mi">10000</span><span class="p">):</span>
-        <span class="n">numbers</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
-    <span class="k">if</span><span class="p">(</span><span class="mi">1000</span><span class="o">&lt;=</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">10000</span><span class="p">):</span>
-        <span class="n">numbers</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>           
-    <span class="k">if</span><span class="p">(</span><span class="mi">1000</span><span class="o">&lt;=</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">i</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="o">&lt;</span><span class="mi">10000</span><span class="p">):</span>
-        <span class="n">numbers</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">i</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
-    <span class="k">if</span><span class="p">(</span><span class="mi">1000</span><span class="o">&lt;=</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">10000</span><span class="p">):</span>
-        <span class="n">numbers</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">))</span>
- 
-<span class="k">def</span> <span class="nf">FindNext</span><span class="p">(</span><span class="n">last</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">LEN</span><span class="p">):</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">solution</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>
-                <span class="k">if</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">solution</span> <span class="ow">and</span> <span class="p">((</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">//</span> <span class="mi">100</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="n">solution</span><span class="p">[</span><span class="n">last</span><span class="p">]</span> <span class="o">%</span> <span class="mi">100</span><span class="p">))):</span>
-                    <span class="n">solution</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
-                    <span class="k">if</span> <span class="p">(</span><span class="n">length</span> <span class="o">==</span> <span class="mi">5</span><span class="p">):</span>
-                        <span class="k">if</span> <span class="p">(</span><span class="n">solution</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">//</span> <span class="mi">100</span> <span class="o">==</span> <span class="n">solution</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">100</span><span class="p">):</span>
-                            <span class="k">return</span> <span class="bp">True</span>
-                    <span class="k">elif</span> <span class="p">(</span><span class="n">FindNext</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)):</span>
-                        <span class="k">return</span> <span class="bp">True</span>
- 
-            <span class="n">solution</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1">#backforce</span>
-    <span class="k">return</span>  <span class="bp">False</span>
- 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">5</span><span class="p">])):</span>
-    <span class="n">solution</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">=</span><span class="n">numbers</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">FindNext</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)):</span>       
-        <span class="k">print</span><span class="p">(</span><span class="n">solution</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">solution</span><span class="p">))</span>
-        <span class="k">break</span>
-
-<span class="p">[</span><span class="mi">8256</span><span class="p">,</span> <span class="mi">5625</span><span class="p">,</span> <span class="mi">2882</span><span class="p">,</span> <span class="mi">8128</span><span class="p">,</span> <span class="mi">2512</span><span class="p">,</span> <span class="mi">1281</span><span class="p">]</span> <span class="mi">28684</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">LEN</span><span class="o">=</span><span class="mi">6</span>
+</span></span><span class="line"><span class="cl"><span class="n">numbers</span><span class="o">=</span><span class="p">[[]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">LEN</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl"><span class="n">solution</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">LEN</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">200</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="mi">1000</span><span class="o">&lt;=</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="o">&lt;</span><span class="mi">10000</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="mi">1000</span><span class="o">&lt;=</span><span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">10000</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="mi">1000</span><span class="o">&lt;=</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="o">&lt;</span><span class="mi">10000</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">numbers</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="mi">1000</span><span class="o">&lt;=</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">10000</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">numbers</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>           
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="mi">1000</span><span class="o">&lt;=</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">i</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="o">&lt;</span><span class="mi">10000</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">numbers</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">i</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="mi">1000</span><span class="o">&lt;=</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">10000</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">numbers</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">FindNext</span><span class="p">(</span><span class="n">last</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">LEN</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">solution</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">solution</span> <span class="ow">and</span> <span class="p">((</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">//</span> <span class="mi">100</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="n">solution</span><span class="p">[</span><span class="n">last</span><span class="p">]</span> <span class="o">%</span> <span class="mi">100</span><span class="p">))):</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">solution</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="p">(</span><span class="n">length</span> <span class="o">==</span> <span class="mi">5</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">if</span> <span class="p">(</span><span class="n">solution</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">//</span> <span class="mi">100</span> <span class="o">==</span> <span class="n">solution</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">100</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                            <span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">elif</span> <span class="p">(</span><span class="n">FindNext</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">            <span class="n">solution</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1">#backforce</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span>  <span class="kc">False</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">5</span><span class="p">])):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">solution</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">=</span><span class="n">numbers</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">FindNext</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)):</span>       
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">solution</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">solution</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">8256</span><span class="p">,</span> <span class="mi">5625</span><span class="p">,</span> <span class="mi">2882</span><span class="p">,</span> <span class="mi">8128</span><span class="p">,</span> <span class="mi">2512</span><span class="p">,</span> <span class="mi">1281</span><span class="p">]</span> <span class="mi">28684</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -304,7 +304,7 @@ MinPathSum[80, 80]
     <div class="post-meta">
       <span class="post-time"> 2014-09-02 12:04:41 CST </span>
       
-        <span class="more-meta"> 1031 words </span>
+        <span class="more-meta"> 1033 words </span>
         <span class="more-meta"> 3 mins read </span>
     </div>
   </header>
@@ -314,18 +314,18 @@ MinPathSum[80, 80]
       <h1 id="problem-41">Problem 41</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Max@Table[ Select[FromDigits /@ Permutations[Range[i]], PrimeQ], {i, 9}]
-7652413
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Max@Table[ Select[FromDigits /@ Permutations[Range[i]], PrimeQ], {i, 9}]
+</span></span><span class="line"><span class="cl">7652413
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-42">Problem 42</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -333,18 +333,18 @@ MinPathSum[80, 80]
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">s = (Total[ToCharacterCode[#] - First@ToCharacterCode[&#34;A&#34;] + 1]) &amp; /@ StringSplit[StringReplace[Import[&#34;R:\\words.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;],   &#34;,&#34;];
-Reduce[n*(n + 1)/2 &gt;Max[s] &amp;&amp; n &gt; 0, n, Integers]
-n &gt;= 20
-In[37]:= tn = Array[#*(# + 1)/2 &amp;, 20];
-In[38]:= Select[s, MemberQ[tn, #] &amp;] // Length
-Out[38]= 162
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">s = (Total[ToCharacterCode[#] - First@ToCharacterCode[&#34;A&#34;] + 1]) &amp; /@ StringSplit[StringReplace[Import[&#34;R:\\words.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;],   &#34;,&#34;];
+</span></span><span class="line"><span class="cl">Reduce[n*(n + 1)/2 &gt;Max[s] &amp;&amp; n &gt; 0, n, Integers]
+</span></span><span class="line"><span class="cl">n &gt;= 20
+</span></span><span class="line"><span class="cl">In[37]:= tn = Array[#*(# + 1)/2 &amp;, 20];
+</span></span><span class="line"><span class="cl">In[38]:= Select[s, MemberQ[tn, #] &amp;] // Length
+</span></span><span class="line"><span class="cl">Out[38]= 162
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-43">Problem 43</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -360,21 +360,21 @@ Out[38]= 162
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">cf = With[{
-    code =
-     And @@ Thread[
-         Table[100 A[[i]] + 10 A[[i + 1]] + A[[i + 2]], {i, 2, 8}]~
-           Mod~{2, 3, 5, 7, 11, 13, 17} == 0] // Boole // Quiet
-    },
-   Compile[{ {A, _Integer, 1} },
-    code,
-    RuntimeAttributes -&gt; Listable,
-    RuntimeOptions -&gt; &#34;Speed&#34;, CompilationTarget -&gt; &#34;C&#34;
-    ]
-   ];
-FromDigits /@ Pick[#, cf@#, 1] &amp;@Permutations@Range[0, 9] // Tr
-16695334890
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cf = With[{
+</span></span><span class="line"><span class="cl">    code =
+</span></span><span class="line"><span class="cl">     And @@ Thread[
+</span></span><span class="line"><span class="cl">         Table[100 A[[i]] + 10 A[[i + 1]] + A[[i + 2]], {i, 2, 8}]~
+</span></span><span class="line"><span class="cl">           Mod~{2, 3, 5, 7, 11, 13, 17} == 0] // Boole // Quiet
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">   Compile[{ {A, _Integer, 1} },
+</span></span><span class="line"><span class="cl">    code,
+</span></span><span class="line"><span class="cl">    RuntimeAttributes -&gt; Listable,
+</span></span><span class="line"><span class="cl">    RuntimeOptions -&gt; &#34;Speed&#34;, CompilationTarget -&gt; &#34;C&#34;
+</span></span><span class="line"><span class="cl">    ]
+</span></span><span class="line"><span class="cl">   ];
+</span></span><span class="line"><span class="cl">FromDigits /@ Pick[#, cf@#, 1] &amp;@Permutations@Range[0, 9] // Tr
+</span></span><span class="line"><span class="cl">16695334890
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -400,65 +400,65 @@ FromDigits /@ Pick[#, cf@#, 1] &amp;@Permutations@Range[0, 9] // Tr
       <h1 id="problem-21">Problem 21</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">f = DivisorSigma[1, #] - # &amp;;
-Total@Select[Range[9999], (a = f@#; a &lt; 9999 &amp;&amp; a != # &amp;&amp; f@a == #) &amp;]
-31626
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">f = DivisorSigma[1, #] - # &amp;;
+</span></span><span class="line"><span class="cl">Total@Select[Range[9999], (a = f@#; a &lt; 9999 &amp;&amp; a != # &amp;&amp; f@a == #) &amp;]
+</span></span><span class="line"><span class="cl">31626
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-22">Problem 22</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">nl=Sort@StringSplit[StringReplace[Import[&#34;p022_names.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;], &#34;,&#34;];
-Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&#34;A&#34;]] + 1] * First[#2] &amp;, nl]
-871198282
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">nl=Sort@StringSplit[StringReplace[Import[&#34;p022_names.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;], &#34;,&#34;];
+</span></span><span class="line"><span class="cl">Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&#34;A&#34;]] + 1] * First[#2] &amp;, nl]
+</span></span><span class="line"><span class="cl">871198282
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-23">Problem 23</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &gt; # &amp;];
-Total@Complement[Range[1, 28123],
-  DeleteDuplicates@(   (Abundants[[#]] + Abundants[[# ;; -1]]) &amp; /@ Range[Length@Abundants] // Flatten  )]
-4179871
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &gt; # &amp;];
+</span></span><span class="line"><span class="cl">Total@Complement[Range[1, 28123],
+</span></span><span class="line"><span class="cl">  DeleteDuplicates@(   (Abundants[[#]] + Abundants[[# ;; -1]]) &amp; /@ Range[Length@Abundants] // Flatten  )]
+</span></span><span class="line"><span class="cl">4179871
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-24">Problem 24</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]]
-2783915460
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]]
+</span></span><span class="line"><span class="cl">2783915460
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-25">Problem 25</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">NestWhile[(# + 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
-4782
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">NestWhile[(# + 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
+</span></span><span class="line"><span class="cl">4782
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -520,11 +520,11 @@ Total@Complement[Range[1, 28123],
   
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+  
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.191509a5c8442abdb6eb5020a332fd59bdd83a7e78a2d2241108df9113504292.js"></script>
 
 
 

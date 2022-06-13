@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigheadghost" /><meta name="description" content="Problem 21 1 2 3  f = DivisorSigma[1, #] - # &amp;amp;; Total@Select[Range[9999], (a = f@#; a &amp;lt; 9999 &amp;amp;&amp;amp; a != # &amp;amp;&amp;amp; f@a == #) &amp;amp;] 31626   Problem 22 1 2 3  nl=Sort@StringSplit[StringReplace[Import[&amp;#34;p022_names.txt&amp;#34;], &amp;#34;\&amp;#34;&amp;#34; -&amp;gt; &amp;#34;&amp;#34;], &amp;#34;,&amp;#34;]; Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&amp;#34;A&amp;#34;]] &#43; 1] * First[#2] &amp;amp;, nl] 871198282   Problem 23 1 2 3 4  Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &amp;gt; # &amp;amp;]; Total@Complement[Range[1, 28123], DeleteDuplicates@( (Abundants[[#]] &#43; Abundants[[# ;; -1]]) &amp;amp; /@ Range[Length@Abundants] // Flatten )] 4179871   Problem 24 1 2  FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]] 2783915460   Problem 25 1 2  NestWhile[(# &#43; 1) &amp;amp;, 1, IntegerLength@Fibonacci@# &amp;lt; 1000 &amp;amp;] 4782   " />
+<meta name="author" content="bigheadghost" /><meta name="description" content="Problem 21 1 2 3 f = DivisorSigma[1, #] - # &amp;amp;; Total@Select[Range[9999], (a = f@#; a &amp;lt; 9999 &amp;amp;&amp;amp; a != # &amp;amp;&amp;amp; f@a == #) &amp;amp;] 31626 Problem 22 1 2 3 nl=Sort@StringSplit[StringReplace[Import[&amp;#34;p022_names.txt&amp;#34;], &amp;#34;\&amp;#34;&amp;#34; -&amp;gt; &amp;#34;&amp;#34;], &amp;#34;,&amp;#34;]; Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&amp;#34;A&amp;#34;]] &#43; 1] * First[#2] &amp;amp;, nl] 871198282 Problem 23 1 2 3 4 Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &amp;gt; # &amp;amp;]; Total@Complement[Range[1, 28123], DeleteDuplicates@( (Abundants[[#]] &#43; Abundants[[# ;; -1]]) &amp;amp; /@ Range[Length@Abundants] // Flatten )] 4179871 Problem 24 1 2 FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]] 2783915460 Problem 25 1 2 NestWhile[(# &#43; 1) &amp;amp;, 1, IntegerLength@Fibonacci@# &amp;lt; 1000 &amp;amp;] 4782 " />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.83.1 with theme even" />
+<meta name="generator" content="Hugo 0.100.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/post/dive-into-project-euler-part-2-21-40/" />
@@ -36,7 +36,7 @@
 
 
 <link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
 
 
 <meta property="og:title" content="Dive into Project Euler Part 2 (21-40)" />
@@ -106,8 +106,8 @@ NestWhile[(# &#43; 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/post/dive-into-project-euler-part-2-21-40/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2014-08-29T12:07:32&#43;08:00" />
-<meta property="article:modified_time" content="2014-08-29T12:07:32&#43;08:00" />
+<meta property="article:published_time" content="2014-08-29T12:07:32+08:00" />
+<meta property="article:modified_time" content="2014-08-29T12:07:32+08:00" />
 
 <meta itemprop="name" content="Dive into Project Euler Part 2 (21-40)">
 <meta itemprop="description" content="Problem 21
@@ -173,8 +173,8 @@ NestWhile[(# &#43; 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
 4782
 
 
-"><meta itemprop="datePublished" content="2014-08-29T12:07:32&#43;08:00" />
-<meta itemprop="dateModified" content="2014-08-29T12:07:32&#43;08:00" />
+"><meta itemprop="datePublished" content="2014-08-29T12:07:32+08:00" />
+<meta itemprop="dateModified" content="2014-08-29T12:07:32+08:00" />
 <meta itemprop="wordCount" content="493">
 <meta itemprop="keywords" content="Mathematica," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Dive into Project Euler Part 2 (21-40)"/>
@@ -362,81 +362,81 @@ NestWhile[(# &#43; 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
       <h1 id="problem-21">Problem 21</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">f = DivisorSigma[1, #] - # &amp;;
-Total@Select[Range[9999], (a = f@#; a &lt; 9999 &amp;&amp; a != # &amp;&amp; f@a == #) &amp;]
-31626
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">f = DivisorSigma[1, #] - # &amp;;
+</span></span><span class="line"><span class="cl">Total@Select[Range[9999], (a = f@#; a &lt; 9999 &amp;&amp; a != # &amp;&amp; f@a == #) &amp;]
+</span></span><span class="line"><span class="cl">31626
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-22">Problem 22</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">nl=Sort@StringSplit[StringReplace[Import[&#34;p022_names.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;], &#34;,&#34;];
-Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&#34;A&#34;]] + 1] * First[#2] &amp;, nl]
-871198282
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">nl=Sort@StringSplit[StringReplace[Import[&#34;p022_names.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;], &#34;,&#34;];
+</span></span><span class="line"><span class="cl">Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&#34;A&#34;]] + 1] * First[#2] &amp;, nl]
+</span></span><span class="line"><span class="cl">871198282
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-23">Problem 23</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &gt; # &amp;];
-Total@Complement[Range[1, 28123],
-  DeleteDuplicates@(   (Abundants[[#]] + Abundants[[# ;; -1]]) &amp; /@ Range[Length@Abundants] // Flatten  )]
-4179871
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &gt; # &amp;];
+</span></span><span class="line"><span class="cl">Total@Complement[Range[1, 28123],
+</span></span><span class="line"><span class="cl">  DeleteDuplicates@(   (Abundants[[#]] + Abundants[[# ;; -1]]) &amp; /@ Range[Length@Abundants] // Flatten  )]
+</span></span><span class="line"><span class="cl">4179871
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-24">Problem 24</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]]
-2783915460
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]]
+</span></span><span class="line"><span class="cl">2783915460
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-25">Problem 25</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">NestWhile[(# + 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
-4782
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">NestWhile[(# + 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
+</span></span><span class="line"><span class="cl">4782
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-26">Problem 26</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Last@Ordering[Length@RealDigits[1/#][[1, 1]] &amp; /@ Range[999]]
-983
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Last@Ordering[Length@RealDigits[1/#][[1, 1]] &amp; /@ Range[999]]
+</span></span><span class="line"><span class="cl">983
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-27">Problem 27</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -446,94 +446,94 @@ Total@Complement[Range[1, 28123],
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">al = Range[-999, 999];
-pl = Array[Prime, PrimePi@999];
-bl = Join[pl, -pl];
-f[a_, b_] := NestWhile[# + 1 &amp;, 0, PrimeQ[#^2 + a # + b] &amp;];
-s = Table[f[a, b], {a, al}, {b, bl}];
-pos = Position[s, Max[s]];
-al[[pos[[1, 1]]]]*bl[[pos[[1, 2]]]]
--59231
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">al = Range[-999, 999];
+</span></span><span class="line"><span class="cl">pl = Array[Prime, PrimePi@999];
+</span></span><span class="line"><span class="cl">bl = Join[pl, -pl];
+</span></span><span class="line"><span class="cl">f[a_, b_] := NestWhile[# + 1 &amp;, 0, PrimeQ[#^2 + a # + b] &amp;];
+</span></span><span class="line"><span class="cl">s = Table[f[a, b], {a, al}, {b, bl}];
+</span></span><span class="line"><span class="cl">pos = Position[s, Max[s]];
+</span></span><span class="line"><span class="cl">al[[pos[[1, 1]]]]*bl[[pos[[1, 2]]]]
+</span></span><span class="line"><span class="cl">-59231
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-28">Problem 28</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Total@FoldList[Plus, 1, Array[Ceiling[#/4]*2 &amp;, (1001-1)/2*4]]
-669171001
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Total@FoldList[Plus, 1, Array[Ceiling[#/4]*2 &amp;, (1001-1)/2*4]]
+</span></span><span class="line"><span class="cl">669171001
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-29">Problem 29</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Length@DeleteDuplicates@Flatten@Table[a^b, {a, 2, 100}, {b, 2, 100}]
-9183
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Length@DeleteDuplicates@Flatten@Table[a^b, {a, 2, 100}, {b, 2, 100}]
+</span></span><span class="line"><span class="cl">9183
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-30">Problem 30</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Total@Select[Range[10, 1*^6 - 1], # == Total[(IntegerDigits@#)^5] &amp;]
-443839
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Total@Select[Range[10, 1*^6 - 1], # == Total[(IntegerDigits@#)^5] &amp;]
+</span></span><span class="line"><span class="cl">443839
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-31">Problem 31</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Length@IntegerPartitions[200, All, {1, 2, 5, 10, 20, 50, 100, 200}]
-73682
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Length@IntegerPartitions[200, All, {1, 2, 5, 10, 20, 50, 100, 200}]
+</span></span><span class="line"><span class="cl">73682
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-32">Problem 32</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">f[m_List, n_List] :=Select[Flatten[Table[{i, j, i*j}, {i, m}, {j, n}], 1],  Sort@Flatten@IntegerDigits@# == Range[9] &amp;]
-Total@DeleteDuplicates@ Join[f[Range[12, 98], Range[123, 987]],  f[Range[1, 9], Range[1234, 9876]]][[All, 3]]
-45228
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">f[m_List, n_List] :=Select[Flatten[Table[{i, j, i*j}, {i, m}, {j, n}], 1],  Sort@Flatten@IntegerDigits@# == Range[9] &amp;]
+</span></span><span class="line"><span class="cl">Total@DeleteDuplicates@ Join[f[Range[12, 98], Range[123, 987]],  f[Range[1, 9], Range[1234, 9876]]][[All, 3]]
+</span></span><span class="line"><span class="cl">45228
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-33">Problem 33</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">f[{i_, j_}] :=  Module[{}, {id, jd} = IntegerDigits@{i, j}; c = Intersection[id, jd];
-   FreeQ[{id, jd}, 0] &amp;&amp; Length@c == 1 &amp;&amp;
- (newi = Delete[id, FirstPosition[id, First@c]]; newj = Delete[jd, FirstPosition[jd, First@c]]; First[newi/newj] == i/j)];
-Denominator[Times @@ Divide @@@ Select[Flatten[Table[{i, j}, {i, 10, 98}, {j, i + 1, 99}], 1], f]]
-100
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">f[{i_, j_}] :=  Module[{}, {id, jd} = IntegerDigits@{i, j}; c = Intersection[id, jd];
+</span></span><span class="line"><span class="cl">   FreeQ[{id, jd}, 0] &amp;&amp; Length@c == 1 &amp;&amp;
+</span></span><span class="line"><span class="cl"> (newi = Delete[id, FirstPosition[id, First@c]]; newj = Delete[jd, FirstPosition[jd, First@c]]; First[newi/newj] == i/j)];
+</span></span><span class="line"><span class="cl">Denominator[Times @@ Divide @@@ Select[Flatten[Table[{i, j}, {i, 10, 98}, {j, i + 1, 99}], 1], f]]
+</span></span><span class="line"><span class="cl">100
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-34">Problem 34</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -542,19 +542,19 @@ Denominator[Times @@ Divide @@@ Select[Flatten[Table[{i, j}, {i, 10, 98}, {j, i 
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">In[48]:= cf =
-  Compile[{ {A, _Integer} },
-   Boole[A == Total[Factorial[IntegerDigits[A]]]],
-   RuntimeAttributes -&gt; Listable,
-   RuntimeOptions -&gt; &#34;Speed&#34;, CompilationTarget -&gt; &#34;C&#34;];
-n = Range[10, 9!*7];
-AbsoluteTiming@Total@Pick[n, cf@n, 1]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">In[48]:= cf =
+</span></span><span class="line"><span class="cl">  Compile[{ {A, _Integer} },
+</span></span><span class="line"><span class="cl">   Boole[A == Total[Factorial[IntegerDigits[A]]]],
+</span></span><span class="line"><span class="cl">   RuntimeAttributes -&gt; Listable,
+</span></span><span class="line"><span class="cl">   RuntimeOptions -&gt; &#34;Speed&#34;, CompilationTarget -&gt; &#34;C&#34;];
+</span></span><span class="line"><span class="cl">n = Range[10, 9!*7];
+</span></span><span class="line"><span class="cl">AbsoluteTiming@Total@Pick[n, cf@n, 1]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-35">Problem 35</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -562,84 +562,84 @@ AbsoluteTiming@Total@Pick[n, cf@n, 1]
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">cpQ[n_] := 
- AllTrue[FromDigits /@ 
-   Array[RotateLeft[IntegerDigits@n, #] &amp;, IntegerLength@n - 1], 
-  PrimeQ]
-Count[Table[Prime[i], {i, PrimePi[1*^6]}], i_/;cpQ@i]
-55
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cpQ[n_] := 
+</span></span><span class="line"><span class="cl"> AllTrue[FromDigits /@ 
+</span></span><span class="line"><span class="cl">   Array[RotateLeft[IntegerDigits@n, #] &amp;, IntegerLength@n - 1], 
+</span></span><span class="line"><span class="cl">  PrimeQ]
+</span></span><span class="line"><span class="cl">Count[Table[Prime[i], {i, PrimePi[1*^6]}], i_/;cpQ@i]
+</span></span><span class="line"><span class="cl">55
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-36">Problem 36</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">palQ[i_List] := i == Reverse@i;
-Total@Select[Range[1*^6], (palQ[IntegerDigits@#] &amp;&amp; palQ[IntegerDigits[#, 2]]) &amp;]
-872187
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">palQ[i_List] := i == Reverse@i;
+</span></span><span class="line"><span class="cl">Total@Select[Range[1*^6], (palQ[IntegerDigits@#] &amp;&amp; palQ[IntegerDigits[#, 2]]) &amp;]
+</span></span><span class="line"><span class="cl">872187
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-37">Problem 37</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">TpQ[n_] :=  Module[{l = IntegerDigits@n},  AllTrue[FromDigits /@Flatten[Table[{l[[;; i]], l[[i + 1 ;;]]}, {i, Length@l - 1}], 1],  PrimeQ]];
-S = n = 0; i = 5; While[n &lt; 11, a = Prime@i;If[TpQ@a, S += a; ++n]; ++i]; S
-748317
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">TpQ[n_] :=  Module[{l = IntegerDigits@n},  AllTrue[FromDigits /@Flatten[Table[{l[[;; i]], l[[i + 1 ;;]]}, {i, Length@l - 1}], 1],  PrimeQ]];
+</span></span><span class="line"><span class="cl">S = n = 0; i = 5; While[n &lt; 11, a = Prime@i;If[TpQ@a, S += a; ++n]; ++i]; S
+</span></span><span class="line"><span class="cl">748317
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-38">Problem 38</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">fl=Select[Range[9123, 9876],Combinatorica`PermutationQ[Catenate@IntegerDigits[{1, 2}*#]] &amp;]
-{9267, 9273, 9327}
-Max[FromDigits /@ (Catenate@IntegerDigits[{1, 2}*#] &amp; /@fl)]
-932718654
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">fl=Select[Range[9123, 9876],Combinatorica`PermutationQ[Catenate@IntegerDigits[{1, 2}*#]] &amp;]
+</span></span><span class="line"><span class="cl">{9267, 9273, 9327}
+</span></span><span class="line"><span class="cl">Max[FromDigits /@ (Catenate@IntegerDigits[{1, 2}*#] &amp; /@fl)]
+</span></span><span class="line"><span class="cl">932718654
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-39">Problem 39</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Commonest@Flatten@Select[# +
-      Total[Rest@PowersRepresentations[#^2, 2, 2], {2}] &amp; /@
-    Range[500], ListQ]
-840
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Commonest@Flatten@Select[# +
+</span></span><span class="line"><span class="cl">      Total[Rest@PowersRepresentations[#^2, 2, 2], {2}] &amp; /@
+</span></span><span class="line"><span class="cl">    Range[500], ListQ]
+</span></span><span class="line"><span class="cl">840
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-40">Problem 40</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">i = 0; NestWhileList[(++i; # + i*9*10^(i - 1)) &amp;, 0, # &lt; 1*^6 &amp;]; i
-6
-Times @@ (Flatten@IntegerDigits@Range[999999])[[Table[ 10^(i - 1), {i, 7}]]]
-210
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">i = 0; NestWhileList[(++i; # + i*9*10^(i - 1)) &amp;, 0, # &lt; 1*^6 &amp;]; i
+</span></span><span class="line"><span class="cl">6
+</span></span><span class="line"><span class="cl">Times @@ (Flatten@IntegerDigits@Range[999999])[[Table[ 10^(i - 1), {i, 7}]]]
+</span></span><span class="line"><span class="cl">210
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -757,11 +757,11 @@ Times @@ (Flatten@IntegerDigits@Range[999999])[[Table[ 10^(i - 1), {i, 7}]]]
   
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+  
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.191509a5c8442abdb6eb5020a332fd59bdd83a7e78a2d2241108df9113504292.js"></script>
 
 
 

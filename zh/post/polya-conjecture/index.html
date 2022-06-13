@@ -26,7 +26,7 @@ Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race�
 
 
 
-<meta name="generator" content="Hugo 0.83.1 with theme even" />
+<meta name="generator" content="Hugo 0.100.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/zh/post/polya-conjecture/" />
@@ -39,7 +39,7 @@ Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race�
 
 
 <link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
 
 
 <meta property="og:title" content="奇偶因数赛马" />
@@ -48,14 +48,14 @@ Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race�
 Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race），即想象奇马、偶马两匹马赛跑，让它们在同一起跑线上，按数字1、2、3念下去，碰到奇类型，奇马前进一步，反之，偶马前进一步。奇马似乎总是在并排或超前位置，相当形象。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/zh/post/polya-conjecture/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-06-14T13:08:43&#43;08:00" />
-<meta property="article:modified_time" content="2019-06-14T13:08:43&#43;08:00" /><meta property="og:site_name" content="日种" />
+<meta property="article:published_time" content="2019-06-14T13:08:43+08:00" />
+<meta property="article:modified_time" content="2019-06-14T13:08:43+08:00" /><meta property="og:site_name" content="日种" />
 
 <meta itemprop="name" content="奇偶因数赛马">
 <meta itemprop="description" content="每个整数都可以分解成若干个质数相乘，即分解质因数。如果需要偶数个质数相乘，我们称其为偶类型（我们定义1也是偶类型），反之则为奇类型。
 对于1~10这前10个整数，奇类型有2，3，5，7，8，偶类型有1，4，6，9，10
-Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race），即想象奇马、偶马两匹马赛跑，让它们在同一起跑线上，按数字1、2、3念下去，碰到奇类型，奇马前进一步，反之，偶马前进一步。奇马似乎总是在并排或超前位置，相当形象。"><meta itemprop="datePublished" content="2019-06-14T13:08:43&#43;08:00" />
-<meta itemprop="dateModified" content="2019-06-14T13:08:43&#43;08:00" />
+Ian Stewart的《数学万花筒》称其为奇偶赛马问题（Two-Horse Race），即想象奇马、偶马两匹马赛跑，让它们在同一起跑线上，按数字1、2、3念下去，碰到奇类型，奇马前进一步，反之，偶马前进一步。奇马似乎总是在并排或超前位置，相当形象。"><meta itemprop="datePublished" content="2019-06-14T13:08:43+08:00" />
+<meta itemprop="dateModified" content="2019-06-14T13:08:43+08:00" />
 <meta itemprop="wordCount" content="789">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="奇偶因数赛马"/>
@@ -163,7 +163,7 @@ Every number is meaningful and all have their purposes.<br>
 <p>下面我们验算一下。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -201,43 +201,43 @@ Every number is meaningful and all have their purposes.<br>
 </span><span class="lnt">36
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">(*可以直接用LiouvilleLambda，但比这个略慢一些*)
-PCType[n_] := If[EvenQ@PrimeOmega@n, 1, -1]; 
-blocksize = 10^7; (*分成91组计算，每组1千万*)
-blocks = 91;
-(bks = ParallelTable[Total[PCType[(i - 1)*blocksize + #] &amp; /@ Range[blocksize]], 
-    {i, blocks}];) // AbsoluteTiming
-{4023.83, Null}
-(*一泻千里*)
-acc = Accumulate@bks
-{-842, -4510, -5630, -3192, -7608, -3016, -6598, -7132, -2176, -3884, 
--10162, -8592, -11162, -5636, -3244, -7206, -10696, -17010, -15562, 
--11126, -9698, -4922, -6086, -9594, -7970, -9628, -14754, -17252, 
--16346, -16648, -17882, -12168, -11464, -6452, -8508, -4110, -4244, 
--8500, -11184, -11200, -14386, -14942, -19500, -20456, -24366, 
--23732, -22644, -19746, -18196, -18804, -11604, -11950, -10062, 
--7442, -6866, -5544, -6456, -9230, -11014, -15350, -15668, -14892, 
--18936, -20766, -20196, -21820, -22404, -27546, -22948, -25384, 
--27772, -26580, -25558, -25602, -27618, -22166, -15564, -15628, 
--15656, -19292, -17546, -19704, -19386, -19754, -14908, -17416, 
--13780, -12306, -8570, -4630, -4702}
-
-(lastblock = ParallelTable[PCType[(blocks - 1)*blocksize + i],
-    {i, blocksize}];) // AbsoluteTiming
-{47.6069, Null}
-lastacc = acc[[90]] + Accumulate@lastblock;
-
-SelectFirst[lastacc, Positive]
-1
-FirstPosition[lastacc, 1]
-{6150257}
-MinMax@lastacc
-{-6077, 829}
-Count[lastacc, _?Positive]
-305426
-Position[overall, 1][[{1, -1}]]
-{{6150257}, {6488079}}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(*可以直接用LiouvilleLambda，但比这个略慢一些*)
+</span></span><span class="line"><span class="cl">PCType[n_] := If[EvenQ@PrimeOmega@n, 1, -1]; 
+</span></span><span class="line"><span class="cl">blocksize = 10^7; (*分成91组计算，每组1千万*)
+</span></span><span class="line"><span class="cl">blocks = 91;
+</span></span><span class="line"><span class="cl">(bks = ParallelTable[Total[PCType[(i - 1)*blocksize + #] &amp; /@ Range[blocksize]], 
+</span></span><span class="line"><span class="cl">    {i, blocks}];) // AbsoluteTiming
+</span></span><span class="line"><span class="cl">{4023.83, Null}
+</span></span><span class="line"><span class="cl">(*一泻千里*)
+</span></span><span class="line"><span class="cl">acc = Accumulate@bks
+</span></span><span class="line"><span class="cl">{-842, -4510, -5630, -3192, -7608, -3016, -6598, -7132, -2176, -3884, 
+</span></span><span class="line"><span class="cl">-10162, -8592, -11162, -5636, -3244, -7206, -10696, -17010, -15562, 
+</span></span><span class="line"><span class="cl">-11126, -9698, -4922, -6086, -9594, -7970, -9628, -14754, -17252, 
+</span></span><span class="line"><span class="cl">-16346, -16648, -17882, -12168, -11464, -6452, -8508, -4110, -4244, 
+</span></span><span class="line"><span class="cl">-8500, -11184, -11200, -14386, -14942, -19500, -20456, -24366, 
+</span></span><span class="line"><span class="cl">-23732, -22644, -19746, -18196, -18804, -11604, -11950, -10062, 
+</span></span><span class="line"><span class="cl">-7442, -6866, -5544, -6456, -9230, -11014, -15350, -15668, -14892, 
+</span></span><span class="line"><span class="cl">-18936, -20766, -20196, -21820, -22404, -27546, -22948, -25384, 
+</span></span><span class="line"><span class="cl">-27772, -26580, -25558, -25602, -27618, -22166, -15564, -15628, 
+</span></span><span class="line"><span class="cl">-15656, -19292, -17546, -19704, -19386, -19754, -14908, -17416, 
+</span></span><span class="line"><span class="cl">-13780, -12306, -8570, -4630, -4702}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">(lastblock = ParallelTable[PCType[(blocks - 1)*blocksize + i],
+</span></span><span class="line"><span class="cl">    {i, blocksize}];) // AbsoluteTiming
+</span></span><span class="line"><span class="cl">{47.6069, Null}
+</span></span><span class="line"><span class="cl">lastacc = acc[[90]] + Accumulate@lastblock;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">SelectFirst[lastacc, Positive]
+</span></span><span class="line"><span class="cl">1
+</span></span><span class="line"><span class="cl">FirstPosition[lastacc, 1]
+</span></span><span class="line"><span class="cl">{6150257}
+</span></span><span class="line"><span class="cl">MinMax@lastacc
+</span></span><span class="line"><span class="cl">{-6077, 829}
+</span></span><span class="line"><span class="cl">Count[lastacc, _?Positive]
+</span></span><span class="line"><span class="cl">305426
+</span></span><span class="line"><span class="cl">Position[overall, 1][[{1, -1}]]
+</span></span><span class="line"><span class="cl">{{6150257}, {6488079}}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>对于<code>906150257≤n≤906488079</code>之间的<code>305426</code>个整数，偶数马领先，<code>906316571</code>时达到顶峰，领先<code>829</code>位。<br>
 但是这种交替领先是否一直存在，即是否在某个数字<code>N</code>之后，只有一种类型马保持持续领先，<strong>未知</strong>。<br>
@@ -355,11 +355,11 @@ Position[overall, 1][[{1, -1}]]
   
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+  
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.191509a5c8442abdb6eb5020a332fd59bdd83a7e78a2d2241108df9113504292.js"></script>
 
 
 

@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigheadghost" /><meta name="description" content="Problem 81 1 2 3 4 5 6 7 8 9  s = Import[&amp;#34;p081_matrix.txt&amp;#34;, &amp;#34;Data&amp;#34;]; Clear@MinPathSum; MinPathSum[1, 1] := s[[1, 1]] MinPathSum[r_, c_] := MinPathSum[r, c] = If[r == 1, MinPathSum[r, c - 1], If[c == 1, MinPathSum[r - 1, c], Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] &#43; s[[r, c]]; MinPathSum[80, 80] 427337   " />
+<meta name="author" content="bigheadghost" /><meta name="description" content="Problem 81 1 2 3 4 5 6 7 8 9 s = Import[&amp;#34;p081_matrix.txt&amp;#34;, &amp;#34;Data&amp;#34;]; Clear@MinPathSum; MinPathSum[1, 1] := s[[1, 1]] MinPathSum[r_, c_] := MinPathSum[r, c] = If[r == 1, MinPathSum[r, c - 1], If[c == 1, MinPathSum[r - 1, c], Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] &#43; s[[r, c]]; MinPathSum[80, 80] 427337 " />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.83.1 with theme even" />
+<meta name="generator" content="Hugo 0.100.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/post/dive-into-project-euler-part-5-81-100/" />
@@ -36,7 +36,7 @@
 
 
 <link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
 
 
 <meta property="og:title" content="Dive into Project Euler Part 5 (81-100)" />
@@ -68,8 +68,8 @@ MinPathSum[80, 80]
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/post/dive-into-project-euler-part-5-81-100/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2014-09-09T12:05:23&#43;08:00" />
-<meta property="article:modified_time" content="2014-09-09T12:05:23&#43;08:00" />
+<meta property="article:published_time" content="2014-09-09T12:05:23+08:00" />
+<meta property="article:modified_time" content="2014-09-09T12:05:23+08:00" />
 
 <meta itemprop="name" content="Dive into Project Euler Part 5 (81-100)">
 <meta itemprop="description" content="Problem 81
@@ -97,9 +97,9 @@ MinPathSum[80, 80]
 427337
 
 
-"><meta itemprop="datePublished" content="2014-09-09T12:05:23&#43;08:00" />
-<meta itemprop="dateModified" content="2014-09-09T12:05:23&#43;08:00" />
-<meta itemprop="wordCount" content="1538">
+"><meta itemprop="datePublished" content="2014-09-09T12:05:23+08:00" />
+<meta itemprop="dateModified" content="2014-09-09T12:05:23+08:00" />
+<meta itemprop="wordCount" content="1540">
 <meta itemprop="keywords" content="Mathematica," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Dive into Project Euler Part 5 (81-100)"/>
 <meta name="twitter:description" content="Problem 81
@@ -209,7 +209,7 @@ MinPathSum[80, 80]
       <div class="post-meta">
         <span class="post-time"> 2014-09-09 12:05:23 CST </span>
         
-          <span class="more-meta"> 1538 words </span>
+          <span class="more-meta"> 1540 words </span>
           <span class="more-meta"> 8 mins read </span>
         
       </div>
@@ -248,7 +248,7 @@ MinPathSum[80, 80]
       <h1 id="problem-81">Problem 81</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -259,21 +259,21 @@ MinPathSum[80, 80]
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">s = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
-Clear@MinPathSum;
-MinPathSum[1, 1] := s[[1, 1]]
-MinPathSum[r_, c_] := MinPathSum[r, c] =
-   If[r == 1, MinPathSum[r, c - 1],
-     If[c == 1, MinPathSum[r - 1, c],
-      Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] + s[[r, c]];
-MinPathSum[80, 80]
-427337
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">s = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
+</span></span><span class="line"><span class="cl">Clear@MinPathSum;
+</span></span><span class="line"><span class="cl">MinPathSum[1, 1] := s[[1, 1]]
+</span></span><span class="line"><span class="cl">MinPathSum[r_, c_] := MinPathSum[r, c] =
+</span></span><span class="line"><span class="cl">   If[r == 1, MinPathSum[r, c - 1],
+</span></span><span class="line"><span class="cl">     If[c == 1, MinPathSum[r - 1, c],
+</span></span><span class="line"><span class="cl">      Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] + s[[r, c]];
+</span></span><span class="line"><span class="cl">MinPathSum[80, 80]
+</span></span><span class="line"><span class="cl">427337
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-82">Problem 82</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -287,24 +287,24 @@ MinPathSum[80, 80]
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">m = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
-n = Length@m;
-dirs = { {0, 1}, {1, 0}, {-1, 0} };
-ew = Flatten[
-   Rest@Reap[ret = {};
-     Table[If[1 &lt;= x + i[[1]] &lt;= n &amp;&amp; 1 &lt;= y + i[[2]] &lt;= n,
-       Sow[{x, y} \[DirectedEdge] {x, y} + i, e];
-       Sow[m[[Sequence @@ ({x, y} + i)]], w]], {x, n}, {y, n}, {i,
-       dirs}];], 1];
-gr = Graph[ew[[1]], EdgeWeight -&gt; ew[[2]]];
-Min@Table[GraphDistance[%, {i, 1}, {j, n}] + m[[i, 1]], {i, n}, {j, n}]
-260324
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">m = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
+</span></span><span class="line"><span class="cl">n = Length@m;
+</span></span><span class="line"><span class="cl">dirs = { {0, 1}, {1, 0}, {-1, 0} };
+</span></span><span class="line"><span class="cl">ew = Flatten[
+</span></span><span class="line"><span class="cl">   Rest@Reap[ret = {};
+</span></span><span class="line"><span class="cl">     Table[If[1 &lt;= x + i[[1]] &lt;= n &amp;&amp; 1 &lt;= y + i[[2]] &lt;= n,
+</span></span><span class="line"><span class="cl">       Sow[{x, y} \[DirectedEdge] {x, y} + i, e];
+</span></span><span class="line"><span class="cl">       Sow[m[[Sequence @@ ({x, y} + i)]], w]], {x, n}, {y, n}, {i,
+</span></span><span class="line"><span class="cl">       dirs}];], 1];
+</span></span><span class="line"><span class="cl">gr = Graph[ew[[1]], EdgeWeight -&gt; ew[[2]]];
+</span></span><span class="line"><span class="cl">Min@Table[GraphDistance[%, {i, 1}, {j, n}] + m[[i, 1]], {i, n}, {j, n}]
+</span></span><span class="line"><span class="cl">260324
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-83">Problem 83</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -318,43 +318,43 @@ Min@Table[GraphDistance[%, {i, 1}, {j, n}] + m[[i, 1]], {i, n}, {j, n}]
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">m = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
-n = Length@m;
-dirs = { {0, 1}, {1, 0}, {-1, 0}, {0, -1} };
-ew = Flatten[
-   Rest@Reap[ret = {};
-     Table[If[1 &lt;= x + i[[1]] &lt;= n &amp;&amp; 1 &lt;= y + i[[2]] &lt;= n,
-       Sow[{x, y} \[DirectedEdge] {x, y} + i, e];
-       Sow[m[[Sequence @@ ({x, y} + i)]], w]], {x, n}, {y, n}, {i,
-       dirs}];], 1];
-gr = Graph[ew[[1]], EdgeWeight -&gt; ew[[2]]];
-m[[1, 1]] + GraphDistance[gr, {1, 1}, {n, n}]
-425185
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">m = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
+</span></span><span class="line"><span class="cl">n = Length@m;
+</span></span><span class="line"><span class="cl">dirs = { {0, 1}, {1, 0}, {-1, 0}, {0, -1} };
+</span></span><span class="line"><span class="cl">ew = Flatten[
+</span></span><span class="line"><span class="cl">   Rest@Reap[ret = {};
+</span></span><span class="line"><span class="cl">     Table[If[1 &lt;= x + i[[1]] &lt;= n &amp;&amp; 1 &lt;= y + i[[2]] &lt;= n,
+</span></span><span class="line"><span class="cl">       Sow[{x, y} \[DirectedEdge] {x, y} + i, e];
+</span></span><span class="line"><span class="cl">       Sow[m[[Sequence @@ ({x, y} + i)]], w]], {x, n}, {y, n}, {i,
+</span></span><span class="line"><span class="cl">       dirs}];], 1];
+</span></span><span class="line"><span class="cl">gr = Graph[ew[[1]], EdgeWeight -&gt; ew[[2]]];
+</span></span><span class="line"><span class="cl">m[[1, 1]] + GraphDistance[gr, {1, 1}, {n, n}]
+</span></span><span class="line"><span class="cl">425185
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-84">Problem 84</h1>
 <p>Not interested</p>
 <h1 id="problem-85">Problem 85</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">s = Abs[Table[Binomial[x + 1, 2]*Binomial[y + 1, 2], {x, 2000, 1, -1}, {y, 2001 - x}] - 2*10^6];
-Position[s, Min@s]
-{ {1924, 36}, {1965, 77} }
-36*77
-2772
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">s = Abs[Table[Binomial[x + 1, 2]*Binomial[y + 1, 2], {x, 2000, 1, -1}, {y, 2001 - x}] - 2*10^6];
+</span></span><span class="line"><span class="cl">Position[s, Min@s]
+</span></span><span class="line"><span class="cl">{ {1924, 36}, {1965, 77} }
+</span></span><span class="line"><span class="cl">36*77
+</span></span><span class="line"><span class="cl">2772
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-86">Problem 86</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -377,33 +377,33 @@ Position[s, Min@s]
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&lt;cmath&gt;</span><span class="cp">
-</span><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">target</span> <span class="o">=</span> <span class="mi">1000000</span><span class="p">;</span>
- 
-    <span class="k">while</span> <span class="p">(</span><span class="n">count</span> <span class="o">&lt;</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">m</span><span class="o">++</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">wh</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="n">wh</span> <span class="o">&lt;=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">m</span><span class="p">;</span> <span class="n">wh</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kt">double</span> <span class="n">s</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">wh</span> <span class="o">*</span> <span class="n">wh</span> <span class="o">+</span> <span class="n">m</span> <span class="o">*</span> <span class="n">m</span><span class="p">);</span>                   
-            <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">s</span><span class="p">))</span> <span class="p">{</span>
-                <span class="n">count</span> <span class="o">+=</span> <span class="p">(</span><span class="n">wh</span> <span class="o">&lt;=</span> <span class="n">m</span><span class="p">)</span> <span class="o">?</span> <span class="n">wh</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">:</span> <span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">m</span> <span class="o">-</span> <span class="p">(</span><span class="n">wh</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;m:%d</span><span class="se">\n</span><span class="s">count:%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">count</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="nl">m</span><span class="p">:</span><span class="mi">1818</span>
-<span class="nl">count</span><span class="p">:</span><span class="mi">1000457</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;cmath&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">target</span> <span class="o">=</span> <span class="mi">1000000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">count</span> <span class="o">&lt;</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">wh</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="n">wh</span> <span class="o">&lt;=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">m</span><span class="p">;</span> <span class="n">wh</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">double</span> <span class="n">s</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">wh</span> <span class="o">*</span> <span class="n">wh</span> <span class="o">+</span> <span class="n">m</span> <span class="o">*</span> <span class="n">m</span><span class="p">);</span>                   
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">s</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">count</span> <span class="o">+=</span> <span class="p">(</span><span class="n">wh</span> <span class="o">&lt;=</span> <span class="n">m</span><span class="p">)</span> <span class="o">?</span> <span class="n">wh</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">:</span> <span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">m</span> <span class="o">-</span> <span class="p">(</span><span class="n">wh</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;m:%d</span><span class="se">\n</span><span class="s">count:%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">count</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nl">m</span><span class="p">:</span><span class="mi">1818</span>
+</span></span><span class="line"><span class="cl"><span class="nl">count</span><span class="p">:</span><span class="mi">1000457</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-87">Problem 87</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -418,25 +418,25 @@ Position[s, Min@s]
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">limit = 5*10^7;
-ps = Array[Prime, PrimePi@Sqrt@limit];
-ret = {};
-For[i = 1, i &lt;= Length@ps, i++,
-x = ps[[i]];
-yset = PrimePi[(limit - x^2)^(1/3)];
-For[j = 1, j &lt;= yset, j++,
-  y = Prime[j]; If[limit - x^2 - y^3 &gt; 0,
-   ret = {ret, x^2 + y^3 + (Array[Prime, PrimePi[(limit - x^2 - y^3)^(1/4)]])^4}];
-  ]
-];
-Length@DeleteDuplicates@Flatten@ret
-1097343
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">limit = 5*10^7;
+</span></span><span class="line"><span class="cl">ps = Array[Prime, PrimePi@Sqrt@limit];
+</span></span><span class="line"><span class="cl">ret = {};
+</span></span><span class="line"><span class="cl">For[i = 1, i &lt;= Length@ps, i++,
+</span></span><span class="line"><span class="cl">x = ps[[i]];
+</span></span><span class="line"><span class="cl">yset = PrimePi[(limit - x^2)^(1/3)];
+</span></span><span class="line"><span class="cl">For[j = 1, j &lt;= yset, j++,
+</span></span><span class="line"><span class="cl">  y = Prime[j]; If[limit - x^2 - y^3 &gt; 0,
+</span></span><span class="line"><span class="cl">   ret = {ret, x^2 + y^3 + (Array[Prime, PrimePi[(limit - x^2 - y^3)^(1/4)]])^4}];
+</span></span><span class="line"><span class="cl">  ]
+</span></span><span class="line"><span class="cl">];
+</span></span><span class="line"><span class="cl">Length@DeleteDuplicates@Flatten@ret
+</span></span><span class="line"><span class="cl">1097343
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-88">Problem 88</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -461,62 +461,62 @@ Length@DeleteDuplicates@Flatten@ret
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">uf[m_, 1] := { {} }
-uf[1, n_] := { {} }
-uf[m_, n_?PrimeQ] := If[m &lt; n, {}, { {n} }]
-uf[m_, n_] :=
-uf[m, n] =
-  Join @@ Table[
-    Prepend[#, d] &amp; /@ uf[d, n/d], {d,
-     Select[Rest@Divisors@n, # &lt;= m &amp;]}]
-uf[n_] := uf[n, n]
-k = 12000;
-limit = 2 k;
-f[n_] := If[Length@uf@n == 1, 0,
-   DeleteCases[
-    DeleteDuplicates[Length@# + n - Total@# &amp; /@ (Most@uf@n)],
-    a_ /; a &gt; k]];
-s = f /@ Range@limit;
-arr = ConstantArray[0, k];
-mf[fl_, pos_] :=
-  If[Length@fl &gt; 0, If[arr[[#]] == 0, arr[[#]] = First@pos] &amp; /@ fl,
-   0];
-MapIndexed[mf, s];
-Total@DeleteDuplicates@arr
-7587457
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">uf[m_, 1] := { {} }
+</span></span><span class="line"><span class="cl">uf[1, n_] := { {} }
+</span></span><span class="line"><span class="cl">uf[m_, n_?PrimeQ] := If[m &lt; n, {}, { {n} }]
+</span></span><span class="line"><span class="cl">uf[m_, n_] :=
+</span></span><span class="line"><span class="cl">uf[m, n] =
+</span></span><span class="line"><span class="cl">  Join @@ Table[
+</span></span><span class="line"><span class="cl">    Prepend[#, d] &amp; /@ uf[d, n/d], {d,
+</span></span><span class="line"><span class="cl">     Select[Rest@Divisors@n, # &lt;= m &amp;]}]
+</span></span><span class="line"><span class="cl">uf[n_] := uf[n, n]
+</span></span><span class="line"><span class="cl">k = 12000;
+</span></span><span class="line"><span class="cl">limit = 2 k;
+</span></span><span class="line"><span class="cl">f[n_] := If[Length@uf@n == 1, 0,
+</span></span><span class="line"><span class="cl">   DeleteCases[
+</span></span><span class="line"><span class="cl">    DeleteDuplicates[Length@# + n - Total@# &amp; /@ (Most@uf@n)],
+</span></span><span class="line"><span class="cl">    a_ /; a &gt; k]];
+</span></span><span class="line"><span class="cl">s = f /@ Range@limit;
+</span></span><span class="line"><span class="cl">arr = ConstantArray[0, k];
+</span></span><span class="line"><span class="cl">mf[fl_, pos_] :=
+</span></span><span class="line"><span class="cl">  If[Length@fl &gt; 0, If[arr[[#]] == 0, arr[[#]] = First@pos] &amp; /@ fl,
+</span></span><span class="line"><span class="cl">   0];
+</span></span><span class="line"><span class="cl">MapIndexed[mf, s];
+</span></span><span class="line"><span class="cl">Total@DeleteDuplicates@arr
+</span></span><span class="line"><span class="cl">7587457
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-89">Problem 89</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Total[StringLength@# - StringLength@IntegerString[FromDigits[#, &#34;Roman&#34;], &#34;Roman&#34;] &amp; /@  ps]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Total[StringLength@# - StringLength@IntegerString[FromDigits[#, &#34;Roman&#34;], &#34;Roman&#34;] &amp; /@  ps]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-90">Problem 90</h1>
 <p>Not interested</p>
 <h1 id="problem-91">Problem 91</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">r = 50; Pts = Flatten[Table[{i, j}, {i, r}, {j, r}], 1];
-NatPt[i_, j_] :=  Module[{}, k = j/i; knew = -1/k; b = j - knew*i;   Count[(knew*# + b) &amp; /@ Range[0, r],   a_ /; IntegerQ@a &amp;&amp; 0 &lt;= a &lt;= r] - 1];
-Total[NatPt @@@ Pts] + 3 r^2
-14234
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">r = 50; Pts = Flatten[Table[{i, j}, {i, r}, {j, r}], 1];
+</span></span><span class="line"><span class="cl">NatPt[i_, j_] :=  Module[{}, k = j/i; knew = -1/k; b = j - knew*i;   Count[(knew*# + b) &amp; /@ Range[0, r],   a_ /; IntegerQ@a &amp;&amp; 0 &lt;= a &lt;= r] - 1];
+</span></span><span class="line"><span class="cl">Total[NatPt @@@ Pts] + 3 r^2
+</span></span><span class="line"><span class="cl">14234
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-92">Problem 92</h1>
 <p><a href="www.mathblog.dk/project-euler-92-square-digits-number-chain">ref</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -571,65 +571,65 @@ Total[NatPt @@@ Pts] + 3 r^2
 </span><span class="lnt">53
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="k">private</span> <span class="kt">int</span> <span class="n">nextNumber</span><span class="p">(</span><span class="kt">int</span> <span class="n">input</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">retVal</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
- 
-    <span class="k">while</span> <span class="p">(</span><span class="n">input</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">digit</span> <span class="p">=</span> <span class="n">input</span> <span class="p">%</span> <span class="m">10</span><span class="p">;</span>
-        <span class="n">retVal</span> <span class="p">+=</span> <span class="n">digit</span> <span class="p">*</span> <span class="n">digit</span><span class="p">;</span>
-        <span class="n">input</span> <span class="p">/=</span> <span class="m">10</span><span class="p">;</span>
-    <span class="p">}</span>
- 
-    <span class="k">return</span> <span class="n">retVal</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">public</span> <span class="k">void</span> <span class="n">Solve</span><span class="p">()</span>
-<span class="p">{</span>
- 
-    <span class="n">Stopwatch</span> <span class="n">clock</span> <span class="p">=</span> <span class="n">Stopwatch</span><span class="p">.</span><span class="n">StartNew</span><span class="p">();</span>
-    <span class="kt">int</span> <span class="n">result</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">target</span> <span class="p">=</span> <span class="m">10000000</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">cachesize</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">Math</span><span class="p">.</span><span class="n">Ceiling</span><span class="p">(</span><span class="m">81</span> <span class="p">*</span> <span class="n">Math</span><span class="p">.</span><span class="n">Log10</span><span class="p">(</span><span class="n">target</span><span class="p">))</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>
-    <span class="kt">bool</span><span class="p">[]</span> <span class="n">cache</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">bool</span><span class="p">[</span><span class="n">cachesize</span> <span class="p">+</span> <span class="m">1</span><span class="p">];</span>
- 
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">cachesize</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
-    <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">sequence</span> <span class="p">=</span> <span class="n">nextNumber</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
- 
-        <span class="k">while</span> <span class="p">(</span><span class="n">sequence</span> <span class="p">&gt;</span> <span class="n">i</span> <span class="p">&amp;&amp;</span> <span class="n">sequence</span> <span class="p">!=</span> <span class="m">89</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">sequence</span> <span class="p">=</span> <span class="n">nextNumber</span><span class="p">(</span><span class="n">sequence</span><span class="p">);</span>
-        <span class="p">}</span>
- 
-        <span class="k">if</span> <span class="p">(</span><span class="n">cache</span><span class="p">[</span><span class="n">sequence</span><span class="p">]</span> <span class="p">||</span> <span class="n">sequence</span> <span class="p">==</span> <span class="m">89</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">result</span><span class="p">++;</span>
-            <span class="n">cache</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
-        <span class="p">}</span>
- 
-    <span class="p">}</span>
- 
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="n">cachesize</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="n">target</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
-    <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">cache</span><span class="p">[</span><span class="n">nextNumber</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-        <span class="p">{</span>
-            <span class="n">result</span><span class="p">++;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
- 
-    <span class="n">clock</span><span class="p">.</span><span class="n">Stop</span><span class="p">();</span>
-    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;There are {0} numbers that ends in 89&#34;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
-    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;Solution took {0} ms&#34;</span><span class="p">,</span> <span class="n">clock</span><span class="p">.</span><span class="n">Elapsed</span><span class="p">.</span><span class="n">TotalMilliseconds</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="n">There</span> <span class="n">are</span> <span class="m">8581146</span> <span class="n">numbers</span> <span class="n">that</span> <span class="n">ends</span> <span class="k">in</span> <span class="m">89</span>
-<span class="n">Solution</span> <span class="n">took</span> <span class="m">1930.5379</span> <span class="n">ms</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl"><span class="k">private</span> <span class="kt">int</span> <span class="n">nextNumber</span><span class="p">(</span><span class="kt">int</span> <span class="n">input</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">retVal</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">input</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">digit</span> <span class="p">=</span> <span class="n">input</span> <span class="p">%</span> <span class="m">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">retVal</span> <span class="p">+=</span> <span class="n">digit</span> <span class="p">*</span> <span class="n">digit</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">input</span> <span class="p">/=</span> <span class="m">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">retVal</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span> <span class="k">void</span> <span class="n">Solve</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="n">Stopwatch</span> <span class="n">clock</span> <span class="p">=</span> <span class="n">Stopwatch</span><span class="p">.</span><span class="n">StartNew</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">result</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">target</span> <span class="p">=</span> <span class="m">10000000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">cachesize</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">Math</span><span class="p">.</span><span class="n">Ceiling</span><span class="p">(</span><span class="m">81</span> <span class="p">*</span> <span class="n">Math</span><span class="p">.</span><span class="n">Log10</span><span class="p">(</span><span class="n">target</span><span class="p">))</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">bool</span><span class="p">[]</span> <span class="n">cache</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">bool</span><span class="p">[</span><span class="n">cachesize</span> <span class="p">+</span> <span class="m">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">cachesize</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">sequence</span> <span class="p">=</span> <span class="n">nextNumber</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="p">(</span><span class="n">sequence</span> <span class="p">&gt;</span> <span class="n">i</span> <span class="p">&amp;&amp;</span> <span class="n">sequence</span> <span class="p">!=</span> <span class="m">89</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">sequence</span> <span class="p">=</span> <span class="n">nextNumber</span><span class="p">(</span><span class="n">sequence</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">cache</span><span class="p">[</span><span class="n">sequence</span><span class="p">]</span> <span class="p">||</span> <span class="n">sequence</span> <span class="p">==</span> <span class="m">89</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">result</span><span class="p">++;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cache</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="n">cachesize</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;=</span> <span class="n">target</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">cache</span><span class="p">[</span><span class="n">nextNumber</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">result</span><span class="p">++;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="n">clock</span><span class="p">.</span><span class="n">Stop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;There are {0} numbers that ends in 89&#34;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;Solution took {0} ms&#34;</span><span class="p">,</span> <span class="n">clock</span><span class="p">.</span><span class="n">Elapsed</span><span class="p">.</span><span class="n">TotalMilliseconds</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">There</span> <span class="n">are</span> <span class="m">8581146</span> <span class="n">numbers</span> <span class="n">that</span> <span class="n">ends</span> <span class="k">in</span> <span class="m">89</span>
+</span></span><span class="line"><span class="cl"><span class="n">Solution</span> <span class="n">took</span> <span class="m">1930.5379</span> <span class="n">ms</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-93">Problem 93</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -703,84 +703,84 @@ Total[NatPt @@@ Pts] + 3 r^2
 </span><span class="lnt">72
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">operators</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;*&#39;</span><span class="p">,</span><span class="s1">&#39;/&#39;</span><span class="p">]</span>
-<span class="kn">import</span> <span class="nn">itertools</span>
-<span class="n">opslist</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">operators</span><span class="p">,</span><span class="n">repeat</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
-
-<span class="k">def</span> <span class="nf">results</span><span class="p">(</span><span class="n">inputints</span><span class="p">):</span>
-    <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">inputints</span><span class="p">]</span>
-    <span class="n">res</span><span class="o">=</span><span class="p">[]</span>
-    <span class="k">for</span> <span class="n">ops</span> <span class="ow">in</span> <span class="n">opslist</span><span class="p">:</span>
-        <span class="n">s</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">zip_longest</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">ops</span><span class="p">,</span> <span class="n">fillvalue</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">))))</span>
-        
-        <span class="c1">#added brackets</span>
-        <span class="c1">#a+b+c+d</span>
-        <span class="c1">#a+(b+c)+d</span>
-        <span class="c1">#a+b+(c+d)</span>
-        <span class="c1">#a+(b+c+d)</span>
-        <span class="c1">#(a+b)+(c+d)</span>
-        <span class="n">exps</span><span class="o">=</span><span class="p">[</span><span class="n">s</span><span class="p">]</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-            <span class="n">exps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
-        <span class="n">exps</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;(&#39;</span><span class="p">)</span>
-        <span class="n">exps</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
-        
-        <span class="n">exps</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;(&#39;</span><span class="p">)</span>
-        <span class="n">exps</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
-        
-        <span class="n">exps</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;(&#39;</span><span class="p">)</span>
-        <span class="n">exps</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
-        
-        <span class="n">exps</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;(&#39;</span><span class="p">)</span>
-        <span class="n">exps</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
-        <span class="n">exps</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;(&#39;</span><span class="p">)</span>
-        <span class="n">exps</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>    
-    
-        <span class="k">for</span> <span class="n">exp</span> <span class="ow">in</span> <span class="n">exps</span><span class="p">:</span>
-            <span class="n">expstr</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">exp</span><span class="p">)</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="n">value</span><span class="o">=</span><span class="nb">eval</span><span class="p">(</span><span class="n">expstr</span><span class="p">)</span>
-                <span class="k">if</span> <span class="n">value</span><span class="o">==</span><span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="ow">and</span> <span class="n">value</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
-                    <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
-            <span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-                <span class="c1">#print(err)</span>
-                <span class="k">pass</span>
-    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">res</span><span class="p">))</span>
-
-<span class="k">def</span> <span class="nf">GetNonCaled</span><span class="p">(</span><span class="n">operands</span><span class="p">):</span>
-    <span class="n">res</span><span class="o">=</span><span class="p">[]</span>
-    <span class="n">intlists</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">permutations</span><span class="p">(</span><span class="n">operands</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-    <span class="k">for</span> <span class="n">inputints</span> <span class="ow">in</span> <span class="n">intlists</span><span class="p">:</span>
-        <span class="n">res</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">results</span><span class="p">(</span><span class="n">inputints</span><span class="p">))</span>
-    <span class="n">res</span><span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">res</span><span class="p">)))</span>
-    <span class="c1">#print(res)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">res</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">i</span>
-
-
-<span class="n">arglist</span><span class="o">=</span><span class="p">[]</span>
-<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">c</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
-                <span class="n">arglist</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">])</span>
-<span class="n">data</span><span class="o">=</span><span class="p">{}</span>
-<span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">arglist</span><span class="p">:</span>
-    <span class="n">r</span><span class="o">=</span><span class="n">GetNonCaled</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">r</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
-        <span class="n">data</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">=</span><span class="p">[</span><span class="n">l</span><span class="p">]</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">data</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="mi">1258</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">operators</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;*&#39;</span><span class="p">,</span><span class="s1">&#39;/&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">itertools</span>
+</span></span><span class="line"><span class="cl"><span class="n">opslist</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">operators</span><span class="p">,</span><span class="n">repeat</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">results</span><span class="p">(</span><span class="n">inputints</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">inputints</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">res</span><span class="o">=</span><span class="p">[]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">ops</span> <span class="ow">in</span> <span class="n">opslist</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">s</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">zip_longest</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">ops</span><span class="p">,</span> <span class="n">fillvalue</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">))))</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1">#added brackets</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#a+b+c+d</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#a+(b+c)+d</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#a+b+(c+d)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#a+(b+c+d)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#(a+b)+(c+d)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">exps</span><span class="o">=</span><span class="p">[</span><span class="n">s</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">exps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">exps</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;(&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">exps</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="n">exps</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;(&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">exps</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="n">exps</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;(&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">exps</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="n">exps</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;(&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">exps</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">exps</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;(&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">exps</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>    
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">exp</span> <span class="ow">in</span> <span class="n">exps</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">expstr</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">exp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">value</span><span class="o">=</span><span class="nb">eval</span><span class="p">(</span><span class="n">expstr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">value</span><span class="o">==</span><span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="ow">and</span> <span class="n">value</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#print(err)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">res</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">GetNonCaled</span><span class="p">(</span><span class="n">operands</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">res</span><span class="o">=</span><span class="p">[]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">intlists</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">permutations</span><span class="p">(</span><span class="n">operands</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">inputints</span> <span class="ow">in</span> <span class="n">intlists</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">results</span><span class="p">(</span><span class="n">inputints</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">res</span><span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">res</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#print(res)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">res</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">arglist</span><span class="o">=</span><span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">c</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">arglist</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span><span class="o">=</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">arglist</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">r</span><span class="o">=</span><span class="n">GetNonCaled</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">r</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">data</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">=</span><span class="p">[</span><span class="n">l</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">data</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mi">1258</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-94">Problem 94</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -799,29 +799,29 @@ Total[NatPt @@@ Pts] + 3 r^2
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span>
-<span class="nb">sum</span><span class="o">=</span><span class="mi">0</span>
-<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-    <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="n">y</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">+</span><span class="n">x</span>
-    <span class="k">if</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">3</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="o">%</span><span class="mi">3</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="p">),</span><span class="nb">int</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
-        <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">2</span>
-        <span class="k">if</span> <span class="n">p</span><span class="o">&gt;</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">:</span><span class="k">break</span>
-        <span class="nb">sum</span><span class="o">+=</span><span class="n">p</span>
-    <span class="k">if</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">3</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">)</span> <span class="o">%</span> <span class="mi">3</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="p">),</span><span class="nb">int</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
-        <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span>
-        <span class="k">if</span> <span class="n">p</span><span class="o">&gt;</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">:</span><span class="k">break</span>
-        <span class="nb">sum</span><span class="o">+=</span><span class="n">p</span>
- 
-<span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
-<span class="mi">518408346</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="nb">sum</span><span class="o">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="n">y</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">+</span><span class="n">x</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">3</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="o">%</span><span class="mi">3</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="p">),</span><span class="nb">int</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">p</span><span class="o">&gt;</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">:</span><span class="k">break</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">sum</span><span class="o">+=</span><span class="n">p</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">3</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">)</span> <span class="o">%</span> <span class="mi">3</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="p">),</span><span class="nb">int</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">p</span><span class="o">&gt;</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">:</span><span class="k">break</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">sum</span><span class="o">+=</span><span class="n">p</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mi">518408346</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-95">Problem 95</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -835,24 +835,24 @@ Total[NatPt @@@ Pts] + 3 r^2
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">f[n_] := DivisorSigma[1, n] - n;
-fl[n_] := Module[{}, i = 1;
-   x = n; ret = {x};
-   While[True, x = f@x;
-    If[x &gt; 10^6 || x &lt; 2, ret = {}; Break[],
-     If[MemberQ[ret, x, Infinity],
-      If[x == n, ret = {ret, x}, ret = {}]; Break[], ret = {ret, x}]]];
-   Length@Flatten@ret - 1];
-ps = Position[fl /@ Range[10000, 1000000], a_ /; a &gt; 0]
-fres = fl @@@ (10000 + ps - 1)
-ps[[FirstPosition[fres, Max@fres]]]
-14316
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">f[n_] := DivisorSigma[1, n] - n;
+</span></span><span class="line"><span class="cl">fl[n_] := Module[{}, i = 1;
+</span></span><span class="line"><span class="cl">   x = n; ret = {x};
+</span></span><span class="line"><span class="cl">   While[True, x = f@x;
+</span></span><span class="line"><span class="cl">    If[x &gt; 10^6 || x &lt; 2, ret = {}; Break[],
+</span></span><span class="line"><span class="cl">     If[MemberQ[ret, x, Infinity],
+</span></span><span class="line"><span class="cl">      If[x == n, ret = {ret, x}, ret = {}]; Break[], ret = {ret, x}]]];
+</span></span><span class="line"><span class="cl">   Length@Flatten@ret - 1];
+</span></span><span class="line"><span class="cl">ps = Position[fl /@ Range[10000, 1000000], a_ /; a &gt; 0]
+</span></span><span class="line"><span class="cl">fres = fl @@@ (10000 + ps - 1)
+</span></span><span class="line"><span class="cl">ps[[FirstPosition[fres, Max@fres]]]
+</span></span><span class="line"><span class="cl">14316
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-96">Problem 96</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -865,34 +865,34 @@ ps[[FirstPosition[fres, Max@fres]]]
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">grids = Map[FromDigits, Characters[  Rest /@ Partition[Import[&#34;p096_sudoku.txt&#34;, &#34;Data&#34;], 10]], {3}];
-f[g_, i_, j_] := Complement[Range[9], DeleteDuplicates@ DeleteCases[ Join[g[[i, All]], g[[All, j]], Flatten@g[[3 Floor[(i - 1)/3] + 1 ;; 3 Floor[(i - 1)/3] + 3, 3 Floor[(j - 1)/3] + 1 ;; 3 Floor[(j - 1)/3] + 3]]], 0]];
-SpreadCands[l_] := Module[{candis = &lt;||&gt;},  Do[If[l[[i, j]] == 0, candis[{i, j}] = f[l, i, j]], {i, 9}, {j,9}]; Sort@candis];
-Step[] :=  Module[{assc, g, rule, pt, values}, g = Last@gl;  assc = SpreadCands[g];
-   If[assc == &lt;||&gt;, Throw[FromDigits@g[[1, 1 ;; 3]]]];
-   If[MemberQ[assc, {}, All], gl = First@gl,
-    rule = First@Normal@assc; pt = First@rule; values = Last@rule;
-    Do[g[[Sequence @@ pt]] = v;  gl = {gl, g}; Step[], {v, values}]];
-   ];
-AbsoluteTiming@Total@Table[gl = { {}, i}; Catch@Step[], {i, grids}]
-{49.13, 24702}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">grids = Map[FromDigits, Characters[  Rest /@ Partition[Import[&#34;p096_sudoku.txt&#34;, &#34;Data&#34;], 10]], {3}];
+</span></span><span class="line"><span class="cl">f[g_, i_, j_] := Complement[Range[9], DeleteDuplicates@ DeleteCases[ Join[g[[i, All]], g[[All, j]], Flatten@g[[3 Floor[(i - 1)/3] + 1 ;; 3 Floor[(i - 1)/3] + 3, 3 Floor[(j - 1)/3] + 1 ;; 3 Floor[(j - 1)/3] + 3]]], 0]];
+</span></span><span class="line"><span class="cl">SpreadCands[l_] := Module[{candis = &lt;||&gt;},  Do[If[l[[i, j]] == 0, candis[{i, j}] = f[l, i, j]], {i, 9}, {j,9}]; Sort@candis];
+</span></span><span class="line"><span class="cl">Step[] :=  Module[{assc, g, rule, pt, values}, g = Last@gl;  assc = SpreadCands[g];
+</span></span><span class="line"><span class="cl">   If[assc == &lt;||&gt;, Throw[FromDigits@g[[1, 1 ;; 3]]]];
+</span></span><span class="line"><span class="cl">   If[MemberQ[assc, {}, All], gl = First@gl,
+</span></span><span class="line"><span class="cl">    rule = First@Normal@assc; pt = First@rule; values = Last@rule;
+</span></span><span class="line"><span class="cl">    Do[g[[Sequence @@ pt]] = v;  gl = {gl, g}; Step[], {v, values}]];
+</span></span><span class="line"><span class="cl">   ];
+</span></span><span class="line"><span class="cl">AbsoluteTiming@Total@Table[gl = { {}, i}; Catch@Step[], {i, grids}]
+</span></span><span class="line"><span class="cl">{49.13, 24702}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-97">Problem 97</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">FromDigits@Take[IntegerDigits[28433*2^7830457 + 1], -10]
-8739992577
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">FromDigits@Take[IntegerDigits[28433*2^7830457 + 1], -10]
+</span></span><span class="line"><span class="cl">8739992577
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-98">Problem 98</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -914,47 +914,47 @@ AbsoluteTiming@Total@Table[gl = { {}, i}; Catch@Step[], {i, grids}]
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">words = StringSplit[StringReplace[Import[&#34;p098_words.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;], &#34;,&#34;];
-wordpairs= SortBy[Select[GatherBy[words, Sort@Characters@# &amp;], Length@# &gt; 1 &amp;],100 - StringLength@First@# &amp;];
-f[w1_, w2_] :=
-Module[{}, l = StringLength@w1; ret = {};
-  For[i = Ceiling@Sqrt[10^(l - 1)], i &lt;= Floor@Sqrt[10^l - 1], i++,
-   {d, w1d, w2d} = {IntegerDigits[i^2], Characters@w1, Characters@w2};
-   assc = &lt;||&gt;;
-   flag = True;
-   For[j = 1, j &lt;= Length@d, j++,
-    If[KeyExistsQ[assc, w1d[[j]]],
-     If[assc[w1d[[j]]] != d[[j]], flag = False; Break[]],
-     If[MemberQ[Values@assc, d[[j]]], flag = False; Break[],
-      assc[w1d[[j]]] = d[[j]]]]
-    ];
-   If[flag, w2i = FromDigits[w2d /. Normal[assc]];
-    If[IntegerLength@w2i == l &amp;&amp; IntegerQ@Sqrt@w2i, ret = {ret, assc}]]
-   ]; Flatten@ret];
-Take[f@@@wordpairs,-20]
-{f[&#34;POST&#34;, &#34;SPOT&#34;,  &#34;STOP&#34;], {}, {&lt;|&#34;B&#34; -&gt; 1, &#34;O&#34; -&gt; 7, &#34;A&#34; -&gt; 6, &#34;R&#34; -&gt; 8,   &#34;D&#34; -&gt; 9|&gt;}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} }
-18769
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">words = StringSplit[StringReplace[Import[&#34;p098_words.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;], &#34;,&#34;];
+</span></span><span class="line"><span class="cl">wordpairs= SortBy[Select[GatherBy[words, Sort@Characters@# &amp;], Length@# &gt; 1 &amp;],100 - StringLength@First@# &amp;];
+</span></span><span class="line"><span class="cl">f[w1_, w2_] :=
+</span></span><span class="line"><span class="cl">Module[{}, l = StringLength@w1; ret = {};
+</span></span><span class="line"><span class="cl">  For[i = Ceiling@Sqrt[10^(l - 1)], i &lt;= Floor@Sqrt[10^l - 1], i++,
+</span></span><span class="line"><span class="cl">   {d, w1d, w2d} = {IntegerDigits[i^2], Characters@w1, Characters@w2};
+</span></span><span class="line"><span class="cl">   assc = &lt;||&gt;;
+</span></span><span class="line"><span class="cl">   flag = True;
+</span></span><span class="line"><span class="cl">   For[j = 1, j &lt;= Length@d, j++,
+</span></span><span class="line"><span class="cl">    If[KeyExistsQ[assc, w1d[[j]]],
+</span></span><span class="line"><span class="cl">     If[assc[w1d[[j]]] != d[[j]], flag = False; Break[]],
+</span></span><span class="line"><span class="cl">     If[MemberQ[Values@assc, d[[j]]], flag = False; Break[],
+</span></span><span class="line"><span class="cl">      assc[w1d[[j]]] = d[[j]]]]
+</span></span><span class="line"><span class="cl">    ];
+</span></span><span class="line"><span class="cl">   If[flag, w2i = FromDigits[w2d /. Normal[assc]];
+</span></span><span class="line"><span class="cl">    If[IntegerLength@w2i == l &amp;&amp; IntegerQ@Sqrt@w2i, ret = {ret, assc}]]
+</span></span><span class="line"><span class="cl">   ]; Flatten@ret];
+</span></span><span class="line"><span class="cl">Take[f@@@wordpairs,-20]
+</span></span><span class="line"><span class="cl">{f[&#34;POST&#34;, &#34;SPOT&#34;,  &#34;STOP&#34;], {}, {&lt;|&#34;B&#34; -&gt; 1, &#34;O&#34; -&gt; 7, &#34;A&#34; -&gt; 6, &#34;R&#34; -&gt; 8,   &#34;D&#34; -&gt; 9|&gt;}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} }
+</span></span><span class="line"><span class="cl">18769
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-99">Problem 99</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Ordering[Import[&#34;p099_base_exp.txt&#34;, &#34;Data&#34;], -1, #1[[2]]*Log@#1[[1]] &lt; #2[[2]]*Log@#2[[1]] &amp;]
-{709}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Ordering[Import[&#34;p099_base_exp.txt&#34;, &#34;Data&#34;], -1, #1[[2]]*Log@#1[[1]] &lt; #2[[2]]*Log@#2[[1]] &amp;]
+</span></span><span class="line"><span class="cl">{709}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-100">Problem 100</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">First@Solve[b/(b + r)*(b - 1)/(b + r - 1) == 1/2 &amp;&amp; b + r &gt; 10^12 &amp;&amp; b &gt; 0 &amp;&amp;  r &gt; 0, {b, r}, Integers]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">First@Solve[b/(b + r)*(b - 1)/(b + r - 1) == 1/2 &amp;&amp; b + r &gt; 10^12 &amp;&amp; b &gt; 0 &amp;&amp;  r &gt; 0, {b, r}, Integers]
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -1072,11 +1072,11 @@ Take[f@@@wordpairs,-20]
   
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+  
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.191509a5c8442abdb6eb5020a332fd59bdd83a7e78a2d2241108df9113504292.js"></script>
 
 
 

@@ -18,16 +18,16 @@
 
 <meta name="author" content="bigheadghost" /><meta name="description" content="Although calculation of mathematica codes could be slower than those written in C/C&#43;&#43;, or even those in python, the prodigious and interesting if not funny functions do save coding time a lot.
 Problem 1 Brute force solution at first thought:
-1 2  Total@Select[Range[999], 3\[Divides]# || 5\[Divides]# &amp;amp;] 233168   What if the upper limit is extreme large, like \(10^{10}\), or \(10^{10^7}\)? Calculating one after another or even saving them using Range is impossible. Here comes the mathematical way:
-1 2 3 4 5  top = 10^(10^7) - 1; SumMultiplesOf[n_] := (p = Quotient[top, n]; n*p*(p &#43; 1)/2); SumMultiplesOf[m_, n_] := SumMultiplesOf[m] &#43; SumMultiplesOf[n] - SumMultiplesOf[LCM[m, n]]; N[SumMultiplesOf[3, 5], 2] // AbsoluteTiming {2.222280, 2.3*10^19999999}   Problem 2 1 2 3  n=NestWhile[# &#43; 1 &amp;amp;, 1, Fibonacci@# &amp;lt;= 4*^6 &amp;amp;] - 1 Total@Select[Array[Fibonacci,n] , EvenQ] 4613732   Even numbers appear every 3rd positions in Fibonacci series:
-1  Total@Table[Fibonacci@i, {i, 3, n, 3}]   Problem 3 1 2  Max[FactorInteger[600851475143][[All, 1]]] 6857   Problem 4 1 2  Catch@Scan[If[FromDigit@Reverse@IntegerDigits@# == #, Throw[#]] &amp;amp;, Reverse@Sort@Flatten@Table[i*j, {i, 999, 100, -1}, {j, i, 100, -1}]] 906609   Problem 5 1 2  LCM @@ Range[20] 232792560   " />
+1 2 Total@Select[Range[999], 3\[Divides]# || 5\[Divides]# &amp;amp;] 233168 What if the upper limit is extreme large, like \(10^{10}\), or \(10^{10^7}\)? Calculating one after another or even saving them using Range is impossible. Here comes the mathematical way:
+1 2 3 4 5 top = 10^(10^7) - 1; SumMultiplesOf[n_] := (p = Quotient[top, n]; n*p*(p &#43; 1)/2); SumMultiplesOf[m_, n_] := SumMultiplesOf[m] &#43; SumMultiplesOf[n] - SumMultiplesOf[LCM[m, n]]; N[SumMultiplesOf[3, 5], 2] // AbsoluteTiming {2.222280, 2.3*10^19999999} Problem 2 1 2 3 n=NestWhile[# &#43; 1 &amp;amp;, 1, Fibonacci@# &amp;lt;= 4*^6 &amp;amp;] - 1 Total@Select[Array[Fibonacci,n] , EvenQ] 4613732 Even numbers appear every 3rd positions in Fibonacci series:
+1 Total@Table[Fibonacci@i, {i, 3, n, 3}] Problem 3 1 2 Max[FactorInteger[600851475143][[All, 1]]] 6857 Problem 4 1 2 Catch@Scan[If[FromDigit@Reverse@IntegerDigits@# == #, Throw[#]] &amp;amp;, Reverse@Sort@Flatten@Table[i*j, {i, 999, 100, -1}, {j, i, 100, -1}]] 906609 Problem 5 1 2 LCM @@ Range[20] 232792560 " />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.83.1 with theme even" />
+<meta name="generator" content="Hugo 0.100.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/post/dive-into-project-euler-part-1-1-20/" />
@@ -40,7 +40,7 @@ Problem 1 Brute force solution at first thought:
 
 
 <link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
 
 
 <meta property="og:title" content="Dive into Project Euler Part 1 (1-20)" />
@@ -132,8 +132,8 @@ LCM @@ Range[20]
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/post/dive-into-project-euler-part-1-1-20/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2014-08-29T08:41:09&#43;08:00" />
-<meta property="article:modified_time" content="2014-08-29T08:41:09&#43;08:00" />
+<meta property="article:published_time" content="2014-08-29T08:41:09+08:00" />
+<meta property="article:modified_time" content="2014-08-29T08:41:09+08:00" />
 
 <meta itemprop="name" content="Dive into Project Euler Part 1 (1-20)">
 <meta itemprop="description" content="Although calculation of mathematica codes could be slower than those written in C/C&#43;&#43;, or even those in python, the prodigious and interesting if not funny functions do save coding time a lot.
@@ -221,8 +221,8 @@ LCM @@ Range[20]
 232792560
 
 
-"><meta itemprop="datePublished" content="2014-08-29T08:41:09&#43;08:00" />
-<meta itemprop="dateModified" content="2014-08-29T08:41:09&#43;08:00" />
+"><meta itemprop="datePublished" content="2014-08-29T08:41:09+08:00" />
+<meta itemprop="dateModified" content="2014-08-29T08:41:09+08:00" />
 <meta itemprop="wordCount" content="566">
 <meta itemprop="keywords" content="Mathematica," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Dive into Project Euler Part 1 (1-20)"/>
@@ -434,195 +434,195 @@ LCM @@ Range[20]
 <p>Brute force solution at first thought:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Total@Select[Range[999], 3\[Divides]# || 5\[Divides]# &amp;]
-233168
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Total@Select[Range[999], 3\[Divides]# || 5\[Divides]# &amp;]
+</span></span><span class="line"><span class="cl">233168
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>What if the upper limit is extreme large, like \(10^{10}\), or \(10^{10^7}\)? Calculating one after another or even saving them using Range is impossible. Here comes the mathematical way:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">top = 10^(10^7) - 1;
-SumMultiplesOf[n_] := (p = Quotient[top, n]; n*p*(p + 1)/2);
-SumMultiplesOf[m_, n_] := SumMultiplesOf[m] + SumMultiplesOf[n] - SumMultiplesOf[LCM[m, n]];
-N[SumMultiplesOf[3, 5], 2] // AbsoluteTiming
-{2.222280, 2.3*10^19999999}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">top = 10^(10^7) - 1;
+</span></span><span class="line"><span class="cl">SumMultiplesOf[n_] := (p = Quotient[top, n]; n*p*(p + 1)/2);
+</span></span><span class="line"><span class="cl">SumMultiplesOf[m_, n_] := SumMultiplesOf[m] + SumMultiplesOf[n] - SumMultiplesOf[LCM[m, n]];
+</span></span><span class="line"><span class="cl">N[SumMultiplesOf[3, 5], 2] // AbsoluteTiming
+</span></span><span class="line"><span class="cl">{2.222280, 2.3*10^19999999}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-2">Problem 2</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">n=NestWhile[# + 1 &amp;, 1, Fibonacci@# &lt;= 4*^6 &amp;] - 1
-Total@Select[Array[Fibonacci,n] ,  EvenQ]
-4613732
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">n=NestWhile[# + 1 &amp;, 1, Fibonacci@# &lt;= 4*^6 &amp;] - 1
+</span></span><span class="line"><span class="cl">Total@Select[Array[Fibonacci,n] ,  EvenQ]
+</span></span><span class="line"><span class="cl">4613732
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Even numbers appear every 3rd positions in Fibonacci series:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Total@Table[Fibonacci@i, {i, 3, n, 3}]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Total@Table[Fibonacci@i, {i, 3, n, 3}]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-3">Problem 3</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Max[FactorInteger[600851475143][[All, 1]]]
-6857
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Max[FactorInteger[600851475143][[All, 1]]]
+</span></span><span class="line"><span class="cl">6857
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-4">Problem 4</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Catch@Scan[If[FromDigit@Reverse@IntegerDigits@# == #, Throw[#]] &amp;, Reverse@Sort@Flatten@Table[i*j, {i, 999, 100, -1}, {j, i, 100, -1}]]
-906609
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Catch@Scan[If[FromDigit@Reverse@IntegerDigits@# == #, Throw[#]] &amp;, Reverse@Sort@Flatten@Table[i*j, {i, 999, 100, -1}, {j, i, 100, -1}]]
+</span></span><span class="line"><span class="cl">906609
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-5">Problem 5</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">LCM @@ Range[20]
-232792560
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">LCM @@ Range[20]
+</span></span><span class="line"><span class="cl">232792560
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-6">Problem 6</h1>
 <p>Sum is clever to use equations like \(\sum_{i=1}^{n}{i}=\frac{n(n+1)}{2}\)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">(Sum[i, {i, 100}])^2 - Sum[i^2, {i, 100}]
-25164150
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(Sum[i, {i, 100}])^2 - Sum[i^2, {i, 100}]
+</span></span><span class="line"><span class="cl">25164150
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-7">Problem 7</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Prime[10001]
-104743
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Prime[10001]
+</span></span><span class="line"><span class="cl">104743
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-8">Problem 8</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Max[Times @@@ Partition[IntegerDigits[n], 13, 1]]
-23514624000
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Max[Times @@@ Partition[IntegerDigits[n], 13, 1]]
+</span></span><span class="line"><span class="cl">23514624000
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-9">Problem 9</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">a b c /. Solve[{a^2 + b^2 == c^2, a + b + c == 1000, c&gt;a &gt; b &gt; 0}, {a, b, c}, Integers]
-{31875000}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">a b c /. Solve[{a^2 + b^2 == c^2, a + b + c == 1000, c&gt;a &gt; b &gt; 0}, {a, b, c}, Integers]
+</span></span><span class="line"><span class="cl">{31875000}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-10">Problem 10</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Sum[Prime[i], {i, PrimePi[2*^6]}]
-142913828922
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sum[Prime[i], {i, PrimePi[2*^6]}]
+</span></span><span class="line"><span class="cl">142913828922
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-11">Problem 11</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Max@Table[{Times@@@a, Times@@Diagonal@a, Times@@@Transpose@a, Times@@Diagonal@Reverse[a, 2]}, {a, Flatten[Partition[n, {4, 4}, 1], 1]}]
-70600674
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Max@Table[{Times@@@a, Times@@Diagonal@a, Times@@@Transpose@a, Times@@Diagonal@Reverse[a, 2]}, {a, Flatten[Partition[n, {4, 4}, 1], 1]}]
+</span></span><span class="line"><span class="cl">70600674
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-12">Problem 12</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">i = 1; NestWhile[(i++; # + i) &amp;, 1, Length@Divisors@# &lt;= 500 &amp;]
-76576500
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">i = 1; NestWhile[(i++; # + i) &amp;, 1, Length@Divisors@# &lt;= 500 &amp;]
+</span></span><span class="line"><span class="cl">76576500
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-13">Problem 13</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">FromDigits@Take[IntegerDigits@Total@nl, 10]
-5537376230
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">FromDigits@Take[IntegerDigits@Total@nl, 10]
+</span></span><span class="line"><span class="cl">5537376230
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-14">Problem 14</h1>
 <p>Using memoized function:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">f[1] = 1;
-f[n_] := f[n] = If[EvenQ[n], f[n/2] + 1, f[3 n + 1] + 1];
-Ordering[Table[f[i], {i, 1*^6}], -1]]//AbsoluteTiming
-{27.099414, {837799}}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">f[1] = 1;
+</span></span><span class="line"><span class="cl">f[n_] := f[n] = If[EvenQ[n], f[n/2] + 1, f[3 n + 1] + 1];
+</span></span><span class="line"><span class="cl">Ordering[Table[f[i], {i, 1*^6}], -1]]//AbsoluteTiming
+</span></span><span class="line"><span class="cl">{27.099414, {837799}}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Using compiled function:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -631,110 +631,110 @@ Ordering[Table[f[i], {i, 1*^6}], -1]]//AbsoluteTiming
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">f=Compile[{ {top, _Integer} }, Module[{len, maxLen = 0, maxN = 0}, 
-Do[len = 1;
-     NestWhile[(len++; If[EvenQ@#, #~Quotient~2, 3 # + 1]) &amp;, n, # != 1 &amp;];
-     If[len &gt;  maxLen, {maxLen, maxN} = {len + Floor[Log[2, top/N[n]]],  n}], {n, 1, top, 2}];
-    {maxLen, maxN}], CompilationTarget -&gt; &#34;C&#34;];
-f[10^6] // AbsoluteTiming
-{5.010632, {525, 837799}}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">f=Compile[{ {top, _Integer} }, Module[{len, maxLen = 0, maxN = 0}, 
+</span></span><span class="line"><span class="cl">Do[len = 1;
+</span></span><span class="line"><span class="cl">     NestWhile[(len++; If[EvenQ@#, #~Quotient~2, 3 # + 1]) &amp;, n, # != 1 &amp;];
+</span></span><span class="line"><span class="cl">     If[len &gt;  maxLen, {maxLen, maxN} = {len + Floor[Log[2, top/N[n]]],  n}], {n, 1, top, 2}];
+</span></span><span class="line"><span class="cl">    {maxLen, maxN}], CompilationTarget -&gt; &#34;C&#34;];
+</span></span><span class="line"><span class="cl">f[10^6] // AbsoluteTiming
+</span></span><span class="line"><span class="cl">{5.010632, {525, 837799}}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-15">Problem 15</h1>
 <p>memoized function way, comes along with heavy memory load and deeply-nested recursive calls.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">f[0, n_] = f[m_, 0] = 1;
-f[m_, n_] := f[m, n] = f[m - 1, n] + f[m, n - 1];
-f[20, 20]
-137846528820
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">f[0, n_] = f[m_, 0] = 1;
+</span></span><span class="line"><span class="cl">f[m_, n_] := f[m, n] = f[m - 1, n] + f[m, n - 1];
+</span></span><span class="line"><span class="cl">f[20, 20]
+</span></span><span class="line"><span class="cl">137846528820
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>In a m \(\times\) n grid, each path contains exactly n movements to the right ( R ) and m movements down (D). So here it is \({m+n \choose m}\)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Binomial[40, 20]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Binomial[40, 20]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-16">Problem 16</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Total[IntegerDigits[2^1000]]
-1366
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Total[IntegerDigits[2^1000]]
+</span></span><span class="line"><span class="cl">1366
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-17">Problem 17</h1>
 <p><a href="http://mathematica.stackexchange.com/a/1075">inWords</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">StringReplace[StringJoin[inWords /@ Range[1000]],   &#34; &#34; -&gt; &#34;&#34;] // StringLength
-21124
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">StringReplace[StringJoin[inWords /@ Range[1000]],   &#34; &#34; -&gt; &#34;&#34;] // StringLength
+</span></span><span class="line"><span class="cl">21124
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-18">Problem 18</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">d=Import[&#34;R:\\triangle.txt&#34;, &#34;Table&#34;];
-f[Length[d], j_] := d[[Length[d], j]];
-f[i_, j_] := f[i, j] = d[[i, j]] + Max[f[i + 1, j], f[i + 1, j + 1]];
-f[1, 1]
-1074
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">d=Import[&#34;R:\\triangle.txt&#34;, &#34;Table&#34;];
+</span></span><span class="line"><span class="cl">f[Length[d], j_] := d[[Length[d], j]];
+</span></span><span class="line"><span class="cl">f[i_, j_] := f[i, j] = d[[i, j]] + Max[f[i + 1, j], f[i + 1, j + 1]];
+</span></span><span class="line"><span class="cl">f[1, 1]
+</span></span><span class="line"><span class="cl">1074
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>or using patterns to calculate bottom-up</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">d //. {x___, a_, b_} :&gt; {x, a + Max /@ Partition[b, 2, 1]}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">d //. {x___, a_, b_} :&gt; {x, a + Max /@ Partition[b, 2, 1]}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-19">Problem 19</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Count[DateRange[{1901, 1}, {2000, 12}, &#34;Month&#34;],d_ /; DayName@d == Sunday]
-171
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Count[DateRange[{1901, 1}, {2000, 12}, &#34;Month&#34;],d_ /; DayName@d == Sunday]
+</span></span><span class="line"><span class="cl">171
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="problem-20">Problem 20</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Total@IntegerDigits@Factorial@100
-648
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Total@IntegerDigits@Factorial@100
+</span></span><span class="line"><span class="cl">648
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -852,11 +852,11 @@ f[1, 1]
   
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+  
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.191509a5c8442abdb6eb5020a332fd59bdd83a7e78a2d2241108df9113504292.js"></script>
   <script type="text/javascript">
     window.MathJax = {
       tex: {

@@ -27,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.83.1 with theme even" />
+<meta name="generator" content="Hugo 0.100.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/zh/post/bruteforce-reasoning/" />
@@ -40,7 +40,7 @@
 
 
 <link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
 
 
 <meta property="og:title" content="逻辑推理题爆破" />
@@ -50,15 +50,15 @@
 话说有了计算机以后，干啥都喜欢简单粗暴的，纯推理是越来越懒了。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bigheadghost.github.io/zh/post/bruteforce-reasoning/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-05-21T22:30:05&#43;08:00" />
-<meta property="article:modified_time" content="2019-05-21T22:30:05&#43;08:00" /><meta property="og:site_name" content="日种" />
+<meta property="article:published_time" content="2019-05-21T22:30:05+08:00" />
+<meta property="article:modified_time" content="2019-05-21T22:30:05+08:00" /><meta property="og:site_name" content="日种" />
 
 <meta itemprop="name" content="逻辑推理题爆破">
 <meta itemprop="description" content="阮一峰之前有篇文章《Prolog 语言入门教程》，介绍说Prolog（全称Programming in Logic）是一种专门解决逻辑问题的语言。
 其实解决逻辑推理问题也不用特意去学一门新语言，去自己工具箱里找个趁手的兵器也行。
 本文采用Mathematica解题，可与上文对照阅读，文末还求解了一道更复杂的题目。
-话说有了计算机以后，干啥都喜欢简单粗暴的，纯推理是越来越懒了。"><meta itemprop="datePublished" content="2019-05-21T22:30:05&#43;08:00" />
-<meta itemprop="dateModified" content="2019-05-21T22:30:05&#43;08:00" />
+话说有了计算机以后，干啥都喜欢简单粗暴的，纯推理是越来越懒了。"><meta itemprop="datePublished" content="2019-05-21T22:30:05+08:00" />
+<meta itemprop="dateModified" content="2019-05-21T22:30:05+08:00" />
 <meta itemprop="wordCount" content="1644">
 <meta itemprop="keywords" content="puzzle,Mathematica," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="逻辑推理题爆破"/>
@@ -174,7 +174,7 @@
 <h1 id="1找朋友">1.找朋友</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -186,24 +186,24 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">(*给定4对（单向）朋友*)
-friends = {{&#34;john&#34;, &#34;julia&#34;}, {&#34;john&#34;, &#34;jack&#34;}, {&#34;julia&#34;, &#34;sam&#34;}, {&#34;julia&#34;, &#34;molly&#34;}};
-allpeople = DeleteDuplicates@Flatten@friends;
-(*查询a、b是否是朋友*)
-FriendQ[a_, b_] := MemberQ[friends, {a, b}];
-FriendQ[&#34;john&#34;, &#34;sam&#34;]
-False
-(*查询john有多少个朋友*)
-Select[allpeople, FriendQ[&#34;john&#34;, #] &amp;]
-{&#34;julia&#34;, &#34;jack&#34;}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(*给定4对（单向）朋友*)
+</span></span><span class="line"><span class="cl">friends = {{&#34;john&#34;, &#34;julia&#34;}, {&#34;john&#34;, &#34;jack&#34;}, {&#34;julia&#34;, &#34;sam&#34;}, {&#34;julia&#34;, &#34;molly&#34;}};
+</span></span><span class="line"><span class="cl">allpeople = DeleteDuplicates@Flatten@friends;
+</span></span><span class="line"><span class="cl">(*查询a、b是否是朋友*)
+</span></span><span class="line"><span class="cl">FriendQ[a_, b_] := MemberQ[friends, {a, b}];
+</span></span><span class="line"><span class="cl">FriendQ[&#34;john&#34;, &#34;sam&#34;]
+</span></span><span class="line"><span class="cl">False
+</span></span><span class="line"><span class="cl">(*查询john有多少个朋友*)
+</span></span><span class="line"><span class="cl">Select[allpeople, FriendQ[&#34;john&#34;, #] &amp;]
+</span></span><span class="line"><span class="cl">{&#34;julia&#34;, &#34;jack&#34;}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>列出所有的朋友关系？friends列表本身就是了。</p>
 <h1 id="2地图着色问题">2.地图着色问题</h1>
 <p>用红、绿、蓝给分成A、B、C、D、E五块的地图上色，要求相邻区域不能使用同一种颜色。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -215,17 +215,17 @@ Select[allpeople, FriendQ[&#34;john&#34;, #] &amp;]
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">colors = {&#34;red&#34;, &#34;green&#34;, &#34;blue&#34;};
-colorOK[{a_, b_, c_, d_, e_}] := And[a != b, a != c, a != d, a != e, b != c, c != d, d != e];
-sol = Select[Tuples[colors, 5], colorOK];
-StringPadLeft /@ sol // TableForm
-  red   green    blue   green    blue
-  red    blue   green    blue   green
-green     red    blue     red    blue
-green    blue     red    blue     red
- blue     red   green     red   green
- blue   green     red   green     red
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">colors = {&#34;red&#34;, &#34;green&#34;, &#34;blue&#34;};
+</span></span><span class="line"><span class="cl">colorOK[{a_, b_, c_, d_, e_}] := And[a != b, a != c, a != d, a != e, b != c, c != d, d != e];
+</span></span><span class="line"><span class="cl">sol = Select[Tuples[colors, 5], colorOK];
+</span></span><span class="line"><span class="cl">StringPadLeft /@ sol // TableForm
+</span></span><span class="line"><span class="cl">  red   green    blue   green    blue
+</span></span><span class="line"><span class="cl">  red    blue   green    blue   green
+</span></span><span class="line"><span class="cl">green     red    blue     red    blue
+</span></span><span class="line"><span class="cl">green    blue     red    blue     red
+</span></span><span class="line"><span class="cl"> blue     red   green     red   green
+</span></span><span class="line"><span class="cl"> blue   green     red   green     red
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="3谁是凶手">3.谁是凶手</h1>
 <p>Boddy 先生死于谋杀，现有六个嫌疑犯，每个人在不同的房间，每间房间各有一件可能的凶器，但不知道嫌疑犯、房间、凶器的对应关系。请根据下面的条件和线索，找出谁是凶手。已知条件：</p>
@@ -247,7 +247,7 @@ green    blue     red    blue     red
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -280,38 +280,38 @@ green    blue     red    blue     red
 </span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">props = {&#34;bathroom&#34;, &#34;dining&#34;, &#34;kitchen&#34;, &#34;livingroom&#34;, &#34;pantry&#34;, &#34;study&#34;, &#34;bag&#34;, &#34;firearm&#34;, &#34;gas&#34;, &#34;knife&#34;, &#34;poison&#34;, &#34;rope&#34;};
-men = {&#34;george&#34;, &#34;john&#34;, &#34;robert&#34;};
-women = {&#34;barbara&#34;, &#34;christine&#34;, &#34;yolanda&#34;};
-people = Flatten@{men, women};
-allcases = Flatten /@ Permutations[Permutations[people], {2}];
-murderQ[case_] := Module[{p},
-  p = AssociationThread[props, case];
-    And @@ {MemberQ[men, p[&#34;kitchen&#34;]], !MemberQ[{p[&#34;knife&#34;], p[&#34;bag&#34;], p[&#34;firearm&#34;], p[&#34;rope&#34;]}, p[&#34;kitchen&#34;]], 
-      Sort@{p[&#34;bathroom&#34;], p[&#34;study&#34;]} == {&#34;barbara&#34;, &#34;yolanda&#34;}, 
-        !MemberQ[{&#34;barbara&#34;, &#34;george&#34;, p[&#34;bathroom&#34;], p[&#34;dining&#34;]}, p[&#34;bag&#34;]], 
-        And[p[&#34;study&#34;] == p[&#34;rope&#34;], MemberQ[women, p[&#34;study&#34;]]], 
-        MemberQ[{&#34;george&#34;, &#34;john&#34;}, p[&#34;livingroom&#34;]], 
-        p[&#34;knife&#34;] != p[&#34;dining&#34;], 
-        And[p[&#34;study&#34;] != &#34;yolanda&#34;, p[&#34;pantry&#34;] != &#34;yolanda&#34;], 
-        p[&#34;firearm&#34;] == &#34;george&#34;, 
-        p[&#34;pantry&#34;] == p[&#34;gas&#34;]}
-      ];
-      sol = First@Select[allcases, murderQ];
-  StringRiffle[ Transpose@{StringPadLeft@props, StringPadRight@sol}, &#34;\n&#34;, &#34;-&gt;&#34;]
-  bathroom-&gt;yolanda  
-    dining-&gt;george   
-   kitchen-&gt;robert   
-livingroom-&gt;john     
-    pantry-&gt;christine
-     study-&gt;barbara  
-       bag-&gt;john     
-   firearm-&gt;george   
-       gas-&gt;christine
-     knife-&gt;yolanda  
-    poison-&gt;robert   
-      rope-&gt;barbara  
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">props = {&#34;bathroom&#34;, &#34;dining&#34;, &#34;kitchen&#34;, &#34;livingroom&#34;, &#34;pantry&#34;, &#34;study&#34;, &#34;bag&#34;, &#34;firearm&#34;, &#34;gas&#34;, &#34;knife&#34;, &#34;poison&#34;, &#34;rope&#34;};
+</span></span><span class="line"><span class="cl">men = {&#34;george&#34;, &#34;john&#34;, &#34;robert&#34;};
+</span></span><span class="line"><span class="cl">women = {&#34;barbara&#34;, &#34;christine&#34;, &#34;yolanda&#34;};
+</span></span><span class="line"><span class="cl">people = Flatten@{men, women};
+</span></span><span class="line"><span class="cl">allcases = Flatten /@ Permutations[Permutations[people], {2}];
+</span></span><span class="line"><span class="cl">murderQ[case_] := Module[{p},
+</span></span><span class="line"><span class="cl">  p = AssociationThread[props, case];
+</span></span><span class="line"><span class="cl">    And @@ {MemberQ[men, p[&#34;kitchen&#34;]], !MemberQ[{p[&#34;knife&#34;], p[&#34;bag&#34;], p[&#34;firearm&#34;], p[&#34;rope&#34;]}, p[&#34;kitchen&#34;]], 
+</span></span><span class="line"><span class="cl">      Sort@{p[&#34;bathroom&#34;], p[&#34;study&#34;]} == {&#34;barbara&#34;, &#34;yolanda&#34;}, 
+</span></span><span class="line"><span class="cl">        !MemberQ[{&#34;barbara&#34;, &#34;george&#34;, p[&#34;bathroom&#34;], p[&#34;dining&#34;]}, p[&#34;bag&#34;]], 
+</span></span><span class="line"><span class="cl">        And[p[&#34;study&#34;] == p[&#34;rope&#34;], MemberQ[women, p[&#34;study&#34;]]], 
+</span></span><span class="line"><span class="cl">        MemberQ[{&#34;george&#34;, &#34;john&#34;}, p[&#34;livingroom&#34;]], 
+</span></span><span class="line"><span class="cl">        p[&#34;knife&#34;] != p[&#34;dining&#34;], 
+</span></span><span class="line"><span class="cl">        And[p[&#34;study&#34;] != &#34;yolanda&#34;, p[&#34;pantry&#34;] != &#34;yolanda&#34;], 
+</span></span><span class="line"><span class="cl">        p[&#34;firearm&#34;] == &#34;george&#34;, 
+</span></span><span class="line"><span class="cl">        p[&#34;pantry&#34;] == p[&#34;gas&#34;]}
+</span></span><span class="line"><span class="cl">      ];
+</span></span><span class="line"><span class="cl">      sol = First@Select[allcases, murderQ];
+</span></span><span class="line"><span class="cl">  StringRiffle[ Transpose@{StringPadLeft@props, StringPadRight@sol}, &#34;\n&#34;, &#34;-&gt;&#34;]
+</span></span><span class="line"><span class="cl">  bathroom-&gt;yolanda  
+</span></span><span class="line"><span class="cl">    dining-&gt;george   
+</span></span><span class="line"><span class="cl">   kitchen-&gt;robert   
+</span></span><span class="line"><span class="cl">livingroom-&gt;john     
+</span></span><span class="line"><span class="cl">    pantry-&gt;christine
+</span></span><span class="line"><span class="cl">     study-&gt;barbara  
+</span></span><span class="line"><span class="cl">       bag-&gt;john     
+</span></span><span class="line"><span class="cl">   firearm-&gt;george   
+</span></span><span class="line"><span class="cl">       gas-&gt;christine
+</span></span><span class="line"><span class="cl">     knife-&gt;yolanda  
+</span></span><span class="line"><span class="cl">    poison-&gt;robert   
+</span></span><span class="line"><span class="cl">      rope-&gt;barbara  
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="4关联题目">4.关联题目</h1>
 <p>网传的2018年刑侦科推理试题，实为<a href="http://society.people.com.cn/n1/2018/0308/c1008-29854595.html">2014年杭州学军中学推理社的招新考题</a>。</p>
@@ -411,7 +411,7 @@ livingroom-&gt;john
 </table>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -432,26 +432,26 @@ livingroom-&gt;john
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Clear@checkQ; checkQ[c_] := Module[{t, t3, t4, t6},
-  t = Count[c, #] &amp; /@ Range@4;
-  Ans[i_] := c[[i]]; (*题目i的答案*)
-  OfAns[l_, i_] := l[[c[[i]]]];  (*题目i的答案内容*)
-  AnsOfAns[l_, i_] := c[[l[[c[[i]]]]]];   (*题目i的答案内容对应的题目的答案*)
-  And @@ {Ans[5] == OfAns[{3, 4, 1, 2}, 2],
-    t3 = SortBy[Tally[c[[{3, 6, 2, 4}]]], Last]; t3[[1, 2]] == 1 &amp;&amp; t3[[2, 2]] == 3 &amp;&amp; t3[[1, 1]] == AnsOfAns[{3, 6, 2, 4}, 3],
-    t4 = AnsOfAns[{{1, 5}, {2, 7}, {1, 9}, {6, 10}}, 4]; t4[[1]] == t4[[2]],
-    Ans[5] == AnsOfAns[{8, 4, 9, 7}, 5],
-    t6 = AnsOfAns[{{2, 4}, {1, 6}, {3, 10}, {5, 9}}, 6]; t6[[1]] == t6[[2]] == Ans[8],
-    OfAns[{3, 2, 1, 4}, 7] == First@Ordering[t, 1],
-    Abs[AnsOfAns[{7, 5, 2, 10}, 8] - Ans[1]] != 1,
-    (Ans[1] == Ans[6]) != (Ans[5] == AnsOfAns[{6, 10, 2, 9}, 9]),
-    Max@t - Min@t == OfAns[{3, 2, 4, 1}, 10]
-    }
-  ];
-sol = Select[Tuples[{1, 2, 3, 4}, {10}], checkQ];
-StringJoin@Characters[&#34;ABCD&#34;][[#]] &amp; /@ sol
-{&#34;BCACACDABA&#34;}  (*唯一解*)
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Clear@checkQ; checkQ[c_] := Module[{t, t3, t4, t6},
+</span></span><span class="line"><span class="cl">  t = Count[c, #] &amp; /@ Range@4;
+</span></span><span class="line"><span class="cl">  Ans[i_] := c[[i]]; (*题目i的答案*)
+</span></span><span class="line"><span class="cl">  OfAns[l_, i_] := l[[c[[i]]]];  (*题目i的答案内容*)
+</span></span><span class="line"><span class="cl">  AnsOfAns[l_, i_] := c[[l[[c[[i]]]]]];   (*题目i的答案内容对应的题目的答案*)
+</span></span><span class="line"><span class="cl">  And @@ {Ans[5] == OfAns[{3, 4, 1, 2}, 2],
+</span></span><span class="line"><span class="cl">    t3 = SortBy[Tally[c[[{3, 6, 2, 4}]]], Last]; t3[[1, 2]] == 1 &amp;&amp; t3[[2, 2]] == 3 &amp;&amp; t3[[1, 1]] == AnsOfAns[{3, 6, 2, 4}, 3],
+</span></span><span class="line"><span class="cl">    t4 = AnsOfAns[{{1, 5}, {2, 7}, {1, 9}, {6, 10}}, 4]; t4[[1]] == t4[[2]],
+</span></span><span class="line"><span class="cl">    Ans[5] == AnsOfAns[{8, 4, 9, 7}, 5],
+</span></span><span class="line"><span class="cl">    t6 = AnsOfAns[{{2, 4}, {1, 6}, {3, 10}, {5, 9}}, 6]; t6[[1]] == t6[[2]] == Ans[8],
+</span></span><span class="line"><span class="cl">    OfAns[{3, 2, 1, 4}, 7] == First@Ordering[t, 1],
+</span></span><span class="line"><span class="cl">    Abs[AnsOfAns[{7, 5, 2, 10}, 8] - Ans[1]] != 1,
+</span></span><span class="line"><span class="cl">    (Ans[1] == Ans[6]) != (Ans[5] == AnsOfAns[{6, 10, 2, 9}, 9]),
+</span></span><span class="line"><span class="cl">    Max@t - Min@t == OfAns[{3, 2, 4, 1}, 10]
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">  ];
+</span></span><span class="line"><span class="cl">sol = Select[Tuples[{1, 2, 3, 4}, {10}], checkQ];
+</span></span><span class="line"><span class="cl">StringJoin@Characters[&#34;ABCD&#34;][[#]] &amp; /@ sol
+</span></span><span class="line"><span class="cl">{&#34;BCACACDABA&#34;}  (*唯一解*)
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -570,11 +570,11 @@ StringJoin@Characters[&#34;ABCD&#34;][[#]] &amp; /@ sol
   
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+  
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.191509a5c8442abdb6eb5020a332fd59bdd83a7e78a2d2241108df9113504292.js"></script>
 
 
 
