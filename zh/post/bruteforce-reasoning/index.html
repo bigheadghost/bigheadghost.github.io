@@ -27,7 +27,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.104.3 with theme even" />
+<meta name="generator" content="Hugo 0.140.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/zh/post/bruteforce-reasoning/" />
@@ -39,33 +39,40 @@
 
 
 
-<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
 
 
 
-<meta property="og:title" content="逻辑推理题爆破" />
-<meta property="og:description" content="阮一峰之前有篇文章《Prolog 语言入门教程》，介绍说Prolog（全称Programming in Logic）是一种专门解决逻辑问题的语言。
+<meta property="og:url" content="https://bigheadghost.github.io/zh/post/bruteforce-reasoning/">
+  <meta property="og:site_name" content="日种">
+  <meta property="og:title" content="逻辑推理题爆破">
+  <meta property="og:description" content="阮一峰之前有篇文章《Prolog 语言入门教程》，介绍说Prolog（全称Programming in Logic）是一种专门解决逻辑问题的语言。
 其实解决逻辑推理问题也不用特意去学一门新语言，去自己工具箱里找个趁手的兵器也行。
 本文采用Mathematica解题，可与上文对照阅读，文末还求解了一道更复杂的题目。
-话说有了计算机以后，干啥都喜欢简单粗暴的，纯推理是越来越懒了。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigheadghost.github.io/zh/post/bruteforce-reasoning/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-05-21T22:30:05+08:00" />
-<meta property="article:modified_time" content="2019-05-21T22:30:05+08:00" /><meta property="og:site_name" content="日种" />
+话说有了计算机以后，干啥都喜欢简单粗暴的，纯推理是越来越懒了。">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2019-05-21T22:30:05+08:00">
+    <meta property="article:modified_time" content="2019-05-21T22:30:05+08:00">
+    <meta property="article:tag" content="Puzzle">
+    <meta property="article:tag" content="Mathematica">
 
-<meta itemprop="name" content="逻辑推理题爆破">
-<meta itemprop="description" content="阮一峰之前有篇文章《Prolog 语言入门教程》，介绍说Prolog（全称Programming in Logic）是一种专门解决逻辑问题的语言。
+  <meta itemprop="name" content="逻辑推理题爆破">
+  <meta itemprop="description" content="阮一峰之前有篇文章《Prolog 语言入门教程》，介绍说Prolog（全称Programming in Logic）是一种专门解决逻辑问题的语言。
 其实解决逻辑推理问题也不用特意去学一门新语言，去自己工具箱里找个趁手的兵器也行。
 本文采用Mathematica解题，可与上文对照阅读，文末还求解了一道更复杂的题目。
-话说有了计算机以后，干啥都喜欢简单粗暴的，纯推理是越来越懒了。"><meta itemprop="datePublished" content="2019-05-21T22:30:05+08:00" />
-<meta itemprop="dateModified" content="2019-05-21T22:30:05+08:00" />
-<meta itemprop="wordCount" content="1644">
-<meta itemprop="keywords" content="puzzle,Mathematica," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="逻辑推理题爆破"/>
-<meta name="twitter:description" content="阮一峰之前有篇文章《Prolog 语言入门教程》，介绍说Prolog（全称Programming in Logic）是一种专门解决逻辑问题的语言。
+话说有了计算机以后，干啥都喜欢简单粗暴的，纯推理是越来越懒了。">
+  <meta itemprop="datePublished" content="2019-05-21T22:30:05+08:00">
+  <meta itemprop="dateModified" content="2019-05-21T22:30:05+08:00">
+  <meta itemprop="wordCount" content="1644">
+  <meta itemprop="keywords" content="Puzzle,Mathematica">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="逻辑推理题爆破">
+  <meta name="twitter:description" content="阮一峰之前有篇文章《Prolog 语言入门教程》，介绍说Prolog（全称Programming in Logic）是一种专门解决逻辑问题的语言。
 其实解决逻辑推理问题也不用特意去学一门新语言，去自己工具箱里找个趁手的兵器也行。
 本文采用Mathematica解题，可与上文对照阅读，文末还求解了一道更复杂的题目。
-话说有了计算机以后，干啥都喜欢简单粗暴的，纯推理是越来越懒了。"/>
+话说有了计算机以后，干啥都喜欢简单粗暴的，纯推理是越来越懒了。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -140,8 +147,8 @@
     <div id="search"></div>
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
-            new PagefindUI({ element: "#search", 
-               showImages: false, });
+            new PagefindUI({ element: "#search",
+               showImages: false, showSubResults: true, });
         });
     </script>
     <main id="main" class="main">
@@ -324,98 +331,98 @@
 </div><h1 id="4关联题目">4.关联题目</h1>
 <p>网传的2018年刑侦科推理试题，实为<a href="http://society.people.com.cn/n1/2018/0308/c1008-29854595.html">2014年杭州学军中学推理社的招新考题</a>。</p>
 <table>
-<thead>
-<tr>
-<th>题号</th>
-<th>题目</th>
-<th>选项A</th>
-<th>选项B</th>
-<th>选项C</th>
-<th>选项D</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>这道题的答案是</td>
-<td>A</td>
-<td>B</td>
-<td>C</td>
-<td>D</td>
-</tr>
-<tr>
-<td>2</td>
-<td>第5题的答案是</td>
-<td>C</td>
-<td>D</td>
-<td>A</td>
-<td>B</td>
-</tr>
-<tr>
-<td>3</td>
-<td>以下选项中哪一题的答案与其他三项不同</td>
-<td>3</td>
-<td>6</td>
-<td>2</td>
-<td>4</td>
-</tr>
-<tr>
-<td>4</td>
-<td>以下选项中哪两题的答案相同</td>
-<td>1、5</td>
-<td>2、7</td>
-<td>1、9</td>
-<td>6、10</td>
-</tr>
-<tr>
-<td>5</td>
-<td>以下选项中哪一题的答案与本题相同</td>
-<td>8</td>
-<td>4</td>
-<td>9</td>
-<td>7</td>
-</tr>
-<tr>
-<td>6</td>
-<td>以下选项中哪两题的答案与第8题相同</td>
-<td>2、4</td>
-<td>1、6</td>
-<td>3、10</td>
-<td>5、9</td>
-</tr>
-<tr>
-<td>7</td>
-<td>在此十道题中，被选中次数最少的选项字母为</td>
-<td>C</td>
-<td>B</td>
-<td>A</td>
-<td>D</td>
-</tr>
-<tr>
-<td>8</td>
-<td>以下选项中哪一题的答案与第1题的答案在字母中不相邻</td>
-<td>7</td>
-<td>5</td>
-<td>2</td>
-<td>10</td>
-</tr>
-<tr>
-<td>9</td>
-<td>已知&quot;第1题与第6题的答案相同&quot;与&quot;第X题与第5题的答案相同&quot;的真假性相反，那么X为</td>
-<td>6</td>
-<td>10</td>
-<td>2</td>
-<td>9</td>
-</tr>
-<tr>
-<td>10</td>
-<td>在此10道题中，ABCD四个字母出现次数最多与最少者的差为</td>
-<td>3</td>
-<td>2</td>
-<td>4</td>
-<td>1</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>题号</th>
+          <th>题目</th>
+          <th>选项A</th>
+          <th>选项B</th>
+          <th>选项C</th>
+          <th>选项D</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>这道题的答案是</td>
+          <td>A</td>
+          <td>B</td>
+          <td>C</td>
+          <td>D</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>第5题的答案是</td>
+          <td>C</td>
+          <td>D</td>
+          <td>A</td>
+          <td>B</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>以下选项中哪一题的答案与其他三项不同</td>
+          <td>3</td>
+          <td>6</td>
+          <td>2</td>
+          <td>4</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>以下选项中哪两题的答案相同</td>
+          <td>1、5</td>
+          <td>2、7</td>
+          <td>1、9</td>
+          <td>6、10</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>以下选项中哪一题的答案与本题相同</td>
+          <td>8</td>
+          <td>4</td>
+          <td>9</td>
+          <td>7</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>以下选项中哪两题的答案与第8题相同</td>
+          <td>2、4</td>
+          <td>1、6</td>
+          <td>3、10</td>
+          <td>5、9</td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td>在此十道题中，被选中次数最少的选项字母为</td>
+          <td>C</td>
+          <td>B</td>
+          <td>A</td>
+          <td>D</td>
+      </tr>
+      <tr>
+          <td>8</td>
+          <td>以下选项中哪一题的答案与第1题的答案在字母中不相邻</td>
+          <td>7</td>
+          <td>5</td>
+          <td>2</td>
+          <td>10</td>
+      </tr>
+      <tr>
+          <td>9</td>
+          <td>已知&quot;第1题与第6题的答案相同&quot;与&quot;第X题与第5题的答案相同&quot;的真假性相反，那么X为</td>
+          <td>6</td>
+          <td>10</td>
+          <td>2</td>
+          <td>9</td>
+      </tr>
+      <tr>
+          <td>10</td>
+          <td>在此10道题中，ABCD四个字母出现次数最多与最少者的差为</td>
+          <td>3</td>
+          <td>2</td>
+          <td>4</td>
+          <td>1</td>
+      </tr>
+  </tbody>
 </table>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -565,7 +572,7 @@
   <span class="copyright-year">
     &copy; 
     2014 - 
-    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigheadghost</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigheadghost</span>
   </span>
 </div>
 
@@ -583,9 +590,6 @@
 
 
 <script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
-
-
-
 
 
 

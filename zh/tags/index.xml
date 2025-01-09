@@ -4,143 +4,114 @@
     <title>Tags on 日种</title>
     <link>https://bigheadghost.github.io/zh/tags/</link>
     <description>Recent content in Tags on 日种</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 03 Apr 2023 19:38:21 +0800</lastBuildDate><atom:link href="https://bigheadghost.github.io/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 09 Jan 2025 14:06:15 +0800</lastBuildDate>
+    <atom:link href="https://bigheadghost.github.io/zh/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>novel</title>
-      <link>https://bigheadghost.github.io/zh/tags/novel/</link>
-      <pubDate>Mon, 03 Apr 2023 19:38:21 +0800</pubDate>
-      
-      <guid>https://bigheadghost.github.io/zh/tags/novel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>book</title>
-      <link>https://bigheadghost.github.io/zh/tags/book/</link>
-      <pubDate>Wed, 21 Dec 2022 11:12:16 +0800</pubDate>
-      
-      <guid>https://bigheadghost.github.io/zh/tags/book/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>society</title>
+      <title>Society</title>
       <link>https://bigheadghost.github.io/zh/tags/society/</link>
-      <pubDate>Mon, 13 Jun 2022 09:29:20 +0800</pubDate>
-      
+      <pubDate>Thu, 09 Jan 2025 14:06:15 +0800</pubDate>
       <guid>https://bigheadghost.github.io/zh/tags/society/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>Novel</title>
+      <link>https://bigheadghost.github.io/zh/tags/novel/</link>
+      <pubDate>Mon, 03 Apr 2023 19:38:21 +0800</pubDate>
+      <guid>https://bigheadghost.github.io/zh/tags/novel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Book</title>
+      <link>https://bigheadghost.github.io/zh/tags/book/</link>
+      <pubDate>Wed, 21 Dec 2022 11:12:16 +0800</pubDate>
+      <guid>https://bigheadghost.github.io/zh/tags/book/</guid>
+      <description></description>
+    </item>
     <item>
       <title>法律</title>
       <link>https://bigheadghost.github.io/zh/tags/%E6%B3%95%E5%BE%8B/</link>
       <pubDate>Tue, 25 Jan 2022 16:02:04 +0800</pubDate>
-      
       <guid>https://bigheadghost.github.io/zh/tags/%E6%B3%95%E5%BE%8B/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>房产</title>
       <link>https://bigheadghost.github.io/zh/tags/%E6%88%BF%E4%BA%A7/</link>
       <pubDate>Tue, 25 Jan 2022 16:02:04 +0800</pubDate>
-      
       <guid>https://bigheadghost.github.io/zh/tags/%E6%88%BF%E4%BA%A7/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>魔都</title>
       <link>https://bigheadghost.github.io/zh/tags/%E9%AD%94%E9%83%BD/</link>
       <pubDate>Tue, 25 Jan 2022 16:02:04 +0800</pubDate>
-      
       <guid>https://bigheadghost.github.io/zh/tags/%E9%AD%94%E9%83%BD/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>puzzle</title>
+      <title>Puzzle</title>
       <link>https://bigheadghost.github.io/zh/tags/puzzle/</link>
       <pubDate>Fri, 18 Jun 2021 12:22:03 +0800</pubDate>
-      
       <guid>https://bigheadghost.github.io/zh/tags/puzzle/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>mathematica</title>
+      <title>Mathematica</title>
       <link>https://bigheadghost.github.io/zh/tags/mathematica/</link>
       <pubDate>Wed, 09 Jun 2021 11:40:39 +0800</pubDate>
-      
       <guid>https://bigheadghost.github.io/zh/tags/mathematica/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>software</title>
+      <title>Software</title>
       <link>https://bigheadghost.github.io/zh/tags/software/</link>
       <pubDate>Wed, 09 Sep 2020 11:23:38 +0800</pubDate>
-      
       <guid>https://bigheadghost.github.io/zh/tags/software/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>人间指南姑妄听之</title>
       <link>https://bigheadghost.github.io/zh/tags/%E4%BA%BA%E9%97%B4%E6%8C%87%E5%8D%97%E5%A7%91%E5%A6%84%E5%90%AC%E4%B9%8B/</link>
       <pubDate>Fri, 07 Aug 2020 09:41:18 +0800</pubDate>
-      
       <guid>https://bigheadghost.github.io/zh/tags/%E4%BA%BA%E9%97%B4%E6%8C%87%E5%8D%97%E5%A7%91%E5%A6%84%E5%90%AC%E4%B9%8B/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tv</title>
+      <title>Tv</title>
       <link>https://bigheadghost.github.io/zh/tags/tv/</link>
       <pubDate>Sat, 02 May 2020 13:29:02 +0800</pubDate>
-      
       <guid>https://bigheadghost.github.io/zh/tags/tv/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>movie</title>
+      <title>Movie</title>
       <link>https://bigheadghost.github.io/zh/tags/movie/</link>
       <pubDate>Wed, 11 Mar 2020 15:56:18 +0800</pubDate>
-      
       <guid>https://bigheadghost.github.io/zh/tags/movie/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>game</title>
+      <title>Game</title>
       <link>https://bigheadghost.github.io/zh/tags/game/</link>
       <pubDate>Thu, 23 Jan 2020 20:09:01 +0800</pubDate>
-      
       <guid>https://bigheadghost.github.io/zh/tags/game/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>classification</title>
+      <title>Classification</title>
       <link>https://bigheadghost.github.io/zh/tags/classification/</link>
       <pubDate>Sun, 30 Jun 2019 22:10:02 +0800</pubDate>
-      
       <guid>https://bigheadghost.github.io/zh/tags/classification/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>uncut</title>
+      <title>Uncut</title>
       <link>https://bigheadghost.github.io/zh/tags/uncut/</link>
       <pubDate>Tue, 01 May 2018 13:39:01 +0800</pubDate>
-      
       <guid>https://bigheadghost.github.io/zh/tags/uncut/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

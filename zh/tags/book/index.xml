@@ -1,34 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>book on 日种</title>
+    <title>Book on 日种</title>
     <link>https://bigheadghost.github.io/zh/tags/book/</link>
-    <description>Recent content in book on 日种</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 21 Dec 2022 11:12:16 +0800</lastBuildDate><atom:link href="https://bigheadghost.github.io/zh/tags/book/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Book on 日种</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 21 Dec 2022 11:12:16 +0800</lastBuildDate>
+    <atom:link href="https://bigheadghost.github.io/zh/tags/book/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>《放我出去》一书有删减</title>
       <link>https://bigheadghost.github.io/zh/post/dk-do-not-open-abridged/</link>
       <pubDate>Wed, 21 Dec 2022 11:12:16 +0800</pubDate>
-      
       <guid>https://bigheadghost.github.io/zh/post/dk-do-not-open-abridged/</guid>
-      <description>&lt;h1 id=&#34;书籍&#34;&gt;书籍&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;书名：放我出去（儿童探秘大百科）&lt;/li&gt;
-&lt;li&gt;英文原版：&lt;a href=&#34;https://www.amazon.com/Do-Not-Open-John-Farndon/dp/0756632056/&#34;&gt;Do Not Open&lt;/a&gt;, 2007年出版&lt;/li&gt;
-&lt;li&gt;作者：（英）约翰·法恩登（John Farndon) 著，敬蓓虹、高静 译&lt;/li&gt;
-&lt;li&gt;出版社：电子工业出版社&lt;/li&gt;
-&lt;li&gt;出版日期：2017-01-01&lt;/li&gt;
-&lt;li&gt;ISBN：9787121301872&lt;/li&gt;
-&lt;li&gt;字数：442000&lt;/li&gt;
-&lt;li&gt;页数：&lt;strong&gt;256页，删减版删了20页，变为236页&lt;/strong&gt;，书号未变&lt;/li&gt;
-&lt;li&gt;版次：1&lt;/li&gt;
-&lt;li&gt;装帧：精装&lt;/li&gt;
-&lt;li&gt;开本：16开&lt;/li&gt;
-&lt;li&gt;定价：128元&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;h1 id=&#34;书籍&#34;&gt;书籍&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;书名：放我出去（儿童探秘大百科）&lt;/li&gt;&#xA;&lt;li&gt;英文原版：&lt;a href=&#34;https://www.amazon.com/Do-Not-Open-John-Farndon/dp/0756632056/&#34;&gt;Do Not Open&lt;/a&gt;, 2007年出版&lt;/li&gt;&#xA;&lt;li&gt;作者：（英）约翰·法恩登（John Farndon) 著，敬蓓虹、高静 译&lt;/li&gt;&#xA;&lt;li&gt;出版社：电子工业出版社&lt;/li&gt;&#xA;&lt;li&gt;出版日期：2017-01-01&lt;/li&gt;&#xA;&lt;li&gt;ISBN：9787121301872&lt;/li&gt;&#xA;&lt;li&gt;字数：442000&lt;/li&gt;&#xA;&lt;li&gt;页数：&lt;strong&gt;256页，删减版删了20页，变为236页&lt;/strong&gt;，书号未变&lt;/li&gt;&#xA;&lt;li&gt;版次：1&lt;/li&gt;&#xA;&lt;li&gt;装帧：精装&lt;/li&gt;&#xA;&lt;li&gt;开本：16开&lt;/li&gt;&#xA;&lt;li&gt;定价：128元&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
   </channel>
 </rss>

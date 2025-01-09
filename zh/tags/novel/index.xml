@@ -1,37 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>novel on 日种</title>
+    <title>Novel on 日种</title>
     <link>https://bigheadghost.github.io/zh/tags/novel/</link>
-    <description>Recent content in novel on 日种</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 03 Apr 2023 19:38:21 +0800</lastBuildDate><atom:link href="https://bigheadghost.github.io/zh/tags/novel/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Novel on 日种</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 03 Apr 2023 19:38:21 +0800</lastBuildDate>
+    <atom:link href="https://bigheadghost.github.io/zh/tags/novel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>老王</title>
       <link>https://bigheadghost.github.io/zh/post/lao-wang/</link>
       <pubDate>Mon, 03 Apr 2023 19:38:21 +0800</pubDate>
-      
       <guid>https://bigheadghost.github.io/zh/post/lao-wang/</guid>
-      <description>&lt;p&gt;老王今年四十，比妻子阿萍大一岁。一双儿女小学在读。&lt;/p&gt;
-&lt;p&gt;夫妻俩白天上班，晚上家教。&lt;/p&gt;
-&lt;p&gt;日子平淡如水，鸡飞狗跳。&lt;/p&gt;
-&lt;p&gt;家里不宽裕，老王很节俭。&lt;/p&gt;
-&lt;p&gt;阿萍说，谁谁谁升官了，每年多挣几十万呢。你得多挣点儿啊，光省能发财？&lt;/p&gt;
-&lt;p&gt;老王说，钱够花就行呗。&lt;/p&gt;
-&lt;p&gt;说得多了，老王就不说了，只在心里想：我还不知道有钱好？挣钱难呐。&lt;/p&gt;</description>
+      <description>&lt;p&gt;老王今年四十，比妻子阿萍大一岁。一双儿女小学在读。&lt;/p&gt;&#xA;&lt;p&gt;夫妻俩白天上班，晚上家教。&lt;/p&gt;&#xA;&lt;p&gt;日子平淡如水，鸡飞狗跳。&lt;/p&gt;&#xA;&lt;p&gt;家里不宽裕，老王很节俭。&lt;/p&gt;&#xA;&lt;p&gt;阿萍说，谁谁谁升官了，每年多挣几十万呢。你得多挣点儿啊，光省能发财？&lt;/p&gt;&#xA;&lt;p&gt;老王说，钱够花就行呗。&lt;/p&gt;&#xA;&lt;p&gt;说得多了，老王就不说了，只在心里想：我还不知道有钱好？挣钱难呐。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>紫藤花园</title>
       <link>https://bigheadghost.github.io/zh/post/wisteria-garden/</link>
       <pubDate>Sat, 02 May 2020 13:29:02 +0800</pubDate>
-      
       <guid>https://bigheadghost.github.io/zh/post/wisteria-garden/</guid>
-      <description>&lt;p&gt;紫藤的花期基本在4月中旬至5月上旬，只有短短两周。&lt;br&gt;
-上海闵行区有条马路叫紫藤路，附近是轨道交通十号线紫藤路站。&lt;br&gt;
-上海嘉定区还有个紫藤园，1997年为纪念嘉定区与日本冈山县和气町开展友好交往十周年、建立友好关系五周年而建。&lt;/p&gt;</description>
+      <description>&lt;p&gt;紫藤的花期基本在4月中旬至5月上旬，只有短短两周。&lt;br&gt;&#xA;上海闵行区有条马路叫紫藤路，附近是轨道交通十号线紫藤路站。&lt;br&gt;&#xA;上海嘉定区还有个紫藤园，1997年为纪念嘉定区与日本冈山县和气町开展友好交往十周年、建立友好关系五周年而建。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

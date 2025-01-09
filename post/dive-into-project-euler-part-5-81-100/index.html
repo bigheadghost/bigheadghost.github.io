@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigheadghost" /><meta name="description" content="Problem 81 1 2 3 4 5 6 7 8 9 s = Import[&amp;#34;p081_matrix.txt&amp;#34;, &amp;#34;Data&amp;#34;]; Clear@MinPathSum; MinPathSum[1, 1] := s[[1, 1]] MinPathSum[r_, c_] := MinPathSum[r, c] = If[r == 1, MinPathSum[r, c - 1], If[c == 1, MinPathSum[r - 1, c], Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] &#43; s[[r, c]]; MinPathSum[80, 80] 427337 " />
+<meta name="author" content="bigheadghost" /><meta name="description" content="Problem 81 1 2 3 4 5 6 7 8 9 s = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;]; Clear@MinPathSum; MinPathSum[1, 1] := s[[1, 1]] MinPathSum[r_, c_] := MinPathSum[r, c] = If[r == 1, MinPathSum[r, c - 1], If[c == 1, MinPathSum[r - 1, c], Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] &#43; s[[r, c]]; MinPathSum[80, 80] 427337 " />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.104.3 with theme even" />
+<meta name="generator" content="Hugo 0.140.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/post/dive-into-project-euler-part-5-81-100/" />
@@ -35,99 +35,30 @@
 
 
 
-<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
 
 
 
-<meta property="og:title" content="Dive into Project Euler Part 5 (81-100)" />
-<meta property="og:description" content="Problem 81
+<meta property="og:url" content="https://bigheadghost.github.io/post/dive-into-project-euler-part-5-81-100/">
+  <meta property="og:site_name" content="Know Nothing">
+  <meta property="og:title" content="Dive into Project Euler Part 5 (81-100)">
+  <meta property="og:description" content="Problem 81 1 2 3 4 5 6 7 8 9 s = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;]; Clear@MinPathSum; MinPathSum[1, 1] := s[[1, 1]] MinPathSum[r_, c_] := MinPathSum[r, c] = If[r == 1, MinPathSum[r, c - 1], If[c == 1, MinPathSum[r - 1, c], Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] &#43; s[[r, c]]; MinPathSum[80, 80] 427337">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2014-09-09T12:05:23+08:00">
+    <meta property="article:modified_time" content="2014-09-09T12:05:23+08:00">
+    <meta property="article:tag" content="Mathematica">
 
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-
-
-s = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
-Clear@MinPathSum;
-MinPathSum[1, 1] := s[[1, 1]]
-MinPathSum[r_, c_] := MinPathSum[r, c] =
-   If[r == 1, MinPathSum[r, c - 1],
-     If[c == 1, MinPathSum[r - 1, c],
-      Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] &#43; s[[r, c]];
-MinPathSum[80, 80]
-427337
-
-
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigheadghost.github.io/post/dive-into-project-euler-part-5-81-100/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2014-09-09T12:05:23+08:00" />
-<meta property="article:modified_time" content="2014-09-09T12:05:23+08:00" />
-
-<meta itemprop="name" content="Dive into Project Euler Part 5 (81-100)">
-<meta itemprop="description" content="Problem 81
-
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-
-
-s = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
-Clear@MinPathSum;
-MinPathSum[1, 1] := s[[1, 1]]
-MinPathSum[r_, c_] := MinPathSum[r, c] =
-   If[r == 1, MinPathSum[r, c - 1],
-     If[c == 1, MinPathSum[r - 1, c],
-      Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] &#43; s[[r, c]];
-MinPathSum[80, 80]
-427337
-
-
-"><meta itemprop="datePublished" content="2014-09-09T12:05:23+08:00" />
-<meta itemprop="dateModified" content="2014-09-09T12:05:23+08:00" />
-<meta itemprop="wordCount" content="1540">
-<meta itemprop="keywords" content="Mathematica," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Dive into Project Euler Part 5 (81-100)"/>
-<meta name="twitter:description" content="Problem 81
-
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-
-
-s = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;];
-Clear@MinPathSum;
-MinPathSum[1, 1] := s[[1, 1]]
-MinPathSum[r_, c_] := MinPathSum[r, c] =
-   If[r == 1, MinPathSum[r, c - 1],
-     If[c == 1, MinPathSum[r - 1, c],
-      Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] &#43; s[[r, c]];
-MinPathSum[80, 80]
-427337
-
-
-"/>
+  <meta itemprop="name" content="Dive into Project Euler Part 5 (81-100)">
+  <meta itemprop="description" content="Problem 81 1 2 3 4 5 6 7 8 9 s = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;]; Clear@MinPathSum; MinPathSum[1, 1] := s[[1, 1]] MinPathSum[r_, c_] := MinPathSum[r, c] = If[r == 1, MinPathSum[r, c - 1], If[c == 1, MinPathSum[r - 1, c], Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] &#43; s[[r, c]]; MinPathSum[80, 80] 427337">
+  <meta itemprop="datePublished" content="2014-09-09T12:05:23+08:00">
+  <meta itemprop="dateModified" content="2014-09-09T12:05:23+08:00">
+  <meta itemprop="wordCount" content="1540">
+  <meta itemprop="keywords" content="Mathematica">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Dive into Project Euler Part 5 (81-100)">
+  <meta name="twitter:description" content="Problem 81 1 2 3 4 5 6 7 8 9 s = Import[&#34;p081_matrix.txt&#34;, &#34;Data&#34;]; Clear@MinPathSum; MinPathSum[1, 1] := s[[1, 1]] MinPathSum[r_, c_] := MinPathSum[r, c] = If[r == 1, MinPathSum[r, c - 1], If[c == 1, MinPathSum[r - 1, c], Min[MinPathSum[r - 1, c], MinPathSum[r, c - 1]]]] &#43; s[[r, c]]; MinPathSum[80, 80] 427337">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -202,8 +133,8 @@ MinPathSum[80, 80]
     <div id="search"></div>
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
-            new PagefindUI({ element: "#search", 
-               showImages: false, });
+            new PagefindUI({ element: "#search",
+               showImages: false, showSubResults: true, });
         });
     </script>
     <main id="main" class="main">
@@ -579,7 +510,7 @@ MinPathSum[80, 80]
 </span><span class="lnt">53
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl"><span class="k">private</span> <span class="kt">int</span> <span class="n">nextNumber</span><span class="p">(</span><span class="kt">int</span> <span class="n">input</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl"><span class="kd">private</span> <span class="kt">int</span> <span class="n">nextNumber</span><span class="p">(</span><span class="kt">int</span> <span class="n">input</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">retVal</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"> 
@@ -592,7 +523,7 @@ MinPathSum[80, 80]
 </span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">retVal</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="k">public</span> <span class="k">void</span> <span class="n">Solve</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">void</span> <span class="n">Solve</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl">    <span class="n">Stopwatch</span> <span class="n">clock</span> <span class="p">=</span> <span class="n">Stopwatch</span><span class="p">.</span><span class="n">StartNew</span><span class="p">();</span>
@@ -613,7 +544,7 @@ MinPathSum[80, 80]
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">cache</span><span class="p">[</span><span class="n">sequence</span><span class="p">]</span> <span class="p">||</span> <span class="n">sequence</span> <span class="p">==</span> <span class="m">89</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">result</span><span class="p">++;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">cache</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cache</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">=</span> <span class="kc">true</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
@@ -1049,7 +980,7 @@ MinPathSum[80, 80]
       <a href="https://math.stackexchange.com/users/157947/bigheadghost" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
       <a href="https://github.com/bigheadghost" class="iconfont icon-github" title="github"></a>
       <a href="https://www.douban.com/people/1254984/" class="iconfont icon-douban" title="douban"></a>
-  <a href="https://bigheadghost.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -1067,7 +998,7 @@ MinPathSum[80, 80]
   <span class="copyright-year">
     &copy; 
     2014 - 
-    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigheadghost</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigheadghost</span>
   </span>
 </div>
 
@@ -1085,9 +1016,6 @@ MinPathSum[80, 80]
 
 
 <script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
-
-
-
 
 
 

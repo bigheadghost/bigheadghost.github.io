@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tv on 日种</title>
+    <title>Tv on 日种</title>
     <link>https://bigheadghost.github.io/zh/tags/tv/</link>
-    <description>Recent content in tv on 日种</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 02 May 2020 13:29:02 +0800</lastBuildDate><atom:link href="https://bigheadghost.github.io/zh/tags/tv/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Tv on 日种</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 02 May 2020 13:29:02 +0800</lastBuildDate>
+    <atom:link href="https://bigheadghost.github.io/zh/tags/tv/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>紫藤花园</title>
       <link>https://bigheadghost.github.io/zh/post/wisteria-garden/</link>
       <pubDate>Sat, 02 May 2020 13:29:02 +0800</pubDate>
-      
       <guid>https://bigheadghost.github.io/zh/post/wisteria-garden/</guid>
-      <description>&lt;p&gt;紫藤的花期基本在4月中旬至5月上旬，只有短短两周。&lt;br&gt;
-上海闵行区有条马路叫紫藤路，附近是轨道交通十号线紫藤路站。&lt;br&gt;
-上海嘉定区还有个紫藤园，1997年为纪念嘉定区与日本冈山县和气町开展友好交往十周年、建立友好关系五周年而建。&lt;/p&gt;</description>
+      <description>&lt;p&gt;紫藤的花期基本在4月中旬至5月上旬，只有短短两周。&lt;br&gt;&#xA;上海闵行区有条马路叫紫藤路，附近是轨道交通十号线紫藤路站。&lt;br&gt;&#xA;上海嘉定区还有个紫藤园，1997年为纪念嘉定区与日本冈山县和气町开展友好交往十周年、建立友好关系五周年而建。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

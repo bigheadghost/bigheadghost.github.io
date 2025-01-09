@@ -16,9 +16,9 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigheadghost" /><meta name="description" content="1.问题 1 ~ n(n&#43;1)/2的整数，排列成类似帕萨卡三角形的等边三角形数阵（从上到下，每行依次有1、2、&amp;hellip;、n个数字）, 其中每个不在最后一行的数都恰好等于排在它下面的两个数的差的绝对值。满足这样排列的三角形称为正差三角形（Triangles of Absolute Diﬀerences，TAD）。
+<meta name="author" content="bigheadghost" /><meta name="description" content="1.问题 1 ~ n(n&#43;1)/2的整数，排列成类似帕萨卡三角形的等边三角形数阵（从上到下，每行依次有1、2、&hellip;、n个数字）, 其中每个不在最后一行的数都恰好等于排在它下面的两个数的差的绝对值。满足这样排列的三角形称为正差三角形（Triangles of Absolute Diﬀerences，TAD）。
 行数n称作TAD的阶。
-有时候，为方便分析，TAD也可以摆成从上到下的每行依次有n、n-1、&amp;hellip;、1个数字。为加以区分，尖头朝上的三角形我们称之为正差上三角形（Up-Pointing TAD，UPTAD），尖头朝下的我们称之为正差下三角形（Down-Pointing TAD，DPTAD）。
+有时候，为方便分析，TAD也可以摆成从上到下的每行依次有n、n-1、&hellip;、1个数字。为加以区分，尖头朝上的三角形我们称之为正差上三角形（Up-Pointing TAD，UPTAD），尖头朝下的我们称之为正差下三角形（Down-Pointing TAD，DPTAD）。
 " />
 
 
@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.104.3 with theme even" />
+<meta name="generator" content="Hugo 0.140.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/zh/post/triangles-of-absolute-differences/" />
@@ -38,33 +38,36 @@
 
 
 
-<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
 
 
 
-<meta property="og:title" content="正差三角形" />
-<meta property="og:description" content="1.问题
-1 ~ n(n&#43;1)/2的整数，排列成类似帕萨卡三角形的等边三角形数阵（从上到下，每行依次有1、2、&hellip;、n个数字）, 其中每个不在最后一行的数都恰好等于排在它下面的两个数的差的绝对值。满足这样排列的三角形称为正差三角形（Triangles of Absolute Diﬀerences，TAD）。
+<meta property="og:url" content="https://bigheadghost.github.io/zh/post/triangles-of-absolute-differences/">
+  <meta property="og:site_name" content="日种">
+  <meta property="og:title" content="正差三角形">
+  <meta property="og:description" content="1.问题 1 ~ n(n&#43;1)/2的整数，排列成类似帕萨卡三角形的等边三角形数阵（从上到下，每行依次有1、2、…、n个数字）, 其中每个不在最后一行的数都恰好等于排在它下面的两个数的差的绝对值。满足这样排列的三角形称为正差三角形（Triangles of Absolute Diﬀerences，TAD）。
 行数n称作TAD的阶。
-有时候，为方便分析，TAD也可以摆成从上到下的每行依次有n、n-1、&hellip;、1个数字。为加以区分，尖头朝上的三角形我们称之为正差上三角形（Up-Pointing TAD，UPTAD），尖头朝下的我们称之为正差下三角形（Down-Pointing TAD，DPTAD）。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigheadghost.github.io/zh/post/triangles-of-absolute-differences/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-05-25T12:09:27+08:00" />
-<meta property="article:modified_time" content="2019-05-25T12:09:27+08:00" /><meta property="og:site_name" content="日种" />
+有时候，为方便分析，TAD也可以摆成从上到下的每行依次有n、n-1、…、1个数字。为加以区分，尖头朝上的三角形我们称之为正差上三角形（Up-Pointing TAD，UPTAD），尖头朝下的我们称之为正差下三角形（Down-Pointing TAD，DPTAD）。">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2019-05-25T12:09:27+08:00">
+    <meta property="article:modified_time" content="2019-05-25T12:09:27+08:00">
+    <meta property="article:tag" content="Puzzle">
 
-<meta itemprop="name" content="正差三角形">
-<meta itemprop="description" content="1.问题
-1 ~ n(n&#43;1)/2的整数，排列成类似帕萨卡三角形的等边三角形数阵（从上到下，每行依次有1、2、&hellip;、n个数字）, 其中每个不在最后一行的数都恰好等于排在它下面的两个数的差的绝对值。满足这样排列的三角形称为正差三角形（Triangles of Absolute Diﬀerences，TAD）。
+  <meta itemprop="name" content="正差三角形">
+  <meta itemprop="description" content="1.问题 1 ~ n(n&#43;1)/2的整数，排列成类似帕萨卡三角形的等边三角形数阵（从上到下，每行依次有1、2、…、n个数字）, 其中每个不在最后一行的数都恰好等于排在它下面的两个数的差的绝对值。满足这样排列的三角形称为正差三角形（Triangles of Absolute Diﬀerences，TAD）。
 行数n称作TAD的阶。
-有时候，为方便分析，TAD也可以摆成从上到下的每行依次有n、n-1、&hellip;、1个数字。为加以区分，尖头朝上的三角形我们称之为正差上三角形（Up-Pointing TAD，UPTAD），尖头朝下的我们称之为正差下三角形（Down-Pointing TAD，DPTAD）。"><meta itemprop="datePublished" content="2019-05-25T12:09:27+08:00" />
-<meta itemprop="dateModified" content="2019-05-25T12:09:27+08:00" />
-<meta itemprop="wordCount" content="2743">
-<meta itemprop="keywords" content="puzzle," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="正差三角形"/>
-<meta name="twitter:description" content="1.问题
-1 ~ n(n&#43;1)/2的整数，排列成类似帕萨卡三角形的等边三角形数阵（从上到下，每行依次有1、2、&hellip;、n个数字）, 其中每个不在最后一行的数都恰好等于排在它下面的两个数的差的绝对值。满足这样排列的三角形称为正差三角形（Triangles of Absolute Diﬀerences，TAD）。
+有时候，为方便分析，TAD也可以摆成从上到下的每行依次有n、n-1、…、1个数字。为加以区分，尖头朝上的三角形我们称之为正差上三角形（Up-Pointing TAD，UPTAD），尖头朝下的我们称之为正差下三角形（Down-Pointing TAD，DPTAD）。">
+  <meta itemprop="datePublished" content="2019-05-25T12:09:27+08:00">
+  <meta itemprop="dateModified" content="2019-05-25T12:09:27+08:00">
+  <meta itemprop="wordCount" content="2743">
+  <meta itemprop="keywords" content="Puzzle">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="正差三角形">
+  <meta name="twitter:description" content="1.问题 1 ~ n(n&#43;1)/2的整数，排列成类似帕萨卡三角形的等边三角形数阵（从上到下，每行依次有1、2、…、n个数字）, 其中每个不在最后一行的数都恰好等于排在它下面的两个数的差的绝对值。满足这样排列的三角形称为正差三角形（Triangles of Absolute Diﬀerences，TAD）。
 行数n称作TAD的阶。
-有时候，为方便分析，TAD也可以摆成从上到下的每行依次有n、n-1、&hellip;、1个数字。为加以区分，尖头朝上的三角形我们称之为正差上三角形（Up-Pointing TAD，UPTAD），尖头朝下的我们称之为正差下三角形（Down-Pointing TAD，DPTAD）。"/>
+有时候，为方便分析，TAD也可以摆成从上到下的每行依次有n、n-1、…、1个数字。为加以区分，尖头朝上的三角形我们称之为正差上三角形（Up-Pointing TAD，UPTAD），尖头朝下的我们称之为正差下三角形（Down-Pointing TAD，DPTAD）。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -139,8 +142,8 @@
     <div id="search"></div>
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
-            new PagefindUI({ element: "#search", 
-               showImages: false, });
+            new PagefindUI({ element: "#search",
+               showImages: false, showSubResults: true, });
         });
     </script>
     <main id="main" class="main">
@@ -317,7 +320,7 @@ n=6时，数量从近400万一下子降到64个，结果发现没有pattern满�
 <img src="/img/2019/tad5demo.jpg" alt="tad5demo"><br>
 不难证明：头=<code>n(n+1)/2</code>, n只脚是<code>1~n</code>，所有脚加起来等于头，每只脚是其所在行最小的数字。<br>
 现在，从第一行的头脚左右两侧 画 三角形两条侧边的平行线，将TAD分成包含脊柱的主三角和左右两侧的副三角，当第一行的头脚两侧尚有空间时会有两个副三角，当头脚偏向一边时则只有一个副三角。<br>
-无论哪种情况，副三角（们）共包含<code>n-2</code>只脚。它们的头之和<code>Q ≥ (n+1)+(n+2)+...+(2n-2)=(n-2)(3n-2)/2</code> <br>
+无论哪种情况，副三角（们）共包含<code>n-2</code>只脚。它们的头之和<code>Q ≥ (n+1)+(n+2)+...+(2n-2)=(n-2)(3n-2)/2</code><br>
 由于TAD最大的数<code>n(n+1)/2</code>已经被主三角的头用掉了，所以:<br>
 ①有1个副三角时，<code>Q ≤ n(n+1)/2-1</code>，与上式联立得<code>n≤3</code><br>
 ②有2个副三角时，<code>Q ≤ (n(n+1)/2-1) + (n(n+1)/2-2)</code>，与上式联立得<code>n≤8</code></p>
@@ -451,7 +454,7 @@ n=6时，数量从近400万一下子降到64个，结果发现没有pattern满�
   <span class="copyright-year">
     &copy; 
     2014 - 
-    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigheadghost</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigheadghost</span>
   </span>
 </div>
 
@@ -469,9 +472,6 @@ n=6时，数量从近400万一下子降到64个，结果发现没有pattern满�
 
 
 <script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
-
-
-
 
 
 

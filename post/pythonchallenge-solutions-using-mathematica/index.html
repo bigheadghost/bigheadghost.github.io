@@ -17,10 +17,10 @@
 
 
 <meta name="author" content="bigheadghost" /><meta name="description" content="Level 1:
-1 a = CharacterRange[&amp;#34;a&amp;#34;, &amp;#34;z&amp;#34;]; StringJoin[Characters[s] /. Thread[a -&amp;gt; RotateLeft[a, 2]]] Level 2:
-1 Sort[Tally[Characters[s]], #1[[2]] &amp;lt;= #2[[2]] &amp;amp;] Level 3:
-1 StringJoin[StringCases[s,RegularExpression[&amp;#34;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&amp;#34;] -&amp;gt; &amp;#34;$1&amp;#34;]] Level 4:
-1 2 3 4 5 NestWhileList[(resp = Import[&amp;#34;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&amp;#34;&amp;lt;&amp;gt;#]; m = StringCases[resp ,&amp;#34;next nothing is &amp;#34; ~~ (x : DigitCharacter ..) -&amp;gt; x]; If[m != {}, m[[1]], Print[resp]; &amp;#34;&amp;#34;]) &amp;amp;, &amp;#34;12345&amp;#34;, StringLength[#] &amp;gt; 0 &amp;amp;] 16044-&amp;gt;8022, continue
+1 a = CharacterRange[&#34;a&#34;, &#34;z&#34;]; StringJoin[Characters[s] /. Thread[a -&gt; RotateLeft[a, 2]]] Level 2:
+1 Sort[Tally[Characters[s]], #1[[2]] &lt;= #2[[2]] &amp;] Level 3:
+1 StringJoin[StringCases[s,RegularExpression[&#34;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&#34;] -&gt; &#34;$1&#34;]] Level 4:
+1 2 3 4 5 NestWhileList[(resp = Import[&#34;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&#34;&lt;&gt;#]; m = StringCases[resp ,&#34;next nothing is &#34; ~~ (x : DigitCharacter ..) -&gt; x]; If[m != {}, m[[1]], Print[resp]; &#34;&#34;]) &amp;, &#34;12345&#34;, StringLength[#] &gt; 0 &amp;] 16044-&gt;8022, continue
 Level 5:
 pickle module needed, python only.
 " />
@@ -30,7 +30,7 @@ pickle module needed, python only.
 
 
 
-<meta name="generator" content="Hugo 0.104.3 with theme even" />
+<meta name="generator" content="Hugo 0.140.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/post/pythonchallenge-solutions-using-mathematica/" />
@@ -42,162 +42,49 @@ pickle module needed, python only.
 
 
 
-<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
 
 
 
-<meta property="og:title" content="PythonChallenge Solutions Using Mathematica" />
-<meta property="og:description" content="Level 1:
-
-
-1
-
-
-a = CharacterRange[&#34;a&#34;, &#34;z&#34;]; StringJoin[Characters[s] /. Thread[a -&gt; RotateLeft[a, 2]]]
-
-
-Level 2:
-
-
-1
-
-
-Sort[Tally[Characters[s]], #1[[2]] &lt;= #2[[2]] &amp;]
-
-
-Level 3:
-
-
-1
-
-
-StringJoin[StringCases[s,RegularExpression[&#34;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&#34;] -&gt;  &#34;$1&#34;]]
-
-
-Level 4:
-
-
-1
-2
-3
-4
-5
-
-
-NestWhileList[(resp = Import[&#34;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&#34;&lt;&gt;#];
-   m = StringCases[resp ,&#34;next nothing is &#34; ~~ (x : DigitCharacter ..) -&gt; x];
-   If[m != {}, m[[1]], Print[resp]; &#34;&#34;]) &amp;,
-&#34;12345&#34;,
-StringLength[#] &gt; 0 &amp;]
-
-
-16044-&gt;8022, continue
+<meta property="og:url" content="https://bigheadghost.github.io/post/pythonchallenge-solutions-using-mathematica/">
+  <meta property="og:site_name" content="Know Nothing">
+  <meta property="og:title" content="PythonChallenge Solutions Using Mathematica">
+  <meta property="og:description" content="Level 1:
+1 a = CharacterRange[&#34;a&#34;, &#34;z&#34;]; StringJoin[Characters[s] /. Thread[a -&gt; RotateLeft[a, 2]]] Level 2:
+1 Sort[Tally[Characters[s]], #1[[2]] &lt;= #2[[2]] &amp;] Level 3:
+1 StringJoin[StringCases[s,RegularExpression[&#34;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&#34;] -&gt; &#34;$1&#34;]] Level 4:
+1 2 3 4 5 NestWhileList[(resp = Import[&#34;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&#34;&lt;&gt;#]; m = StringCases[resp ,&#34;next nothing is &#34; ~~ (x : DigitCharacter ..) -&gt; x]; If[m != {}, m[[1]], Print[resp]; &#34;&#34;]) &amp;, &#34;12345&#34;, StringLength[#] &gt; 0 &amp;] 16044-&gt;8022, continue
 Level 5:
-pickle module needed, python only." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigheadghost.github.io/post/pythonchallenge-solutions-using-mathematica/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2014-07-11T20:40:02+08:00" />
-<meta property="article:modified_time" content="2014-07-11T20:40:02+08:00" />
+pickle module needed, python only.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2014-07-11T20:40:02+08:00">
+    <meta property="article:modified_time" content="2014-07-11T20:40:02+08:00">
+    <meta property="article:tag" content="Mathematica">
+    <meta property="article:tag" content="PythonChallenge">
 
-<meta itemprop="name" content="PythonChallenge Solutions Using Mathematica">
-<meta itemprop="description" content="Level 1:
-
-
-1
-
-
-a = CharacterRange[&#34;a&#34;, &#34;z&#34;]; StringJoin[Characters[s] /. Thread[a -&gt; RotateLeft[a, 2]]]
-
-
-Level 2:
-
-
-1
-
-
-Sort[Tally[Characters[s]], #1[[2]] &lt;= #2[[2]] &amp;]
-
-
-Level 3:
-
-
-1
-
-
-StringJoin[StringCases[s,RegularExpression[&#34;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&#34;] -&gt;  &#34;$1&#34;]]
-
-
-Level 4:
-
-
-1
-2
-3
-4
-5
-
-
-NestWhileList[(resp = Import[&#34;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&#34;&lt;&gt;#];
-   m = StringCases[resp ,&#34;next nothing is &#34; ~~ (x : DigitCharacter ..) -&gt; x];
-   If[m != {}, m[[1]], Print[resp]; &#34;&#34;]) &amp;,
-&#34;12345&#34;,
-StringLength[#] &gt; 0 &amp;]
-
-
-16044-&gt;8022, continue
+  <meta itemprop="name" content="PythonChallenge Solutions Using Mathematica">
+  <meta itemprop="description" content="Level 1:
+1 a = CharacterRange[&#34;a&#34;, &#34;z&#34;]; StringJoin[Characters[s] /. Thread[a -&gt; RotateLeft[a, 2]]] Level 2:
+1 Sort[Tally[Characters[s]], #1[[2]] &lt;= #2[[2]] &amp;] Level 3:
+1 StringJoin[StringCases[s,RegularExpression[&#34;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&#34;] -&gt; &#34;$1&#34;]] Level 4:
+1 2 3 4 5 NestWhileList[(resp = Import[&#34;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&#34;&lt;&gt;#]; m = StringCases[resp ,&#34;next nothing is &#34; ~~ (x : DigitCharacter ..) -&gt; x]; If[m != {}, m[[1]], Print[resp]; &#34;&#34;]) &amp;, &#34;12345&#34;, StringLength[#] &gt; 0 &amp;] 16044-&gt;8022, continue
 Level 5:
-pickle module needed, python only."><meta itemprop="datePublished" content="2014-07-11T20:40:02+08:00" />
-<meta itemprop="dateModified" content="2014-07-11T20:40:02+08:00" />
-<meta itemprop="wordCount" content="1007">
-<meta itemprop="keywords" content="Mathematica,PythonChallenge," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="PythonChallenge Solutions Using Mathematica"/>
-<meta name="twitter:description" content="Level 1:
-
-
-1
-
-
-a = CharacterRange[&#34;a&#34;, &#34;z&#34;]; StringJoin[Characters[s] /. Thread[a -&gt; RotateLeft[a, 2]]]
-
-
-Level 2:
-
-
-1
-
-
-Sort[Tally[Characters[s]], #1[[2]] &lt;= #2[[2]] &amp;]
-
-
-Level 3:
-
-
-1
-
-
-StringJoin[StringCases[s,RegularExpression[&#34;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&#34;] -&gt;  &#34;$1&#34;]]
-
-
-Level 4:
-
-
-1
-2
-3
-4
-5
-
-
-NestWhileList[(resp = Import[&#34;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&#34;&lt;&gt;#];
-   m = StringCases[resp ,&#34;next nothing is &#34; ~~ (x : DigitCharacter ..) -&gt; x];
-   If[m != {}, m[[1]], Print[resp]; &#34;&#34;]) &amp;,
-&#34;12345&#34;,
-StringLength[#] &gt; 0 &amp;]
-
-
-16044-&gt;8022, continue
+pickle module needed, python only.">
+  <meta itemprop="datePublished" content="2014-07-11T20:40:02+08:00">
+  <meta itemprop="dateModified" content="2014-07-11T20:40:02+08:00">
+  <meta itemprop="wordCount" content="1007">
+  <meta itemprop="keywords" content="Mathematica,PythonChallenge">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PythonChallenge Solutions Using Mathematica">
+  <meta name="twitter:description" content="Level 1:
+1 a = CharacterRange[&#34;a&#34;, &#34;z&#34;]; StringJoin[Characters[s] /. Thread[a -&gt; RotateLeft[a, 2]]] Level 2:
+1 Sort[Tally[Characters[s]], #1[[2]] &lt;= #2[[2]] &amp;] Level 3:
+1 StringJoin[StringCases[s,RegularExpression[&#34;[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]&#34;] -&gt; &#34;$1&#34;]] Level 4:
+1 2 3 4 5 NestWhileList[(resp = Import[&#34;http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=&#34;&lt;&gt;#]; m = StringCases[resp ,&#34;next nothing is &#34; ~~ (x : DigitCharacter ..) -&gt; x]; If[m != {}, m[[1]], Print[resp]; &#34;&#34;]) &amp;, &#34;12345&#34;, StringLength[#] &gt; 0 &amp;] 16044-&gt;8022, continue
 Level 5:
-pickle module needed, python only."/>
+pickle module needed, python only.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -272,8 +159,8 @@ pickle module needed, python only."/>
     <div id="search"></div>
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
-            new PagefindUI({ element: "#search", 
-               showImages: false, });
+            new PagefindUI({ element: "#search",
+               showImages: false, showSubResults: true, });
         });
     </script>
     <main id="main" class="main">
@@ -402,7 +289,7 @@ evil4.jpg will not rendered correctly in Chrome, because it uses a confusing Con
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ImportString[FromCharacterCode[#]]&amp; /@ Table[Downsample[Import[&#34;R:\\evil2.gfx&#34;, &#34;Byte&#34;], 5, i], {i, 5}]
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>The 4th image is kind of corrupt. But you can save it, then use your image viewer or Firefox/Chrome to view it. <a href="http://www.pythonchallenge.com/forums/viewtopic.php?f=1&amp;t=15&amp;p=164&amp;hilit=padding+zeroes#p164">It is said</a> to be truncated on purpose to fit in the gfx pack, and you can try padding it with a few kilobytes of zeroes. But I <strong>did not make it</strong>. However the other images should give you enough information that you don&rsquo;t need that one.</p>
+</div><p>The 4th image is kind of corrupt. But you can save it, then use your image viewer or Firefox/Chrome to view it. <a href="http://www.pythonchallenge.com/forums/viewtopic.php?f=1&amp;t=15&amp;p=164&amp;hilit=padding&#43;zeroes#p164">It is said</a> to be truncated on purpose to fit in the gfx pack, and you can try padding it with a few kilobytes of zeroes. But I <strong>did not make it</strong>. However the other images should give you enough information that you don&rsquo;t need that one.</p>
 <p><a href="http://www.pythonchallenge.com/pc/return/disproportional.html">Level 13</a>:<br>
 xmlrpc, Mathematica has no official implement.</p>
 <p><a href="http://www.pythonchallenge.com/pc/return/italy.html">Level 14</a>:<br>
@@ -764,7 +651,7 @@ It&rsquo;s a <a href="http://en.wikipedia.org/wiki/Nonogram">Nonogram</a> puzzle
       <a href="https://math.stackexchange.com/users/157947/bigheadghost" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
       <a href="https://github.com/bigheadghost" class="iconfont icon-github" title="github"></a>
       <a href="https://www.douban.com/people/1254984/" class="iconfont icon-douban" title="douban"></a>
-  <a href="https://bigheadghost.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -782,7 +669,7 @@ It&rsquo;s a <a href="http://en.wikipedia.org/wiki/Nonogram">Nonogram</a> puzzle
   <span class="copyright-year">
     &copy; 
     2014 - 
-    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigheadghost</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigheadghost</span>
   </span>
 </div>
 
@@ -800,9 +687,6 @@ It&rsquo;s a <a href="http://en.wikipedia.org/wiki/Nonogram">Nonogram</a> puzzle
 
 
 <script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
-
-
-
 
 
 

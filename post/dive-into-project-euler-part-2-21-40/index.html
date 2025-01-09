@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="bigheadghost" /><meta name="description" content="Problem 21 1 2 3 f = DivisorSigma[1, #] - # &amp;amp;; Total@Select[Range[9999], (a = f@#; a &amp;lt; 9999 &amp;amp;&amp;amp; a != # &amp;amp;&amp;amp; f@a == #) &amp;amp;] 31626 Problem 22 1 2 3 nl=Sort@StringSplit[StringReplace[Import[&amp;#34;p022_names.txt&amp;#34;], &amp;#34;\&amp;#34;&amp;#34; -&amp;gt; &amp;#34;&amp;#34;], &amp;#34;,&amp;#34;]; Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&amp;#34;A&amp;#34;]] &#43; 1] * First[#2] &amp;amp;, nl] 871198282 Problem 23 1 2 3 4 Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &amp;gt; # &amp;amp;]; Total@Complement[Range[1, 28123], DeleteDuplicates@( (Abundants[[#]] &#43; Abundants[[# ;; -1]]) &amp;amp; /@ Range[Length@Abundants] // Flatten )] 4179871 Problem 24 1 2 FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]] 2783915460 Problem 25 1 2 NestWhile[(# &#43; 1) &amp;amp;, 1, IntegerLength@Fibonacci@# &amp;lt; 1000 &amp;amp;] 4782 " />
+<meta name="author" content="bigheadghost" /><meta name="description" content="Problem 21 1 2 3 f = DivisorSigma[1, #] - # &amp;; Total@Select[Range[9999], (a = f@#; a &lt; 9999 &amp;&amp; a != # &amp;&amp; f@a == #) &amp;] 31626 Problem 22 1 2 3 nl=Sort@StringSplit[StringReplace[Import[&#34;p022_names.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;], &#34;,&#34;]; Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&#34;A&#34;]] &#43; 1] * First[#2] &amp;, nl] 871198282 Problem 23 1 2 3 4 Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &gt; # &amp;]; Total@Complement[Range[1, 28123], DeleteDuplicates@( (Abundants[[#]] &#43; Abundants[[# ;; -1]]) &amp; /@ Range[Length@Abundants] // Flatten )] 4179871 Problem 24 1 2 FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]] 2783915460 Problem 25 1 2 NestWhile[(# &#43; 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;] 4782 " />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.104.3 with theme even" />
+<meta name="generator" content="Hugo 0.140.2 with theme even" />
 
 
 <link rel="canonical" href="https://bigheadghost.github.io/post/dive-into-project-euler-part-2-21-40/" />
@@ -35,213 +35,30 @@
 
 
 
-<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
-
-
-
-<meta property="og:title" content="Dive into Project Euler Part 2 (21-40)" />
-<meta property="og:description" content="Problem 21
-
-
-1
-2
-3
-
-
-f = DivisorSigma[1, #] - # &amp;;
-Total@Select[Range[9999], (a = f@#; a &lt; 9999 &amp;&amp; a != # &amp;&amp; f@a == #) &amp;]
-31626
-
-
-Problem 22
-
-
-1
-2
-3
-
-
-nl=Sort@StringSplit[StringReplace[Import[&#34;p022_names.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;], &#34;,&#34;];
-Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&#34;A&#34;]] &#43; 1] * First[#2] &amp;, nl]
-871198282
-
-
-Problem 23
-
-
-1
-2
-3
-4
-
-
-Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &gt; # &amp;];
-Total@Complement[Range[1, 28123],
-  DeleteDuplicates@(   (Abundants[[#]] &#43; Abundants[[# ;; -1]]) &amp; /@ Range[Length@Abundants] // Flatten  )]
-4179871
-
-
-Problem 24
-
-
-1
-2
-
-
-FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]]
-2783915460
-
-
-Problem 25
-
-
-1
-2
-
-
-NestWhile[(# &#43; 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
-4782
-
-
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://bigheadghost.github.io/post/dive-into-project-euler-part-2-21-40/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2014-08-29T12:07:32+08:00" />
-<meta property="article:modified_time" content="2014-08-29T12:07:32+08:00" />
-
-<meta itemprop="name" content="Dive into Project Euler Part 2 (21-40)">
-<meta itemprop="description" content="Problem 21
-
-
-1
-2
-3
-
-
-f = DivisorSigma[1, #] - # &amp;;
-Total@Select[Range[9999], (a = f@#; a &lt; 9999 &amp;&amp; a != # &amp;&amp; f@a == #) &amp;]
-31626
-
-
-Problem 22
-
-
-1
-2
-3
-
-
-nl=Sort@StringSplit[StringReplace[Import[&#34;p022_names.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;], &#34;,&#34;];
-Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&#34;A&#34;]] &#43; 1] * First[#2] &amp;, nl]
-871198282
-
-
-Problem 23
-
-
-1
-2
-3
-4
-
-
-Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &gt; # &amp;];
-Total@Complement[Range[1, 28123],
-  DeleteDuplicates@(   (Abundants[[#]] &#43; Abundants[[# ;; -1]]) &amp; /@ Range[Length@Abundants] // Flatten  )]
-4179871
-
-
-Problem 24
-
-
-1
-2
-
-
-FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]]
-2783915460
-
-
-Problem 25
-
-
-1
-2
-
-
-NestWhile[(# &#43; 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
-4782
-
-
-"><meta itemprop="datePublished" content="2014-08-29T12:07:32+08:00" />
-<meta itemprop="dateModified" content="2014-08-29T12:07:32+08:00" />
-<meta itemprop="wordCount" content="493">
-<meta itemprop="keywords" content="Mathematica," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Dive into Project Euler Part 2 (21-40)"/>
-<meta name="twitter:description" content="Problem 21
-
-
-1
-2
-3
-
-
-f = DivisorSigma[1, #] - # &amp;;
-Total@Select[Range[9999], (a = f@#; a &lt; 9999 &amp;&amp; a != # &amp;&amp; f@a == #) &amp;]
-31626
-
-
-Problem 22
-
-
-1
-2
-3
-
-
-nl=Sort@StringSplit[StringReplace[Import[&#34;p022_names.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;], &#34;,&#34;];
-Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&#34;A&#34;]] &#43; 1] * First[#2] &amp;, nl]
-871198282
-
-
-Problem 23
-
-
-1
-2
-3
-4
-
-
-Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &gt; # &amp;];
-Total@Complement[Range[1, 28123],
-  DeleteDuplicates@(   (Abundants[[#]] &#43; Abundants[[# ;; -1]]) &amp; /@ Range[Length@Abundants] // Flatten  )]
-4179871
-
-
-Problem 24
-
-
-1
-2
-
-
-FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]]
-2783915460
-
-
-Problem 25
-
-
-1
-2
-
-
-NestWhile[(# &#43; 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
-4782
-
-
-"/>
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+
+
+
+<meta property="og:url" content="https://bigheadghost.github.io/post/dive-into-project-euler-part-2-21-40/">
+  <meta property="og:site_name" content="Know Nothing">
+  <meta property="og:title" content="Dive into Project Euler Part 2 (21-40)">
+  <meta property="og:description" content="Problem 21 1 2 3 f = DivisorSigma[1, #] - # &amp;; Total@Select[Range[9999], (a = f@#; a &lt; 9999 &amp;&amp; a != # &amp;&amp; f@a == #) &amp;] 31626 Problem 22 1 2 3 nl=Sort@StringSplit[StringReplace[Import[&#34;p022_names.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;], &#34;,&#34;]; Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&#34;A&#34;]] &#43; 1] * First[#2] &amp;, nl] 871198282 Problem 23 1 2 3 4 Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &gt; # &amp;]; Total@Complement[Range[1, 28123], DeleteDuplicates@( (Abundants[[#]] &#43; Abundants[[# ;; -1]]) &amp; /@ Range[Length@Abundants] // Flatten )] 4179871 Problem 24 1 2 FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]] 2783915460 Problem 25 1 2 NestWhile[(# &#43; 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;] 4782">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2014-08-29T12:07:32+08:00">
+    <meta property="article:modified_time" content="2014-08-29T12:07:32+08:00">
+    <meta property="article:tag" content="Mathematica">
+
+  <meta itemprop="name" content="Dive into Project Euler Part 2 (21-40)">
+  <meta itemprop="description" content="Problem 21 1 2 3 f = DivisorSigma[1, #] - # &amp;; Total@Select[Range[9999], (a = f@#; a &lt; 9999 &amp;&amp; a != # &amp;&amp; f@a == #) &amp;] 31626 Problem 22 1 2 3 nl=Sort@StringSplit[StringReplace[Import[&#34;p022_names.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;], &#34;,&#34;]; Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&#34;A&#34;]] &#43; 1] * First[#2] &amp;, nl] 871198282 Problem 23 1 2 3 4 Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &gt; # &amp;]; Total@Complement[Range[1, 28123], DeleteDuplicates@( (Abundants[[#]] &#43; Abundants[[# ;; -1]]) &amp; /@ Range[Length@Abundants] // Flatten )] 4179871 Problem 24 1 2 FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]] 2783915460 Problem 25 1 2 NestWhile[(# &#43; 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;] 4782">
+  <meta itemprop="datePublished" content="2014-08-29T12:07:32+08:00">
+  <meta itemprop="dateModified" content="2014-08-29T12:07:32+08:00">
+  <meta itemprop="wordCount" content="493">
+  <meta itemprop="keywords" content="Mathematica">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Dive into Project Euler Part 2 (21-40)">
+  <meta name="twitter:description" content="Problem 21 1 2 3 f = DivisorSigma[1, #] - # &amp;; Total@Select[Range[9999], (a = f@#; a &lt; 9999 &amp;&amp; a != # &amp;&amp; f@a == #) &amp;] 31626 Problem 22 1 2 3 nl=Sort@StringSplit[StringReplace[Import[&#34;p022_names.txt&#34;], &#34;\&#34;&#34; -&gt; &#34;&#34;], &#34;,&#34;]; Total@MapIndexed[Total[ToCharacterCode[#1] - First[ToCharacterCode[&#34;A&#34;]] &#43; 1] * First[#2] &amp;, nl] 871198282 Problem 23 1 2 3 4 Abundants = Select[Range[1, 28123], DivisorSigma[1, #] - # &gt; # &amp;]; Total@Complement[Range[1, 28123], DeleteDuplicates@( (Abundants[[#]] &#43; Abundants[[# ;; -1]]) &amp; /@ Range[Length@Abundants] // Flatten )] 4179871 Problem 24 1 2 FromDigits[Permutations[Range[0, 9], {10}][[1*^6]]] 2783915460 Problem 25 1 2 NestWhile[(# &#43; 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;] 4782">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -316,8 +133,8 @@ NestWhile[(# &#43; 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
     <div id="search"></div>
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
-            new PagefindUI({ element: "#search", 
-               showImages: false, });
+            new PagefindUI({ element: "#search",
+               showImages: false, showSubResults: true, });
         });
     </script>
     <main id="main" class="main">
@@ -734,7 +551,7 @@ NestWhile[(# &#43; 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
       <a href="https://math.stackexchange.com/users/157947/bigheadghost" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
       <a href="https://github.com/bigheadghost" class="iconfont icon-github" title="github"></a>
       <a href="https://www.douban.com/people/1254984/" class="iconfont icon-douban" title="douban"></a>
-  <a href="https://bigheadghost.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -752,7 +569,7 @@ NestWhile[(# &#43; 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
   <span class="copyright-year">
     &copy; 
     2014 - 
-    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigheadghost</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>bigheadghost</span>
   </span>
 </div>
 
@@ -770,9 +587,6 @@ NestWhile[(# &#43; 1) &amp;, 1, IntegerLength@Fibonacci@# &lt; 1000 &amp;]
 
 
 <script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
-
-
-
 
 
 
